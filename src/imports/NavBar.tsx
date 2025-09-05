@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-import CNLogo from "../assets/CN_logo.svg";
 
 const NAV_ITEMS = [
   { label: "Home", id: "home" },
@@ -37,7 +36,7 @@ export default function NavBar() {
       </div>
       {/* <CNLogo /> */}
       <img
-        src={CNLogo}
+        src={"/CN_logo.svg"}
         alt="CN logo"
         className="absolute left-[40px] top-1.5 w-[80px]"
       />

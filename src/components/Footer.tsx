@@ -1,11 +1,10 @@
-import imgChicago from "../assets/chicago_bg.png";
 
 export default function Footer() {
   return (
     <footer id="contact" className="relative">
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${imgChicago})` }}
+        style={{ backgroundImage: `url("../public/chicago_bg.png")` }}
       />
       <div className="absolute inset-0 bg-black/55" />
 

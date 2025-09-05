@@ -1,8 +1,9 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { projects } from "../lib/projectData";
-import imgChicago from "../assets/chicago_bg.png";
+// import imgChicago from "./public/chicago_bg.png";
 import Footer from "./Footer";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
+import WorldNotes from "./Projects/WorldNotes";
 
 export default function ProjectDetailPage() {
   const { projectId } = useParams<{ projectId: string }>();
@@ -31,13 +32,14 @@ export default function ProjectDetailPage() {
     description,
     category,
     githubUrl,
+    imageUrl,
     fullDescription,
     features = [],
     problem,
     subProblem, 
     solution,
     skills = [],
-    tools = project.technologies ?? [],
+    tools,
     role,
     timeline,
     milestones = [],
@@ -48,7 +50,7 @@ export default function ProjectDetailPage() {
       {/* Banner */}
       <section className="relative h-[560px] w-full overflow-hidden">
         <img
-          src={imgChicago}
+          src={project.imageUrl}
           alt="Banner"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -162,7 +164,7 @@ export default function ProjectDetailPage() {
       {(problem || true) && (
         <section className="mt-16">
           <div className="mx-auto w-full max-w-6xl px-6">
-            <h4 className="text-white/70">Problem</h4>
+            <h4 className="text-white font-semibold">Problem</h4>
             <h3 className="mt-2 text-2xl font-semibold">
               {problem ||
                 "How can we promote authentic visual expression and global communication while elevating the medium with new technologies?"}
@@ -178,7 +180,7 @@ export default function ProjectDetailPage() {
       {(solution || true) && (
         <section className="mt-10">
           <div className="mx-auto w-full max-w-6xl px-6">
-            <h4 className="text-white/70">Solution</h4>
+            <h4 className="text-white font-semibold">Solution</h4>
             <p className="mt-2 max-w-5xl text-white/80">
               {solution ||
                 "A social platform that embraces visual self-expression. Users place 2D/3D notes on a map using Street View, discover others’ notes, and explore city-scale stories. Built end-to-end with a focus on joyful micro-interactions and fast iteration."}
@@ -192,7 +194,7 @@ export default function ProjectDetailPage() {
         <div className="mx-auto w-full max-w-6xl px-6">
           <div className="overflow-hidden rounded-lg border border-white/20">
             <img
-              src={imgChicago}
+              src={project.imageUrl || imgChicago}
               alt="Project mock"
               className="h-auto w-full object-cover"
             />
@@ -230,6 +232,9 @@ export default function ProjectDetailPage() {
           </div>
         </div>
       </section>
+
+      {project.id === "worldnotes" ? 
+      <WorldNotes/> : null}
 
       {/* Next Milestones card */}
       <section className="mt-12">

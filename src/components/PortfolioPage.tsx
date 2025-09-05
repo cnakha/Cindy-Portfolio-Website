@@ -1,8 +1,6 @@
 // import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { projects } from "../lib/projectData";
-import imgChicago from "../assets/chicago_bg.png";
-import kitchenPanorama from "../assets/panorama_kitchen.png";
 import AboutMeCarousel from "./AboutMeCarousel";
 import Footer from "./Footer";
 
@@ -14,14 +12,14 @@ function Hero() {
       {/* Full-bleed background */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${imgChicago})` }}
+        style={{ backgroundImage: `url("../public/chicago_bg.png")` }}
       />
       {/* Gradient for legibility */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#008BE8]/70 to-transparent" />
 
       {/* Content container: left aligned, pushed down from the top */}
       <div className="relative z-10 mx-auto w-full max-w-[80%]">
-        <div className="pt-[125px]">
+        <div className="pt-[100px]">
           {/* Left-aligned card; keep it square-ish with max-w and padding */}
           <AboutMeCarousel />
         </div>
@@ -52,8 +50,8 @@ function FeaturedProjectBlock({
         >
           <div className="relative aspect-[21/9] overflow-hidden rounded-[12px]">
             <img
-              src={kitchenPanorama}
-              alt={`${project.title} preview`}
+              src={`${project.imageUrl}`}
+              alt={`${project.id} preview`}
               className="absolute inset-0 h-full w-full object-cover transform transition-transform duration-600 ease-in-out hover:scale-105"
             />
           </div>
@@ -75,7 +73,7 @@ function FeaturedProjects({
     <section id="projects" className="relative w-full bg-[#1e1e1e] py-14">
       <div className="mx-auto w-full px-[10%] pb-10">
 
-        <div className="flex w-full justify-center text-center px-4 py-6">
+        <div className="flex w-full justify-center text-center px-4 py-8">
           <h2 className="text-4xl font-semibold text-white">
             Featured Projects
           </h2>
@@ -131,7 +129,7 @@ function Extras() {
                 {/* <button> */}
                   <div className="relative aspect-[3/4]">
                     <img
-                      src={kitchenPanorama}
+                      src="/public/panorama_kitchen.png"
                       alt="Project preview"
                       className="absolute inset-0 h-full w-full object-cover transform transition-transform duration-600 ease-in-out hover:scale-105"
                     />
