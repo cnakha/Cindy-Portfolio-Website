@@ -169,7 +169,7 @@ export default function ProjectDetailPage() {
               {problem ||
                 "How can we promote authentic visual expression and global communication while elevating the medium with new technologies?"}
             </h3>
-            <p className="mt-2 max-w-4xl text-sm text-white/70">
+            <p className="mt-2 text-sm text-white/70">
               {subProblem || "Authentic connection can be expanded through shared, visual notes and geolocated discovery—creating richer casual browsing and meaningfulinteractions."}
             </p>
           </div>
@@ -181,7 +181,7 @@ export default function ProjectDetailPage() {
         <section className="mt-10">
           <div className="mx-auto w-full max-w-6xl px-6">
             <h4 className="text-white font-semibold">Solution</h4>
-            <p className="mt-2 max-w-5xl text-white/80">
+            <p className="mt-2 text-white/80">
               {solution ||
                 "A social platform that embraces visual self-expression. Users place 2D/3D notes on a map using Street View, discover others’ notes, and explore city-scale stories. Built end-to-end with a focus on joyful micro-interactions and fast iteration."}
             </p>
@@ -194,7 +194,7 @@ export default function ProjectDetailPage() {
         <div className="mx-auto w-full max-w-6xl px-6">
           <div className="overflow-hidden rounded-lg border border-white/20">
             <img
-              src={project.imageUrl || imgChicago}
+              src={project.imageUrl}
               alt="Project mock"
               className="h-auto w-full object-cover"
             />
@@ -206,7 +206,7 @@ export default function ProjectDetailPage() {
       <section className="mt-12">
         <div className="mx-auto w-full max-w-6xl px-6">
           <div className="rounded-xl border border-white/15 bg-[#222] p-6">
-            <h3 className="mb-4 text-white">Key Features</h3>
+            <h3 className="mb-4 text-white font-semibold">Key Features</h3>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
               <ul className="list-disc list-inside space-y-2 text-white/85">
                 {(features.length
@@ -240,7 +240,7 @@ export default function ProjectDetailPage() {
       <section className="mt-12">
         <div className="mx-auto w-full max-w-6xl px-6">
           <div className="rounded-xl border border-white/15 bg-[#222] p-6">
-            <h3 className="text-white/90">Next Milestones</h3>
+            <h3 className="text-white font-semibold">Next Milestones</h3>
             <div className="mt-4 space-y-6">
               {(milestones.length
                 ? milestones
