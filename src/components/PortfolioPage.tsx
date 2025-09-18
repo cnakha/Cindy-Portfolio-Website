@@ -8,7 +8,7 @@ import Footer from "./Footer";
 
 function Hero() {
   return (
-    <section id="home" className="relative w-full min-h-[100vh]">
+    <section id="home" className="relative w-full min-h-[120vh]">
       {/* Full-bleed background */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -41,8 +41,8 @@ function FeaturedProjectBlock({
     <div className="flex">
       <div className="w-full">
         <h3 className="text-white text-4xl font-semibold">{project.title}</h3>
-        <p className="mt-2 text-white/50 text-xl">{project.category}</p>
-        <p className="mt-2 text-white text-xl">{project.description}</p>
+        <p className="mt-4 text-white/50 text-xl">{project.category}</p>
+        <p className="text-white/90 text-xl">{project.description}</p>
 
         <button
           onClick={() => onOpen(project.id)}
@@ -74,14 +74,14 @@ function FeaturedProjects({
       <div className="mx-auto w-full px-[10%] pb-10">
 
         <div className="flex w-full justify-center text-center px-4 py-8">
-          <h2 className="text-4xl font-semibold text-white">
+          <h2 className="mt-10 text-6xl font-semibold text-white">
             Featured Projects
           </h2>
         </div>
         <div className="px-4">
           <p className="mx-auto max-w-5xl text-center text-2xl text-white/75">
-            Case studies of previous and current projects that explore my Fullstack
-            development, UI/UX design, and Product design process.
+            Case studies of previous and ongoing projects that explore my Fullstack
+            Development and UI and User Experience Design process.
           </p>
         </div>
 
@@ -106,7 +106,7 @@ function Extras() {
     <section id="extras" className="relative w-full bg-[#008be8] py-12">
       <div className="mx-auto w-full px-[5%]">
         <div className="flex w-full justify-center text-center px-4">
-          <h2 className="text-4xl font-semibold text-white">
+          <h2 className="text-6xl font-semibold text-white">
             Extras
           </h2>
         </div>

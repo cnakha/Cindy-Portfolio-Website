@@ -1,20 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
+import { Triangle } from "lucide-react";
 
-/** optional: keep phrase at 100% opacity if you switch back to static <p> */
-function highlightFullstack(s: string) {
-  const re = /fullstack developer and UI\/UX designer/gi;
-  const parts: Array<string | JSX.Element> = [];
-  let last = 0;
-  let m: RegExpExecArray | null;
-  while ((m = re.exec(s)) !== null) {
-    if (m.index > last) parts.push(s.slice(last, m.index));
-    parts.push(<span key={m.index} className="text-white">{m[0]}</span>);
-    last = m.index + m[0].length;
-  }
-  if (last < s.length) parts.push(s.slice(last));
-  return parts;
-}
+
 
 function TypedParagraph({ text }: { text: string }) {
   return (
@@ -24,10 +12,17 @@ function TypedParagraph({ text }: { text: string }) {
       speed={55}
       cursor
       wrapper="p"
-      className="block text-5xl leading-[1.45] text-white/75" 
+      className="
+        block text-5xl text-white/75
+        !leading-[1.25]               /* force on <p> */
+        [&>span]:!leading-[1.6]      /* force on inner span that TA inserts */
+        whitespace-pre-wrap
+      "
+      style={{ lineHeight: 1.6 }}
     />
   );
 }
+
 
 
 export default function AboutMeCarousel() {
@@ -41,23 +36,20 @@ export default function AboutMeCarousel() {
   const [idx, setIdx] = useState(0);
   const nextSlide = () => setIdx((i) => (i + 1) % slides.length);
 
-  const MIN = 550;
-  const innerRef = useRef<HTMLDivElement>(null); // natural-flow container (no h-full)
+  const MIN = 580;
+  const innerRef = useRef<HTMLDivElement>(null); 
   const [height, setHeight] = useState<number>(MIN);
 
   useEffect(() => {
     const measure = () => {
       const el = innerRef.current;
       if (!el) return;
-      // natural content height (ignores parent constraints)
       const natural = el.scrollHeight;
       setHeight(Math.max(MIN, natural));
     };
 
-    // measure now & on slide change
     measure();
 
-    // re-measure as text types/wraps or on resize
     const ro = new ResizeObserver(measure);
     const mo = new MutationObserver(measure);
     if (innerRef.current) {
@@ -79,7 +71,7 @@ export default function AboutMeCarousel() {
   return (
     <div
       className="
-        w-full max-w-2xl rounded-2xl
+        w-full max-w-[650px] rounded-2xl
         bg-black/55 backdrop-blur-sm
         shadow-[0_12px_32px_rgba(0,0,0,0.35)]
         ring-1 ring-white/10 overflow-hidden
@@ -89,15 +81,10 @@ export default function AboutMeCarousel() {
       {/* Natural-flow flex column (no h-full) so height can shrink/grow per slide */}
       <div
         ref={innerRef}
-        className="flex min-h-[550px] flex-col gap-6 px-10 py-10"
+        className="flex min-h-[550px] flex-col gap-6 px-10 pt-10 pb-4"
       >
         {/* Text */}
         <TypedParagraph text={slides[idx]} />
-        {/* If you need the inline highlight instead of typing: 
-            <p className="text-6xl leading-[1.15] text-white/75">
-              {highlightFullstack(slides[idx])}
-            </p>
-        */}
 
         {/* Controls pinned bottom-right when there's spare space */}
         <div className="mt-auto self-end text-right">
@@ -106,12 +93,12 @@ export default function AboutMeCarousel() {
             onClick={nextSlide}
           >
             More about me
-            <svg width="30" height="30" viewBox="0 0 20 20" className="-rotate-90">
-              <path d="M5 7l5 6 5-6" fill="currentColor" />
-            </svg>
+           
+            <Triangle className="h-4 w-4 rotate-45 fill-white" />
+
           </button>
 
-          <div className="mt-3 flex items-center justify-end gap-3">
+          <div className="mt-2 flex items-center justify-end gap-3">
             {slides.map((_, i) => (
               <button
                 key={i}

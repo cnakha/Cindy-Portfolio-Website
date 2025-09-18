@@ -4,6 +4,8 @@ import { projects } from "../lib/projectData";
 import Footer from "./Footer";
 import { ArrowLeft } from "lucide-react";
 import WorldNotes from "./Projects/WorldNotes";
+import Clarity from "./Projects/Clarity";
+import YCGH from "./Projects/YCGH";
 
 export default function ProjectDetailPage() {
   const { projectId } = useParams<{ projectId: string }>();
@@ -69,9 +71,9 @@ export default function ProjectDetailPage() {
               Return
             </button>
 
-            <h3 className="text-white text-4xl font-semibold">{project.title}</h3>
-            <p className="mt-2 text-white/50 text-[16px]">{project.category}</p>
-            <p className="mt-2 text-white text-[24px]">{project.fullDescription}</p>
+            <h3 className="mt-4 text-white text-6xl leading-[1.25] font-semibold">{project.title}</h3>
+            <p className="mt-4 text-white/50 text-[16px]">{project.category}</p>
+            <p className="mt-12 text-white text-[24px]">{project.fullDescription}</p>
 
           </div>
         </div>
@@ -133,7 +135,7 @@ export default function ProjectDetailPage() {
                     (t, i) => (
                       <span
                         key={i}
-                        className="rounded-full bg-white/10 px-3 py-1 text-xs text-white ring-1 ring-white/20"
+                        className="mt-2 rounded-full bg-white/10 px-3 py-1 text-xs text-white ring-1 ring-white/20"
                       >
                         {t}
                       </span>
@@ -150,7 +152,7 @@ export default function ProjectDetailPage() {
                       rel="noopener noreferrer"
                       className="inline-flex text-[16px] mt-8 items-center gap-2 rounded-full border border-white/50 px-10 py-2 text-sm text-white/50 hover:bg-white/10"
                     >
-                      See the Code  <ArrowLeft className="h-4 w-4 rotate-180" />
+                      See the Code  <ArrowLeft className="h-6 w-6 rotate-180" />
                     </a>
                   )}
                 </div>
@@ -160,38 +162,40 @@ export default function ProjectDetailPage() {
         </div>
       </section>
 
-      {/* Problem */}
-      {(problem || true) && (
-        <section className="mt-16">
-          <div className="mx-auto w-full max-w-6xl px-6">
-            <h4 className="text-white font-semibold">Problem</h4>
-            <h3 className="mt-2 text-2xl font-semibold">
-              {problem ||
-                "How can we promote authentic visual expression and global communication while elevating the medium with new technologies?"}
-            </h3>
-            <p className="mt-2 text-sm text-white/70">
-              {subProblem || "Authentic connection can be expanded through shared, visual notes and geolocated discovery—creating richer casual browsing and meaningfulinteractions."}
-            </p>
-          </div>
-        </section>
-      )}
+      <div className="grid grid-cols-1 mt-6 mx-auto w-full max-w-6xl px-6 md:grid-cols-2">
+        {/* Problem */}
+        {(problem || true) && (
+          <section className="mt-10">
+            <div className="mx-auto w-full max-w-6xl px-6">
+              <h4 className="text-white font-semibold">Problem</h4>
+              <h3 className="mt-2 text-2xl font-semibold">
+                {problem ||
+                  "How can we promote authentic visual expression and global communication while elevating the medium with new technologies?"}
+              </h3>
+              <p className="mt-4 text-sm text-white/70">
+                {subProblem || "Authentic connection can be expanded through shared, visual notes and geolocated discovery—creating richer casual browsing and meaningfulinteractions."}
+              </p>
+            </div>
+          </section>
+        )}
 
-      {/* Solution */}
-      {(solution || true) && (
-        <section className="mt-10">
-          <div className="mx-auto w-full max-w-6xl px-6">
-            <h4 className="text-white font-semibold">Solution</h4>
-            <p className="mt-2 text-white/80">
-              {solution ||
-                "A social platform that embraces visual self-expression. Users place 2D/3D notes on a map using Street View, discover others’ notes, and explore city-scale stories. Built end-to-end with a focus on joyful micro-interactions and fast iteration."}
-            </p>
-          </div>
-        </section>
-      )}
+        {/* Solution */}
+        {(solution || true) && (
+          <section className="mt-10">
+            <div className="mx-auto w-full max-w-6xl px-6">
+              <h4 className="text-white font-semibold">Solution</h4>
+              <p className="mt-2 text-white/80">
+                {solution ||
+                  "A social platform that embraces visual self-expression. Users place 2D/3D notes on a map using Street View, discover others’ notes, and explore city-scale stories. Built end-to-end with a focus on joyful micro-interactions and fast iteration."}
+              </p>
+            </div>
+          </section>
+        )}
+      </div>
 
       {/* Big image */}
       <section className="mt-10">
-        <div className="mx-auto w-full max-w-6xl px-6">
+        <div className="mx-auto w-full max-w-6xl px-12">
           <div className="overflow-hidden rounded-lg border border-white/20">
             <img
               src={project.imageUrl}
@@ -234,7 +238,9 @@ export default function ProjectDetailPage() {
       </section>
 
       {project.id === "worldnotes" ? 
-      <WorldNotes/> : null}
+      <WorldNotes/> : project.id === "clarity" 
+      ? <Clarity/> : project.id === "YCGH"
+      ? <YCGH/> : null}
 
       {/* Next Milestones card */}
       <section className="mt-12">
