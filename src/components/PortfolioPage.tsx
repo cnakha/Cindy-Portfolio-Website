@@ -42,7 +42,7 @@ function FeaturedProjectBlock({
       <div className="w-full">
         <h3 className="text-white text-4xl font-semibold">{project.title}</h3>
         <p className="mt-4 text-white/50 text-xl">{project.category}</p>
-        <p className="text-white/90 text-xl">{project.description}</p>
+        <p className="mt-1 text-white/90 text-xl">{project.description}</p>
 
         <button
           onClick={() => onOpen(project.id)}
