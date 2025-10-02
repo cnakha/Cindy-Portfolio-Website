@@ -10,15 +10,24 @@ function Hero() {
   return (
     <section id="home" className="relative w-full min-h-[120vh]">
       {/* Full-bleed background */}
-      <div
+      {/* <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url("../public/chicago_bg.png")` }}
+      /> */}
+      <video
+        src={'/Portfolio_hero.mp4'}
+        className="absolute inset-0 h-full w-auto min-w-full object-cover bg-center bg-no-repeat"
+        alt={`Hero Video`}
+        muted
+        autoPlay
+        loop
+        style={{ minHeight: '100%', height: '100%', width: 'auto' }}
       />
       {/* Gradient for legibility */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#008BE8]/70 to-transparent" />
 
       {/* Content container: left aligned, pushed down from the top */}
-      <div className="relative z-10 mx-auto w-full max-w-[80%]">
+      <div className="relative z-10 mx-auto w-full max-w-[90%]">
         <div className="pt-[100px]">
           {/* Left-aligned card; keep it square-ish with max-w and padding */}
           <AboutMeCarousel />
@@ -41,14 +50,14 @@ function FeaturedProjectBlock({
     <div className="flex">
       <div className="w-full">
         <h3 className="text-white text-4xl font-semibold">{project.title}</h3>
-        <p className="mt-4 text-white/50 text-xl">{project.category}</p>
-        <p className="mt-1 text-white/90 text-xl">{project.description}</p>
+        <p className="mt-4 text-white/50 ">{project.category}</p>
+        <p className="mt-4 text-white/90 max-w-3xl">{project.description}</p>
 
         <button
           onClick={() => onOpen(project.id)}
           className="mt-8 block w-full overflow-hidden rounded-[12px] bg-black/20 ring-1 ring-white/10 hover:ring-white/30 transition"
         >
-          <div className="relative aspect-[21/9] overflow-hidden rounded-[12px]">
+          <div className="relative aspect-[21/8] overflow-hidden rounded-[12px]">
             <img
               src={`${project.imageUrl}`}
               alt={`${project.id} preview`}
@@ -74,12 +83,12 @@ function FeaturedProjects({
       <div className="mx-auto w-full px-[10%] pb-10">
 
         <div className="flex w-full justify-center text-center px-4 py-8">
-          <h2 className="mt-10 text-6xl font-semibold text-white">
+          <h2 className="mt-10 text-4xl md:text-6xl font-semibold text-white">
             Featured Projects
           </h2>
         </div>
         <div className="px-4">
-          <p className="mx-auto max-w-5xl text-center text-2xl text-white/75">
+          <p className="mx-auto max-w-4xl text-center text-xl md:text-2xl text-white/75">
             Case studies of previous and ongoing projects that explore my Fullstack
             Development and UI and User Experience Design process.
           </p>

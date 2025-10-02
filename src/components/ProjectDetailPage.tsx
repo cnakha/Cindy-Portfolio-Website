@@ -72,7 +72,7 @@ export default function ProjectDetailPage() {
             </button>
 
             <h3 className="mt-4 text-white text-6xl leading-[1.25] font-semibold">{project.title}</h3>
-            <p className="mt-4 text-white/50 text-[16px]">{project.category}</p>
+            <p className={`text-white/50 text-[24px] ${project.id === "YCGH" ? "mt-4" : "mt-2"}`}>{project.category}</p>
             <p className="mt-12 text-white text-[24px]">{project.fullDescription}</p>
 
           </div>
@@ -184,7 +184,7 @@ export default function ProjectDetailPage() {
           <section className="mt-10">
             <div className="mx-auto w-full max-w-6xl px-6">
               <h4 className="text-white font-semibold">Solution</h4>
-              <p className="mt-2 text-white/80">
+              <p className="mt-2 text-xl text-white/80">
                 {solution ||
                   "A social platform that embraces visual self-expression. Users place 2D/3D notes on a map using Street View, discover others’ notes, and explore city-scale stories. Built end-to-end with a focus on joyful micro-interactions and fast iteration."}
               </p>
@@ -193,24 +193,11 @@ export default function ProjectDetailPage() {
         )}
       </div>
 
-      {/* Big image */}
-      <section className="mt-10">
-        <div className="mx-auto w-full max-w-6xl px-12">
-          <div className="overflow-hidden rounded-lg border border-white/20">
-            <img
-              src={project.imageUrl}
-              alt="Project mock"
-              className="h-auto w-full object-cover"
-            />
-          </div>
-        </div>
-      </section>
-
       {/* Key Features (two-column bullets) */}
       <section className="mt-12">
         <div className="mx-auto w-full max-w-6xl px-6">
-          <div className="rounded-xl border border-white/15 bg-[#222] p-6">
-            <h3 className="mb-4 text-white font-semibold">Key Features</h3>
+          <div className="rounded-xl border border-white/15 bg-[#1f1f1f] p-6 pb-10">
+            <h3 className="mb-4 text-white text-xl font-semibold">Key Features</h3>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
               <ul className="list-disc list-inside space-y-2 text-white/85">
                 {(features.length
@@ -236,6 +223,7 @@ export default function ProjectDetailPage() {
           </div>
         </div>
       </section>
+              
 
       {project.id === "worldnotes" ? 
       <WorldNotes/> : project.id === "clarity" 
@@ -243,19 +231,13 @@ export default function ProjectDetailPage() {
       ? <YCGH/> : null}
 
       {/* Next Milestones card */}
+      {milestones.length > 0 && (
       <section className="mt-12">
         <div className="mx-auto w-full max-w-6xl px-6">
           <div className="rounded-xl border border-white/15 bg-[#222] p-6">
             <h3 className="text-white font-semibold">Next Milestones</h3>
             <div className="mt-4 space-y-6">
-              {(milestones.length
-                ? milestones
-                : [
-                    "User Testing and Feedback Integration",
-                    "Refine UI and Micro-interactions",
-                    "Improve SEO",
-                  ]
-              ).map((m, i) => (
+              {(milestones).map((m, i) => (
                 <div key={i}>
                   <h4 className="font-semibold">{m}</h4>
                   <p className="mt-1 text-xs text-white/60">
@@ -266,7 +248,7 @@ export default function ProjectDetailPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section>)}
 
       {/* Footer banner (use your existing component) */}
       <section className="mt-16">

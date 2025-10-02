@@ -13,7 +13,7 @@ function TypedParagraph({ text }: { text: string }) {
       cursor
       wrapper="p"
       className="
-        block text-5xl text-white/75
+        block text-3xl md:text-5xl text-white/75
         !leading-[1.25]               /* force on <p> */
         [&>span]:!leading-[1.6]      /* force on inner span that TA inserts */
         whitespace-pre-wrap
@@ -28,7 +28,7 @@ function TypedParagraph({ text }: { text: string }) {
 export default function AboutMeCarousel() {
   const slides = [
     "Hi! I'm Cindy Nakhammouane, a fullstack developer and UI/UX designer with product focused thinking and a love for making cool projects...",
-    "I love creating things that bring joy to others and leave a positive impact. Wanting to leverage my academic drive and creative mind, one day I found myself at the door of creative technology...",
+    "I love creating things that bring joy to others and value leaving a positive impact. Wanting to leverage my academic drive and creative mind, one day I found myself at the door of creative technology...",
     "Today, I'm a fourth year undergraduate student at the University of Illinois Chicago studying computer science and design exploring the possibilities of AI/ML automation, web dev, and product design.",
     "In my free time I love to travel to cool places, watch movies, sing, and attend theatrical shows. I also spend a lot of time on my passion projects: WorldNotes and FolioFlips!",
   ];
@@ -94,7 +94,7 @@ export default function AboutMeCarousel() {
           >
             More about me
            
-            <Triangle className="h-4 w-4 rotate-45 fill-white" />
+            <Triangle className="h-4 w-4 rotate-90 fill-white" />
 
           </button>
 

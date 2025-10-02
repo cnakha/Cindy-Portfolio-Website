@@ -12,6 +12,7 @@ export interface Project {
   challenges: string;
   outcome: string;
   imageUrl: string;
+  imageUrl2?: string;
   liveUrl?: string;
   githubUrl?: string;
   problem: string;
@@ -21,16 +22,16 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-  {
+   {
     id: "worldnotes",
     title: "WorldNotes",
     timeline: "June 2025 — Present",
     description: "A worldwide notes and doodles sharing website with Google Maps API integration, perfect for casual web strolling",
-    category: "Fullstack Web Development and UI and User Experience Design for a Creative Social Media App",
-    fullDescription: "WorldNotes is a passion project created to be a global platform for sharing notes, thoughts, and doodles, perfect for casual web strolling. The platform emphasizes user agency, discovery, and building community through creative expression.",
-    role: "Lead fullstack developer and web designer, I built this app end-to-end from ideation to launch",
+    category: "Fullstack Web Development and UI/UX Design for a Creative Social Media App",
+    fullDescription: "WorldNotes is my passion project—a global platform for sharing notes, thoughts, and doodles. Designed for casual web strolling, the platform emphasizes user agency, discovery, and building community through creative expression.", 
+    role: "Project Manager, fullstack developer, and web designer, I built this app end-to-end from ideation to launch",
     skills: ["UI/UX Design", "Fullstack Development", "Web Development", "Web Design", "Webflow Development", "Wireframing", "SEO"],
-    tools: ["React", "Next.js", "TypeScript", "Three.js", "NoSQL"],
+    tools: ["React", "Next.js", "TypeScript", "Three.js", "NoSQL", "Figma", "Illustrator", "Photoshop"],
     features: [
       "Dynamic 3D Note Traversal and Discovery Algorithm",
       "FireBase Database Integration",
@@ -39,18 +40,20 @@ export const projects: Project[] = [
       "Personalized User Profiles",
       "User Authentication",
     ],
-    challenges: "The main challenge was implementing real-time collaboration while maintaining performance with hundreds of concurrent users. We solved this by implementing efficient data structures and optimized WebSocket connections.",
+    challenges: "The main challenge was implementing real-time collaboration while maintaining performance with hundreds of concurrent users. I solved this by implementing efficient data structures and optimized WebSocket connections.",
     outcome: "This project is currently in active development with plans to launch a beta version in late 2026.",
     imageUrl: "/worldnotes/thumbnail.png",
     problem: "How can we promote authentic visual ways of expression and global communication whilst elevating the social medium with new technologies?",
-    subProblem: "Authentic connection can be further explored through sharing pictoral messages in relation to the context of geolocations. Existing platforms often prioritize text-based communication, which can lack the nuance and emotional depth that visual content provides. Additionally, many social media platforms are designed to maximize user engagement through algorithms that may not prioritize meaningful interactions or creative expression.",
-    solution: "I created a social platform that embraces the values and practice of digital graffiti and promote self expression. This web app is built on the Google maps API and allows people to create and place 3D notes in the Google Street maps view. The ultimate goal was to encourage a new and interesting form of communication from complex to casual messages.",
+    subProblem: "Authentic connection can be further explored through pairing visual expression and geolocations. Existing platforms often prioritize text-based communication, which can lack the nuance and emotional depth that visual content provides.",
+    solution: "I created a social platform that embraces the values and practice of digital graffiti, emphasizing self expression. This web app is built on the Google maps API and allows people to create and place 3D notes in a street view.",
     milestones: [
       "User Testing and Feedback Integration",
       "Refine UI and Micro-interactions",
       "Improve SEO",
+      "Implement Web-Vital Monitoring System",
     ],
   },
+
   {
     id: "biomed",
     title: "Various Wearable Biomedical Devices",
@@ -93,6 +96,7 @@ export const projects: Project[] = [
     challenges: "Designing the user flow and creating story-driven emotional impact with 3D typography as a main actor in our project.",
     outcome: "Our project was successfully exhibited in UIC's CAVE2 with over 50 guests and presented as a research poster at SIGGRAPH 2025, showcasing the potential of VR for mental health support.",
     imageUrl: "/YCGH/thumbnail.png",
+    imageUrl2: "/YCGH/interaction2.jpeg",
     timeline: "Jan 2025 — May 2025",
     role: "Equal contributing VR Developer and UI/UX Designer along side 3 other interdisciplinary students from computer science and design backgrounds: Hope Jo, Gaeun Lee, Khin Yuupar Myat",
     skills: ["UI/UX Design", "Virtual Reality Development", "Human-Computer Interaction", "Prototyping", "3D Modeling", "User Testing", "Field Research", "Scripting"],

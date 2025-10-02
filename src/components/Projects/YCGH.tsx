@@ -1,7 +1,9 @@
 // import {videofile} from './YCGH/YCGH_SIGGRAPH_video.mp4';
-
+import { useState } from "react";
 
 export default function YCGH() {
+    const [showPopup, setShowPopup] = useState(false);
+    
     return(
         <section className="mt-14 mx-auto w-full max-w-6xl px-6">
             <h3 className="mt-10 text-2xl font-semibold">
@@ -13,7 +15,6 @@ export default function YCGH() {
                 src={'/YCGH/YCGH_SIGGRAPH_video.mp4'}
                 alt={`Concept Video`}
                 controls
-                muted
             />
             </div>
 
@@ -30,12 +31,26 @@ export default function YCGH() {
                         </h3>
                         <a href="https://dl.acm.org/doi/10.1145/3721250.3743037"> LINK </a>
                     </div>      
-                    <div className="mt-5 relative  overflow-hidden rounded-[12px]">
+                    <div className="mt-5 relative overflow-hidden rounded-[12px]">
                         <img
-                        src={"/YCGH/2025_SIGGRAPH_POSTER_YCGH_Final.png"}
-                        alt={`YCGH Poster`}
-                        className="h-full w-full object-cover"
+                            src={"/YCGH/2025_SIGGRAPH_POSTER_YCGH_Final.png"}
+                            alt={`YCGH Poster`}
+                            className="h-full w-full object-cover cursor-pointer"
+                            onClick={() => setShowPopup(true)}
                         />
+                        {showPopup && (
+                            <div
+                                className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70"
+                                onClick={() => setShowPopup(false)}
+                            >
+                                <img
+                                    src={"/YCGH/2025_SIGGRAPH_POSTER_YCGH_Final.png"}
+                                    alt={`YCGH Poster Enlarged`}
+                                    className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg"
+                                    onClick={e => e.stopPropagation()}
+                                />
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
