@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import {Play, Pause} from 'lucide-react'
 import { useRef, useState } from "react";
 
+
 // import Curve from "../assets/grouping_curve.svg";
 
 function Hero() {
@@ -30,7 +31,6 @@ function Hero() {
         ref={videoRef}
         src={'/Portfolio_hero.mp4'}
         className="absolute inset-0 h-full w-auto min-w-full object-cover bg-center bg-no-repeat"
-        alt={`Hero Video`}
         muted
         autoPlay
         loop
@@ -40,10 +40,9 @@ function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-[#008BE8]/70 to-transparent" />
 
       {/* Play/Pause Button */}
-      {/* Play/Pause Button: always show on large screens, conditionally hide on small screens */}
       <button
         onClick={handlePlayPause}
-        className={`absolute top-[15%] md:top-[74%] right-14 md:right-8 z-20 bg-black/55 backdrop-blur-sm
+        className={`absolute top-[15%] md:top-[70%] right-14 md:right-8 z-20 bg-black/55 backdrop-blur-sm
         shadow-[0_12px_32px_rgba(0,0,0,0.35)] ring-1 ring-white/10 text-white px-4 py-4 rounded-full shadow hover:bg-black/80 transition-transform duration-200 hover:scale-110
         ${typeof slideNumber !== "undefined" && slideNumber !== 0 ? "hidden md:block" : "block"}`}
       >
@@ -74,11 +73,10 @@ function FeaturedProjectBlock({
 }) {
   return (
     <div className="flex">
-      <div className="w-full">
-        <h3 className="text-white text-4xl font-semibold">{project.title}</h3>
-        <p className="mt-4 text-white/50 ">{project.category}</p>
-        <p className="mt-4 text-white/90 max-w-3xl">{project.description}</p>
-
+      <div className="w-full text-center mt-10">
+        <h3 className="text-white text-4xl md:text-6xl font-bolder">{project.title}</h3>
+        <p className="mt-4 text-sm md:text-xl text-white/25 md:px-10">{project.category}</p>
+        <p className="mt-4 text-xl md:text-3xl text-white/75 md:px-10">{project.description}</p>
         <button
           onClick={() => onOpen(project.id)}
           className="mt-8 block w-full overflow-hidden rounded-[12px] bg-black/20 ring-1 ring-white/10 hover:ring-white/30 transition"
@@ -105,13 +103,13 @@ function FeaturedProjects({
   onOpen: (id: string) => void;
 }) {
   return (
-    <section id="projects" className="relative w-full bg-[#1e1e1e]">
-      <div className="flex w-full bg-blue-haze justify-center text-center px-4 py-20">
-          <h2 className="text-4xl md:text-8xl font-semibold text-white">
-            Featured Projects
-          </h2>
-        </div>
-      <div className="mx-auto w-full px-[10%] pb-10">
+    <section id="projects" className="relative w-full bg-[#1e1e1e] pb-10">
+      <div className="flex w-full bg-blue-haze justify-center text-center px-4 py-20 ">
+        <h2 className="text-3xl md:text-6xl font-bolder text-white">
+          Featured Projects
+        </h2>
+      </div>
+      <div className="mx-auto w-full px-[10%] md:pb-10">
 
         <div className="mt-28 space-y-16">
           {items.map((project) => (

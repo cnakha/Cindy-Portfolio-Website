@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import { Triangle, Clock , Heart} from "lucide-react";
+import { motion } from "framer-motion";
 
 declare global {
   interface Window {
@@ -10,29 +11,62 @@ declare global {
 
 
 function TypedParagraph({ text, index }: { text: string; index: number }) {
+const [typingDone, setTypingDone] = useState(false);
+
+  // Framer Motion variants
+  const container = {
+    hidden: { opacity: 1 }, // keep container mounted while children are hidden
+    show: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.1,    // small pause before first child
+        staggerChildren: 0.28, // spacing between each child
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 18 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" as const },
+    },
+  };
+
   return (
     index === 0 ? (
       <div className="text-white space-y-6">
         <TypeAnimation
-        key={"Hey there! I'm..."}
-        sequence={["Hey there! I'm..."]}
-        speed={35}
-        cursor={true}
-        wrapper="p"
-        className="
-          block text-4xl text-white/50
-          !leading-[1.25]               /* force on <p> */
-          [&>span]:!leading-[1.4]      /* force on inner span that TA inserts */
-          whitespace-pre-wrap
-        "
-        style={{ lineHeight: 1.6 }}
-      />
-        {/* <p className="text-4xl text-white/50">Hey there! I'm...</p> */}
-        <div className="flex flex-inline w-full items-center gap-6">
-          {/* Show image only on medium screens and up */}
+          key={"Hey there! I'm..."}
+          sequence={[
+            "Hey there! I'm...",
+            () => setTypingDone(true), // <-- start the rest after typing
+          ]}
+          speed={35}
+          cursor
+          wrapper="p"
+          className="
+            block text-3xl md:text-4xl text-white/50
+            !leading-[1.25]
+            [&>span]:!leading-[1.4]
+            whitespace-pre-wrap
+          "
+          style={{ lineHeight: 1.4 }}
+        />
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate={typingDone ? "show" : "hidden"}
+        >
+        {/* Name + Image */}
+        <motion.div
+          className="flex flex-inline w-full items-center gap-6 md:ml-8"
+          variants={item}
+        >
           <img
-            src={'/headshot-bw.png'}
-            alt={`Headshot Preview`}
+            src={"/headshot-bw.png"}
+            alt="Headshot Preview"
             className="hidden md:block w-[25%] h-[25%] -rotate-[3deg]"
           />
           <div>
@@ -40,39 +74,48 @@ function TypedParagraph({ text, index }: { text: string; index: number }) {
             <p className="text-5xl md:text-6xl text-white font-bolder pt-2">Nakhammouane</p>
             <p className="text-xl text-white pt-1">Fullstack Developer & UI/UX Designer</p>
           </div>
-        </div>
-        <p className="text-4xl text-white/50 pt-2">I love to <span className="text-white font-bolder">research, prototype, design, user test, code, and launch </span>cool projects with product focused thinking...</p>
-        
-        <div className="flex flex-wrap w-full gap-5 pt-2">
+        </motion.div>
+
+        <motion.p className="text-3xl md:text-4xl text-white/50 pt-8" variants={item}>
+          I love to{" "}
+          <span className="text-white font-bolder">
+            research, prototype, design, user test, code, and launch{" "}
+          </span>
+          cool projects with product-focused thinking...
+        </motion.p>     
+
+        {/* Bottom info row */}
+        <motion.div className="flex flex-wrap w-full gap-5 pt-8" variants={item}>
           <div className="flex flex-inline text-white/75 gap-2">
-              <div className="w-6 h-6 rounded-full bg-white border border-[6px] border-blue-haze" />
+            <div className="w-6 h-6 rounded-full bg-white border border-[6px] border-blue-haze" />
             <p>Chicago, IL</p>
           </div>
+
           <div className="flex flex-inline items-center text-white/75 gap-2">
             <Clock className="h-5 w-5 stroke-white/75" />
             <p>
               {new Date().toLocaleTimeString("en-US", {
-              hour: "2-digit",
-              minute: "2-digit",
-              hour12: true,
-              timeZone: "America/Chicago",
+                hour: "2-digit",
+                minute: "2-digit",
+                hour12: true,
+                timeZone: "America/Chicago",
               })}
             </p>
           </div>
-          <div className="flex flex-inline items-center text-white/75 gap-2">
+
+          <div className="flex flex-inline items-center text-white/75 gap-1">
             <Heart className="h-5 w-5 fill-white/75 stroke-none" />
             <p>Hello visitor</p>
-            <div className="ring-1 ring-white/10 min-w-20 flex items-center gap-2 rounded-full bg-black/25 px-3 py-1 text-sm">
-              {/* Visitor count */}
+            <div className="ring-1 ring-white/10 min-w-20 flex ml-1 items-center gap-2 rounded-full bg-black/25 px-3 py-1 text-sm">
               <span>
-              {typeof window !== "undefined" && window.visitorCount
-                ? '${window.visitorCount}'
-                : "0"}
+                {typeof window !== "undefined" && (window as any).visitorCount
+                  ? `${(window as any).visitorCount}`
+                  : "0"}
               </span>
             </div>
           </div>
-        </div>
-      
+        </motion.div>
+      </motion.div>
       </div>
     ) : (
       <TypeAnimation
