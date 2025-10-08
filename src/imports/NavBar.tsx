@@ -6,7 +6,7 @@ import { Menu, X } from "lucide-react"; // hamburger/close icons
 
 const NAV_ITEMS = [
   { label: "Home", id: "home" },
-  { label: "About Me", id: "aboutme" },
+  { label: "About", id: "aboutme" },
   { label: "Projects", id: "projects" },
   // { label: "Extras", id: "extras" },
   { label: "Contact", id: "contact" },
@@ -42,36 +42,23 @@ export default function NavBar() {
           alt="CN logo"
           className="absolute left-[40px] top-1.5 w-[80px]"
         />
-        <div className="flex flex-col font-semibold translate-y-[-8px] text-white text-[16px] text-left">
-          <p className="mb-0">Cindy</p>
+        <div className="flex flex-col font-semibold translate-y-[-7px] text-white text-[16px] text-left">
+          <p className="-mb-1">Cindy</p>
           <p>Nakhammouane</p>
         </div>
       </button>
 
+    
       {/* Nav buttons on right */}
-      {/* <div className="absolute top-0 right-0 h-full flex items-center gap-8 pr-8">
-        {NAV_ITEMS.map((item) => (
-          <button
-            key={item.id}
-            onClick={() => goTo(item.id)}
-            className={`text-[20px] font-semibold transition-opacity ${
-              active === item.id ? "text-white opacity-100" : "text-white opacity-75"
-            }`}
-          >
-            {item.label}
-          </button>
-        ))}
-      </div> */}
-      {/* Nav buttons on right */}
-<div className="absolute top-0 right-0 h-full flex items-center pr-8">
+      <div className="absolute top-0 right-0 h-full flex items-center pr-8">
       {/* Desktop nav */}
       <div className="hidden sm:flex gap-8">
         {NAV_ITEMS.map((item) => (
           <button
             key={item.id}
             onClick={() => goTo(item.id)}
-            className={`text-[20px] font-semibold transition-opacity ${
-              active === item.id ? "text-white opacity-100" : "text-white opacity-75"
+            className={`text-[20px] font-semibold transition-opacity text-white hover:opacity-90 ${
+              active === item.id ? "opacity-100" : "opacity-75"
             }`}
           >
             {item.label}
@@ -90,7 +77,7 @@ export default function NavBar() {
 
         {/* Dropdown */}
         {menuOpen && (
-          <div className="absolute right-4 mt-2 w-32 rounded-md bg-black/90 py-4 shadow-lg z-50 flex flex-col">
+          <div className="absolute right-4 mt-2 w-32 rounded-md bg-black/75 py-4 shadow-lg z-50 flex flex-col">
             {NAV_ITEMS.map((item) => (
               <button
                 key={item.id}

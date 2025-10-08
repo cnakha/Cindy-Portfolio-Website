@@ -196,8 +196,7 @@ export default function WorldNotes() {
           Step 6 - Implementation
         </h3>
         <p className="mt-2 text-xl text-white/70 max-w-4xl">
-        After validating flows, I shifted to creating a formal visual design using Figma and Illustrator. The interface embraces playfulness, bright accents, references to the visual characteristics of paper notes, and a lighthearted aesthetic—to reflect the project’s creative spirit. The UI is intentionally inviting, encouraging hesitant users to leave their mark on the world.
-        </p>
+After desiging all ne        </p>
         <h4 className="mt-10  font-semibold">
           Frontend Stack & Architecture
         </h4>

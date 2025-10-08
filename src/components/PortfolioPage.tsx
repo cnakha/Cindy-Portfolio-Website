@@ -1,20 +1,33 @@
-// import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { projects } from "../lib/projectData";
 import AboutMeCarousel from "./AboutMeCarousel";
 import Footer from "./Footer";
+import {Play, Pause} from 'lucide-react'
+import { useRef, useState } from "react";
 
 // import Curve from "../assets/grouping_curve.svg";
 
 function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [slideNumber, setSlideNumber] = useState(0);
+
+  const handlePlayPause = () => {
+    if (!videoRef.current) return;
+    if (videoRef.current.paused) {
+      videoRef.current.play();
+      setIsPlaying(true);
+    } else {
+      videoRef.current.pause();
+      setIsPlaying(false);
+    }
+  };
+
   return (
     <section id="home" className="relative w-full min-h-[120vh]">
       {/* Full-bleed background */}
-      {/* <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url("../public/chicago_bg.png")` }}
-      /> */}
       <video
+        ref={videoRef}
         src={'/Portfolio_hero.mp4'}
         className="absolute inset-0 h-full w-auto min-w-full object-cover bg-center bg-no-repeat"
         alt={`Hero Video`}
@@ -26,11 +39,24 @@ function Hero() {
       {/* Gradient for legibility */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#008BE8]/70 to-transparent" />
 
+      {/* Play/Pause Button */}
+      {/* Play/Pause Button: always show on large screens, conditionally hide on small screens */}
+      <button
+        onClick={handlePlayPause}
+        className={`absolute top-[15%] md:top-[74%] right-14 md:right-8 z-20 bg-black/55 backdrop-blur-sm
+        shadow-[0_12px_32px_rgba(0,0,0,0.35)] ring-1 ring-white/10 text-white px-4 py-4 rounded-full shadow hover:bg-black/80 transition-transform duration-200 hover:scale-110
+        ${typeof slideNumber !== "undefined" && slideNumber !== 0 ? "hidden md:block" : "block"}`}
+      >
+        <div className="rounded-full p-2 flex items-center justify-center border-4 border-white/75">
+          {isPlaying ? <Pause className="w-8 h-8 md:w-10 md:h-10 fill-white stroke-none"/> : <Play className="w-8 h-8 md:w-10 md:h-10 fill-white stroke-none"/>}
+        </div>
+      </button>
+
       {/* Content container: left aligned, pushed down from the top */}
       <div className="relative z-10 mx-auto w-full max-w-[90%]">
         <div className="pt-[100px]">
           {/* Left-aligned card; keep it square-ish with max-w and padding */}
-          <AboutMeCarousel />
+          <AboutMeCarousel setSlideNumber={setSlideNumber}/>
         </div>
       </div>
     </section>
@@ -79,22 +105,15 @@ function FeaturedProjects({
   onOpen: (id: string) => void;
 }) {
   return (
-    <section id="projects" className="relative w-full bg-[#1e1e1e] py-14">
-      <div className="mx-auto w-full px-[10%] pb-10">
-
-        <div className="flex w-full justify-center text-center px-4 py-8">
-          <h2 className="mt-10 text-4xl md:text-6xl font-semibold text-white">
+    <section id="projects" className="relative w-full bg-[#1e1e1e]">
+      <div className="flex w-full bg-blue-haze justify-center text-center px-4 py-20">
+          <h2 className="text-4xl md:text-8xl font-semibold text-white">
             Featured Projects
           </h2>
         </div>
-        <div className="px-4">
-          <p className="mx-auto max-w-4xl text-center text-xl md:text-2xl text-white/75">
-            Case studies of previous and ongoing projects that explore my Fullstack
-            Development and UI and User Experience Design process.
-          </p>
-        </div>
+      <div className="mx-auto w-full px-[10%] pb-10">
 
-        <div className="mt-20 space-y-16">
+        <div className="mt-28 space-y-16">
           {items.map((project) => (
             <FeaturedProjectBlock
               key={project.id}

@@ -4,10 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 
+
 html {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-} */
+    font-family:'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+}
+
+:root {
+  --blue-haze:  #008BE8;
+}
 
 @keyframes pulse {
   50% {

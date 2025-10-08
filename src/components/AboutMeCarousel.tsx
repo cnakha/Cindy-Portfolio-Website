@@ -1,36 +1,107 @@
 import { useEffect, useRef, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
-import { Triangle } from "lucide-react";
+import { Triangle, Clock , Heart} from "lucide-react";
+
+declare global {
+  interface Window {
+    visitorCount?: number;
+  }
+}
 
 
-
-function TypedParagraph({ text }: { text: string }) {
+function TypedParagraph({ text, index }: { text: string; index: number }) {
   return (
-    <TypeAnimation
-      key={text}
-      sequence={[text]}
-      speed={55}
-      cursor
-      wrapper="p"
-      className="
-        block text-3xl md:text-5xl text-white/75
-        !leading-[1.25]               /* force on <p> */
-        [&>span]:!leading-[1.6]      /* force on inner span that TA inserts */
-        whitespace-pre-wrap
-      "
-      style={{ lineHeight: 1.6 }}
-    />
+    index === 0 ? (
+      <div className="text-white space-y-6">
+        <TypeAnimation
+        key={"Hey there! I'm..."}
+        sequence={["Hey there! I'm..."]}
+        speed={35}
+        cursor={true}
+        wrapper="p"
+        className="
+          block text-4xl text-white/50
+          !leading-[1.25]               /* force on <p> */
+          [&>span]:!leading-[1.4]      /* force on inner span that TA inserts */
+          whitespace-pre-wrap
+        "
+        style={{ lineHeight: 1.6 }}
+      />
+        {/* <p className="text-4xl text-white/50">Hey there! I'm...</p> */}
+        <div className="flex flex-inline w-full items-center gap-6">
+          {/* Show image only on medium screens and up */}
+          <img
+            src={'/headshot-bw.png'}
+            alt={`Headshot Preview`}
+            className="hidden md:block w-[25%] h-[25%] -rotate-[3deg]"
+          />
+          <div>
+            <p className="text-6xl md:text-7xl text-white font-bolder pt-2">Cindy</p>
+            <p className="text-5xl md:text-6xl text-white font-bolder pt-2">Nakhammouane</p>
+            <p className="text-xl text-white pt-1">Fullstack Developer & UI/UX Designer</p>
+          </div>
+        </div>
+        <p className="text-4xl text-white/50 pt-2">I love to <span className="text-white font-bolder">research, prototype, design, user test, code, and launch </span>cool projects with product focused thinking...</p>
+        
+        <div className="flex flex-wrap w-full gap-5 pt-2">
+          <div className="flex flex-inline text-white/75 gap-2">
+              <div className="w-6 h-6 rounded-full bg-white border border-[6px] border-blue-haze" />
+            <p>Chicago, IL</p>
+          </div>
+          <div className="flex flex-inline items-center text-white/75 gap-2">
+            <Clock className="h-5 w-5 stroke-white/75" />
+            <p>
+              {new Date().toLocaleTimeString("en-US", {
+              hour: "2-digit",
+              minute: "2-digit",
+              hour12: true,
+              timeZone: "America/Chicago",
+              })}
+            </p>
+          </div>
+          <div className="flex flex-inline items-center text-white/75 gap-2">
+            <Heart className="h-5 w-5 fill-white/75 stroke-none" />
+            <p>Hello visitor</p>
+            <div className="ring-1 ring-white/10 min-w-20 flex items-center gap-2 rounded-full bg-black/25 px-3 py-1 text-sm">
+              {/* Visitor count */}
+              <span>
+              {typeof window !== "undefined" && window.visitorCount
+                ? '${window.visitorCount}'
+                : "0"}
+              </span>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    ) : (
+      <TypeAnimation
+        key={text}
+        sequence={[text]}
+        speed={55}
+        cursor={text !== ""}
+        wrapper="p"
+        className="
+          block text-3xl md:text-5xl text-white/75
+          !leading-[1.25]               /* force on <p> */
+          [&>span]:!leading-[1.4]      /* force on inner span that TA inserts */
+          whitespace-pre-wrap
+        "
+        style={{ lineHeight: 1.6 }}
+      />
+    )
   );
 }
 
 
 
-export default function AboutMeCarousel() {
+export default function AboutMeCarousel({ setSlideNumber }: { setSlideNumber: (num: number) => void }) {
   const slides = [
-    "Hi! I'm Cindy Nakhammouane, a fullstack developer and UI/UX designer with product focused thinking and a love for making cool projects...",
-    "I love creating things that bring joy to others and value leaving a positive impact. Wanting to leverage my academic drive and creative mind, one day I found myself at the door of creative technology...",
-    "Today, I'm a fourth year undergraduate student at the University of Illinois Chicago studying computer science and design exploring the possibilities of AI/ML automation, web dev, and product design.",
-    "In my free time I love to travel to cool places, watch movies, sing, and attend theatrical shows. I also spend a lot of time on my passion projects: WorldNotes and FolioFlips!",
+    "",
+    "I love creating things that bring joy to others and heavily value leaving a positive impact in the world. Wanting to leverage my academic drive and creative mind, I found myself at the door of creative technology...",
+    "Today, I'm a fourth year undergraduate student at the University of Illinois Chicago studying computer science and design and exploring the possibilities of AI/ML automation, web dev, and product design.",
+    "I love being at the intersection of design and technology as I get to bridge creative and technical teams. I've thus became a very passionate designer who values intuitive experiences and engaging storytelling and a developer who can bring ideas to life.",
+    "In my free time I love to travel to cool places, watch movies, sing, and attend live theatrical shows. I also spend a lot of time on my passion projects: WorldNotes and FolioFlips!",
   ];
 
   const [idx, setIdx] = useState(0);
@@ -71,7 +142,7 @@ export default function AboutMeCarousel() {
   return (
     <div
       className="
-        w-full max-w-[650px] rounded-2xl
+        w-full max-w-[750px] rounded-2xl
         bg-black/55 backdrop-blur-sm
         shadow-[0_12px_32px_rgba(0,0,0,0.35)]
         ring-1 ring-white/10 overflow-hidden
@@ -81,34 +152,36 @@ export default function AboutMeCarousel() {
       {/* Natural-flow flex column (no h-full) so height can shrink/grow per slide */}
       <div
         ref={innerRef}
-        className="flex min-h-[550px] flex-col gap-6 px-10 pt-10 pb-4"
+        className="flex min-h-[600px] flex-col gap-6 px-10 pt-10 "
       >
         {/* Text */}
-        <TypedParagraph text={slides[idx]} />
+        <TypedParagraph text={slides[idx]} index={idx} />
 
         {/* Controls pinned bottom-right when there's spare space */}
-        <div className="mt-auto self-end text-right">
-          <button
-            className="inline-flex items-center text-xl gap-2 text-white/90 hover:text-white transition"
-            onClick={nextSlide}
-          >
-            More about me
-           
-            <Triangle className="h-4 w-4 rotate-90 fill-white" />
-
-          </button>
-
-          <div className="mt-2 flex items-center justify-end gap-3">
-            {slides.map((_, i) => (
+        <div className="flex justify-end w-full mt-auto">
+          <div className="flex flex-col">
+            <div className="opacity-40 hover:opacity-90 transition">
               <button
-                key={i}
-                aria-label={`About slide ${i + 1}`}
-                onClick={() => setIdx(i)}
-                className={`h-8 w-8 rounded-full transition ${
-                  i === idx ? "bg-white" : "bg-white/40 hover:bg-white/70"
-                }`}
-              />
-            ))}
+                className="inline-flex items-center text-xl text-white"
+                onClick={nextSlide}
+              >
+                <p className="pb-1 pl-1">More about me</p>
+                <Triangle className="ml-2 h-5 w-5 rotate-90 fill-white stroke-none" />
+              </button>
+            </div>
+
+            <div className="flex items-center gap-2 pb-10">
+              {slides.map((_, i) => (
+                <button
+                  key={i}
+                  aria-label={`About slide ${i + 1}`}
+                  onClick={() => {setIdx(i); setSlideNumber(i);}}
+                  className={`h-7 w-7 rounded-full transition ${
+                    i === idx ? "bg-white" : "bg-white/40 hover:bg-white/70"
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

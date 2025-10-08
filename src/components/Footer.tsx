@@ -14,14 +14,14 @@ export default function Footer() {
           backdrop-blur-sm shadow-[0_12px_32px_rgba(0,0,0,0.35)]
           ring-1 ring-white/10 overflow-hidden"
         >
-          <h3 className="text-4xl font-extrabold leading-tight text-white">
+          <h3 className="text-4xl font-bolder leading-tight text-white">
             Let's Work
             <br />
             Together...
           </h3>
-          <p className="mt-4 text-lg text-white/75">
+          <p className="mt-4 text-lg text-white/50">
             I'm always interested in new opportunities and exciting projects!
-            Let's connect and build something amazing!
+            Let's get in touch and build something amazing!
           </p>
 
           <div className="mt-6 flex flex-wrap gap-4">
@@ -31,7 +31,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="rounded-[55px] border-2 border-white/75 px-6 py-3 text-white/75 transition-all duration-300 hover:bg-white hover:text-black"
             >
-              Email
+              cindynakh@gmail.com
             </a>
             <a
               href="https://www.linkedin.com/in/cindy-nakhammouane-348a63247/"
