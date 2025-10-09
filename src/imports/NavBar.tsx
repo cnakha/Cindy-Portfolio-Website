@@ -42,7 +42,7 @@ export default function NavBar() {
           alt="CN logo"
           className="absolute left-[40px] top-1.5 w-[80px]"
         />
-        <div className="flex flex-col font-semibold translate-y-[-7px] text-white text-[16px] text-left">
+        <div className="flex flex-col font-bolder translate-y-[-7px] text-white text-[16px] text-left">
           <p className="-mb-1">Cindy</p>
           <p>Nakhammouane</p>
         </div>
@@ -57,7 +57,7 @@ export default function NavBar() {
           <button
             key={item.id}
             onClick={() => goTo(item.id)}
-            className={`text-[20px] font-semibold transition-opacity text-white hover:opacity-90 ${
+            className={`text-[20px] font-bolder transition-opacity text-white hover:opacity-90 ${
               active === item.id ? "opacity-100" : "opacity-75"
             }`}
           >
@@ -86,7 +86,7 @@ export default function NavBar() {
                   setMenuOpen(false); // close after click
                 }}
                 className={`px-4 py-2 text-left text-white text-sm hover:bg-white/10 ${
-                  active === item.id ? "font-bold" : ""
+                  active === item.id ? "font-bolder" : ""
                 }`}
               >
                 {item.label}

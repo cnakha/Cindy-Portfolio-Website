@@ -73,10 +73,10 @@ function FeaturedProjectBlock({
 }) {
   return (
     <div className="flex">
-      <div className="w-full text-center mt-10">
-        <h3 className="text-white text-4xl md:text-6xl font-bolder">{project.title}</h3>
-        <p className="mt-4 text-sm md:text-xl text-white/25 md:px-10">{project.category}</p>
-        <p className="mt-4 text-xl md:text-3xl text-white/75 md:px-10">{project.description}</p>
+      <div className="flex flex-col justify-center items-center w-full text-center mt-10">
+        <h3 className="text-white text-4xl md:text-5xl ">{project.title}</h3>
+        {/* <p className="mt-4 text-sm md:text-xl text-white/25 md:px-10">{project.category}</p> */}
+        <p className="mt-8 max-w-4xl text-sm md:text-xl text-white/50 ">{project.description}</p>
         <button
           onClick={() => onOpen(project.id)}
           className="mt-8 block w-full overflow-hidden rounded-[12px] bg-black/20 ring-1 ring-white/10 hover:ring-white/30 transition"
@@ -104,8 +104,8 @@ function FeaturedProjects({
 }) {
   return (
     <section id="projects" className="relative w-full bg-[#1e1e1e] pb-10">
-      <div className="flex w-full bg-blue-haze justify-center text-center px-4 py-20 ">
-        <h2 className="text-3xl md:text-6xl font-bolder text-white">
+      <div className="flex w-full bg-blue-haze  px-4 py-20 ">
+        <h2 className="text-3xl ml-20 md:text-6xl font-bolder text-white">
           Featured Projects
         </h2>
       </div>

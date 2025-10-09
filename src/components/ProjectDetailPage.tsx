@@ -45,24 +45,27 @@ export default function ProjectDetailPage() {
     role,
     timeline,
     milestones = [],
+    keyProblemDescriptions,
+    keyProblems,
   } = project;
 
   return (
     <main className="min-h-screen bg-[#1e1e1e] text-white">
       {/* Banner */}
-      <section className="relative h-[560px] w-full overflow-hidden">
+      <section className="relative h-[300px] w-full overflow-hidden">
         <img
           src={project.imageUrl}
           alt="Banner"
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 w-full object-cover"
+          style={{ objectPosition: "center top", transform: "translateY(-25%)" }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#008BE8]/70 via-[#1e1e1e]/10 to-[#1e1e1e]" />
       </section>
 
       {/* Summary band (matches screenshot spacing) */}
-      <section className="mt-0">
+      <section className="mt-10">
         <div className="mx-auto w-full max-w-6xl px-6">
-          <div className="rounded-xl  p-6">
+          <div className="rounded-xl p-6">
             <button
               onClick={() => navigate(-1)}
               className="mb-6 inline-flex items-center gap-2 rounded-md px-3 py-2 text-white/90 hover:bg-white/10"
@@ -72,8 +75,8 @@ export default function ProjectDetailPage() {
             </button>
 
             <h3 className="mt-4 text-white text-6xl leading-[1.25] font-semibold">{project.title}</h3>
-            <p className={`text-white/50 text-[24px] ${project.id === "YCGH" ? "mt-4" : "mt-2"}`}>{project.category}</p>
-            <p className="mt-12 text-white text-[24px]">{project.fullDescription}</p>
+            {/* <p className={`text-white/40 text-xl ${project.id === "YCGH" ? "mt-4" : "mt-2"}`}>{project.category}</p> */}
+            <p className="mt-12 text-white/75 text-[24px]">{project.fullDescription}</p>
 
           </div>
         </div>
@@ -162,8 +165,20 @@ export default function ProjectDetailPage() {
         </div>
       </section>
 
-      <div className="grid grid-cols-1 mt-6 mx-auto w-full max-w-6xl px-6 md:grid-cols-2">
-        {/* Problem */}
+       {/* Big image */}
+            <section className="mt-8">
+              <div className="mx-auto max-w-6xl mt-10">
+                <div className="overflow-hidden rounded-lg border border-white/20">
+                  <img
+                    src={`${project.imageUrl2}`}
+                    alt="Project mock"
+                    className="h-auto w-full object-cover"
+                  />
+                </div>
+              </div>
+            </section>
+
+      {/* <div className="grid grid-cols-1 mt-20 mx-auto w-full max-w-6xl px-6 md:grid-cols-2">
         {(problem || true) && (
           <section className="mt-10">
             <div className="mx-auto w-full max-w-6xl px-6">
@@ -179,7 +194,6 @@ export default function ProjectDetailPage() {
           </section>
         )}
 
-        {/* Solution */}
         {(solution || true) && (
           <section className="mt-10">
             <div className="mx-auto w-full max-w-6xl px-6">
@@ -191,7 +205,32 @@ export default function ProjectDetailPage() {
             </div>
           </section>
         )}
+      </div> */}
+
+      <div className="flex flex-col justify-center items-center text-center mt-40 mx-auto w-full max-w-6xl px-6">
+        <h4 className="text-white font-semibold">Problem</h4>
+        <h3 className="mt-2 text-2xl text-white/90 font-bolder max-w-3xl">
+          {problem ||
+            "How can we promote authentic visual expression and global communication while elevating the medium with new technologies?"}
+        </h3>
+        <p className="mt-4 text-white/50 max-w-3xl">
+          {subProblem || "Authentic connection can be expanded through shared, visual notes and geolocated discovery—creating richer casual browsing and meaningfulinteractions."}
+        </p>
+      {keyProblems && keyProblems.length > 0 && keyProblemDescriptions && keyProblemDescriptions.length === keyProblems.length && (
+          <div className="mt-8 flex flex-wrap gap-6 justify-center w-full">
+          {keyProblems.map((problem, idx) => (
+            <div
+            key={idx}
+            className="flex flex-col text-left items-start bg-[#1f1f1f] border border-white/10 rounded-xl p-6 min-w-[220px] max-w-xs flex-1"
+            >
+            <h5 className="text-lg font-bolder text-white/90 mb-4">{problem}</h5>
+            <p className="text-sm text-white/50">{keyProblemDescriptions[idx]}</p>
+            </div>
+          ))}
+          </div>
+      )}
       </div>
+
 
       {/* Key Features (two-column bullets) */}
       <section className="mt-12">

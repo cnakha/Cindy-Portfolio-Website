@@ -6,7 +6,7 @@ export default function WorldNotes() {
       <div className="mx-auto w-full max-w-6xl px-6 ">
 
       {/* Big image */}
-      <section className="mt-8">
+      {/* <section className="mt-8">
         <div className="mx-auto w-full max-w-8xl px-12">
           <div className="overflow-hidden rounded-lg border border-white/20">
             <img
@@ -16,7 +16,7 @@ export default function WorldNotes() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
 
         <h3 className="mt-20 text-white text-4xl font-bold">WorldNotes: A Global Canvas for Creative Expression</h3>
         <div className="mt-10 grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-10"> 
