@@ -11,11 +11,10 @@ export default function YCGH() {
             </h3>
             {/* <p className="mt-2 text-sm text-white/70">jkdhhf</p> */}
             <div className=" mt-5 relative aspect-[21/12] overflow-hidden rounded-[12px]">
-            <video
-                src={'/YCGH/YCGH_Concept_Vid.mp4'}
-                alt={`Concept Video`}
-                controls
-            />
+                <video
+                    src={'/YCGH/YCGH_Concept_Vid.mp4'}
+                    controls
+                />
             </div>
 
             <div className="mt-10 mx-auto w-full max-w-6xl px-12">

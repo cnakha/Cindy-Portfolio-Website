@@ -82,15 +82,16 @@ function FeaturedProjectBlock({
           className="mt-8 block w-full overflow-hidden rounded-[12px] bg-black/20 ring-1 ring-white/10 hover:ring-white/30 transition"
         >
           <div className="relative aspect-[21/8] overflow-hidden rounded-[12px]">
-            <img
-              src={`${project.imageUrl}`}
-              alt={`${project.id} preview`}
-              className="absolute inset-0 h-full w-full object-cover transform transition-transform duration-600 ease-in-out hover:scale-105"
-            />
+          <img
+            src={`${project.imageUrl}`}
+            alt={`${project.id} preview`}
+            className="absolute inset-0 h-full w-full object-cover transform transition-transform duration-600 ease-in-out hover:scale-105"
+          />
           </div>
         </button>
-
+        <div className="mt-32 h-[1px] w-full bg-white/50" />
       </div>
+
     </div>
   );
 }

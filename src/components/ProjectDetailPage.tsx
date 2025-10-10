@@ -35,6 +35,7 @@ export default function ProjectDetailPage() {
     category,
     githubUrl,
     imageUrl,
+    vid,
     fullDescription,
     features = [],
     problem,
@@ -165,18 +166,32 @@ export default function ProjectDetailPage() {
         </div>
       </section>
 
-       {/* Big image */}
-            <section className="mt-8">
-              <div className="mx-auto max-w-6xl mt-10">
-                <div className="overflow-hidden rounded-lg border border-white/20">
-                  <img
-                    src={`${project.imageUrl2}`}
-                    alt="Project mock"
-                    className="h-auto w-full object-cover"
-                  />
-                </div>
-              </div>
-            </section>
+      {project.vid ? (
+        <div>
+            <h3 className="mt-10 text-2xl font-semibold">
+                Concept Video
+            </h3>
+            {/* <p className="mt-2 text-sm text-white/70">jkdhhf</p> */}
+            <div className=" mt-5 relative aspect-[21/12] overflow-hidden rounded-[12px]">
+                <video
+                    src={'/YCGH/YCGH_Concept_Vid.mp4'}
+                    controls
+                />
+            </div>
+          </div>
+      ) : (
+        <section className="mt-8">
+          <div className="mx-auto max-w-6xl mt-10">
+            <div className="overflow-hidden rounded-lg border border-white/20">
+              <img
+                src={`${project.imageUrl2}`}
+                alt="Project mock"
+                className="h-auto w-full object-cover"
+              />
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* <div className="grid grid-cols-1 mt-20 mx-auto w-full max-w-6xl px-6 md:grid-cols-2">
         {(problem || true) && (

@@ -13,6 +13,7 @@ export interface Project {
   outcome: string;
   imageUrl: string;
   imageUrl2?: string;
+  vid?: string;
   liveUrl?: string;
   githubUrl?: string;
   problem: string;
@@ -109,6 +110,7 @@ export const projects: Project[] = [
     outcome: "Our project was successfully exhibited in UIC's CAVE2 with over 50 guests and presented as a research poster at SIGGRAPH 2025, showcasing the potential of VR for mental health support.",
     imageUrl: "/YCGH/thumbnail.png",
     imageUrl2: "/YCGH/interaction2.jpeg",
+    vid: "/YCGH/YCGH_Concept_Vid.mp4",
     timeline: "Jan 2025 — May 2025",
     role: "Equal contributing VR Developer and UI/UX Designer along side 3 other interdisciplinary students from computer science and design backgrounds: Hope Jo, Gaeun Lee, Khin Yuupar Myat",
     skills: ["UI/UX Design", "Virtual Reality Development", "Human-Computer Interaction", "Prototyping", "3D Modeling", "User Testing", "Field Research", "Scripting"],
