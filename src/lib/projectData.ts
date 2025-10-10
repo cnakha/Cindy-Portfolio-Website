@@ -8,7 +8,7 @@ export interface Project {
   role: string;
   skills: string[];
   tools: string[];
-  features: string[];
+  features?: string[];
   challenges: string;
   outcome: string;
   imageUrl: string;
@@ -25,32 +25,24 @@ export interface Project {
 }
 
 export const projects: Project[] = [
- {
+{
   id: "worldnotes",
   title: "WorldNotes — Global canvas for creative expression",
   timeline: "June 2025 — Present",
   description: "Blurring the line between social platform and digital graffiti, explore the world through notes, doodles, and stories left behind by others.",
   category: "Fullstack Web Development and UI/UX Design for a Creative Social Media App",
-  fullDescription: 
-    "WorldNotes is a passion project—A spatial web experiment blending maps, art, and emotion where users share notes, thoughts and doodles, and anchor them to a globally shared street view map. Designed for casual web strolling, this web app emphasizes user agency, discovery, and building community through creative expression.",
-  role: "Project Manager, lead solo Fullstack Developer and UI/UX Designer. I built this app end-to-end from ideation to launch",
+  fullDescription:
+    "WorldNotes is a passion project—A spatial web experiment blending maps, art, and emotion where users share notes, thoughts, and doodles, and then anchor them to a globally shared street view map. Designed for casual web strolling, this web app emphasizes user agency, serendipitous discovery, and building community through creative expression.",
+  role: "Project Manager, Lead Fullstack Developer and UI/UX Designer. I built this app end-to-end from ideation to launch",
   skills: ["UI/UX Design", "Fullstack Development", "Web Development", "Web Design", "Webflow Development", "Wireframing", "SEO"],
   tools: ["React", "Next.js", "TypeScript", "Three.js", "NoSQL"],
-  features: [
-    "Dynamic 3D Note Traversal and Discovery Algorithm",
-    "FireBase Database Integration",
-    "Google Maps API Integration",
-    "Custom Note Creator Canvas",
-    "Personalized User Profiles",
-    "User Authentication",
-  ],
   challenges: "The main challenge was implementing real-time collaboration while maintaining performance with hundreds of concurrent users. I solved this by implementing efficient data structures and optimized WebSocket connections.",
   outcome: "This project is currently in active development with plans to launch a beta version in late 2026.",
   imageUrl: "/worldnotes/thumbnail.png",
   imageUrl2: "/worldnotes/welcomeScreen.png",
-  problem: "How can we promote authentic visual ways of expression and global communication whilst elevating the social medium with new technologies?",
-  subProblem: "Authentic connection can be further explored through pairing visual expression and geolocations. The tactility and craftiness involved with each post creates a unique shared visual language that we don’t see in other existing platforms.",
-  solution: "I created a social platform that embraces the values and practice of digital graffiti: self-expression, authenticity, and creativity. This web app is built on the Google Maps API and allows people to create and place 3D notes in a street view.",
+  problem: "Existing social media platforms are losing their genuinity and overall appeal",
+  subProblem: "After interviewing a pool of social media creators and everyday users, many say these are the reasons for the rise of disinterest in social media:",
+  solution: "I created WorldNotes to embrace the values and practice of digital graffiti: self-expression, pictography, and creativity. Interesting technologies like 3D note placement, drawing tools, and Street View mapping are integrated to create a unique craft-based social media platform.",
   milestones: [
     "User Testing and Feedback Integration",
     "Refine UI and Micro-interactions",
@@ -58,15 +50,15 @@ export const projects: Project[] = [
     "Implement Web-Vital Monitoring System",
   ],
   keyProblems:[
-    "Loss of Human Touch and Authenticity", 
-    "Overly Curated Feeds", 
-    "Need to Elevate the Social Medium Through Technology"],
+    "Loss of Human Touch and Authenticity",
+    "Overly Curated Feeds",
+    "Lack of Fresh Approaches to Online Social Interaction"],
   keyProblemDescriptions:[
-    "Automation, AI-generated posts, and brand-driven content have diluted the sense of human presence online. The warmth and imperfection of human expression — handwriting, messy doodles, candid moments — are increasingly rare.",
-    "Most social media platforms filter what users see through opaque algorithms optimized for engagement. This leads to repetitive, trend-chasing content and limits exposure to genuine, serendipitous creativity.",
-    "Existing social apps focus on engagement metrics rather than meaningful interaction. WorldNotes seeks to redefine social media by integrating new technologies—like 3D note placement, drawing tools, and Street View mapping—to create a more tactile, craft-based digital experience that feels human, not manufactured.",
-  ],
+    "Hyper brand-driven content, the stress of performativity, and the rise of AI-generated posts and bot accounts have diluted the sense of genuine human presence online.",
+    "Most platforms use filters and optimized algorithms to maximize user engagement, this  leads to internet addiction and less serendipitous discovery.",
+    "Social platforms are beginning to share derivative features and blend into each other. People want new and innovative ways to connect with people online.",],
   },
+
   {
     id: "biomed",
     title: "Various Wearable Biomedical Devices",

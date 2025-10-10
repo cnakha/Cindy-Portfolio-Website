@@ -52,19 +52,9 @@ export default function ProjectDetailPage() {
 
   return (
     <main className="min-h-screen bg-[#1e1e1e] text-white">
-      {/* Banner */}
-      <section className="relative h-[300px] w-full overflow-hidden">
-        <img
-          src={project.imageUrl}
-          alt="Banner"
-          className="absolute inset-0 w-full object-cover"
-          style={{ objectPosition: "center top", transform: "translateY(-25%)" }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#008BE8]/70 via-[#1e1e1e]/10 to-[#1e1e1e]" />
-      </section>
-
+     
       {/* Summary band (matches screenshot spacing) */}
-      <section className="mt-10">
+      <section className="pt-32">
         <div className="mx-auto w-full max-w-6xl px-6">
           <div className="rounded-xl p-6">
             <button
@@ -167,8 +157,8 @@ export default function ProjectDetailPage() {
       </section>
 
       {project.vid ? (
-        <div>
-            <h3 className="mt-10 text-2xl font-semibold">
+        <div className="max-w-6xl mx-auto mt-10 px-6">
+            <h3 className="mt-40 text-2xl font-semibold">
                 Concept Video
             </h3>
             {/* <p className="mt-2 text-sm text-white/70">jkdhhf</p> */}
@@ -180,7 +170,7 @@ export default function ProjectDetailPage() {
             </div>
           </div>
       ) : (
-        <section className="mt-8">
+        <section className="mt-40">
           <div className="mx-auto max-w-6xl mt-10">
             <div className="overflow-hidden rounded-lg border border-white/20">
               <img
@@ -193,90 +183,57 @@ export default function ProjectDetailPage() {
         </section>
       )}
 
-      {/* <div className="grid grid-cols-1 mt-20 mx-auto w-full max-w-6xl px-6 md:grid-cols-2">
-        {(problem || true) && (
-          <section className="mt-10">
-            <div className="mx-auto w-full max-w-6xl px-6">
-              <h4 className="text-white font-semibold">Problem</h4>
-              <h3 className="mt-2 text-2xl font-semibold">
-                {problem ||
-                  "How can we promote authentic visual expression and global communication while elevating the medium with new technologies?"}
-              </h3>
-              <p className="mt-4 text-sm text-white/70">
-                {subProblem || "Authentic connection can be expanded through shared, visual notes and geolocated discovery—creating richer casual browsing and meaningfulinteractions."}
-              </p>
-            </div>
-          </section>
-        )}
-
-        {(solution || true) && (
-          <section className="mt-10">
-            <div className="mx-auto w-full max-w-6xl px-6">
-              <h4 className="text-white font-semibold">Solution</h4>
-              <p className="mt-2 text-xl text-white/80">
-                {solution ||
-                  "A social platform that embraces visual self-expression. Users place 2D/3D notes on a map using Street View, discover others’ notes, and explore city-scale stories. Built end-to-end with a focus on joyful micro-interactions and fast iteration."}
-              </p>
-            </div>
-          </section>
-        )}
-      </div> */}
 
       <div className="flex flex-col justify-center items-center text-center mt-40 mx-auto w-full max-w-6xl px-6">
         <h4 className="text-white font-semibold">Problem</h4>
-        <h3 className="mt-2 text-2xl text-white/90 font-bolder max-w-3xl">
+        <h3 className="mt-2 text-3xl text-white/90 font-bolder max-w-3xl">
           {problem ||
             "How can we promote authentic visual expression and global communication while elevating the medium with new technologies?"}
         </h3>
-        <p className="mt-4 text-white/50 max-w-3xl">
+        <p className="mt-4 text-white/50 max-w-2xl">
           {subProblem || "Authentic connection can be expanded through shared, visual notes and geolocated discovery—creating richer casual browsing and meaningfulinteractions."}
         </p>
-      {keyProblems && keyProblems.length > 0 && keyProblemDescriptions && keyProblemDescriptions.length === keyProblems.length && (
-          <div className="mt-8 flex flex-wrap gap-6 justify-center w-full">
-          {keyProblems.map((problem, idx) => (
-            <div
-            key={idx}
-            className="flex flex-col text-left items-start bg-[#1f1f1f] border border-white/10 rounded-xl p-6 min-w-[220px] max-w-xs flex-1"
-            >
-            <h5 className="text-lg font-bolder text-white/90 mb-4">{problem}</h5>
-            <p className="text-sm text-white/50">{keyProblemDescriptions[idx]}</p>
+        {keyProblems && keyProblems.length > 0 && keyProblemDescriptions && keyProblemDescriptions.length === keyProblems.length && (
+            <div className="mt-8 flex flex-wrap gap-6 justify-center w-full">
+            {keyProblems.map((problem, idx) => (
+              <div
+              key={idx}
+              className="flex flex-col text-left items-start bg-[#1f1f1f] border border-white/10 rounded-xl p-6 min-w-[220px] max-w-xs flex-1"
+              >
+              <h5 className="text-lg font-bolder text-white/90 mb-4">{problem}</h5>
+              <p className="text-sm text-white/50">{keyProblemDescriptions[idx]}</p>
+              </div>
+            ))}
             </div>
-          ))}
-          </div>
-      )}
+        )}
+      </div>
+
+      <div className="flex flex-col justify-center items-center text-center mt-40 mx-auto w-full max-w-6xl px-6">
+        <h4 className="text-white font-semibold">Solution</h4>
+        <h3 className="mt-2 text-3xl font-normal text-white/90 max-w-3xl">
+          {solution}
+        </h3>
       </div>
 
 
       {/* Key Features (two-column bullets) */}
-      <section className="mt-12">
+      {features.length > 0 && (
+      <section className="mt-40">
         <div className="mx-auto w-full max-w-6xl px-6">
           <div className="rounded-xl border border-white/15 bg-[#1f1f1f] p-6 pb-10">
-            <h3 className="mb-4 text-white text-xl font-semibold">Key Features</h3>
+            <h3 className="mb-4 text-white font-semibold">Key Features</h3>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
               <ul className="list-disc list-inside space-y-2 text-white/85">
-                {(features.length
-                  ? features.slice(0, Math.ceil(features.length / 2))
-                  : [
-                      "Street View Note Traversal and Discovery",
-                      "Animated Post Viewer",
-                      "Personalized User Profiles",
-                    ]
-                ).map((f, i) => (
-                  <li key={i}>{f}</li>
-                ))}
+                {features.slice(0, Math.ceil(features.length / 2))}
               </ul>
               <ul className="list-disc list-inside space-y-2 text-white/85">
-                {(features.length
-                  ? features.slice(Math.ceil(features.length / 2))
-                  : ["Custom Note Creator", "Animated Post Viewer", "Responsive UI"]
-                ).map((f, i) => (
-                  <li key={i}>{f}</li>
-                ))}
+                {features.slice(Math.ceil(features.length / 2))}
               </ul>
             </div>
           </div>
         </div>
       </section>
+      )}
               
 
       {project.id === "worldnotes" ? 

@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import PortfolioPage from './components/PortfolioPage';
 import ProjectDetailPage from './components/ProjectDetailPage';
 import AboutMePage from './components/AboutMePage';
+import Extras from './components/ExtrasPage';
 import NavBar from './imports/NavBar';
 import ScrollManager from './components/routing/ScrollManager';
 
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/project/:projectId" element={<ProjectDetailPage />} />
           <Route path="/preview_page.html" element={<PortfolioPage />} />
           <Route path="/aboutme" element={<AboutMePage />} />
+          <Route path="/extras" element={<Extras/>}/>
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>

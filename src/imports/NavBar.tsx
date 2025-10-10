@@ -20,7 +20,7 @@ export default function NavBar() {
 
  const goTo = (id: string) => {
     setActive(id);
-    if (id === "aboutme") {
+    if (id === "aboutme" || id === "extras") {
       navigate(`/${id}`);
     }
     else if (location.pathname !== "/") {

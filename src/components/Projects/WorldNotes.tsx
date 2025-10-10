@@ -1,93 +1,109 @@
 
+import { useState } from "react";
+function Line(){
+  return <div className="mt-20 h-[1px] w-full bg-white/50" />
+}
 
 export default function WorldNotes() {
+  const [AppStructPopup, setShowPopup] = useState(false);
+  const techStack = [
+    'React', 'Next.js', 'TypeScript', 'Konva', 'Firebase Firestore', 'NextAuth'
+  ];
+  const texhStackDescriptions = [
+    'React powers the interactive UI components, while Next.js (App Router) structures the app with nested layouts and route groups for the map explorer, note creator, and profiles.',
+    'TypeScript ensures type safety across components, hooks, and API calls, reducing runtime bugs and streamlining refactors as features evolve.', 
+    'Konva enables the custom note creation canvas with drawing, text, and pixel-art modes, supporting layers, transforms, and undo/redo functionality.',
+    'Firebase Firestore serves as the NoSQL database, storing notes, user profiles, and community replies with geo-discovery and fast reads in mind.', 
+    'NextAuth manages authentication and session flow, tying identities to Firestore documents for secure user interactions.'
+  ];
+
+  const keyInspos = [
+    'The Unsent Project',
+    'Google Maps & GeoGuessr',
+    "Reddit's r/Place",
+    'Gartic Phone & MS Paint'
+  ];
+  const keyInsposDescriptions = [
+    'I loved its minimalist approach to anonymous note sharing. Its simple layouts inspired me to strip away unnecessary complexity, keeping WorldNotes focused on the intimacy of expression.',
+    'Reinforced the importance of world exploration mechanics. Features like zoom levels, Street View, and metadata overlays shaped how I designed the navigation system for discovering notes.',
+    "Sparked ideas around collaborative art, where users can collaborate digitally in one space together. This heavily influenced WorldNotes' note placement and discovery system.",
+    'Inspired the drawing experience. I intentionally leaned into primitive, playful tools, which lower barriers to entry and make creation fun rather than intimidating.'
+  ];
+
   return (
-    <section className="mt-14">
+    <section className="mt-40">
       <div className="mx-auto w-full max-w-6xl px-6 ">
-
-      {/* Big image */}
-      {/* <section className="mt-8">
-        <div className="mx-auto w-full max-w-8xl px-12">
-          <div className="overflow-hidden rounded-lg border border-white/20">
-            <img
-              src={"/worldnotes/welcomeScreen.png"}
-              alt="Project mock"
-              className="h-auto w-full object-cover"
-            />
-          </div>
-        </div>
-      </section> */}
-
-        <h3 className="mt-20 text-white text-4xl font-bold">WorldNotes: A Global Canvas for Creative Expression</h3>
+        {/* <h3 className="mt-20 text-white text-4xl font-bold">WorldNotes: A Global Canvas for Creative Expression</h3> */}
         <div className="mt-10 grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-10"> 
           <div>
-            <h3 className="mt-2 text-2xl font-semibold">
-              Note Traversal and Discovery
+            <h3 className="mt-2 text-3xl font-bolder">
+              Discover Notes, Art, and Stories From Around the World
             </h3>
-            <p className="mt-4 text-xl text-white/70">
-              The app's home page immediately brings the user into the world of WorldNotes, dropping them off at a random place scattered with 3D notes posted in the space by previous users. 
-              <br/><br/>Traversing the site is fairly simple, users use the click-to-go circle on the ground to progress in the Street View or they can toggle an overview map, click on the mini map, or location search to explore other places. 
-              <br/><br/>The Navigation bar lets the user refresh and shuffle the notes seen in a given area as well as step to the previous or next note for an automated note discovery experience.
+            <p className="mt-10 text-white/50">
+              Users are instantly immersed in WorldNotes, landing at a random location scattered with 3D notes left by others. <br/> <br/>Exploration feels natural: click-to-move in Street View, use the overview or mini map, or search specific places.<br/><br/> The navigation bar allows quick refreshes, shuffling nearby notes, or stepping through them sequentially for a guided discovery experience.            
             </p>          
           </div>      
-          <div className="mt-5 relative aspect-[21/9] overflow-hidden rounded-[12px]">
+          <div className="mt-5 relative aspect-[20/15] overflow-hidden rounded-[12px]">
             <img
-              src={"/panorama_kitchen.png"}
+              src={"/worldnotes/note_creator.png"}
               alt={`Note Traversal and Discovery`}
               className="absolute inset-0 h-full w-full object-cover"
             />
-          </div>
+          </div>  
         </div>
 
+        <Line/>
 
-        <div className="mt-10 grid grid-cols-1 gap-10 md:grid-cols-2"> 
+         <div className="mt-20 grid grid-cols-1 gap-10 md:grid-cols-2"> 
           <div>
-            <h3 className="mt-2 text-2xl font-semibold">
-              Customizable User Profiles
+            <h3 className="mt-2 text-3xl font-bolder">
+              See the Full Picture and Respond Along with Your Community
             </h3>
-            <p className="mt-4 text-xl text-white/70">
-              Profiles show you all the notes a user creates as well as reposts. The profile page is a place the user can display their favorite notes in any way they want.
-            </p>          
-            </div>      
-          <div className="mt-5 relative aspect-[21/9] overflow-hidden rounded-[12px]">
-            <img
-              src={"/panorama_kitchen.png"}
-              alt={`Note Traversal and Discovery`}
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-          </div>
-        </div>
-
-
-         <div className="mt-10 grid grid-cols-1 gap-10 md:grid-cols-2"> 
-          <div>
-            <h3 className="mt-2 text-2xl font-semibold">
-              Note Viewer
-            </h3>
-            <p className="mt-4 text-xl text-white/70">
+            <p className="mt-10 text-white/50">
               A post viewer will be shown to the user if they click on a note, here we can see information about the note’s title, creator, description, and community reactions.
             </p>          
             </div>   
-          <div className="mt-5 relative aspect-[21/9] overflow-hidden rounded-[12px]">
+          <div className="mt-5 relative aspect-[20/15] overflow-hidden rounded-[12px]">
             <img
-              src={"/panorama_kitchen.png"}
+              src={"/worldnotes/note_creator.png"}
               alt={`Note Traversal and Discovery`}
               className="absolute inset-0 h-full w-full object-cover"
             />
-          </div>   
+          </div>    
         </div>
 
+        <Line/>
 
-        <div className="mt-10 grid grid-cols-1 gap-10 md:grid-cols-2"> 
+        <div className="mt-20 grid grid-cols-1 gap-10 md:grid-cols-2"> 
           <div>
-            <h3 className="mt-2 text-2xl font-semibold">
-              Note Creator
+            <h3 className="mt-2 text-3xl font-bolder">
+              Show Off Your Notes the Way You Want
             </h3>
-            <p className="mt-4 text-xl text-white/70">
-              A new note creation canvas was created from scratch to not just adhere to the web app’s design, but also to provide unique custom tools and brushes specific to the site. Draggable panels were a key characteristic to the canvas, making the creation process and workspace feel more free.
+            <p className="mt-10 text-white/50">
+              Profiles show you all the notes a user creates as well as reposts. The profile page is a place the user can display their favorite notes in any way they want.
+            </p>          
+            </div>      
+          <div className="mt-5 relative aspect-[20/15] overflow-hidden rounded-[12px]">
+            <img
+              src={"/worldnotes/note_creator.png"}
+              alt={`Note Traversal and Discovery`}
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          </div>  
+        </div>
+
+        <Line/>
+
+        <div className="mt-20 grid grid-cols-1 gap-10 md:grid-cols-2"> 
+          <div>
+            <h3 className="mt-2 text-3xl font-bolder">
+              Create Notes with Fun, Easy-to-Use Tools For Everyone
+            </h3>
+            <p className="mt-10 text-white/50">
+              A custom note creation canvas was created to provide custom tools and brushes. Drawing, text, pixel art, and animation are all supported along with a layers panel, color picker, and color palette creator. <br/> <br/> Draggable panels are a key characteristic, making the workspace feel more free.
             </p>          
             </div> 
-          <div className="mt-5 relative aspect-[21/12] overflow-hidden rounded-[12px]">
+          <div className="mt-5 relative aspect-[20/15] overflow-hidden rounded-[12px]">
             <img
               src={"/worldnotes/note_creator.png"}
               alt={`Note Traversal and Discovery`}
@@ -97,65 +113,83 @@ export default function WorldNotes() {
         </div>
 
         {/* Process Section */}
-        <h3 className="text-white text-4xl font-bold mt-40">The Process of Creating the MVP</h3>
-        <h3 className="mt-10 text-2xl font-semibold">
+        <h3 className="text-white text-6xl font-bold mt-60">Creating the MVP</h3>
+        <h3 className="mt-20 text-2xl font-semibold">
           Step 1 - Inspiration and Discovery
         </h3>
-        <p className="mt-4 text-sm text-white/70 max-w-4xl leading-relaxed text-xl">
-          The first step was establishing a vision and core values to my product to help guide the visual and user experience design. I noticed a gap in how existing platforms encourage expression: most prioritize text or algorithm-driven hyper curated engagement, which often dilutes authentic connection. Visual communication, especially when tied to place, offers richer nuance and emotional depth that is yet to be explored. 
-          The challenge became: <span className="italic text-white"> how can we design a platform that promotes genuine self-expression and global connection, while elevating the social medium through new, creative technologies? </span>
+        <p className="mt-10 text-sm text-white/50 max-w-4xl leading-relaxed text-xl">
+          Establishing a vision and core values were key to WorldNotes's design. Prioritizing pictorial communication and geolocated discoveries offers a quirky nuance and emotional depth in social interactions that is yet to be explored. 
+          The challenge became: <span className="italic text-white/90"> how can we design a user friendly, universal platform that inspires creativity? </span>
         
         <br/><br/>
-        WorldNotes is deeply informed by a blend of <span className="font-semibold text-white">internet culture </span>, mapping tools, and communal creativity platforms. Here a few places of inspiration I pulled from:
+        WorldNotes is deeply informed by a blend of <span className="font-bolder text-white">internet culture </span>, mapping tools, and communal creativity platforms. Here a few places of inspiration I pulled from:
         </p>
-        <ul className="mt-8 text-sm text-white/70 max-w-2xl list-disc pl-6 space-y-4">
-          <li>
-            <span className="font-semibold text-white">The Unsent Project:</span> I loved its minimalist approach to anonymous note sharing. Its simple layouts inspired me to strip away unnecessary complexity, keeping WorldNotes focused on the intimacy of expression.
-          </li>
-          <li>
-            <span className="font-semibold text-white">Google Maps & GeoGuessr:</span> Reinforced the importance of world exploration mechanics. Features like zoom levels, Street View, and metadata overlays shaped how I designed the navigation system for discovering notes.
-          </li>
-          <li>
-            <span className="font-semibold text-white">Reddit's r/Place:</span> Sparked ideas around collaborative art, where users can collaborate digitally in one space together. This heavily influenced WorldNotes' note placement and discovery system.
-          </li>
-          <li>
-            <span className="font-semibold text-white">Gartic Phone & MS Paint:</span> Inspired the drawing experience. I intentionally leaned into primitive, playful tools, which lower barriers to entry and make creation fun rather than intimidating.
-          </li>
-        </ul>
-          <p className="font-semibold text-white mt-10">The Result</p>
+        
+        <div className="mt-8 flex flex-wrap gap-6 justify-center w-full">
+          {keyInspos.map((inspo, idx) => (
+            <div
+            key={idx}
+            className="flex flex-col text-left items-start bg-[#1f1f1f] border border-white/10 rounded-xl p-6 min-w-[220px] max-w-xs flex-1"
+            >
+            <h5 className="text-lg font-bolder text-white/90 mb-4">{inspo}</h5>
+            <p className="text-sm text-white/50">{keyInsposDescriptions[idx]}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* <p className="font-semibold text-white mt-20">The Result</p>
         <p className="text-sm text-white/70 max-w-2xl mt-2 text-xl">
           The result is a creative world explorer that is part map, part sketchbook, part message board. WorldNotes transforms the act of scrolling into a playful exploration of what people leave behind, visually bridging global
-        </p>
+        </p> */}
 
 
-        <h3 className="mt-10 text-2xl font-semibold">
+        <h3 className="mt-40 text-2xl font-semibold">
           Step 2 - Building Community
         </h3>
-        <p className="mt-2 text-xl text-white/70 max-w-2xl">
-          From the start, I designed WorldNotes to encourage participation rather than passive scrolling. Notes are anchored to places, giving users a sense of belonging and discovery. This fosters micro-communities clusters of ideas tied not just to people but to locations and shared experiences. This experience thus opens itself up to a diverse user base of different backgrounds and interests.
+        <p className="mt-10 text-xl text-white/70 max-w-2xl">
+          I wanted to encourage exploration rather than passive scrolling. Notes are anchored to geolocations, giving users a sense of discovery and adventure. 
+          This fosters micro-communities, clusterings of ideas tied not just to people but to locations and a shared experience. 
+          This creative freedom thus opens the platform up to a diverse user base of different backgrounds and interests and creates a spontaneous element towards finding new communities.
         </p>
 
 
-        <h3 className="mt-10 text-2xl font-semibold">
+        <h3 className="mt-40 text-2xl font-semibold">
           Step 3 - Designing App Structure
         </h3>
-        <p className="mt-2 text-xl text-white/70 max-w-4xl">
-        With the vision set, I focused on structuring the app. There's a diverse set of user flows I had to consider, browsing, creating, and interacting with notes, so I decided to map them out to balance ease of use with room for exploration. I created flow charts to visualize how casual visitors and frequent creators would engage with the platform.
+        <p className="mt-10 text-xl text-white/70 max-w-4xl">
+        With the vision set, I focused on structuring the app. 
+        There's a diverse set of unique user flows I had to consider: note traversal and browsing, the note creation process, etc., so I decided to map the app structure 
+        out. This helped me visualize all users navigation routes between different sections, ensuring a logical flow and helping plan the uer flow web development. 
         </p>
-        <div className=" mt-5 relative aspect-[21/12] overflow-hidden rounded-[12px]">
+        <div className=" mt-10 relative aspect-[21/12] overflow-hidden rounded-[12px]">
           <img
             src={"/worldnotes/user_flow.png"}
             alt={`Flowchart of Webflow`}
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover cursor-pointer"
+            onClick={() => setShowPopup(true)}
           />
+          {AppStructPopup && (
+              <div
+                  className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70"
+                  onClick={() => setShowPopup(false)}
+              >
+                  <img
+                      src={"/worldnotes/user_flow.png"}
+                      alt={`App Structure Enlarged`}
+                      className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg"
+                      onClick={e => e.stopPropagation()}
+                  />
+              </div>
+          )}
         </div>
 
 
-        <h3 className="mt-10 text-2xl font-bold">
+        <h3 className="mt-40 text-2xl font-bold">
           Step 4 - Wireframing
         </h3>
-        <p className="mt-6 text-xl text-white/70 max-w-4xl">
-          Next came wireframing. I sketched out how key features like the user profile, community page, and subsequent news and updates page would look and interact. Early iterations emphasized simple layouts so I could test flows without over-investing in visuals too soon.
+        <p className="mt-10 text-xl text-white/70 max-w-4xl">
+          I sketched out how key features like the user profile, community page, and subsequent news and updates page would look and interact. 
+          Early iterations helped me find balance between clean and simpler layouts and a stylized scrap book layout without over-investing in visuals too soon.
         </p>
         <div className="mt-10 relative aspect-[21/8] overflow-hidden rounded-[12px]">
           <img
@@ -169,34 +203,39 @@ export default function WorldNotes() {
         </div>    
         
         
-        <h3 className="mt-10 text-2xl font-semibold">
+        <h3 className="mt-40 text-2xl font-semibold">
           Step 5 - UI Design
         </h3>
-        <p className="mt-2 text-xl text-white/70 max-w-4xl">
-        After validating flows, I shifted to creating a formal visual design using Figma and Illustrator. The interface embraces playfulness, bright accents, references to the visual characteristics of paper notes, and a lighthearted aesthetic—to reflect the project’s creative spirit. The UI is intentionally inviting, encouraging hesitant users to leave their mark on the world.
+        <p className="mt-10 text-xl text-white/70 max-w-4xl">
+        After validating layouts, I shifted to creating a formal visual design of components using Figma and Illustrator. 
+        WorldNote's branding embraces playfulness, bright accents, references scrapbooking, and a lighthearted aesthetic—to reflect the project’s creative spirit. 
+        The UI is intentionally inviting, encouraging hesitant users to leave their mark on the world.
         </p>
-        <h4 className="mt-10  font-semibold">
-          Creating An Ecosystem
-        </h4>
-        <p className="mt-2 max-w-4xl text-xl text-white/70">
-          A consistent design system ensures the interface feels cohesive and visually unified, giving every interaction from map navigation to note creation a recognizable identity.
-          <br/><br/>
-          Beyond text, the platform already supports layering, doodles, and spatial note placement, but the foundation  is intentionally <span className="font-bold"> scalable </span>. The note creator is built to grow, opening possibilities like animated notes, music attachments, borders, or stickers, expanding the ways users can express themselves. By treating design as both a system and a playground, WorldNotes sets the foundation for a platform that can evolve alongside its community’s creativity.
-        </p>
-        <div className=" mt-5 relative aspect-[21/9] overflow-hidden rounded-[12px]">
-          <img
-            src={"/panorama_kitchen.png"}
-            alt={`UI Design`}
-            className="absolute inset-0 h-full w-full object-cover"
-          />
+
+        <div className="mt-10 ml-10 flex flex-col text-left items-start bg-[#1f1f1f] border border-white/10 rounded-xl p-6 ">
+          <h4 className=" font-semibold">
+            Creating An Ecosystem
+          </h4>
+          <p className="mt-2 max-w-4xl text-xl text-white/70">
+            A consistent design system ensures the interface feels cohesive and visually unified, giving every interaction from map navigation to note creation a recognizable identity.
+            <br/><br/>
+            Beyond text, the platform already supports layering, doodles, and spatial note placement, but the foundation  is intentionally <span className="font-bold"> scalable </span>. The note creator is built to grow, opening possibilities like animated notes, music attachments, borders, or stickers, expanding the ways users can express themselves. By treating design as both a system and a playground, WorldNotes sets the foundation for a platform that can evolve alongside its community’s creativity.
+          </p>
+          <div className=" mt-5 relative aspect-[21/9] overflow-hidden rounded-[12px]">
+            <img
+              src={"/worldnotes/wireframing.png"}
+              alt={`UI Design`}
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
         </div>
 
 
         <h3 className="mt-10 text-2xl font-semibold">
-          Step 6 - Implementation
+          Step 6 - Implementation and Beginning Fullstack Development
         </h3>
         <p className="mt-2 text-xl text-white/70 max-w-4xl">
-After desiging all ne        </p>
+          After desiging all ne        </p>
         <h4 className="mt-10  font-semibold">
           Frontend Stack & Architecture
         </h4>

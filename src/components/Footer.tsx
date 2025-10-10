@@ -4,7 +4,7 @@ export default function Footer() {
     <footer id="contact" className="relative">
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url("../public/chicago_bg.png")` }}
+        style={{ backgroundImage: `url("../chicago_bg.png")` }}
       />
       <div className="absolute inset-0 bg-black/55" />
 
