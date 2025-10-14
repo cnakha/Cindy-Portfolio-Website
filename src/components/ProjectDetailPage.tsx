@@ -6,6 +6,7 @@ import { ArrowLeft } from "lucide-react";
 import WorldNotes from "./Projects/WorldNotes";
 import Clarity from "./Projects/Clarity";
 import YCGH from "./Projects/YCGH";
+import Biomed from "./Projects/Biomed";
 
 export default function ProjectDetailPage() {
   const { projectId } = useParams<{ projectId: string }>();
@@ -158,7 +159,7 @@ export default function ProjectDetailPage() {
 
       {project.vid ? (
         <div className="max-w-6xl mx-auto mt-10 px-6">
-            <h3 className="mt-40 text-2xl font-semibold">
+            <h3 className="mt-16 text-3xl font-semibold">
                 Concept Video
             </h3>
             {/* <p className="mt-2 text-sm text-white/70">jkdhhf</p> */}
@@ -171,7 +172,7 @@ export default function ProjectDetailPage() {
           </div>
       ) : (
         <section className="mt-40">
-          <div className="mx-auto max-w-6xl mt-10">
+          <div className="mx-auto max-w-5xl px-6 mt-10">
             <div className="overflow-hidden rounded-lg border border-white/20">
               <img
                 src={`${project.imageUrl2}`}
@@ -218,28 +219,32 @@ export default function ProjectDetailPage() {
 
       {/* Key Features (two-column bullets) */}
       {features.length > 0 && (
-      <section className="mt-40">
-        <div className="mx-auto w-full max-w-6xl px-6">
-          <div className="rounded-xl border border-white/15 bg-[#1f1f1f] p-6 pb-10">
-            <h3 className="mb-4 text-white font-semibold">Key Features</h3>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-              <ul className="list-disc list-inside space-y-2 text-white/85">
-                {features.slice(0, Math.ceil(features.length / 2))}
-              </ul>
-              <ul className="list-disc list-inside space-y-2 text-white/85">
-                {features.slice(Math.ceil(features.length / 2))}
-              </ul>
+        <section className="mt-32">
+          <div className="mx-auto w-full max-w-6xl px-6">
+            <div className="rounded-xl border border-white/15 bg-[#1f1f1f] p-6 pb-10">
+              <h3 className="mb-4 text-white font-semibold">Key Features</h3>
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                <ul className="list-disc list-inside space-y-2 text-white/85">
+                  {features.slice(0, Math.ceil(features.length / 2)).map((feature, idx) => (
+                    <li key={idx}>{feature}</li>
+                  ))}
+                </ul>
+                <ul className="list-disc list-inside space-y-2 text-white/85">
+                  {features.slice(Math.ceil(features.length / 2)).map((feature, idx) => (
+                    <li key={idx + Math.ceil(features.length / 2)}>{feature}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
       )}
-              
 
       {project.id === "worldnotes" ? 
-      <WorldNotes/> : project.id === "clarity" 
-      ? <Clarity/> : project.id === "YCGH"
-      ? <YCGH/> : null}
+        <WorldNotes/> : project.id === "clarity" 
+        ? <Clarity/> : project.id === "YCGH"
+        ? <YCGH/> : project.id === "biomed"
+        ? <Biomed/> :  null}
 
       {/* Next Milestones card */}
       {milestones.length > 0 && (

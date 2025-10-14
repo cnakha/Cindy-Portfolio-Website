@@ -5,15 +5,16 @@ export default function YCGH() {
     const [showPopup, setShowPopup] = useState(false);
     
     return(
-        <section className="mt-14 mx-auto w-full max-w-6xl px-6">
-            <h3 className="mt-10 text-2xl font-semibold">
+        <section className="mt-20 mx-auto w-full max-w-6xl px-6">
+            {/* <h3 className="mt-10 text-2xl font-semibold">
                 Concept Video
-            </h3>
+            </h3> */}
             {/* <p className="mt-2 text-sm text-white/70">jkdhhf</p> */}
-            <div className=" mt-5 relative aspect-[21/12] overflow-hidden rounded-[12px]">
-                <video
-                    src={'/YCGH/YCGH_Concept_Vid.mp4'}
-                    controls
+            <div className=" mt-5 relative aspect-[10/5] overflow-hidden rounded-[12px]">
+                <img
+                src={"/YCGH/interaction2.jpeg"}
+                alt={`YCGH Interaction`}
+                className="absolute inset-0 h-full w-full object-cover"
                 />
             </div>
 
@@ -21,16 +22,22 @@ export default function YCGH() {
             
                 <div className="grid grid-cols-1 gap-10 md:grid-cols-2"> 
                     <div>
-                        <h3 className="mt-2 text-2xl font-semibold">
+                        <h3 className="mt-40 text-2xl font-semibold">
                         SIGGRAPH 2025 Convention Research Poster
                         </h3>
-                        <p className="mt-2 text-sm text-white/70"> This poster was presented at the SIGGRAPGH 2025 Convention in Vancouver over the course of 5 days for over 12,000 attendees within the AR/VR research section.</p>
-                        <h3 className="mt-10 text-2xl font-semibold">
-                            Check out the Research Paper Here
-                        </h3>
-                        <a href="https://dl.acm.org/doi/10.1145/3721250.3743037"> LINK </a>
+                        <p className="mt-10 text-sm text-white/70"> 
+                        This poster was presented at the SIGGRAPGH 2025 Convention in Vancouver over the course of 5 days for over 12,000 attendees within the AR/VR research section.
+                        <br/><br/>
+                        Many meanigful conversations were had with researchers and industry professionals about the future of AR/VR and the challenges that need to be overcome to make it more accessible to the general public.
+                        <br/><br/>
+                        An interesting application of this research that was discussed was the potential for VR to be used in medical and clinical settings, where patients could use VR to destress and be educated about their upcoming procedure or good health practices.
+                        <br/><br/>
+                        Check out the research paper here:
+                        </p>
+                        
+                        <a href="https://dl.acm.org/doi/10.1145/3721250.3743037"> https://dl.acm.org/doi/10.1145/3721250.3743037 </a>
                     </div>      
-                    <div className="mt-5 relative overflow-hidden rounded-[12px]">
+                    <div className="mt-40 relative overflow-hidden rounded-[12px]">
                         <img
                             src={"/YCGH/2025_SIGGRAPH_POSTER_YCGH_Final.png"}
                             alt={`YCGH Poster`}

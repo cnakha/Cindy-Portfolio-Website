@@ -27,9 +27,9 @@ export interface Project {
 export const projects: Project[] = [
 {
   id: "worldnotes",
-  title: "WorldNotes — Global canvas for creative expression",
+  title: "WorldNotes — Global Canvas for Creative Expression",
   timeline: "June 2025 — Present",
-  description: "Blurring the line between social platform and digital graffiti, explore the world through notes, doodles, and stories left behind by others.",
+  description: "Blurring the line between social platform and digital graffiti, explore the world through notes and doodles left behind by others on a street map view.",
   category: "Fullstack Web Development and UI/UX Design for a Creative Social Media App",
   fullDescription:
     "WorldNotes is a passion project—A spatial web experiment blending maps, art, and emotion where users share notes, thoughts, and doodles, and then anchor them to a globally shared street view map. Designed for casual web strolling, this web app emphasizes user agency, serendipitous discovery, and building community through creative expression.",
@@ -56,7 +56,8 @@ export const projects: Project[] = [
   keyProblemDescriptions:[
     "Hyper brand-driven content, the stress of performativity, and the rise of AI-generated posts and bot accounts have diluted the sense of genuine human presence online.",
     "Most platforms use filters and optimized algorithms to maximize user engagement, this  leads to internet addiction and less serendipitous discovery.",
-    "Social platforms are beginning to share derivative features and blend into each other. People want new and innovative ways to connect with people online.",],
+    "Social platforms are beginning to share derivative features and blend into each other. People want new and innovative ways to connect with people online.",
+  ],
   },
 
   {
@@ -64,30 +65,35 @@ export const projects: Project[] = [
     title: "Various Wearable Biomedical Devices",
     description: "Projects from my time at the Wearables and Nearables Technology Laboratory at the University of Illinois Chicago",
     category: "Fullstack Development, Hardware Assembly, and UI and User Experience Design for Wearable Health Monitoring Devices",
-    fullDescription: "Projects from working in the Wearables and Nearables Technology Laboratory at the University of Illinois Chicago. For a semester, I collaborated in an interdisciplinary group of four Biomedical Engineering and Computer Science students and gained practical experience packaging and developing various wearable and nearable devices, acquisitioning and processing a diverse set of sensor data, and designing and integrating user-friendly interfaces. Each project was developed in under two weeks of development and presented through a series of live demos and critques.",
+    fullDescription: "Projects from working in the Wearables and Nearables Technology Laboratory at the University of Illinois Chicago. For a semester, I collaborated in an interdisciplinary group of four biomedical engineering and computer science students, gaining practical experience assembling, packaging, and developing various wearable and nearable devices. I acquisitioned, processed, and analyzed a diverse set of sensor data, designing and integrating user-friendly interfaces for data visualization. Each project was developed in under two weeks of development and presented through a series of live demos and critques.",
     tools: ["React", "Node.js", "Processing", "C#", "Arduino", "Figma"],
-    features: [
-      "Motion Tracking",
-      "Real-time Data Visualization",
-      "Time tracking and reporting",
-      "Analytics Dashboards",
-      "Custom Alerts and Notifications",
-    ],
     challenges: "Creating an intuitive interface that could handle complex project hierarchies while remaining accessible to users of all technical levels.",
     outcome: "Successfully developed 5 different wearable biomedical devices that monitor various health metrics, each successfully tested and validated in real-world scenarios.",
     imageUrl: "/biomed_devices/thumbnail.png",
+    imageUrl2: "/biomed_devices/thumbnail.png",
     githubUrl: "https://github.com/cnakha/Wearable_Biomedical_Devices",
     timeline: "Jan 2025 — May 2025",
-    role: "Fullstack Developer and UI/UX Designer alongside three other interdisciplinary students from computer science and biomedical engineering backgrounds: Kegan Jones, Rohan Kakarlapudi, and Sufyan Siddiqui",
-    skills: ["UI/UX Design", "Entrepreneurship", "Internet of Things", "Prototyping", "Hardware Engineering", "Product Design", "User Testing", "Websockets"],
-    problem: "How can we leverage wearable technology to provide continuous, real-time health monitoring that is both accurate and user-friendly to aid in fields such as sports, fitness, medicine, assistive tech, and rehabilitation?",
-    subProblem: "Many existing health monitoring devices are either too complex for everyday users or lack the precision needed for medical applications. There is a need for devices that can seamlessly integrate into daily life while providing reliable health data.",
-    solution: "I developed several wearable biomedical devices that utilize advanced sensors and machine learning algorithms to monitor vital signs such as heart rate, oxygen levels, stress, and activity patterns. The devices are designed with user comfort in mind, featuring ergonomic designs and intuitive interfaces. Additionally, I created companion mobile apps that provide real-time data visualization and alerts, ensuring users can easily track their health metrics and receive timely notifications for any anomalies.",
+    role: "Lead Frontend Developer and UI/UX Designer but I was also a Fullstack Developer and Hardware Engineer alongside three other interdisciplinary students from computer science and biomedical engineering backgrounds: Kegan Jones, Rohan Kakarlapudi, and Sufyan Siddiqui",
+    skills: ["UI/UX Design", "Fullstack Development", "Entrepreneurship", "Internet of Things", "Prototyping", "Hardware Engineering", "Product Design", "User Testing", "Websockets"],
+    problem: "Wearable technology has immense potential to revolutionize personal health tracking, yet many current devices fail to balance accuracy, usability, and seamless integration into everyday life.",
+    subProblem: "Listed are a few key problems we identified in the wearable health tech space:",
+    solution: "My team developed five wearable bluetooth devices that utilize sensors to monitor biometric data such as heart rate, oxygen levels, stress, and activity patterns. The devices are created with user comfort in mind, featuring ergonomic designs and intuitive user interfaces that provide real-time data visualization and alerts, ensuring users can easily track their health metrics and receive timely notifications on health anomalies.",
+    keyProblems:[
+      "Lack of Accessible Health Monitoring",
+      "Poor Integration into Daily Life",
+      "Need for Real-Time, Continuous Monitoring"
+    ],
+    keyProblemDescriptions:[
+      "Many existing health monitoring devices are unaffordable or too complex for everyday users.",
+      "There is a gap in designing devices that seamlessly blend into users' routines while maintaining comfort, aesthetics, and continuous operation without disruption.",
+      "Current solutions don’t consistently offer real-time, continuous data streams that are accurate and intuitive enough to provide meaningful feedback or alerts."
+      ],
+    
   },
   {
     id: "YCGH",
     title: "You Can Grow Here: A Therapeutic VR Journey for Anxiety Management",
-    description: "VR experience that combines theatrical storytelling, improvisational design methods, and evidence-based wellness techniques to guide users through emotional regulation and anxiety relief.",
+    description: "Theatrical storytelling, improvisational design methods, and evidence-based wellness techniques to guide users through emotional regulation and anxiety relief.",
     category: "VR Application and Research Paper on VR Applications Centering Health and Well-Being Presented at SIGGRAPH 2025 Convention",
     fullDescription: "You Can Grow Here is an immersive VR experience developed for and exhibited at the CAVE2™ environment in the Electronic Visualization Labratory at the University of Illinois Chicago, aligning with the United Nation's Sustainable Development Goal of Good Health and Well-Being. In response to the mental health challenges intensified by the COVID-19 pandemic, the project explores how interactive storytelling, ambient sound, and 3D typography can support emotional reflection and teach anxiety coping strategies. Built in Unity with custom assets from Blender and Maya, the experience differs from most clinical VR programs, allowing users to independently explore emotions, manage anxiety, and practice evidence-based calming techniques within a safe, narrative-driven space that builds emotional resilience.",
     features: [
@@ -114,7 +120,7 @@ export const projects: Project[] = [
   {
     id: "foliofolds",
     title: "FolioFolds",
-    description: "Web app for designing and sharing interactive 3D models of books, magazines, origamis, zines, and fliers with support for real-time model development, complex folds, bindings, cutouts, and AR viewing",
+    description: "Assemble and share interactive 3D models of books, cards, zines, origamis, and fliers with real-time model development, complex folds, bindings, cutouts, and AR viewing",
     category: "Fullstack Development of 3D Model Editors and Web Design",
     fullDescription: "FolioFolds is a passion project, a web application that allows users to design, customize, and share interactive 3D models of various printed forms. The platform supports complex folds, bindings, cutouts, and offers AR viewing capabilities. Users can create their own designs using an intuitive interface, explore a gallery of community creations, and share their work with others.",
     features: [

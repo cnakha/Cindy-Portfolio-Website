@@ -1,16 +1,21 @@
 
 import { useState } from "react";
+
+
 function Line(){
   return <div className="mt-20 h-[1px] w-full bg-white/50" />
 }
 
 export default function WorldNotes() {
   const [AppStructPopup, setShowPopup] = useState(false);
+
   const techStack = [
     'React', 'Next.js', 'TypeScript', 'Konva', 'Firebase Firestore', 'NextAuth'
   ];
+
   const texhStackDescriptions = [
-    'React powers the interactive UI components, while Next.js (App Router) structures the app with nested layouts and route groups for the map explorer, note creator, and profiles.',
+    'React powers the interactive UI components, while Next.js (App Router) structures the app.',
+    'Nested layouts and route groups separate the map explorer, note creator, and profile areas. Server Components handle data fetching and SEO-friendly rendering; Client Components power interactive views.',
     'TypeScript ensures type safety across components, hooks, and API calls, reducing runtime bugs and streamlining refactors as features evolve.', 
     'Konva enables the custom note creation canvas with drawing, text, and pixel-art modes, supporting layers, transforms, and undo/redo functionality.',
     'Firebase Firestore serves as the NoSQL database, storing notes, user profiles, and community replies with geo-discovery and fast reads in mind.', 
@@ -23,6 +28,7 @@ export default function WorldNotes() {
     "Reddit's r/Place",
     'Gartic Phone & MS Paint'
   ];
+
   const keyInsposDescriptions = [
     'I loved its minimalist approach to anonymous note sharing. Its simple layouts inspired me to strip away unnecessary complexity, keeping WorldNotes focused on the intimacy of expression.',
     'Reinforced the importance of world exploration mechanics. Features like zoom levels, Street View, and metadata overlays shaped how I designed the navigation system for discovering notes.',
@@ -45,7 +51,7 @@ export default function WorldNotes() {
           </div>      
           <div className="mt-5 relative aspect-[20/15] overflow-hidden rounded-[12px]">
             <img
-              src={"/worldnotes/note_creator.png"}
+              src={"/worldnotes/thumbnail2.png"}
               alt={`Note Traversal and Discovery`}
               className="absolute inset-0 h-full w-full object-cover"
             />
@@ -142,6 +148,8 @@ export default function WorldNotes() {
           The result is a creative world explorer that is part map, part sketchbook, part message board. WorldNotes transforms the act of scrolling into a playful exploration of what people leave behind, visually bridging global
         </p> */}
 
+        <Line/>
+
 
         <h3 className="mt-40 text-2xl font-semibold">
           Step 2 - Building Community
@@ -151,6 +159,8 @@ export default function WorldNotes() {
           This fosters micro-communities, clusterings of ideas tied not just to people but to locations and a shared experience. 
           This creative freedom thus opens the platform up to a diverse user base of different backgrounds and interests and creates a spontaneous element towards finding new communities.
         </p>
+
+        <Line/>
 
 
         <h3 className="mt-40 text-2xl font-semibold">
@@ -169,20 +179,21 @@ export default function WorldNotes() {
             onClick={() => setShowPopup(true)}
           />
           {AppStructPopup && (
-              <div
-                  className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70"
-                  onClick={() => setShowPopup(false)}
-              >
-                  <img
-                      src={"/worldnotes/user_flow.png"}
-                      alt={`App Structure Enlarged`}
-                      className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg"
-                      onClick={e => e.stopPropagation()}
-                  />
-              </div>
+            <div
+                className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70"
+                onClick={() => setShowPopup(false)}
+            >
+              <img
+                src={"/worldnotes/user_flow.png"}
+                alt={`App Structure Enlarged`}
+                className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg"
+                onClick={e => e.stopPropagation()}
+              />
+            </div>
           )}
         </div>
 
+        <Line/>
 
         <h3 className="mt-40 text-2xl font-bold">
           Step 4 - Wireframing
@@ -202,6 +213,7 @@ export default function WorldNotes() {
           <p className="text-center text-white/50">Wireframes of User Profile and Community Page</p>
         </div>    
         
+        <Line/>
         
         <h3 className="mt-40 text-2xl font-semibold">
           Step 5 - UI Design
@@ -221,80 +233,46 @@ export default function WorldNotes() {
             <br/><br/>
             Beyond text, the platform already supports layering, doodles, and spatial note placement, but the foundation  is intentionally <span className="font-bold"> scalable </span>. The note creator is built to grow, opening possibilities like animated notes, music attachments, borders, or stickers, expanding the ways users can express themselves. By treating design as both a system and a playground, WorldNotes sets the foundation for a platform that can evolve alongside its community’s creativity.
           </p>
-          <div className=" mt-5 relative aspect-[21/9] overflow-hidden rounded-[12px]">
-            <img
-              src={"/worldnotes/wireframing.png"}
-              alt={`UI Design`}
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-          </div>
         </div>
 
-
-        <h3 className="mt-10 text-2xl font-semibold">
-          Step 6 - Implementation and Beginning Fullstack Development
-        </h3>
-        <p className="mt-2 text-xl text-white/70 max-w-4xl">
-          After desiging all ne        </p>
-        <h4 className="mt-10  font-semibold">
-          Frontend Stack & Architecture
-        </h4>
-        <span className="font-semibold">Stack:</span> React (server & client components), Next.js (App Router), TypeScript, Konva
-
-        <p className="mt-2 text-sm  max-w-4xl text-white/70">
-          <ul className="list-disc pl-6 mt-4 space-y-4">
-            <li>
-              <span className="font-bold">Architecture with Next.js App Router:</span> Nested layouts and route groups separate the map explorer, note creator, and profile areas. Server Components handle data fetching and SEO-friendly rendering; Client Components power interactive views like the canvas tools and Street View overlays.
-            </li>
-            <li>
-              <span className="font-semibold">Type-Safe UI in TypeScript:</span> Domain types (e.g., Note, NoteLocation, ToolState) enforce correctness across components, hooks, and API calls. Strong typing reduces runtime bugs and streamlines refactors as features (layers, pixel art, stickers) evolve.
-            </li>
-            <li>
-              <span className="font-semibold">Konva-Powered Creation Tools:</span> The note creator uses Konva for drawing, text, and pixel-art modes with support for layers, transforms, and undo/redo. Debounced state updates and canvas snapshots keep the UI responsive while preserving editing history.
-            </li>
-            <li>
-              <span className="font-semibold">Street View + Spatial UX:</span> Notes render with spatial anchoring—position/scale respond to zoom, heading, and pitch for believable placement. Interaction patterns mirror familiar map behaviors (pan/zoom, hover previews), lowering the learning curve.
-            </li>
-            <li>
-              <span className="font-semibold">State & Interaction:</span> React context + custom hooks manage tool state, selection, and note metadata. Transitions and micro-interactions (hover cues, drag handles) make creation feel playful without getting in the way.
-            </li>
-            <li>
-              <span className="font-semibold">Performance & Accessibility:</span> Code-splitting for heavy views (creator, Street View), memoized canvases, and throttled map events keep fps stable. Keyboard focus management and semantic roles improve accessibility across the editor and feed.
-            </li>
-          </ul>
-        </p>    <div className=" mt-5 relative aspect-[21/9] overflow-hidden rounded-[12px]">
+        <div className=" mt-10 relative aspect-[21/9] overflow-hidden rounded-[12px]">
           <img
-            src={"/panorama_kitchen.png"}
+            src={"/worldnotes/wireframing.png"}
             alt={`UI Design`}
             className="absolute inset-0 h-full w-full object-cover"
           />
         </div>
-         <h4 className="mt-10  font-semibold">
-          Backend
-        </h4>
-       
-        <p className="text-xl text-white/70">Stack: Firebase Firestore (NoSQL), Next.js Route Handlers (API), Auth (NextAuth + Firebase), React Context/Hooks</p>
-        <ul className="list-disc pl-6 mt-4 space-y-4 text-white/70 max-w-4xl">
-          <li>
-            <span className="font-bold text-white">Data Model (Firestore):</span> Collections like notes, users profiles, and community replies to posts are shaped for geo-discovery and fast reads. Notes store lightweight content + spatial metadata (lat/lng, zoom hints, heading/pitch) with security rules to ensure users can only modify their own content.
-          </li>
-          <li>
-            <span className="font-bold">APIs with Next.js Route Handlers:</span> CRUD endpoints (e.g., /api/notes, /api/reactions) validate input with TypeScript types and return lean payloads optimized for streaming Server Components. Write paths are authenticated; read paths are cached and paginated for map/Street View browsing.
-          </li>
-          <li>
-            <span className="font-bold">Authentication & Session Flow:</span> NextAuth provides session management on the web side; Firebase (Auth/Custom Claims or a Firebase Adapter) ties identities to Firestore documents. Client components read session state via React context, while server routes verify tokens before writes.
-          </li>
-          <li>
-            <span className="font-bold">Real-Time & Caching Strategy:</span> Firestore listeners power live updates in creation flows (e.g., collaborative impressions and reaction counts), while map discovery prefers cache-first reads with incremental revalidation to control cost and latency.
-          </li>
-          <li>
-            <span className="font-bold">Security & Governance:</span> Firestore security rules gate create/update/delete by user_id, rate-limit sensitive actions (publishing, reporting), and validate schema shapes. Server routes perform a second layer of checks (ownership, content size caps) before writing.
-          </li>
-          <li>
-            <span className="font-bold">Observability (planned):</span> Lightweight analytics record funnel steps (view → open → create → publish) and field performance (Web Vitals, error traces). This informs iteration on the note creator (e.g., adding animation, music, borders, or stickers) without invasive tracking.
-          </li>
-        </ul>
 
+        <Line/>
+
+        <h3 className="mt-40 text-2xl font-semibold">
+          Step 6 - Beginning Fullstack Development
+        </h3>
+        <p className="mt-2 text-xl text-white/70 max-w-4xl">
+          After designing all necessary UI components, I assembled a tech stack and begain implementing the vision: </p>
+      
+        <div className="flex flex-col justify-center items-center w-full mt-2 text-sm max-w-4xl text-white/70 mx-auto">
+          <div className="mt-8 flex flex-wrap gap-6 justify-center items-center w-full">
+            {techStack.map((tech, idx) => (
+              <div
+                key={idx}
+                className="flex flex-col text-left items-start bg-[#1f1f1f] border border-white/10 rounded-xl p-6 min-w-[220px] min-h-[220px] max-w-xs flex-1"
+              >
+                <h5 className="text-lg font-bolder text-white/90 mb-4">{tech}</h5>
+                <p className="text-sm text-white/50">{texhStackDescriptions[idx]}</p>
+              </div>
+            ))}
+        </div>
+        </div>    
+        <div className=" mt-5 relative aspect-[21/9] overflow-hidden rounded-[12px]">
+          <img
+            src={"/worldnotes/ui_design.png"}
+            alt={`UI Design`}
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        </div>
+
+        <Line/> 
         
         <h3 className="mt-10 text-2xl font-semibold">
           Step 7 - Measuring Impact

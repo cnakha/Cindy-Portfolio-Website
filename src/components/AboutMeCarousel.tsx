@@ -38,10 +38,10 @@ const [typingDone, setTypingDone] = useState(false);
     index === 0 ? (
       <div className="text-white space-y-6">
         <TypeAnimation
-          key={"Hey there! I'm..."}
+          key={"Hi there! I'm..."}
           sequence={[
-            "Hey there! I'm...",
-            () => setTypingDone(true), // <-- start the rest after typing
+            "Hi there! I'm...",
+            () => setTypingDone(true), 
           ]}
           speed={35}
           cursor
@@ -79,9 +79,9 @@ const [typingDone, setTypingDone] = useState(false);
         <motion.p className="text-3xl md:text-4xl text-white/50 pt-8" variants={item}>
           I love to{" "}
           <span className="text-white font-bolder">
-            research, prototype, design, user test, code, and launch{" "}
+            research, design, user test, code, and launch{" "}
           </span>
-          cool projects with product-focused thinking...
+          cool projects with product focused thinking...
         </motion.p>     
 
         {/* Bottom info row */}
@@ -205,10 +205,10 @@ export default function AboutMeCarousel({ setSlideNumber }: { setSlideNumber: (n
           <div className="flex flex-col">
             <div className="opacity-40 hover:opacity-90 transition">
               <button
-                className="inline-flex items-center text-xl text-white"
+                className="inline-flex items-center text-xl text-white pb-2"
                 onClick={nextSlide}
               >
-                <p className="pb-1 pl-1">More about me</p>
+                <p className="">More about me</p>
                 <Triangle className="ml-2 h-5 w-5 rotate-90 fill-white stroke-none" />
               </button>
             </div>

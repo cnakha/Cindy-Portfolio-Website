@@ -36,13 +36,13 @@ export default function NavBar() {
       <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-b from-[#008BE8] to-transparent" />
 
       {/* Logo + name */}
-      <button onClick={() => goTo("home")} className="relative flex items-start pl-[110px] pt-6">
+      <button onClick={() => goTo("home")} className="relative flex items-start pl-8 pt-6">
         <img
           src={"/CN_logo.svg"}
           alt="CN logo"
-          className="absolute left-[40px] top-1.5 w-[80px]"
+          className=" translate-y-[-10px] w-[70px]"
         />
-        <div className="flex flex-col font-bolder translate-y-[-7px] text-white text-[16px] text-left">
+        <div className="flex flex-col font-semibold translate-y-[-2px] translate-x-[-8px] text-white text-[16px] text-left">
           <p className="-mb-1">Cindy</p>
           <p>Nakhammouane</p>
         </div>
@@ -52,12 +52,12 @@ export default function NavBar() {
       {/* Nav buttons on right */}
       <div className="absolute top-0 right-0 h-full flex items-center pr-8">
       {/* Desktop nav */}
-      <div className="hidden sm:flex gap-8">
+      <div className="hidden sm:flex gap-6">
         {NAV_ITEMS.map((item) => (
           <button
             key={item.id}
             onClick={() => goTo(item.id)}
-            className={`text-[20px] font-bolder transition-opacity text-white hover:opacity-90 ${
+            className={`text-[18px] font-bolder transition-opacity text-white hover:opacity-90 ${
               active === item.id ? "opacity-100" : "opacity-75"
             }`}
           >
