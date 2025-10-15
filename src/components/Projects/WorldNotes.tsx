@@ -63,7 +63,7 @@ export default function WorldNotes() {
          <div className="mt-20 grid grid-cols-1 gap-10 md:grid-cols-2"> 
           <div>
             <h3 className="mt-2 text-3xl font-bolder">
-              See the Full Picture and Respond Along with Your Community
+              See the Full Picture and React with Your Community
             </h3>
             <p className="mt-10 text-white/50">
               A post viewer will be shown to the user if they click on a note, here we can see information about the note’s title, creator, description, and community reactions.

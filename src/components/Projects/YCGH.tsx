@@ -6,10 +6,7 @@ export default function YCGH() {
     
     return(
         <section className="mt-20 mx-auto w-full max-w-6xl px-6">
-            {/* <h3 className="mt-10 text-2xl font-semibold">
-                Concept Video
-            </h3> */}
-            {/* <p className="mt-2 text-sm text-white/70">jkdhhf</p> */}
+           
             <div className=" mt-5 relative aspect-[10/5] overflow-hidden rounded-[12px]">
                 <img
                 src={"/YCGH/interaction2.jpeg"}

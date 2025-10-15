@@ -17,7 +17,7 @@ export default function Biomed() {
     'Smart Heart rate and Blood Oxygenation Assessment Wristband',
     'Smart Sport Band for Heart Rate and Respiratory Monitoring',
     'Smart Arm Tattoo to Control TikTok',
-    'Gait and Motion Analysis Smart Shoe'
+    'Gait, Balance, and Motion Analysis Smart Shoe'
    ];
 
   const features = [
@@ -40,16 +40,47 @@ export default function Biomed() {
   ];
 
   const MotionSenseDesCriteria = [
-    "Shoe Insole – for FSR sensors.",
-    "Thigh Strap – houses EMG sensors.",
-    "Waistband Clip – contains the FireBeetle board, accelerometer, and battery."
+    "Shoe Insole for FSR sensors.",
+    "Thigh Strap houses EMG sensors.",
+    "Waistband Clip contains the FireBeetle board, accelerometer, and battery.",
+    "Must display real-time angle of hip hinge",
+    "Heat maps, balamce assessment, and Voltage over time graphs from each insole FSR",
+    "Visualize Hamstring Engagement",
+    "Create an assistive target form interface"
   ];
+
+  const Sparkbeat2Hardware = [
+    "FireBeetle Board-328P with BLE4.1 x 2", "FireBeetle Proto Board", "AD8232 Heart Monitor", "ECG leads", "Snap-On ECG electrodes", "Force Sensitive Resistors (FSR)"
+  ];
+
+  const Sparkbeat2DesignCriteria = [
+    "Fitness, Stress, and Meditation Modes",
+    "Real-time Heart Rate and Respiratory Rate Monitoring",
+    "Data Logging and Visualization",
+    "Adjustable Fit and Comfort",
+  ];
+
+  const SmartShoeHardware = [
+    "MPU-6050 Accelerometer: Detects motion of the user. We use it to also calculate the period of activity.", 
+    "Force Sensitive Resistors (FSR) sensor: Indicates which part of the foot the user applies pressure/force while walking.",
+    "LED lights that correspond to each FSR",
+    "18650 Li-Ion Battery: Powers the device for up to 8 hours of continuous use.",
+  ];
+
+  const SmartShoeDesignCriteria = [
+    "Must be worn in the shoe",
+    "Identify real-time gait profile, detect acceleration, and determine quality of balance",
+    "Display a real-time heatmap uf the foot's pressure points",
+    "Graph the Voltage over time of each FSR",
+  ];
+
 
   const tech = [
     'Processing',
     'Arduino',
     'Figma',
     'React + Node.js + TailwindCSS',
+    "Python",
     '3D Printing',
     'FireBeetle Boards',
   ];
@@ -106,135 +137,232 @@ export default function Biomed() {
           </div>
         </section>
 
+        {/* MotionSense */}
+        <div className="mt-40 grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-10">
+          <div>
+            <h3 className="mt-2 text-4xl font-bolder">
+            MotionSense - A Wearable System for Real-Time Assessment of Lower Body Form and Muscle Engagement During Exercise
+            </h3>
+            <h4 className="mt-20 text-xl text-white/90 font-semibold">Context</h4>
+            <p className="mt-2 text-xl text-white/50">
+            Poor exercise form, especially during lower body workouts like squats and deadlifts, can lead to long-term injuries and chronic back issues. Without real-time feedback, subtle mistakes often go unnoticed.
+            <br /><br />
+            A wearable multi-sensor system can monitor lower back posture, hamstring activation, and foot pressure, providing corrective insights to reduce injury and improve training effectiveness.
+            </p>
+
+            <h4 className="mt-20 text-xl text-white/50"><span className="font-semibold text-white/90">Tech Stack </span>: React.js, Tailwind CSS, Node.js, Arduino C++</h4>
+
+            <h4 className="mt-10 text-xl text-white/90 font-semibold">Hardware</h4>
+            <ul className="list-disc mt-4 list-inside space-y-2 text-white/50">
+              {MotionSenseHardware.slice(0, MotionSenseHardware.length ).map((feature, idx) => (
+                <li key={idx}>{feature}</li>
+              ))}
+            </ul>
+            
+            <h4 className="mt-20 text-xl text-white/90 font-semibold">Design Criteria</h4>
+            <ul className="list-disc mt-4 list-inside space-y-2 text-white/50">
+              {MotionSenseDesCriteria.slice(0, MotionSenseDesCriteria.length ).map((feature, idx) => (
+                <li key={idx}>{feature}</li>
+              ))}
+            </ul>
+            
+            <h4 className="mt-20 text-xl text-white/90 font-semibold">Evaluation</h4>
+            <p className="mt-2 text-xl text-white/50">
+              Preliminary testing using squats and lunges across multiple users showed that EMG sensors detected hamstring activation within 50 milliseconds, FSR readings distinguished balanced vs. forward-leaning postures, and accelerometers consistently tracked trunk angle. The system accurately identified poor form in 84% of misaligned trials and delivered corrective feedback based on sensor thresholds and movement patterns.
+            </p>
+          </div>
+
+          <div className="mt-5 relative aspect-[4/10] overflow-hidden rounded-[12px] flex justify-center">
+            <img
+              src="/biomed_devices/p1.png"
+              alt="MotionSense prototype"
+              className="object-cover w-full h-full"
+            />
+          </div>
+        </div>
+
+        <Line/>
+
+        {/* Smart Shoe */}
+        <div className="mt-40 grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-10">
+          <div>
+            <h3 className="mt-2 text-4xl font-bolder">
+              Smart Shoe - Wearables for Motion, Balance, and Gait Analysis
+            </h3>
+            <h4 className="mt-20 text-xl text-white/90 font-semibold">Context</h4>
+            <p className="mt-2 text-xl text-white/50">
+            A wearable smart shoe insole with force sensors and accelerometers to analyze the user’s real-time walk patterns. Our device informs the user which part of the foot they use more while walking through a heatmap. Example: Walking on heels, or walking on toes, or normal walking.
+            </p>
+
+            <h4 className="mt-20 text-xl text-white/50"><span className="font-semibold text-white/90">Tech Stack </span>: Processing, Arduino C++</h4>
+
+            <h4 className="mt-10 text-xl text-white/90 font-semibold">Hardware</h4>
+            <ul className="list-disc mt-4 list-inside space-y-2 text-white/50">
+              {SmartShoeHardware.slice(0, SmartShoeHardware.length ).map((feature, idx) => (
+                <li key={idx}>{feature}</li>
+              ))}
+            </ul>
+            
+            <h4 className="mt-20 text-xl text-white/90 font-semibold">Design Criteria</h4>
+            <ul className="list-disc mt-4 list-inside space-y-2 text-white/50">
+              {SmartShoeDesignCriteria.slice(0, SmartShoeDesignCriteria.length ).map((feature, idx) => (
+                <li key={idx}>{feature}</li>
+              ))}
+            </ul>            
+
+            <h4 className="mt-20 text-xl text-white/90 font-semibold">Evaluation</h4>
+            <p className="mt-2 text-xl text-white/50">
+              Preliminary testing using squats and lunges across multiple users showed that EMG sensors detected hamstring activation within 50 milliseconds, FSR readings distinguished balanced vs. forward-leaning postures, and accelerometers consistently tracked trunk angle. The system accurately identified poor form in 84% of misaligned trials and delivered corrective feedback based on sensor thresholds and movement patterns.
+            </p>
+          </div>
+
+          <div className="mt-5 relative aspect-[5/10] overflow-hidden rounded-[12px] flex justify-center">
+            <img
+              src="/biomed_devices/p3_vert.png"
+              alt="MotionSense prototype"
+              className="object-cover w-full h-full"
+            />
+          </div>
+        </div>
+
+        <Line/>
+
+        {/* SparkBeat */}
+         <div className="mt-40 grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-10">
+          <div>
+            <h3 className="mt-2 text-4xl font-bolder">
+              SparkBeat - Smart Heartrate and Blood Oxygenation Wristband
+            </h3>
+            <h4 className="mt-20 text-xl text-white/90 font-semibold">Context</h4>
+            <p className="mt-2 text-xl text-white/50">
+            Measures heart rates and blood oxygen saturation (SpO2), providing insights into the wearer's cardiovascular health.
+            </p>
+
+            <h4 className="mt-20 text-xl text-white/50"><span className="font-semibold text-white/90">Tech Stack </span>: React.js, Tailwind CSS, Node.js, Arduino C++</h4>
+
+            <h4 className="mt-10 text-xl text-white/90 font-semibold">Hardware</h4>
+            <ul className="list-disc mt-4 list-inside space-y-2 text-white/50">
+              {MotionSenseHardware.slice(0, MotionSenseHardware.length ).map((feature, idx) => (
+                <li key={idx}>{feature}</li>
+              ))}
+            </ul>
+            
+            <h4 className="mt-20 text-xl text-white/90 font-semibold">Design Criteria</h4>
+            <ul className="list-disc mt-4 list-inside space-y-2 text-white/50">
+              {MotionSenseDesCriteria.slice(0, MotionSenseDesCriteria.length ).map((feature, idx) => (
+                <li key={idx}>{feature}</li>
+              ))}
+            </ul>
+            
+            <h4 className="mt-20 text-xl text-white/90 font-semibold">Evaluation</h4>
+            <p className="mt-2 text-xl text-white/50">
+              Preliminary testing using squats and lunges across multiple users showed that EMG sensors detected hamstring activation within 50 milliseconds, FSR readings distinguished balanced vs. forward-leaning postures, and accelerometers consistently tracked trunk angle. The system accurately identified poor form in 84% of misaligned trials and delivered corrective feedback based on sensor thresholds and movement patterns.
+            </p>
+          </div>
+
+          <div className="mt-5 relative aspect-[6/10] overflow-hidden rounded-[12px] flex justify-center">
+            <img
+              src="/biomed_devices/p4_vert.png"
+              alt="MotionSense prototype"
+              className="object-cover w-full h-full"
+            />
+          </div>
+        </div>
+
+        <Line/>
+
+        {/* SparkBeat 2 */}
+        <div className="mt-40 grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-10">
+          <div>
+            <h3 className="mt-2 text-4xl font-bolder">
+              SparkBeat 2 - Wearable Sport Band
+            </h3>
+            <h4 className="mt-20 text-xl text-white/90 font-semibold">Context</h4>
+            <p className="mt-2 text-xl text-white/50">
+            This project collects clean ECG signals from the patient’s heart and measure respiratory rate through analyzing resistance changes when the patient exhales and inhales.
+            </p>
+
+            <h4 className="mt-20 text-xl text-white/50"><span className="font-semibold text-white/90">Tech Stack </span>: Processing, Arduino C++</h4>
+
+            <h4 className="mt-10 text-xl text-white/90 font-semibold">Hardware</h4>
+            <ul className="list-disc mt-4 list-inside space-y-2 text-white/50">
+              {Sparkbeat2Hardware.slice(0, Sparkbeat2Hardware.length ).map((feature, idx) => (
+                <li key={idx}>{feature}</li>
+              ))}
+            </ul>
+            
+            <h4 className="mt-20 text-xl text-white/90 font-semibold">Design Criteria</h4>
+            <ul className="list-disc mt-4 list-inside space-y-2 text-white/50">
+              {Sparkbeat2DesignCriteria.slice(0, Sparkbeat2DesignCriteria.length ).map((feature, idx) => (
+                <li key={idx}>{feature}</li>
+              ))}
+            </ul>
+            
+            <h4 className="mt-20 text-xl text-white/90 font-semibold">Evaluation</h4>
+            <p className="mt-2 text-xl text-white/50">
+              The sportbands accurately captured ECG signals, with heart rate measurements within 3 bpm of clinical-grade monitors. Respiratory rate detection showed 95% accuracy in controlled breathing tests. Users reported the band was comfortable for extended wear, and the adjustable strap ensured a secure fit during physical activity.
+            </p>
+          </div>
+
+          <div className="mt-5 relative aspect-[5/12] overflow-hidden rounded-[12px] flex justify-center">
+            <img
+              src="/biomed_devices/p2_vert.png"
+              alt="MotionSense prototype"
+              className="object-cover w-full h-full"
+            />
+          </div>
+        </div>
+
+        <Line/>
 
         <div className="mt-40 grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-10">
-            <div>
-                <h3 className="mt-2 text-4xl font-bolder">
-                MotionSense - A Wearable System for Real-Time Assessment of Lower Body Form and Muscle Engagement During Exercise
-                </h3>
-                <h4 className="mt-20 text-xl text-white/75 font-semibold">Context</h4>
-                <p className="mt-2 text-xl text-white/50">
-                Poor exercise form, especially during lower body workouts like squats and deadlifts, can lead to long-term injuries and chronic back issues. Without real-time feedback, subtle mistakes often go unnoticed.
-                <br /><br />
-                A wearable multi-sensor system can monitor lower back posture, hamstring activation, and foot pressure, providing corrective insights to reduce injury and improve training effectiveness.
-                </p>
-
-                <h4 className="mt-20 text-xl text-white/50"><span className="font-semibold text-white/75">Tech Stack </span>: React.js, Tailwind CSS, Node.js, Arduino C++</h4>
-
-                <h4 className="mt-10 text-xl text-white/75 font-semibold">Hardware</h4>
-                <ul className="list-disc mt-4 list-inside space-y-2 text-white/50">
-                  {MotionSenseHardware.slice(0, MotionSenseHardware.length ).map((feature, idx) => (
-                    <li key={idx}>{feature}</li>
-                  ))}
-                </ul>
-                
-                <h4 className="mt-20 text-xl text-white/75 font-semibold">Design Criteria</h4>
-                <ul className="list-disc mt-4 list-inside space-y-2 text-white/50">
-                  {MotionSenseDesCriteria.slice(0, MotionSenseDesCriteria.length ).map((feature, idx) => (
-                    <li key={idx}>{feature}</li>
-                  ))}
-                </ul>
-                
-                <h4 className="mt-20 text-xl text-white/75 font-semibold">Evaluation</h4>
-                <p className="mt-2 text-xl text-white/50">
-                  Preliminary testing using squats and lunges across multiple users showed that EMG sensors detected hamstring activation within 50 milliseconds, FSR readings distinguished balanced vs. forward-leaning postures, and accelerometers consistently tracked trunk angle. The system accurately identified poor form in 84% of misaligned trials and delivered corrective feedback based on sensor thresholds and movement patterns.
-                </p>
-            </div>
-
-            <div className="mt-5 relative aspect-[4/10] overflow-hidden rounded-[12px] flex justify-center">
-                <img
-                    src="/biomed_devices/p1.png"
-                    alt="MotionSense prototype"
-                    className="object-cover w-full h-full"
-                />
-            </div>
-        </div>
-
-
-        <Line/>
-
-         <div className="mt-40 grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-10">
-            <div>
-                <h3 className="mt-2 text-3xl font-bolder">
-                  SparkBeat - Smart Heartrate and Blood Oxygenation Wristband               
-                </h3>
-                <h4 className="mt-20 text-xl text-white/75 font-semibold">Context</h4>
-                <p className="mt-2 text-xl text-white/50">
-                Poor exercise form, especially during lower body workouts like squats and deadlifts, can lead to long-term injuries and chronic back issues. Without real-time feedback, subtle mistakes often go unnoticed.
-                <br /><br />
-                A wearable multi-sensor system can monitor lower back posture, hamstring activation, and foot pressure, providing corrective insights to reduce injury and improve training effectiveness.
-                </p>
-
-                <h4 className="mt-20 text-xl text-white/50"><span className="font-semibold text-white/75">Tech Stack </span>: React.js, Tailwind CSS, Node.js, Arduino C++</h4>
-
-                <h4 className="mt-10 text-xl text-white/75 font-semibold">Hardware</h4>
-                <ul className="list-disc mt-4 list-inside space-y-2 text-white/50">
-                  {MotionSenseHardware.slice(0, MotionSenseHardware.length ).map((feature, idx) => (
-                    <li key={idx}>{feature}</li>
-                  ))}
-                </ul>
-                
-                <h4 className="mt-20 text-xl text-white/75 font-semibold">Design Criteria</h4>
-                <ul className="list-disc mt-4 list-inside space-y-2 text-white/50">
-                  {MotionSenseDesCriteria.slice(0, MotionSenseDesCriteria.length ).map((feature, idx) => (
-                    <li key={idx}>{feature}</li>
-                  ))}
-                </ul>
-                
-                <h4 className="mt-20 text-xl font-semibold">Evaluation</h4>
-                <p className="mt-2 text-xl text-white/50">
-                  Preliminary testing using squats and lunges across multiple users showed that EMG sensors detected hamstring activation within 50 milliseconds, FSR readings distinguished balanced vs. forward-leaning postures, and accelerometers consistently tracked trunk angle. The system accurately identified poor form in 84% of misaligned trials and delivered corrective feedback based on sensor thresholds and movement patterns.
-                </p>
-            </div>
-
-            <div className="mt-5 relative aspect-[4/10] overflow-hidden rounded-[12px] flex justify-center">
-                <img
-                    src="/biomed_devices/p1.png"
-                    alt="MotionSense prototype"
-                    className="object-cover w-full h-full"
-                />
-            </div>
-        </div>
-
-        <Line/>
-
-        <div className="mt-20 grid grid-cols-1 gap-10 md:grid-cols-2"> 
           <div>
-            <h3 className="mt-2 text-3xl font-bolder">
-              Show Off Your Notes the Way You Want
+            <h3 className="mt-2 text-4xl font-bolder">
+              TikTok Tattoo - Interactive Tattoos 
             </h3>
-            <p className="mt-10 text-white/50">
-              Profiles show you all the notes a user creates as well as reposts. The profile page is a place the user can display their favorite notes in any way they want.
-            </p>          
-            </div>      
-          <div className="mt-5 relative aspect-[20/15] overflow-hidden rounded-[12px]">
-            <img
-              src={"/worldnotes/note_creator.png"}
-              alt={`Note Traversal and Discovery`}
-              className="absolute inset-0 h-full w-full object-cover"
+            <h4 className="mt-20 text-xl text-white/90 font-semibold">Context</h4>
+            <p className="mt-2 text-xl text-white/50">
+              Tiktok Tattoo is a smart tattoo that allows users to control external devices such as TikTok on Web with a simple swipe on your skin.
+            </p>
+
+            <h4 className="mt-20 text-xl text-white/50"><span className="font-semibold text-white/90">Tech Stack </span>: Processing, Python, Arduino C++</h4>
+
+            <h4 className="mt-10 text-xl text-white/90 font-semibold">Hardware</h4>
+            <ul className="list-disc mt-4 list-inside space-y-2 text-white/50">
+              <li>
+                MPR121 Breakout Board: Relies on capacitive sensor to detect touches. When a capacitive sensor (electrode) is touched, the total sensed capacitance changes. When the finger makes contact with the electrode, this shift in capacitance signals a touch event.
+              </li>
+            </ul>
+            
+            <h4 className="mt-20 text-xl text-white/90 font-semibold">Design Criteria</h4>
+            <ul className="list-disc mt-4 list-inside space-y-2 text-white/50">
+              {MotionSenseDesCriteria.slice(0, MotionSenseDesCriteria.length ).map((feature, idx) => (
+                <li key={idx}>{feature}</li>
+              ))}
+            </ul>
+            
+            <h4 className="mt-20 text-xl text-white/90 font-semibold">Evaluation</h4>
+            <p className="mt-2 text-xl text-white/50">
+              The tattoo reliably detected swipe gestures and touch inputs, allowing users to seamlessly scroll through TikTok videos with a simple finger movement. The integration with TikTok on Web was smooth, enabling users to control video playback without any noticeable lag or delay.
+            </p>
+          </div>
+
+
+          <div className="flex flex-col gap-10 mt-5 relative aspect-[5/10] overflow-hidden rounded-[12px] flex justify-center">
+            <video
+              src={'/biomed_devices/Tiktok_demo.mp4'}
+              controls
             />
-          </div>  
+            <img
+              src="/biomed_devices/p5.png"
+              alt="MotionSense prototype"
+              className="object-cover w-full h-full"
+            />
+          </div>
         </div>
 
-        <Line/>
+    
 
-        <div className="mt-20 grid grid-cols-1 gap-10 md:grid-cols-2"> 
-          <div>
-            <h3 className="mt-2 text-3xl font-bolder">
-              Create Notes with Fun, Easy-to-Use Tools For Everyone
-            </h3>
-            <p className="mt-10 text-white/50">
-              A custom note creation canvas was created to provide custom tools and brushes. Drawing, text, pixel art, and animation are all supported along with a layers panel, color picker, and color palette creator. <br/> <br/> Draggable panels are a key characteristic, making the workspace feel more free.
-            </p>          
-            </div> 
-          <div className="mt-5 relative aspect-[20/15] overflow-hidden rounded-[12px]">
-            <img
-              src={"/worldnotes/note_creator.png"}
-              alt={`Note Traversal and Discovery`}
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-          </div>     
-        </div>
 
         {/* Process Section */}
         <h3 className="text-white text-6xl font-bold mt-60">Creating the MVP</h3>
