@@ -61,14 +61,10 @@ const [typingDone, setTypingDone] = useState(false);
         >
         {/* Name + Image */}
         <motion.div
-          className="flex flex-inline w-full items-center gap-6 md:ml-8"
+          className="flex flex-inline w-full items-center gap-6"
           variants={item}
         >
-          <img
-            src={"/headshot-bw.png"}
-            alt="Headshot Preview"
-            className="hidden md:block w-[25%] h-[25%] -rotate-[3deg]"
-          />
+        
           <div>
             <p className="text-6xl md:text-7xl text-white font-bolder pt-2">Cindy</p>
             <p className="text-5xl md:text-6xl text-white font-bolder pt-2">Nakhammouane</p>
@@ -203,7 +199,7 @@ export default function AboutMeCarousel({ setSlideNumber }: { setSlideNumber: (n
         {/* Controls pinned bottom-right when there's spare space */}
         <div className="flex justify-end w-full mt-auto">
           <div className="flex flex-col">
-            <div className="opacity-40 hover:opacity-90 transition">
+            <div className="opacity-40 hover:opacity-90 transition ease-in-out duration-500">
               <button
                 className="inline-flex items-center text-xl text-white pb-2"
                 onClick={nextSlide}

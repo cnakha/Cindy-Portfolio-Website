@@ -31,18 +31,23 @@ export default function NavBar() {
   };
 
   return (
-    <div className="relative w-full h-[84px]" data-name="nav bar">
+    <div className="relative w-full h-[70px]" data-name="nav bar">
       {/* Gradient background */}
       <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-b from-[#008BE8] to-transparent" />
 
       {/* Logo + name */}
       <button onClick={() => goTo("home")} className="relative flex items-start pl-8 pt-6">
-        <img
+        {/* <img
           src={"/CN_logo.svg"}
           alt="CN logo"
           className=" translate-y-[-10px] w-[70px]"
-        />
-        <div className="flex flex-col font-semibold translate-y-[-2px] translate-x-[-8px] text-white text-[16px] text-left">
+        /> */}
+        {/* <img
+            src={"/headshot-bw.png"}
+            alt="Headshot Preview"
+            className="hidden md:block w-[35px] h-[35px]"
+          /> */}
+        <div className="flex flex-col font-bolder text-white text-[16px] text-left">
           <p className="-mb-1">Cindy</p>
           <p>Nakhammouane</p>
         </div>
@@ -70,9 +75,9 @@ export default function NavBar() {
       <div className="sm:hidden">
         <button
           onClick={() => setMenuOpen((prev) => !prev)}
-          className="p-2 text-white focus:outline-none"
+          className=" text-white focus:outline-none mt-4"
         >
-          {menuOpen ? <X size={48} /> : <Menu size={48} />}
+          {menuOpen ? <X size={40} /> : <Menu size={40} />}
         </button>
 
         {/* Dropdown */}

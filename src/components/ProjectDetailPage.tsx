@@ -2,7 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { projects } from "../lib/projectData";
 // import imgChicago from "./public/chicago_bg.png";
 import Footer from "./Footer";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, UserRound, Calendar, Wrench, Wand } from "lucide-react";
 import WorldNotes from "./Projects/WorldNotes";
 import Clarity from "./Projects/Clarity";
 import YCGH from "./Projects/YCGH";
@@ -15,7 +15,7 @@ export default function ProjectDetailPage() {
 
   if (!project) {
     return (
-      <main className="min-h-screen bg-[#1e1e1e] pt-[84px] text-white flex items-center justify-center">
+      <main className="min-h-screen bg-[#131415] pt-[84px] text-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-3xl font-bold mb-4">Project Not Found</h1>
           <button
@@ -52,7 +52,7 @@ export default function ProjectDetailPage() {
   } = project;
 
   return (
-    <main className="min-h-screen bg-[#1e1e1e] text-white">
+    <main className="min-h-screen bg-[#131415] text-white">
      
       {/* Summary band (matches screenshot spacing) */}
       <section className="pt-32">
@@ -67,15 +67,43 @@ export default function ProjectDetailPage() {
             </button>
 
             <h3 className="mt-4 text-white text-6xl leading-[1.25] font-semibold">{project.title}</h3>
-            {/* <p className={`text-white/40 text-xl ${project.id === "YCGH" ? "mt-4" : "mt-2"}`}>{project.category}</p> */}
-            <p className="mt-12 text-white/75 text-[24px]">{project.fullDescription}</p>
+            <h4 className="mt-16 text-white font-semibold">Overview</h4>
+            <p className="mt-4 text-white/75 text-[24px]">{project.fullDescription}</p>
 
           </div>
         </div>
       </section>
 
+      {project.vid ? (
+        <div className="max-w-6xl mx-auto mt-10 px-6">
+            <h3 className="mt-16 text-3xl font-semibold">
+                Concept Video
+            </h3>
+            <div className=" mt-5 relative aspect-[21/12] overflow-hidden rounded-[12px]">
+                <video
+                    src={'/YCGH/YCGH_Concept_Vid.mp4'}
+                    controls
+                />
+            </div>
+          </div>
+      ) : (
+        <section className="mt-10">
+          <div className="mx-auto max-w-6xl px-6 mt-10">
+            <div className="overflow-hidden  border border-white/20">
+              <img
+                src={`${project.imageUrl2}`}
+                alt="Project mock"
+                className="h-auto w-full object-cover"
+              />
+            </div>
+          </div>
+        </section>
+      )}
+
+
+
       {/* Top specs row: My Role / Skills / Tools / Timeline + See the Code */}
-      <section className="mt-10">
+      <section className="mt-20">
         <div className="mx-auto w-full max-w-6xl px-6">
           <div className="rounded-xl border border-white/10 bg-[#1f1f1f] p-6">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -85,9 +113,12 @@ export default function ProjectDetailPage() {
 
                 {/* My Role */}
                 <div>
-                  <h3 className="text-[24px] tracking-wider text-white font-semibold">
-                    My Role
-                  </h3>
+                  <div className="flex gap-2">
+                    <UserRound size="30"/>
+                    <h3 className="text-[24px] tracking-wider text-white font-semibold">
+                      My Role
+                    </h3>
+                  </div>
                   <p className="mt-2 text-[16px] text-white/80 max-w-md">
                     {role ||
                       "As the only developer and designer, I built this app end-to-end from ideation to launch."}
@@ -96,9 +127,12 @@ export default function ProjectDetailPage() {
 
                 {/* Timeline */}
                 <div className="w-full mt-4">
-                  <h3 className="text-[24px] tracking-wider text-white font-semibold">
-                    Timeline
-                  </h3>
+                  <div className="flex gap-2">
+                    <Calendar size="30"/>
+                    <h3 className="text-[24px] tracking-wider text-white font-semibold">
+                      Timeline
+                    </h3>
+                  </div>
                   <p className="mt-2 text-[16px] text-white/80">
                     {timeline || "June 2025 – Present"}
                   </p>
@@ -108,9 +142,12 @@ export default function ProjectDetailPage() {
               {/* Column 2: Skills */}
               {/* Skills */}
               <div>
+                <div className="flex gap-2">
+                  <Wand size="30"/>
                 <h3 className="text-[24px] tracking-wider text-white font-semibold">
                   Skills
                 </h3>
+                </div>
                 <ul className="mt-2 space-y-1 text-[16px] text-white/80 list-disc list-inside">
                   {(skills.length ? skills : ["UI/UX Design", "Web Development", "Wireframing", "SEO"]).map(
                     (s, i) => (
@@ -122,9 +159,12 @@ export default function ProjectDetailPage() {
 
               {/* Column 3: Tools + See Code */}
               <div>
+                <div className="flex gap-2">
+                  <Wrench size="30"/>
                 <h3 className="text-[24px] tracking-wider text-white font-semibold">
                   Tools
                 </h3>
+                </div>
                 <div className="mt-2 text-[16px] flex flex-wrap gap-2">
                   {(tools.length ? tools : ["React", "Next.js", "TypeScript"]).map(
                     (t, i) => (
@@ -156,32 +196,6 @@ export default function ProjectDetailPage() {
           </div>
         </div>
       </section>
-
-      {project.vid ? (
-        <div className="max-w-6xl mx-auto mt-10 px-6">
-            <h3 className="mt-16 text-3xl font-semibold">
-                Concept Video
-            </h3>
-            <div className=" mt-5 relative aspect-[21/12] overflow-hidden rounded-[12px]">
-                <video
-                    src={'/YCGH/YCGH_Concept_Vid.mp4'}
-                    controls
-                />
-            </div>
-          </div>
-      ) : (
-        <section className="mt-40">
-          <div className="mx-auto max-w-5xl px-6 mt-10">
-            <div className="overflow-hidden rounded-lg border border-white/20">
-              <img
-                src={`${project.imageUrl2}`}
-                alt="Project mock"
-                className="h-auto w-full object-cover"
-              />
-            </div>
-          </div>
-        </section>
-      )}
 
 
       <div className="flex flex-col justify-center items-center text-center mt-40 mx-auto w-full max-w-6xl px-6">

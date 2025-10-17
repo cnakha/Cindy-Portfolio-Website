@@ -1,12 +1,13 @@
 
 export default function Footer() {
   return (
-    <footer id="contact" className="relative">
+    <footer id="contact" className="relative bg-blue-haze">
+
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover opacity-80 bg-center"
         style={{ backgroundImage: `url("../chicago_bg.png")` }}
       />
-      <div className="absolute inset-0 bg-black/55" />
+      <div className="absolute inset-0 " />
 
       <div className="relative mx-auto w-full max-w-7xl px-4 py-20">
         <div
@@ -15,11 +16,9 @@ export default function Footer() {
           ring-1 ring-white/10 overflow-hidden"
         >
           <h3 className="text-4xl font-bolder leading-tight text-white">
-            Let's Work
-            <br />
-            Together...
+            Let's Work Together!
           </h3>
-          <p className="mt-4 text-lg text-white/50">
+          <p className="mt-4 text-lg text-white/75">
             I'm always interested in new opportunities and exciting projects!
             Let's get in touch and build something amazing!
           </p>
@@ -52,6 +51,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
+             {/* <div className="absolute h-full w-full bg-gradient-to-b from-[#008BE8] to-transparent" /> */}
+
     </footer>
   );
 }
