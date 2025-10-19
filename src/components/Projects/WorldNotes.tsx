@@ -45,7 +45,7 @@ export default function WorldNotes() {
             <h3 className="mt-2 text-3xl font-bolder">
               Discover Notes, Art, and Stories From Around the World
             </h3>
-            <p className="mt-10 text-white/50">
+            <p className="mt-10 text-white/50 text-xl">
               Users are instantly immersed in WorldNotes, landing at a random location scattered with 3D notes left by others. <br/> <br/>Exploration feels natural: click-to-move in Street View, use the overview or mini map, or search specific places.<br/><br/> The navigation bar allows quick refreshes, shuffling nearby notes, or stepping through them sequentially for a guided discovery experience.            
             </p>          
           </div>      
@@ -65,7 +65,7 @@ export default function WorldNotes() {
             <h3 className="mt-2 text-3xl font-bolder">
               See the Full Picture and React with Your Community
             </h3>
-            <p className="mt-10 text-white/50">
+            <p className="mt-10 text-white/50 text-xl">
               A post viewer will be shown to the user if they click on a note, here we can see information about the note’s title, creator, description, and community reactions.
             </p>          
             </div>   
@@ -85,7 +85,7 @@ export default function WorldNotes() {
             <h3 className="mt-2 text-3xl font-bolder">
               Show Off Your Notes the Way You Want
             </h3>
-            <p className="mt-10 text-white/50">
+            <p className="mt-10 text-white/50 text-xl">
               Profiles show you all the notes a user creates as well as reposts. The profile page is a place the user can display their favorite notes in any way they want.
             </p>          
             </div>      
@@ -105,7 +105,7 @@ export default function WorldNotes() {
             <h3 className="mt-2 text-3xl font-bolder">
               Create Notes with Fun, Easy-to-Use Tools For Everyone
             </h3>
-            <p className="mt-10 text-white/50">
+            <p className="mt-10 text-white/50 text-xl">
               A custom note creation canvas was created to provide custom tools and brushes. Drawing, text, pixel art, and animation are all supported along with a layers panel, color picker, and color palette creator. <br/> <br/> Draggable panels are a key characteristic, making the workspace feel more free.
             </p>          
             </div> 

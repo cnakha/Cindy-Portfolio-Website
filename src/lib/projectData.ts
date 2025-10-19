@@ -93,7 +93,7 @@ export const projects: Project[] = [
   {
     id: "YCGH",
     title: "You Can Grow Here: A Therapeutic VR Journey for Anxiety Management",
-    description: "Theatrical storytelling, typographic design, and evidence-based wellness techniques to guide users in emotional regulation and anxiety relief (SIGGRAPH 2025).",
+    description: "Theatrical storytelling, typographic design, and evidence-based wellness techniques to guide users in emotional regulation and anxiety relief (Presented at SIGGRAPH 2025).",
     category: "VR Application and Research Paper on VR Applications Centering Health and Well-Being Presented at SIGGRAPH 2025 Convention",
     fullDescription: "You Can Grow Here is an immersive VR experience developed for and exhibited at the CAVE2™ environment in the Electronic Visualization Labratory at the University of Illinois Chicago, aligning with the United Nation's Sustainable Development Goal of Good Health and Well-Being. In response to the mental health challenges intensified by the COVID-19 pandemic, the project explores how interactive storytelling, ambient sound, and 3D typography can support emotional reflection and teach anxiety coping strategies. Built in Unity with custom assets from Blender and Maya, the experience differs from most clinical VR programs, allowing users to independently explore emotions, manage anxiety, and practice evidence-based calming techniques within a safe, narrative-driven space that builds emotional resilience.",
     features: [
@@ -119,8 +119,8 @@ export const projects: Project[] = [
   },
   {
     id: "foliofolds",
-    title: "FolioFolds — Interactive 3D Papercraft Made Easy",
-    description: "Upload, assemble, and share interactive 3D models of books, cards, zines, origamis, and fliers. Real-time model development of complex folds, bindings, cutouts, with AR viewing support",
+    title: "FolioFolds — 3D Papercraft Made Easy",
+    description: "Assemble and share interactive 3D models of books, cards, zines, origamis, and fliers. Real-time model development that supports complex folds, bindings, cutouts, and AR viewing",
     category: "Fullstack Development of 3D Model Editors and Web Design",
     fullDescription: "FolioFolds is a passion project, a web application that allows users to design, customize, and share interactive 3D models of various printed forms. The platform supports complex folds, bindings, cutouts, and offers AR viewing capabilities. Users can create their own designs using an intuitive interface, explore a gallery of community creations, and share their work with others.",
     features: [

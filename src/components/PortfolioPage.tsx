@@ -4,6 +4,7 @@ import AboutMeCarousel from "./AboutMeCarousel";
 import Footer from "./Footer";
 import {Play, Pause} from 'lucide-react'
 import { useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 
 // import Curve from "../assets/grouping_curve.svg";
@@ -77,12 +78,41 @@ function Hero() {
 function FeaturedProjectBlock({
   project,
   onOpen,
+  index,
 }: {
   project: any;
   onOpen: (id: string) => void;
+  index: number;
 }) {
+
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    show: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+        delay: i * 0.25, // spacing between siblings, but only after THIS one is in view
+      },
+    }),
+  };
+
   return (
-    <div className="flex">
+    <motion.div
+      className="flex"
+      variants={itemVariants}
+      initial="hidden"
+      whileInView="show"
+      custom={index}
+      viewport={{
+        once: true,          
+        amount: 0.15,         
+        margin: "0px 0px -8% 0px", 
+      }}
+    >
+
       <div className="flex flex-col justify-center items-center w-full text-center mt-10">
        
         <button
@@ -108,7 +138,7 @@ function FeaturedProjectBlock({
         {/* {project.id !== "clarity" && (<div className="mt-32 h-[1px] w-full bg-white/50" />)} */}
       </div>
 
-    </div>
+    </motion.div>
   );
 }
 
@@ -119,6 +149,16 @@ function FeaturedProjects({
   items: any[];
   onOpen: (id: string) => void;
 }) {
+
+  // Animation variants
+  const listVariants = {
+    hidden: { opacity: 1 }, // keep mounted
+    show: {
+      opacity: 1,
+      transition: { staggerChildren: 0.8, delayChildren: 0 },
+    },
+  };
+
   return (
     <section id="projects" className="relative w-full bg-[#131415] pb-10">
       <div className="flex w-full items-center justify-center bg-black px-4 py-10 ">
@@ -129,11 +169,13 @@ function FeaturedProjects({
       <div className="mx-auto w-full px-[15%] md:pb-10">
 
         <div className="mt-10 space-y-16">
-          {items.map((project) => (
+
+          {items.map((project, i) => (
             <FeaturedProjectBlock
               key={project.id}
               project={project}
               onOpen={onOpen}
+              index={i}
             />
           ))}
         </div>
