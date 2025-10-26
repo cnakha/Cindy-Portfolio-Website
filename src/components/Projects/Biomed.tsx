@@ -98,7 +98,7 @@ export default function Biomed() {
 
         <div className="flex flex-col items-center justify-center">
           <p className="mt-5 text-xl text-center text-white/50 max-w-2xl">
-            These five devices empower individuals to monitor different facets of their health in fields such as digital health, fitness, assistive, medical, and rehabilitation.
+            These five devices empower individuals to monitor their health in fields such as digital health, fitness, assistive, medical, and rehabilitation.
           </p>
         </div>
 

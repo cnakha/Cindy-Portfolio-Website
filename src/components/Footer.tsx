@@ -9,7 +9,7 @@ export default function Footer() {
       />
       <div className="absolute inset-0 " />
 
-      <div className="relative mx-auto w-full max-w-7xl px-4 py-20">
+      <div className="relative ml-20 w-full px-4 py-20">
         <div
           className="max-w-xl w-full rounded-2xl bg-black/55 p-10
           backdrop-blur-sm shadow-[0_12px_32px_rgba(0,0,0,0.35)]

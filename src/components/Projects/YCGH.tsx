@@ -30,7 +30,7 @@ export default function YCGH() {
                     <button
                         onClick={prevPic}
                         aria-label="Previous image"
-                        className="flex justify-center items-center p-2 md:p-4 rounded-full bg-white/75 hover:bg-blue-haze hover:scale-105 transition cursor-pointer shadow"
+                        className="flex justify-center items-center p-2 md:p-4 rounded-full bg-white/75 hover:bg-white hover:scale-105 transition cursor-pointer shadow"
                     >
                         <Triangle className="size-8 md:size-10 stroke-none -rotate-90 fill-black" />
                     </button>
@@ -38,7 +38,7 @@ export default function YCGH() {
                     <button
                         onClick={nextPic}
                         aria-label="Next image"
-                        className="flex justify-center items-center p-2 md:p-4 rounded-full bg-white/75 hover:bg-blue-haze hover:scale-105 transition cursor-pointer shadow"
+                        className="flex justify-center items-center p-2 md:p-4 rounded-full bg-white/75 hover:bg-white hover:scale-105 transition cursor-pointer shadow"
                     >
                         <Triangle className="size-8 md:size-10 stroke-none rotate-90 fill-black" />
                     </button>

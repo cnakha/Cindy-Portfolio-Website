@@ -2,7 +2,6 @@ import { useNavigate } from "react-router-dom";
 import { projects } from "../lib/projectData";
 import AboutMeCarousel from "./AboutMeCarousel";
 import Footer from "./Footer";
-import {Play, Pause} from 'lucide-react'
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 
@@ -40,33 +39,16 @@ function Hero() {
       {/* Gradient for legibility */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#008BE8]/70 to-transparent" />
 
-      {/* Play/Pause Button */}
-      <button
-  onClick={handlePlayPause}
-  className={`
-    absolute top-[16%] z-20 bg-black/55 backdrop-blur-sm
-    right-14 min-[920px]:right-auto min-[920px]:left-[700px]
-    shadow-[0_12px_32px_rgba(0,0,0,0.35)]
-    ring-1 ring-white/10 text-white px-4 py-4 rounded-full
-    shadow hover:bg-black/80 transition-transform duration-200 hover:scale-110
-    ${typeof slideNumber !== "undefined" && slideNumber !== 0 ? "hidden md:block" : "block"}
-  `}
->
-  <div className="rounded-full p-2 flex items-center justify-center border-4 border-white/75">
-    {isPlaying ? (
-      <Pause className="w-8 h-8 md:w-10 md:h-10 fill-white stroke-none" />
-    ) : (
-      <Play className="w-8 h-8 md:w-10 md:h-10 fill-white stroke-none" />
-    )}
-  </div>
-</button>
-
-
       {/* Content container: left aligned, pushed down from the top */}
       <div className="relative z-10 mx-auto w-full max-w-[90%]">
         <div className="pt-[100px]">
           {/* Left-aligned card; keep it square-ish with max-w and padding */}
-          <AboutMeCarousel setSlideNumber={setSlideNumber}/>
+          <AboutMeCarousel 
+          setSlideNumber={setSlideNumber}
+          slideNumber={slideNumber}
+          isPlaying={isPlaying}
+          onTogglePlay={handlePlayPause}
+          />
         </div>
       </div>
     </section>
@@ -113,12 +95,10 @@ function FeaturedProjectBlock({
       }
     }
     >
-
       <div className="flex flex-col justify-center items-center w-full text-center mt-10">
-       
         <button
           onClick={() => onOpen(project.id)}
-          className=" block w-full overflow-hidden rounded-[12px] bg-black/20 ring-1 ring-white  hover:ring-blue-haze transition shadow-[0_12px_32px_rgba(0,0,0,0.35)]"
+          className=" block w-full overflow-hidden rounded-[12px] bg-black/20 ring-1 ring-white transition shadow-[0_12px_32px_rgba(0,0,0,0.35)]"
         >
           <div className="relative aspect-[20/7] overflow-hidden">
           <img
@@ -129,7 +109,7 @@ function FeaturedProjectBlock({
           </div>
           <div 
             className="flex flex-col py-6 px-6 md:px-20 justify-center items-center text-center 
-            backdrop-blur-sm bg-black/75 hover:bg-blue-haze ring-1 ring-white/10 z-10  cursor-pointer transition ease-in-out duration-500">
+            backdrop-blur-sm bg-black/75 hover:bg-blue-haze hover:ring-blue-haze ring-1 ring-white/10 z-10 cursor-pointer transition ease-in-out duration-500">
             <h3 className="text-white max-w-4xl font-bolder text-2xl leading-[1.25] md:text-4xl ">{project.title}</h3>
             <p className="max-w-3xl text-sm mt-4 md:text-base text-white ">{project.description}</p>
           </div>

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
-import { Triangle, Clock , Heart} from "lucide-react";
+import { Triangle, Clock , Heart, Play, Pause} from "lucide-react";
+
 import { motion } from "framer-motion";
 
 declare global {
@@ -77,7 +78,7 @@ const [typingDone, setTypingDone] = useState(false);
           <span className="text-white font-bolder">
             research, design, user test, and code{" "}
           </span>
-          cool projects to launch with product focused thinking...
+          cool projects all the way to launch with product focused thinking...
         </motion.p>     
 
         {/* Bottom info row */}
@@ -134,7 +135,12 @@ const [typingDone, setTypingDone] = useState(false);
 
 
 
-export default function AboutMeCarousel({ setSlideNumber }: { setSlideNumber: (num: number) => void }) {
+export default function AboutMeCarousel({slideNumber,  setSlideNumber, isPlaying, onTogglePlay }: 
+  { setSlideNumber: (num: number) => void 
+    isPlaying: boolean;
+    onTogglePlay: () => void;
+    slideNumber: number;
+  }) {
   const slides = [
     "",
     "I love creating things that bring joy to others and heavily value leaving a positive impact in the world. Wanting to leverage my academic drive and creative mind, I found myself at the door of creative technology...",
@@ -181,13 +187,35 @@ export default function AboutMeCarousel({ setSlideNumber }: { setSlideNumber: (n
   return (
     <div
       className="
-        w-full max-w-[750px] rounded-2xl
+        relative w-full max-w-[750px] rounded-2xl
         bg-black/55 backdrop-blur-sm
         shadow-[0_12px_32px_rgba(0,0,0,0.35)]
         ring-1 ring-white/10 overflow-hidden
       "
       style={{ height, transition: "height 300ms ease" }}
     >
+      {/* Play/Pause Button */}
+      {slideNumber === 0 && (
+        <button
+          onClick={onTogglePlay}
+          className="
+            absolute top-4 right-4
+            bg-black/55 text-white rounded-full
+            p-4 backdrop-blur-sm ring-1 ring-white/10
+            shadow-[0_12px_32px_rgba(0,0,0,0.35)]
+            hover:bg-black/80 transition-transform hover:scale-110
+          "
+        >
+          <div className="rounded-full p-2 border-4 border-white/75 flex items-center justify-center">
+            {isPlaying ? (
+              <Pause className="w-8 h-8 fill-white stroke-none" />
+            ) : (
+              <Play className="w-8 h-8 fill-white stroke-none" />
+            )}
+          </div>
+        </button>
+      )}
+
       {/* Natural-flow flex column (no h-full) so height can shrink/grow per slide */}
       <div
         ref={innerRef}

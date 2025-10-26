@@ -52,7 +52,7 @@ export default function ProjectDetailPage() {
   } = project;
 
   return (
-    <main className="min-h-screen bg-[#131415] text-white">
+    <main className="min-h-screen overflow-x-clip bg-[#131415] text-white">
      
       {/* Summary band (matches screenshot spacing) */}
       <section className="pt-32">
