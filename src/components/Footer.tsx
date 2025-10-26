@@ -5,7 +5,7 @@ export default function Footer() {
 
       <div
         className="absolute inset-0 bg-cover opacity-80 bg-center"
-        style={{ backgroundImage: `url("../chicago_bg.png")` }}
+        // style={{ backgroundImage: `url("../chicago_bg.png")` }}
       />
       <div className="absolute inset-0 " />
 

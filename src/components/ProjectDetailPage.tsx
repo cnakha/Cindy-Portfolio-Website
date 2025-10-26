@@ -75,11 +75,11 @@ export default function ProjectDetailPage() {
       </section>
 
       {project.vid ? (
-        <div className="max-w-6xl mx-auto mt-10 px-6">
+        <div className="max-w-6xl mx-auto mt-10 px-10">
             <h3 className="mt-16 text-3xl font-semibold">
                 Concept Video
             </h3>
-            <div className=" mt-5 relative aspect-[21/12] overflow-hidden rounded-[12px]">
+            <div className=" mt-5 relative aspect-[21/12] overflow-hidden ">
                 <video
                     src={'/YCGH/YCGH_Concept_Vid.mp4'}
                     controls
@@ -88,7 +88,7 @@ export default function ProjectDetailPage() {
           </div>
       ) : (
         <section className="mt-10">
-          <div className="mx-auto max-w-6xl px-6 mt-10">
+          <div className="mx-auto max-w-6xl px-10 mt-10">
             <div className="overflow-hidden  border border-white/20">
               <img
                 src={`${project.imageUrl2}`}
@@ -104,7 +104,7 @@ export default function ProjectDetailPage() {
 
       {/* Top specs row: My Role / Skills / Tools / Timeline + See the Code */}
       <section className="mt-20">
-        <div className="mx-auto w-full max-w-6xl px-6">
+        <div className="mx-auto w-full max-w-6xl px-10">
           <div className="rounded-xl border border-white/10 bg-[#1f1f1f] p-6">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
 
@@ -126,7 +126,7 @@ export default function ProjectDetailPage() {
                 </div>
 
                 {/* Timeline */}
-                <div className="w-full mt-4">
+                <div className="w-full ">
                   <div className="flex gap-2">
                     <Calendar size="30"/>
                     <h3 className="text-[24px] tracking-wider text-white font-semibold">
@@ -224,7 +224,7 @@ export default function ProjectDetailPage() {
 
       <div className="flex flex-col justify-center items-center text-center mt-40 mx-auto w-full max-w-6xl px-6">
         <h4 className="text-white font-semibold">Solution</h4>
-        <h3 className="mt-2 text-3xl font-normal text-white/90 max-w-3xl">
+        <h3 className="mt-2 text-3xl font-normal text-white/90 max-w-4xl">
           {solution}
         </h3>
       </div>
@@ -261,15 +261,15 @@ export default function ProjectDetailPage() {
 
       {/* Next Milestones card */}
       {milestones.length > 0 && (
-      <section className="mt-12">
+      <section className="mt-20 mb-40">
         <div className="mx-auto w-full max-w-6xl px-6">
           <div className="rounded-xl border border-white/15 bg-[#222] p-6">
-            <h3 className="text-white font-semibold">Next Milestones</h3>
+            <h3 className="text-white font-semibold text-3xl">Next Milestones</h3>
             <div className="mt-4 space-y-6">
               {(milestones).map((m, i) => (
                 <div key={i}>
-                  <h4 className="font-semibold">{m}</h4>
-                  <p className="mt-1 text-xs text-white/60">
+                  <h4 className="font-bolder">{m}</h4>
+                  <p className="mt-1 ml-2 text-xs text-white/60">
                     Elevate fidelity and gather analytics to iterate quickly.
                   </p>
                 </div>

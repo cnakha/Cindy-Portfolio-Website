@@ -65,7 +65,7 @@ export const projects: Project[] = [
     title: "Sensing Through Life: A Collection of Wearable Biomedical Devices and Apps",
     description: "Various wearable biomedical devices and UI projects from my time at the Wearables and Nearables Technology Laboratory at the University of Illinois Chicago",
     category: "Fullstack Development, Hardware Assembly, and UI and User Experience Design for Wearable Health Monitoring Devices",
-    fullDescription: "Projects from working in the Wearables and Nearables Technology Laboratory at the University of Illinois Chicago. For a semester, I collaborated in an interdisciplinary group of four biomedical engineering and computer science students, gaining practical experience assembling, designing, and developing various wearable and nearable devices. I acquisitioned, processed, and analyzed a diverse set of sensor data, designing and integrating user-friendly interfaces for data visualization. Each project was developed in under two weeks of development and presented through a series of live demos and critques.",
+    fullDescription: "Projects from working in the Wearables and Nearables Technology Laboratory at the University of Illinois Chicago. For a semester, I collaborated in an interdisciplinary group of four biomedical engineering and computer science students, gaining hands-on experience assembling, designing, and developing various embedded wearable devices and user interfaces. I acquisitioned, processed, and analyzed a diverse set of sensor data, working with wireless communication and various sensors. Each project was developed in under two weeks of development and presented through a series of live demos and critques.",
     tools: ["React", "Node.js", "Processing", "Python", "C#", "Arduino", "Figma"],
     challenges: "Creating an intuitive interface that could handle complex project hierarchies while remaining accessible to users of all technical levels.",
     outcome: "Successfully developed 5 different wearable biomedical devices that monitor various health metrics, each successfully tested and validated in real-world scenarios.",
@@ -76,8 +76,8 @@ export const projects: Project[] = [
     role: "Lead Frontend Developer and UI/UX Designer but I was also a Fullstack Developer and Hardware Engineer alongside three other interdisciplinary students from computer science and biomedical engineering backgrounds: Kegan Jones, Rohan Kakarlapudi, and Sufyan Siddiqui",
     skills: ["UI/UX Design", "Fullstack Development", "Entrepreneurship", "Internet of Things", "Prototyping", "Hardware Engineering", "Product Design", "User Testing", "Websockets"],
     problem: "Wearable technology has immense potential to revolutionize personal health tracking, yet many current devices fail to balance accuracy, usability, and seamless integration into everyday life.",
-    subProblem: "Listed are a few key problems we identified in the wearable health tech space:",
-    solution: "My team developed five wearable bluetooth devices that utilize sensors to monitor biometric data such as heart rate, oxygen levels, stress, and activity patterns. The devices are created with user comfort in mind, featuring ergonomic designs and intuitive user interfaces that provide real-time data visualization and alerts, ensuring users can easily track their health metrics and receive timely notifications on health anomalies.",
+    subProblem: "After user research, listed are key problems we identified in the wearable health tech space:",
+    solution: "My team developed five wearable bluetooth devices that utilize sensors to monitor biometric data such as heart rate, oxygen levels, stress, and activity patterns. The devices are created with user comfort in mind, featuring ergonomic designs, wireless communication, and intuitive user interfaces that provide real-time data visualization and alerts, ensuring users can easily track their health metrics and receive timely notifications on health anomalies.",
     keyProblems:[
       "Lack of Accessible Health Monitoring",
       "Poor Integration into Daily Life",
@@ -113,9 +113,19 @@ export const projects: Project[] = [
     role: "Equal contributing VR Developer and UI/UX Designer along side 3 other interdisciplinary students from computer science and design backgrounds: Hope Jo, Gaeun Lee, Khin Yuupar Myat",
     skills: ["UI/UX Design", "Virtual Reality Development", "Human-Computer Interaction", "Prototyping", "3D Modeling", "User Testing", "Field Research", "Scripting"],
     tools: ["C#", "Unity", "Blender", "Maya", "Figma"],
-    problem: "While traditional therapeutic approaches remain vital, there is a growing need for accessible, engaging tools that promote emotional awareness and coping strategies.",
-    subProblem: "Anxiety continues to be one of the most prevalent and growing mental health challenges, with 43% of adults in 2024 reporting increased levels compared to the previous year. While traditional therapeutic approaches remain vital, there is a growing need for accessible, engaging tools that promote emotional awareness and coping strategies.",
+    problem: "Anxiety continues to be one of the most prevalent and growing mental health challenges, with 43% of adults in 2024 reporting increased levels of anxiety compared to the previous year.",
+    subProblem: "While traditional therapeutic approaches remain vital, there is a growing need for accessible, engaging tools that promote emotional awareness and coping strategies. Key challenges in mental health support include:",
     solution: "You Can Grow Here (YCGH) was developed to be a narrative-driven virtual reality (VR) experience that leverages interaction, storytelling, and design to foster emotional reflection and support mental well-being.",  
+    keyProblems:[
+      "Inaccessible Emotional Support",
+      "Lack of Engaging and Emotionally Reflective Tools",
+      "Difficulty Building Emotional Awareness"
+    ],
+    keyProblemDescriptions:[
+      "Inconsistent access to therapy due to financial, geographic, or social barriers, impersonal tools, and strictly clinical tools limit access to emotional support.",
+      "There's a need for interactive, sensory-rich experiences that help users sustain engagement and encourage deep emotional reflection.",
+      "Internalizing and applying coping mechanisms in real-life situations can be hard without spaces for safe exploration and guided practice."
+      ],
   },
   {
     id: "foliofolds",

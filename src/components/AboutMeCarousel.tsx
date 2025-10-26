@@ -75,9 +75,9 @@ const [typingDone, setTypingDone] = useState(false);
         <motion.p className="text-3xl md:text-4xl text-white/50 pt-8" variants={item}>
           I love to{" "}
           <span className="text-white font-bolder">
-            research, design, user test, code, and launch{" "}
+            research, design, user test, and code{" "}
           </span>
-          cool projects with product focused thinking...
+          cool projects to launch with product focused thinking...
         </motion.p>     
 
         {/* Bottom info row */}

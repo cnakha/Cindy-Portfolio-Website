@@ -30,7 +30,7 @@ function Hero() {
       {/* Full-bleed background */}
       <video
         ref={videoRef}
-        src={'/Portfolio_hero.mp4'}
+        src={'/Hero.mp4'}
         className="absolute inset-0 h-full w-auto min-w-full object-cover bg-center bg-no-repeat"
         muted
         autoPlay
@@ -108,34 +108,33 @@ function FeaturedProjectBlock({
       custom={index}
       viewport={{
         once: true,          
-        amount: 0.15,         
+        amount: 0.1,         
         margin: "0px 0px -8% 0px", 
-      }}
+      }
+    }
     >
 
       <div className="flex flex-col justify-center items-center w-full text-center mt-10">
        
         <button
           onClick={() => onOpen(project.id)}
-          className=" block w-full overflow-hidden rounded-[12px] bg-black/20 ring-1 ring-white/20 hover:ring-white/50 transition shadow-[0_12px_32px_rgba(0,0,0,0.35)]"
+          className=" block w-full overflow-hidden rounded-[12px] bg-black/20 ring-1 ring-white  hover:ring-blue-haze transition shadow-[0_12px_32px_rgba(0,0,0,0.35)]"
         >
-          <div className="relative aspect-[20/8] overflow-hidden">
+          <div className="relative aspect-[20/7] overflow-hidden">
           <img
             src={`${project.imageUrl}`}
             alt={`${project.id} preview`}
             className="absolute inset-0 h-full w-full object-cover transform transition-transform duration-600 ease-in-out hover:scale-105"
           />
           </div>
-        <div 
-          className="flex flex-col py-6 px-6 md:px-20 justify-center items-center text-center 
-          backdrop-blur-sm bg-black/75 hover:bg-blue-haze ring-1 ring-white/10 z-10  cursor-pointer transition ease-in-out duration-500">
-          <h3 className="text-white max-w-4xl font-bolder text-2xl leading-[1.25] md:text-4xl ">{project.title}</h3>
-          <p className="max-w-3xl text-sm mt-4 md:text-base text-white ">{project.description}</p>
-        </div>
-                </button>
+          <div 
+            className="flex flex-col py-6 px-6 md:px-20 justify-center items-center text-center 
+            backdrop-blur-sm bg-black/75 hover:bg-blue-haze ring-1 ring-white/10 z-10  cursor-pointer transition ease-in-out duration-500">
+            <h3 className="text-white max-w-4xl font-bolder text-2xl leading-[1.25] md:text-4xl ">{project.title}</h3>
+            <p className="max-w-3xl text-sm mt-4 md:text-base text-white ">{project.description}</p>
+          </div>
+        </button>
 
-        {/* Line */}
-        {/* {project.id !== "clarity" && (<div className="mt-32 h-[1px] w-full bg-white/50" />)} */}
       </div>
 
     </motion.div>
@@ -150,15 +149,6 @@ function FeaturedProjects({
   onOpen: (id: string) => void;
 }) {
 
-  // Animation variants
-  const listVariants = {
-    hidden: { opacity: 1 }, // keep mounted
-    show: {
-      opacity: 1,
-      transition: { staggerChildren: 0.8, delayChildren: 0 },
-    },
-  };
-
   return (
     <section id="projects" className="relative w-full bg-[#131415] pb-10">
       <div className="flex w-full items-center justify-center bg-black px-4 py-10 ">
@@ -166,7 +156,7 @@ function FeaturedProjects({
           Featured Projects
         </h2>
       </div>
-      <div className="mx-auto w-full px-[15%] md:pb-10">
+      <div className="mx-auto w-full px-[10%] md:pb-10">
 
         <div className="mt-10 space-y-16">
 

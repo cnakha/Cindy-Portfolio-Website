@@ -98,7 +98,7 @@ export default function Biomed() {
 
         <div className="flex flex-col items-center justify-center">
           <p className="mt-5 text-xl text-center text-white/50 max-w-2xl">
-            These five devices empower individuals to monitor different facets of their health in fields such as sports, fitness, medicine, assistive tech, and rehabilitation.
+            These five devices empower individuals to monitor different facets of their health in fields such as digital health, fitness, assistive, medical, and rehabilitation.
           </p>
         </div>
 
@@ -153,11 +153,12 @@ export default function Biomed() {
             <h4 className="mt-20 text-xl text-white/50"><span className="font-semibold text-white/90">Tech Stack </span>: React.js, Tailwind CSS, Node.js, Arduino C++</h4>
 
             <h4 className="mt-10 text-xl text-white/90 font-semibold">Hardware</h4>
-            <ul className="list-disc mt-4 list-inside space-y-2 text-white/50">
-              {MotionSenseHardware.slice(0, MotionSenseHardware.length ).map((feature, idx) => (
-                <li key={idx}>{feature}</li>
+            <ul className="list-disc mt-4 pl-6 space-y-2 text-white/50">
+              {MotionSenseHardware.map((feature, idx) => (
+                <li key={idx} className="pl-1">{feature}</li>
               ))}
             </ul>
+
             
             <h4 className="mt-20 text-xl text-white/90 font-semibold">Design Criteria</h4>
             <ul className="list-disc mt-4 list-inside space-y-2 text-white/50">
@@ -172,7 +173,7 @@ export default function Biomed() {
             </p>
           </div>
 
-          <div className="mt-5 relative aspect-[4/10] overflow-hidden rounded-[12px] flex justify-center">
+          <div className="mt-5 relative aspect-[4/10] overflow-hidden flex justify-center">
             <img
               src="/biomed_devices/p1.png"
               alt="MotionSense prototype"
