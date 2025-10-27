@@ -199,7 +199,7 @@ export default function AboutMeCarousel({slideNumber,  setSlideNumber, isPlaying
         <button
           onClick={onTogglePlay}
           className="
-            absolute top-4 right-4
+            absolute top-8 right-8
             bg-black/55 text-white rounded-full
             p-4 backdrop-blur-sm ring-1 ring-white/10
             shadow-[0_12px_32px_rgba(0,0,0,0.35)]
@@ -208,9 +208,9 @@ export default function AboutMeCarousel({slideNumber,  setSlideNumber, isPlaying
         >
           <div className="rounded-full p-2 border-4 border-white/75 flex items-center justify-center">
             {isPlaying ? (
-              <Pause className="w-8 h-8 fill-white stroke-none" />
+              <Pause className="w-8 h-8 md:w-12 md:h-12 fill-white stroke-none" />
             ) : (
-              <Play className="w-8 h-8 fill-white stroke-none" />
+              <Play className="w-8 h-8 md:w-12 md:h-12 fill-white stroke-none" />
             )}
           </div>
         </button>

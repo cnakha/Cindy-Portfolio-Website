@@ -47,7 +47,7 @@ export default function WorldNotes() {
                 Discover Art and Stories From Around the World
               </h3>
               <p className="mt-10 text-black/75 text-xl">
-                Users are instantly immersed in WorldNotes, landing at a random location scattered with 3D notes left by others. <br/> <br/>Exploration feels natural: click-to-move in Street View, use the overview or mini map, or search specific places.<br/><br/> The navigation bar allows quick refreshes, shuffling nearby notes, or stepping through them sequentially for a guided discovery experience.            
+                Users start their adventure by landing at a random location scattered with 3D notes left by others. <br/> <br/>Exploration feels natural: click-to-move in Street View, use the overview or mini map, or search specific places.<br/><br/> The navigation bar allows quick refreshes, shuffling nearby notes, or stepping through them sequentially for a guided discovery experience.            
               </p>          
             </div>      
             <div className="relative aspect-[22/15] overflow-hidden">
@@ -83,7 +83,7 @@ export default function WorldNotes() {
               Show Off Your Notes the Way You Want
             </h3>
             <p className="mt-10 text-black/75 text-xl">
-              Profiles show you all the notes a user creates as well as reposts. The profile page is a place the user can display their favorite notes in any way they want.
+              Profiles show you all the notes you post, draft, repost, like, and save. The cover page is a place the user can display their favorite notes in any way they desire.
             </p>          
             </div>      
           <div className="relative aspect-[22/15] overflow-hidden">
@@ -117,7 +117,8 @@ export default function WorldNotes() {
       <Line/>
 
 
-        {/* Process Section */}
+
+      {/* Process Section */}
       <div className="max-w-6xl flex flex-col mx-auto mt-40">
         <h3 className="text-white text-center text-7xl font-bold">Creating the MVP</h3>
         <h3 className="mt-40 text-2xl font-semibold">
@@ -125,7 +126,7 @@ export default function WorldNotes() {
         </h3>
         <p className="mt-10 text-sm text-white/70 max-w-4xl leading-relaxed text-xl">
           Establishing a vision and core values were key to WorldNotes's design. Prioritizing pictorial communication and geolocated discoveries offers a quirky nuance and emotional depth in social interactions that is yet to be explored. 
-          The challenge became: <span className="italic text-white font-semibold"> how can we design a user friendly, universal platform that inspires creativity? </span>
+          The challenge then became: <span className="italic text-white font-semibold"> how can we design a user friendly, universal platform that inspires creativity? </span>
         
         <br/><br/>
         WorldNotes is deeply informed by a blend of <span className="font-semibold text-white">internet culture </span>, mapping tools, and communal creativity platforms. Here a few places of inspiration I pulled from:
@@ -263,7 +264,15 @@ export default function WorldNotes() {
         <h3 className="mt-40 text-2xl font-semibold">
           Step 6 — Fullstack Development
         </h3>
+
+
         <p className="mt-10 text-xl text-white/70 max-w-5xl">
+          I followed an Agile-inspired workflow to stay organized and iterative. Each development cycle began with defining small, testable goals—design a feature, implement it, validate behavior, and gather informal user feedback.
+          <br/><br/>
+          Working independently meant acting as both designer and developer, so I used short sprints and modular commits to keep momentum while maintaining flexibility. I continuously refined features through rapid prototyping, debugging, and lightweight testing rather than long planning phases.
+          <br/><br/>
+          This solo-Agile approach allowed WorldNotes to grow organically—each iteration building on user insight, visual polish, and technical scalability without rigid deadlines or external dependencies.
+          <br/><br/>
           After designing all necessary UI components, I assembled a tech stack and began developing the vision: </p>
         
         <div className="flex flex-col justify-center items-center w-full mt-2 text-sm max-w-4xl text-white/70 mx-auto">

@@ -1,14 +1,14 @@
-
 export default function Footer() {
   return (
     <footer id="contact" className="relative bg-blue-haze">
+      {/* Black horizontal line at the top of the footer */}
+      {/* <div className="absolute top-0 left-0 right-0 h-40 bg-black z-30" /> */}
 
       <div
         className="absolute inset-0 bg-cover opacity-80 bg-center"
-        // style={{ backgroundImage: `url("../chicago_bg.png")` }}
+        style={{ backgroundImage: `url("../footer.png")` }}
       />
       <div className="absolute inset-0 " />
-
       <div className="relative ml-20 w-full px-4 py-20">
         <div
           className="max-w-xl w-full rounded-2xl bg-black/55 p-10

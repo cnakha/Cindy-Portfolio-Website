@@ -98,7 +98,7 @@ function FeaturedProjectBlock({
       <div className="flex flex-col justify-center items-center w-full text-center mt-10">
         <button
           onClick={() => onOpen(project.id)}
-          className=" block w-full overflow-hidden rounded-[12px] bg-black/20 ring-1 ring-white transition shadow-[0_12px_32px_rgba(0,0,0,0.35)]"
+          className=" block w-full overflow-hidden rounded-[12px] bg-black/20 ring-1 ring-white/25 hover:ring-white/50 transition shadow-[0_12px_32px_rgba(0,0,0,0.35)]"
         >
           <div className="relative aspect-[20/7] overflow-hidden">
           <img
@@ -108,8 +108,8 @@ function FeaturedProjectBlock({
           />
           </div>
           <div 
-            className="flex flex-col py-6 px-6 md:px-20 justify-center items-center text-center 
-            backdrop-blur-sm bg-black/75 hover:bg-blue-haze hover:ring-blue-haze ring-1 ring-white/10 z-10 cursor-pointer transition ease-in-out duration-500">
+            className="flex flex-col min-h-[250px] md:min-h-[300px] py-6 px-6 md:px-20 justify-center items-center text-center 
+            backdrop-blur-sm bg-black/75 hover:bg-blue-haze  ring-1 z-10 cursor-pointer transition ease-in-out duration-500">
             <h3 className="text-white max-w-4xl font-bolder text-2xl leading-[1.25] md:text-4xl ">{project.title}</h3>
             <p className="max-w-3xl text-sm mt-4 md:text-base text-white ">{project.description}</p>
           </div>
@@ -137,9 +137,15 @@ function FeaturedProjects({
         </h2>
       </div>
       <div className="mx-auto w-full px-[10%] md:pb-10">
-
-        <div className="mt-10 space-y-16">
-
+        <div
+          className="
+            mt-10 
+            grid 
+            grid-cols-1 
+            md:grid-cols-2 
+            gap-16
+          "
+        >
           {items.map((project, i) => (
             <FeaturedProjectBlock
               key={project.id}
