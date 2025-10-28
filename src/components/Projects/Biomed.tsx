@@ -15,9 +15,9 @@ export default function Biomed() {
   const deviceDescriptions = [
     'A Wearable System for Real-Time Assessment of Lower Body Form and Muscle Engagement During Exercise',
     'Smart Heart rate and Blood Oxygenation Assessment Wristband',
-    'Smart Sport Band for Heart Rate and Respiratory Monitoring',
-    'Smart Arm Tattoo to Control TikTok',
-    'Gait, Balance, and Motion Analysis Smart Shoe'
+    'Smart Sport Chest Band for Heart Rate and Respiratory Monitoring',
+    'Smart Arm Tattoo to Control TikTok Web',
+    'Gait, Balance, and Motion Analysis Smart Shoe Insole'
    ];
 
   const features = [
@@ -40,13 +40,29 @@ export default function Biomed() {
   ];
 
   const MotionSenseDesCriteria = [
-    "Shoe Insole for FSR sensors.",
-    "Thigh Strap houses EMG sensors.",
-    "Waistband Clip contains the FireBeetle board, accelerometer, and battery.",
+    "Shoe insole for FSR sensors.",
+    "Thigh strap houses EMG sensors.",
+    "Waistband clip contains the FireBeetle board, accelerometer, and battery.",
     "Must display real-time angle of hip hinge",
     "Heat maps, balance feedback, and voltage over time graphs from each insole FSR",
-    "Visualize Hamstring Engagement",
+    "Visualize hamstring engagement",
     "Create an assistive target form interface"
+  ];
+
+  const SparkBeatHardware = [
+    "Sparkfun Pulse Oximeter and Heart Rate Monitor (MAX30101 & MAX32664)",
+    "FireBeetle Board-328P with BLE4.1",
+    "18650 Li-Ion Battery",
+    "Photoplethysmogram (PPG) Sensors",
+    "Stress indicative buzzer"
+  ];
+
+  const SparkBeatDesCriteria = [
+    "Real-time Heart Rate and Blood Oxygenation Monitoring",
+    "Comfortable Wristband Design",
+    "Stress Detection and Alerts",
+    "Heart Rate Over Time Visualization",
+    "Cardio Zone Indicators",
   ];
 
   const Sparkbeat2Hardware = [
@@ -56,6 +72,7 @@ export default function Biomed() {
   const Sparkbeat2DesignCriteria = [
     "Fitness, Stress, and Meditation Modes",
     "Real-time Heart Rate and Respiratory Rate Monitoring",
+    "Cardio Zone Indicators",
     "Data Logging and Visualization",
     "Adjustable Fit and Comfort",
   ];
@@ -74,27 +91,40 @@ export default function Biomed() {
     "Graph the Voltage over time of each FSR",
   ];
 
+  const TikTokHardware = [
+    "FireBeetle Board-328P with BLE4.1: Provides Bluetooth device capabilities.",
+    "MPR 121 Breakout Board: Relies on capacitive sensor to detect touches.",
+    "18650 Li-Ion Battery: Powers the device for up to 8 hours of continuous use.",
+  ];
+
+  const TikTokDesCriteria = [
+    "12 capacitive sensors",
+    "Vinyl base",
+    "Copper tape connections to link electrodes to the MPR121 board",
+    "Clear interface to display touch interactions",
+  ];
 
   const tech = [
     'Processing',
-    'Arduino',
-    'Figma',
     'React + Node.js + TailwindCSS',
+    'Figma',
+    'Arduino',
     "Python",
     '3D Printing',
-    'FireBeetle Boards',
   ];
 
   const techDescriptions = [
-    'I loved its minimalist approach to anonymous note sharing. Its simple layouts inspired me to strip away unnecessary complexity, keeping WorldNotes focused on the intimacy of expression.',
-    'Reinforced the importance of world exploration mechanics. Features like zoom levels, Street View, and metadata overlays shaped how I designed the navigation system for discovering notes.',
-    "Sparked ideas around collaborative art, where users can collaborate digitally in one space together. This heavily influenced WorldNotes' note placement and discovery system.",
-    'Inspired the drawing experience. I intentionally leaned into primitive, playful tools, which lower barriers to entry and make creation fun rather than intimidating.'
+    'Processing is a visual programming environment used for creative coding, interactive graphics, and generative art.',
+    'A modern full-stack web development stack. React powers dynamic UIs, Node.js handles backend logic and APIs, and TailwindCSS enables rapid, responsive interface styling.',
+    'A collaborative design tool for creating user interfaces, prototypes, and design systems with real-time feedback.',
+    'An open-source electronics platform based on easy-to-use hardware and software, ideal for building interactive projects and prototypes.',
+    'A versatile programming language known for its simplicity and readability, widely used in data analysis, machine learning, web development, and automation.',
+    'A manufacturing process that creates three-dimensional objects by layering materials based on digital models, enabling rapid prototyping and custom designs.',
   ];
 
   return (
     <section>
-      <div className="mx-auto w-full max-w-7xl px-6 ">
+      <div className="mx-auto w-full max-w-7xl px-6 mb-40">
 
         <div className="flex flex-col items-center justify-center">
           <p className="mt-5 text-xl text-center text-white/50 max-w-2xl">
@@ -160,7 +190,6 @@ export default function Biomed() {
               ))}
             </ul>
 
-            
             <h4 className="mt-10 text-xl text-black font-semibold">Design Criteria</h4>
             <ul className="list-disc mt-4 text-sm pl-6 space-y-2 text-black/75">
               {MotionSenseDesCriteria.slice(0, MotionSenseDesCriteria.length ).map((feature, idx) => (
@@ -174,7 +203,7 @@ export default function Biomed() {
             </p>
           </div>
 
-          <div className="mt-5 relative aspect-[4/10] overflow-hidden flex justify-center">
+          <div className="relative mt-5 md:mt-0 aspect-[4/10] overflow-hidden flex justify-center">
             <img
               src="/biomed_devices/p1.png"
               alt="MotionSense prototype"
@@ -185,42 +214,42 @@ export default function Biomed() {
 
         <Line/>
 
-        {/* SparkBeat */}
-         <div className="mt-40 grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-10">
+        {/* SparkBeat 2 */}
+        <div className="mt-20 grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-10">
           <div>
             <h3 className="mt-2 text-4xl font-semibold">
-              SparkBeat  — Smart Heartrate and Blood Oxygenation Wristband
+              SparkBeat 2  — Wearable Sport Chest Band
             </h3>
-            <h4 className="mt-20 text-xl text-black font-semibold">Context</h4>
+            <h4 className="mt-10 text-xl text-black font-semibold">Context</h4>
             <p className="mt-2 text-xl text-black/75">
-            Measures heart rates and blood oxygen saturation (SpO2), providing insights into the wearer's cardiovascular health.
+            This project collects clean ECG signals from the patient’s heart and measure respiratory rate through analyzing resistance changes when the patient exhales and inhales.
             </p>
 
-            <h4 className="mt-20 text-xl text-black/75"><span className="font-semibold text-black">Tech Stack </span>: React.js, Tailwind CSS, Node.js, Arduino C++</h4>
+            <h4 className="mt-10 text-xl text-black/75"><span className="font-semibold text-black">Tech Stack </span>: Processing, Arduino C++</h4>
 
             <h4 className="mt-10 text-xl text-black font-semibold">Hardware</h4>
             <ul className="list-disc mt-4 text-sm pl-6 space-y-2 text-black/75">
-              {MotionSenseHardware.slice(0, MotionSenseHardware.length ).map((feature, idx) => (
+              {Sparkbeat2Hardware.slice(0, Sparkbeat2Hardware.length ).map((feature, idx) => (
                 <li key={idx}>{feature}</li>
               ))}
             </ul>
             
-            <h4 className="mt-20 text-xl text-black font-semibold">Design Criteria</h4>
+            <h4 className="mt-10 text-xl text-black font-semibold">Design Criteria</h4>
             <ul className="list-disc mt-4 text-sm pl-6 space-y-2 text-black/75">
-              {MotionSenseDesCriteria.slice(0, MotionSenseDesCriteria.length ).map((feature, idx) => (
+              {Sparkbeat2DesignCriteria.slice(0, Sparkbeat2DesignCriteria.length ).map((feature, idx) => (
                 <li key={idx}>{feature}</li>
               ))}
             </ul>
             
-            <h4 className="mt-20 text-xl text-black font-semibold">Evaluation</h4>
+            <h4 className="mt-10 text-xl text-black font-semibold">Evaluation</h4>
             <p className="mt-2 text-xl text-black/75">
-              Preliminary testing using squats and lunges across multiple users showed that EMG sensors detected hamstring activation within 50 milliseconds, FSR readings distinguished balanced vs. forward-leaning postures, and accelerometers consistently tracked trunk angle. The system accurately identified poor form in 84% of misaligned trials and delivered corrective feedback based on sensor thresholds and movement patterns.
+              The sport bands accurately captured ECG signals, with heart rate measurements within 3 bpm of clinical-grade monitors. Respiratory rate detection showed 95% accuracy in controlled breathing tests. Users reported the band was comfortable for extended wear, and the adjustable strap ensured a secure fit during physical activity.
             </p>
           </div>
 
-          <div className="mt-5 relative aspect-[6/10] overflow-hidden rounded-[12px] flex justify-center">
+          <div className="relative mt-5 md:mt-0 aspect-[5/12] overflow-hidden rounded-[12px] flex justify-center">
             <img
-              src="/biomed_devices/p4_vert.png"
+              src="/biomed_devices/p2_vert.png"
               alt="MotionSense prototype"
               className="object-cover w-full h-full"
             />
@@ -229,42 +258,42 @@ export default function Biomed() {
 
         <Line/>
 
-        {/* SparkBeat 2 */}
-        <div className="mt-40 grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-10">
+        {/* SparkBeat */}
+         <div className="mt-20 grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-10">
           <div>
             <h3 className="mt-2 text-4xl font-semibold">
-              SparkBeat 2  — Wearable Sport Band
+              SparkBeat  — Smart Heartrate and Blood Oxygenation Wristband
             </h3>
-            <h4 className="mt-20 text-xl text-black font-semibold">Context</h4>
+            <h4 className="mt-10 text-xl text-black font-semibold">Context</h4>
             <p className="mt-2 text-xl text-black/75">
-            This project collects clean ECG signals from the patient’s heart and measure respiratory rate through analyzing resistance changes when the patient exhales and inhales.
+            Measures heart rates and blood oxygen saturation (SpO2), providing insights into the wearer's cardiovascular health.
             </p>
 
-            <h4 className="mt-20 text-xl text-black/75"><span className="font-semibold text-black">Tech Stack </span>: Processing, Arduino C++</h4>
+            <h4 className="mt-10 text-xl text-black/75"><span className="font-semibold text-black">Tech Stack </span>: Processing, Arduino C++</h4>
 
             <h4 className="mt-10 text-xl text-black font-semibold">Hardware</h4>
-            <ul className="list-disc mt-4 pl-6 space-y-2 text-black/75">
-              {Sparkbeat2Hardware.slice(0, Sparkbeat2Hardware.length ).map((feature, idx) => (
-                <li key={idx}>{feature}</li>
-              ))}
-            </ul>
-            
-            <h4 className="mt-20 text-xl text-black font-semibold">Design Criteria</h4>
             <ul className="list-disc mt-4 text-sm pl-6 space-y-2 text-black/75">
-              {Sparkbeat2DesignCriteria.slice(0, Sparkbeat2DesignCriteria.length ).map((feature, idx) => (
+              {SparkBeatHardware.slice(0, SparkBeatHardware.length ).map((feature, idx) => (
                 <li key={idx}>{feature}</li>
               ))}
             </ul>
             
-            <h4 className="mt-20 text-xl text-black font-semibold">Evaluation</h4>
+            <h4 className="mt-10 text-xl text-black font-semibold">Design Criteria</h4>
+            <ul className="list-disc mt-4 text-sm pl-6 space-y-2 text-black/75">
+              {SparkBeatDesCriteria.slice(0, SparkBeatDesCriteria.length ).map((feature, idx) => (
+                <li key={idx}>{feature}</li>
+              ))}
+            </ul>
+            
+            <h4 className="mt-10 text-xl text-black font-semibold">Evaluation</h4>
             <p className="mt-2 text-xl text-black/75">
-              The sportbands accurately captured ECG signals, with heart rate measurements within 3 bpm of clinical-grade monitors. Respiratory rate detection showed 95% accuracy in controlled breathing tests. Users reported the band was comfortable for extended wear, and the adjustable strap ensured a secure fit during physical activity.
+              Testing with multiple users showed that the SparkBeat wristband accurately measured heart rate within 2 bpm of clinical-grade monitors and SpO2 levels within 2% accuracy. Stress was successfully detected, identifying and alerting elevated heart rates during simulated stress tests.
             </p>
           </div>
 
-          <div className="mt-5 relative aspect-[5/12] overflow-hidden rounded-[12px] flex justify-center">
+          <div className="relative mt-5 md:mt-0 aspect-[6/10] overflow-hidden rounded-[12px] flex justify-center">
             <img
-              src="/biomed_devices/p2_vert.png"
+              src="/biomed_devices/p4_vert.png"
               alt="MotionSense prototype"
               className="object-cover w-full h-full"
             />
@@ -279,9 +308,9 @@ export default function Biomed() {
             <h3 className="mt-2 text-4xl font-semibold">
               Smart Shoe  — Wearables for Motion, Balance, and Gait Analysis
             </h3>
-            <h4 className="mt-20 text-xl text-black font-semibold">Context</h4>
+            <h4 className="mt-10 text-xl text-black font-semibold">Context</h4>
             <p className="mt-2 text-xl text-black/75">
-            A wearable smart shoe insole with force sensors and accelerometers to analyze the user’s real-time walk patterns. Our device informs the user which part of the foot they use more while walking through a heatmap. Example: Walking on heels, or walking on toes, or normal walking.
+            Good gait is important for maintaining balance, coordination, and mobility, which reduces the risk of injuries and falls. Smart Shoe is a shoe insole with force sensors and accelerometers to analyze the user’s real-time walk patterns. Our device informs the user which part of the foot they use more while walking through a heatmap. Example: Walking on heels, or walking on toes, or normal walking.
             </p>
 
             <h4 className="mt-10 text-xl text-black/75"><span className="font-semibold text-black">Tech Stack </span>: Processing, Arduino C++</h4>
@@ -300,15 +329,12 @@ export default function Biomed() {
               ))}
             </ul>            
 
-            <h4 className="mt-20 text-xl text-black font-semibold">Evaluation</h4>
+            <h4 className="mt-10 text-xl text-black font-semibold">Evaluation</h4>
             <p className="mt-2 text-xl text-black/75">
-              Preliminary testing using squats and lunges across multiple users showed that EMG sensors detected hamstring activation within 50 milliseconds, FSR readings distinguished balanced vs. forward-leaning postures, and accelerometers consistently tracked trunk angle. The system accurately identified poor form in 84% of misaligned trials and delivered corrective feedback based on sensor thresholds and movement patterns.
+              Testing with multiple users showed that the Smart Shoe accurately identified gait patterns, distinguishing between heel-strike, toe-strike, and flat-footed walking with 92% accuracy. The heatmap visualization effectively highlighted pressure distribution, allowing users to adjust their walking form based on real-time feedback.
             </p>
           </div>
-
-        <Line/>
-
-          <div className="mt-5 relative aspect-[5/10] overflow-hidden rounded-[12px] flex justify-center">
+          <div className="relative mt-5 md:mt-0 aspect-[4/10] overflow-hidden flex justify-center">
             <img
               src="/biomed_devices/p3_vert.png"
               alt="MotionSense prototype"
@@ -317,41 +343,45 @@ export default function Biomed() {
           </div>
         </div>
 
-        <div className="mt-40 grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-10">
+        <Line/>
+
+        <div className="mt-20 grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-10">
           <div>
             <h3 className="mt-2 text-4xl font-semibold">
               TikTok Tattoo  — Interactive Tattoos 
             </h3>
-            <h4 className="mt-20 text-xl text-black font-semibold">Context</h4>
+            <h4 className="mt-10 text-xl text-black font-semibold">Context</h4>
             <p className="mt-2 text-xl text-black/75">
-              Tiktok Tattoo is a smart tattoo that allows users to control external devices such as TikTok on Web with a simple swipe on your skin.
+              As digital and physical worlds continue to merge, people are increasingly seeking playful and personal ways to interact with technology. 
+              Tiktok Tattoo is a smart tattoo that explores the idea of skin-based interfaces and allows you to control TikTok Web from an external device with your skin instead of tapping a phone or keyboard,.
             </p>
 
-            <h4 className="mt-20 text-xl text-black/75"><span className="font-semibold text-black">Tech Stack </span>: Processing, Python, Arduino C++</h4>
+            <h4 className="mt-10 text-xl text-black/75"><span className="font-semibold text-black">Tech Stack </span>: Processing, Python, Arduino C++</h4>
 
             <h4 className="mt-10 text-xl text-black font-semibold">Hardware</h4>
             <ul className="list-disc mt-4 text-sm pl-6 space-y-2 text-black/75">
-              <li>
-                MPR121 Breakout Board: Relies on capacitive sensor to detect touches. When a capacitive sensor (electrode) is touched, the total sensed capacitance changes. When the finger makes contact with the electrode, this shift in capacitance signals a touch event.
-              </li>
-            </ul>
-            
-            <h4 className="mt-20 text-xl text-black font-semibold">Design Criteria</h4>
-            <ul className="list-disc mt-4 text-sm pl-6 space-y-2 text-black/75">
-              {MotionSenseDesCriteria.slice(0, MotionSenseDesCriteria.length ).map((feature, idx) => (
+              {TikTokHardware.slice(0, TikTokHardware.length ).map((feature, idx) => (
                 <li key={idx}>{feature}</li>
               ))}
             </ul>
             
-            <h4 className="mt-20 text-xl text-black font-semibold">Evaluation</h4>
+            <h4 className="mt-10 text-xl text-black font-semibold">Design Criteria</h4>
+            <ul className="list-disc mt-4 text-sm pl-6 space-y-2 text-black/75">
+              {TikTokDesCriteria.slice(0, TikTokDesCriteria.length ).map((feature, idx) => (
+                <li key={idx}>{feature}</li>
+              ))}
+            </ul>
+            
+            <h4 className="mt-10 text-xl text-black font-semibold">Evaluation</h4>
             <p className="mt-2 text-xl text-black/75">
               The tattoo reliably detected swipe gestures and touch inputs, allowing users to seamlessly scroll through TikTok videos with a simple finger movement. The integration with TikTok on Web was smooth, enabling users to control video playback without any noticeable lag or delay.
             </p>
           </div>
 
-          <div className="flex flex-col gap-10 mt-5 relative aspect-[5/10] overflow-hidden rounded-[12px] flex justify-center">
+          <div className="flex mt-10 md:mt-0 flex-col gap-5 relative aspect-[5/10] overflow-hidden flex justify-center">
             <video
               src={'/biomed_devices/Tiktok_demo.mp4'}
+              className="object-cover w-full h-full px-10 rounded-[12px]"
               controls
               muted
             />
@@ -366,100 +396,40 @@ export default function Biomed() {
     
 
         {/* Process Section */}
-        <h3 className="text-white text-6xl font-bold mt-60">Creating the MVP</h3>
+        <h3 className="text-white text-6xl font-bold mt-60">The Process</h3>
         <h3 className="mt-20 text-2xl font-semibold">
-          Step 1  — Inspiration and Discovery
+          Technologies
         </h3>
         <p className="mt-10 text-sm text-white/50 max-w-4xl leading-relaxed text-xl">
-          Establishing a vision and core values were key to WorldNotes's design. Prioritizing pictorial communication and geolocated discoveries offers a quirky nuance and emotional depth in social interactions that is yet to be explored. 
-          The challenge became: <span className="italic text-black"> how can we design a user friendly, universal platform that inspires creativity? </span>
-        
-        <br/><br/>
-        WorldNotes is deeply informed by a blend of <span className="font-bolder text-white">internet culture </span>, mapping tools, and communal creativity platforms. Here a few places of inspiration I pulled from:
+          Before participating in this lab, I had limited experience with biomedical device design nor engineering in general. 
+          Through this project, I gained hands-on experience in sensor integration, harware engineering, data acquisition, and real-time monitoring.
+          <br/><br/>
+          The following tools were instrumental in bringing the various biomedical devices to life:
         </p>
         
-        <div className="mt-8 flex flex-wrap gap-6 justify-center w-full">
+        <div className="mt-10 md:px-20 flex flex-wrap gap-6 justify-center w-full">
           {tech.map((inspo, idx) => (
             <div
             key={idx}
-            className="flex flex-col text-left items-start bg-[#1f1f1f] border border-white/10 rounded-xl p-6 min-w-[220px] max-w-xs flex-1"
+            className="flex flex-col text-left items-start bg-[#1f1f1f] border border-white/10 rounded-xl p-6 min-w-[220px] min-h-[220px] max-w-xs flex-1"
             >
-            <h5 className="text-lg font-bolder text-black mb-4">{inspo}</h5>
+            <h5 className="text-lg font-bolder text-white mb-4">{inspo}</h5>
             <p className="text-sm text-white/50">{techDescriptions[idx]}</p>
             </div>
           ))}
         </div>
 
-        {/* <p className="font-semibold text-white mt-20">The Result</p>
-        <p className="text-sm text-white/70 max-w-2xl mt-2 text-xl">
-          The result is a creative world explorer that is part map, part sketchbook, part message board. WorldNotes transforms the act of scrolling into a playful exploration of what people leave behind, visually bridging global
-        </p> */}
-
         <Line/>
 
-
-
         
-        <h3 className="mt-40 text-2xl font-semibold">
-          Step 5  — UI Design
+        <h3 className="mt-20 text-2xl font-semibold">
+          Designing for Health
         </h3>
         <p className="mt-10 text-xl text-white/70 max-w-4xl">
-        After validating layouts, I shifted to creating a formal visual design of components using Figma and Illustrator. 
-        WorldNote's branding embraces playfulness, bright accents, references scrapbooking, and a lighthearted aesthetic—to reflect the project’s creative spirit. 
-        The UI is intentionally inviting, encouraging hesitant users to leave their mark on the world.
+          Designing biomedical devices requires a deep understanding of both user needs and technical constraints. I prioritized clarity, accessibility, and comfort in these UI designs as displaying biometric data can often be non-intuitive and overwhelming. 
+          Researching existing health monitoring solutions helped to identify effective hierarchy of information and the importance of clear labeling and soft visuals. 
+          <br/><br/>
         </p>
-
-        <div className="mt-10 ml-10 flex flex-col text-left items-start bg-[#1f1f1f] border border-white/10 rounded-xl p-6 ">
-          <h4 className=" font-semibold">
-            Creating An Ecosystem
-          </h4>
-          <p className="mt-2 max-w-4xl text-xl text-white/70">
-            A consistent design system ensures the interface feels cohesive and visually unified, giving every interaction from map navigation to note creation a recognizable identity.
-            <br/><br/>
-            Beyond text, the platform already supports layering, doodles, and spatial note placement, but the foundation  is intentionally <span className="font-bold"> scalable </span>. The note creator is built to grow, opening possibilities like animated notes, music attachments, borders, or stickers, expanding the ways users can express themselves. By treating design as both a system and a playground, WorldNotes sets the foundation for a platform that can evolve alongside its community’s creativity.
-          </p>
-        </div>
-
-        <div className=" mt-10 relative aspect-[21/9] overflow-hidden rounded-[12px]">
-          <img
-            src={"/worldnotes/wireframing.png"}
-            alt={`UI Design`}
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-        </div>
-
-        <Line/>
-
-        <h3 className="mt-40 text-2xl font-semibold">
-          Step 6  — Beginning Fullstack Development
-        </h3>
-        <p className="mt-2 text-xl text-white/70 max-w-4xl">
-          After designing all necessary UI components, I assembled a tech stack and begain implementing the vision: </p>
-      
-           
-        <div className=" mt-5 relative aspect-[21/9] overflow-hidden rounded-[12px]">
-          <img
-            src={"/worldnotes/ui_design.png"}
-            alt={`UI Design`}
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-        </div>
-
-        <Line/> 
-        
-        <h3 className="mt-10 text-2xl font-semibold">
-          Step 7  — Measuring Impact
-        </h3>
-        <p className="mt-2 text-xl text-white/70 max-w-4xl">
-          Because WorldNotes is experimental, impact is measured less in metrics and more in moments of connection; however there are community polls that are posted to survey users on the site’s updates. Over time, I plan to introduce lightweight analytics and community feedback loops to guide future iterations.
-        </p>
-        <div className=" mt-5 relative aspect-[21/9] overflow-hidden rounded-[12px]">
-          <img
-            src={"/panorama_kitchen.png"}
-            alt={`Engagement Metrics`}
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-        </div>
 
       </div>
     </section>
