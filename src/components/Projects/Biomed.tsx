@@ -171,7 +171,7 @@ export default function Biomed() {
         {/* MotionSense */}
         <div className="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-10">
           <div>
-            <h3 className="mt-2 text-4xl font-semibold">
+            <h3 className="mt-2 text-4xl">
             MotionSense  — A Wearable System for Real-Time Assessment of Lower Body Form and Muscle Engagement During Exercise
             </h3>
             <h4 className="mt-20 text-xl text-black font-semibold">Context</h4>
@@ -217,7 +217,7 @@ export default function Biomed() {
         {/* SparkBeat 2 */}
         <div className="mt-20 grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-10">
           <div>
-            <h3 className="mt-2 text-4xl font-semibold">
+            <h3 className="mt-2 text-4xl ">
               SparkBeat 2  — Wearable Sport Chest Band
             </h3>
             <h4 className="mt-10 text-xl text-black font-semibold">Context</h4>
@@ -261,7 +261,7 @@ export default function Biomed() {
         {/* SparkBeat */}
          <div className="mt-20 grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-10">
           <div>
-            <h3 className="mt-2 text-4xl font-semibold">
+            <h3 className="mt-2 text-4xl ">
               SparkBeat  — Smart Heartrate and Blood Oxygenation Wristband
             </h3>
             <h4 className="mt-10 text-xl text-black font-semibold">Context</h4>
@@ -305,7 +305,7 @@ export default function Biomed() {
         {/* Smart Shoe */}
         <div className="mt-20 grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-10">
           <div>
-            <h3 className="mt-2 text-4xl font-semibold">
+            <h3 className="mt-2 text-4xl ">
               Smart Shoe  — Wearables for Motion, Balance, and Gait Analysis
             </h3>
             <h4 className="mt-10 text-xl text-black font-semibold">Context</h4>
@@ -347,7 +347,7 @@ export default function Biomed() {
 
         <div className="mt-20 grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-10">
           <div>
-            <h3 className="mt-2 text-4xl font-semibold">
+            <h3 className="mt-2 text-4xl">
               TikTok Tattoo  — Interactive Tattoos 
             </h3>
             <h4 className="mt-10 text-xl text-black font-semibold">Context</h4>
@@ -396,7 +396,7 @@ export default function Biomed() {
     
 
         {/* Process Section */}
-        <h3 className="text-white text-6xl font-bold mt-60">The Process</h3>
+        <h3 className="text-white text-6xl mt-60">The Process</h3>
         <h3 className="mt-20 text-2xl font-semibold">
           Technologies
         </h3>

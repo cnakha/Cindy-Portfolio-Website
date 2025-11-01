@@ -5,12 +5,39 @@
 @tailwind utilities;
 
 
-html {
+/* html {
     font-family:'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+} */
+
+:root{
+  --blue-haze:  #008BE8;
+  --font-nhg-display: "neue-haas-grotesk-display", "Helvetica Neue", Arial, sans-serif;
+  --font-nhg-text: "neue-haas-grotesk-text", "Helvetica Neue", Arial, sans-serif;
+  --font-nhg-mono: "neue-haas-grotesk-mono", "Helvetica Neue", Arial, sans-serif;
+  --font-nhg-light: "neue-haas-grotesk-light", "Helvetica Neue", Arial, sans-serif;
 }
 
-:root {
-  --blue-haze:  #008BE8;
+.title { font-family: var(--font-nhg-display); font-weight: 500; }
+.body  { font-family: var(--font-nhg-text);    font-weight: 20; }
+
+
+h2, h3 {
+  font-family: "neue-haas-grotesk-display", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 500; /* 65 Medium */
+  /* letter-spacing: -0.01em; */
+}
+
+h1 {
+  font-family: "neue-haas-grotesk-display", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 500; /* 65 Medium */
+  letter-spacing: -0.01em;
+}
+
+p {
+  font-family: "neue-haas-grotesk-text", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400; /* 65 Medium */
+  line-height: 1.6;
+
 }
 
 @keyframes pulse {

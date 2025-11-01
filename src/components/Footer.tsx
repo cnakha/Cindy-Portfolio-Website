@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer id="contact" className="relative bg-blue-haze">
+    <footer id="contact" className="font-nhgMono relative bg-blue-haze">
       {/* Black horizontal line at the top of the footer */}
       {/* <div className="absolute top-0 left-0 right-0 h-40 bg-black z-30" /> */}
 

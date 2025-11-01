@@ -48,6 +48,7 @@ const [typingDone, setTypingDone] = useState(false);
           cursor
           wrapper="p"
           className="
+            font-nhgText  
             block text-3xl md:text-4xl text-white/50
             !leading-[1.25]
             [&>span]:!leading-[1.4]
@@ -67,18 +68,18 @@ const [typingDone, setTypingDone] = useState(false);
         >
         
           <div>
-            <p className="text-6xl md:text-7xl text-white font-bolder pt-2">Cindy</p>
-            <p className="text-5xl md:text-6xl text-white font-bolder pt-2">Nakhammouane</p>
-            <p className="text-xl text-white pt-1">Fullstack Developer & UI/UX Designer</p>
+            <h3 className="text-5xl md:text-8xl text-white">Cindy</h3>
+            <h3 className="text-5xl  md:text-8xl text-white pt-2">Nakhammouane</h3>
+            <p className="text-xl font-nhgText text-white pt-2">Fullstack Developer & UI/UX Designer</p>
           </div>
         </motion.div>
 
-        <motion.p className="text-3xl md:text-4xl text-white/50 pt-8" variants={item}>
+        <motion.p className="font-nhgMono text-3xl md:text-4xl text-white/50 pt-8" variants={item}>
           I love to{" "}
           <span className="text-white font-bolder">
             research, design, user test, and code{" "}
           </span>
-          cool projects all the way to launch with product focused thinking...
+          cool projects with product focused thinking...
         </motion.p>     
 
         {/* Bottom info row */}
@@ -187,6 +188,7 @@ export default function AboutMeCarousel({slideNumber,  setSlideNumber, isPlaying
   return (
     <div
       className="
+        font-nhgDisplay
         relative w-full max-w-[750px] rounded-2xl
         bg-black/55 backdrop-blur-sm
         shadow-[0_12px_32px_rgba(0,0,0,0.35)]

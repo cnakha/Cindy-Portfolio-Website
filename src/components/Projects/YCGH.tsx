@@ -53,7 +53,7 @@ export default function YCGH() {
             
                 <div className="mt-20 grid grid-cols-1 gap-10 md:grid-cols-2"> 
                     <div>
-                        <h3 className=" text-5xl font-semibold">
+                        <h3 className=" text-5xl">
                         SIGGRAPH 2025 Convention
                         </h3>
                         <p className="mt-10 text-xl text-white/70"> 

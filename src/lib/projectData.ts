@@ -63,7 +63,7 @@ export const projects: Project[] = [
   {
     id: "biomed",
     title: "Sensing Through Life: A Collection of Wearable Biomedical Devices and Apps",
-    description: "Various wearable biomedical devices and UI projects from my time at the Wearables and Nearables Technology Laboratory at the University of Illinois Chicago",
+    description: "Five wearable biomedical devices and UI projects from my time at the Wearables and Nearables Technology Laboratory at the University of Illinois Chicago",
     category: "Fullstack Development, Hardware Assembly, and UI and User Experience Design for Wearable Health Monitoring Devices",
     fullDescription: "Projects from working in the Wearables and Nearables Technology Laboratory at the University of Illinois Chicago. For a semester, I collaborated in an interdisciplinary group of four biomedical engineering and computer science students, gaining hands-on experience assembling, designing, and developing various embedded wearable devices and user interfaces. I acquisitioned, processed, and analyzed a diverse set of sensor data, working with wireless communication and various sensors. Each project was developed in under two weeks of development and presented through a series of live demos and critques.",
     tools: ["React", "Node.js", "Processing", "Python", "C#", "Arduino", "Figma"],
@@ -132,7 +132,7 @@ export const projects: Project[] = [
     title: "FolioFolds — 3D Papercraft Made Easy",
     description: "Assemble and share interactive 3D models of books, cards, zines, origamis, and fliers. Real-time model development that supports complex folds, bindings, cutouts, and AR viewing",
     category: "Fullstack Development of 3D Model Editors and Web Design",
-    fullDescription: "FolioFolds is a passion project, a web application that allows users to design, customize, and share interactive 3D models of various printed forms. The platform supports complex folds, bindings, cutouts, and offers AR viewing capabilities. Users can create their own designs using an intuitive interface, explore a gallery of community creations, and share their work with others.",
+    fullDescription: "From birthday cards to origami, FolioFolds is a web application for designing, assembling, and sharing interactive 3D models of unique printed forms. The platform supports complex folds, bindings, cutouts, and offers AR viewing capabilities. Create your own designs using an intuitive interface, explore a gallery of community creations, and share your work with others.",
     features: [
       "Supports PDF, PNG, and JPEG imports to create 3D models",
       "Intuitive drag-and-drop interface for designing complex folds and bindings",
@@ -145,6 +145,8 @@ export const projects: Project[] = [
     challenges: "Creating a user-friendly interface that could handle the complexity of 3D modeling while ensuring smooth performance across devices.",
     outcome: "This project is currently in active development with plans to launch a beta version in late 2026.",
     imageUrl: "/foliofolds/thumbnail.png",
+    imageUrl2: "/foliofolds/thumbnail.png",
+
     timeline: "Jan 2023 — May 2024",
     role: "Fullstack Developer and UI and User Experience Designer",
     skills: ["UI/UX Design", "Web Development", "Prototyping", "Wireframing", "User Testing"],

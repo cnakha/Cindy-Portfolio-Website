@@ -52,7 +52,7 @@ export default function ProjectDetailPage() {
   } = project;
 
   return (
-    <main className="min-h-screen overflow-x-clip bg-[#131415] text-white">
+    <main className="font-nhgMono min-h-screen overflow-x-clip bg-[#131415] text-white">
      
       {/* Summary band (matches screenshot spacing) */}
       <section className="pt-32">
@@ -66,7 +66,7 @@ export default function ProjectDetailPage() {
               Return
             </button>
 
-            <h3 className="mt-4 text-white text-6xl leading-[1.25] font-semibold">{project.title}</h3>
+            <h3 className="mt-4 text-white text-6xl leading-[1.25] ">{project.title}</h3>
             <h4 className="mt-16 text-white font-semibold">Overview</h4>
             <p className="mt-4 text-white/75 text-[24px]">{project.fullDescription}</p>
 
@@ -76,7 +76,7 @@ export default function ProjectDetailPage() {
 
       {project.vid ? (
         <div className="max-w-6xl mx-auto mt-10 px-10">
-            <h3 className="mt-16 text-3xl font-semibold">
+            <h3 className="mt-16 text-3xl">
                 Concept Video
             </h3>
             <div className=" mt-5 relative aspect-[21/12] overflow-hidden ">
@@ -115,7 +115,7 @@ export default function ProjectDetailPage() {
                 <div>
                   <div className="flex gap-2">
                     <UserRound size="30"/>
-                    <h3 className="text-[24px] tracking-wider text-white font-semibold">
+                    <h3 className="text-[24px] tracking-wider text-white">
                       My Role
                     </h3>
                   </div>
@@ -129,7 +129,7 @@ export default function ProjectDetailPage() {
                 <div className="w-full ">
                   <div className="flex gap-2">
                     <Calendar size="30"/>
-                    <h3 className="text-[24px] tracking-wider text-white font-semibold">
+                    <h3 className="text-[24px] tracking-wider text-white ">
                       Timeline
                     </h3>
                   </div>
@@ -144,7 +144,7 @@ export default function ProjectDetailPage() {
               <div>
                 <div className="flex gap-2">
                   <Wand size="30"/>
-                <h3 className="text-[24px] tracking-wider text-white font-semibold">
+                <h3 className="text-[24px] tracking-wider text-white">
                   Skills
                 </h3>
                 </div>
@@ -161,7 +161,7 @@ export default function ProjectDetailPage() {
               <div>
                 <div className="flex gap-2">
                   <Wrench size="30"/>
-                <h3 className="text-[24px] tracking-wider text-white font-semibold">
+                <h3 className="text-[24px] tracking-wider text-white">
                   Tools
                 </h3>
                 </div>
@@ -200,7 +200,7 @@ export default function ProjectDetailPage() {
 
       <div className="flex flex-col justify-center items-center text-center mt-40 mx-auto w-full max-w-6xl px-6">
         <h4 className="text-white font-semibold">Problem</h4>
-        <h3 className="mt-2 text-3xl text-white/90 font-bolder max-w-3xl">
+        <h3 className="font-nhgMono mt-2 text-3xl text-white/90 font-bolder max-w-3xl">
           {problem ||
             "How can we promote authentic visual expression and global communication while elevating the medium with new technologies?"}
         </h3>
@@ -224,7 +224,7 @@ export default function ProjectDetailPage() {
 
       <div className="flex flex-col justify-center items-center text-center mt-40 mx-auto w-full max-w-6xl px-6">
         <h4 className="text-white font-semibold">Solution</h4>
-        <h3 className="mt-2 text-3xl font-normal text-white/90 max-w-4xl">
+        <h3 className="font-nhgMono mt-2 text-3xl font-normal text-white/90 max-w-4xl">
           {solution}
         </h3>
       </div>
@@ -235,14 +235,14 @@ export default function ProjectDetailPage() {
         <section className="mt-32">
           <div className="mx-auto w-full max-w-6xl px-6">
             <div className="rounded-xl border border-white/15 bg-[#1f1f1f] p-6 pb-10">
-              <h3 className="mb-4 text-white font-semibold">Key Features</h3>
+              <h3 className="mb-4 text-white">Key Features</h3>
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
                 <ul className="list-disc list-inside space-y-2 text-white/85">
                   {features.slice(0, Math.ceil(features.length / 2)).map((feature, idx) => (
                     <li key={idx}>{feature}</li>
                   ))}
                 </ul>
-                <ul className="list-disc list-inside space-y-2 text-white/85">
+                <ul className="list-disc pl-6  space-y-2 text-white/85">
                   {features.slice(Math.ceil(features.length / 2)).map((feature, idx) => (
                     <li key={idx + Math.ceil(features.length / 2)}>{feature}</li>
                   ))}

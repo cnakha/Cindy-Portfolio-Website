@@ -40,14 +40,14 @@ export default function WorldNotes() {
     <section className="mt-40 mb-40">
       <div className="mx-auto w-full">
       <Line/>
-      <div className="bg-white/90 text-black">
+      <div className="font-nhgDisplay bg-white/95 text-black">
           <div className="grid grid-cols-1 md:grid-cols-[1fr_1.2fr]"> 
             <div className="mt-20 mb-20 md:mb-0 ml-10 mr-20 md:ml-40">
               <h3 className="text-4xl font-semibold">
                 Discover Art and Stories From Around the World
               </h3>
               <p className="mt-10 text-black/75 text-xl">
-                Users start their adventure by landing at a random location scattered with 3D notes left by others. <br/> <br/>Exploration feels natural: click-to-move in Street View, use the overview or mini map, or search specific places.<br/><br/> The navigation bar allows quick refreshes, shuffling nearby notes, or stepping through them sequentially for a guided discovery experience.            
+                Start your adventure by landing at a random location scattered with 3D notes left by others. <br/> <br/>Exploration feels natural: click-to-move in Street View, use the overview or mini map, or search specific places.<br/><br/> The navigation bar allows quick refreshes, shuffling nearby notes, or stepping through them sequentially for a guided discovery experience.            
               </p>          
             </div>      
             <div className="relative aspect-[22/15] overflow-hidden">
@@ -72,7 +72,7 @@ export default function WorldNotes() {
               See the Full Picture and React with Your Community
             </h3>
             <p className="mt-10 text-black/75 text-xl">
-              A post viewer will be shown to the user if they click on a note, here we can see information about the note’s title, creator, description, and community reactions.
+              A post viewer will be shown if you click on a note, here we can see information about the note’s title, creator, location, description, and community reactions.
             </p>          
           </div>    
         </div>
@@ -120,7 +120,7 @@ export default function WorldNotes() {
 
       {/* Process Section */}
       <div className="max-w-6xl flex flex-col mx-auto mt-40">
-        <h3 className="text-white text-center text-7xl font-bold">Creating the MVP</h3>
+        <h3 className="font-nhgDisplay text-white text-center text-7xl ">Creating the MVP</h3>
         <h3 className="mt-40 text-2xl font-semibold">
           Step 1 — Inspiration and Discovery
         </h3>

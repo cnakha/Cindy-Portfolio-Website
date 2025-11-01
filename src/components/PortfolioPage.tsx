@@ -83,7 +83,7 @@ function FeaturedProjectBlock({
 
   return (
     <motion.div
-      className="flex"
+      className="flex h-full"
       variants={itemVariants}
       initial="hidden"
       whileInView="show"
@@ -95,23 +95,23 @@ function FeaturedProjectBlock({
       }
     }
     >
-      <div className="flex flex-col justify-center items-center w-full text-center mt-10">
+      <div className="flex flex-col justify-center items-center h-full w-full text-center">
         <button
           onClick={() => onOpen(project.id)}
-          className=" block w-full overflow-hidden rounded-[12px] bg-black/20 ring-1 ring-white/25 hover:ring-white/50 transition shadow-[0_12px_32px_rgba(0,0,0,0.35)]"
+          className=" block h-full w-full overflow-hidden rounded-[12px] bg-black/20 ring-1 ring-white/25 hover:ring-white/50 transition shadow-[0_12px_32px_rgba(0,0,0,0.35)]"
         >
           <div className="relative aspect-[20/7] overflow-hidden">
-          <img
-            src={`${project.imageUrl}`}
-            alt={`${project.id} preview`}
-            className="absolute inset-0 h-full w-full object-cover transform transition-transform duration-600 ease-in-out hover:scale-105"
-          />
+            <img
+              src={`${project.imageUrl}`}
+              alt={`${project.id} preview`}
+              className="absolute inset-0 h-full w-full object-cover transform transition-transform duration-600 ease-in-out hover:scale-105"
+            />
           </div>
           <div 
-            className="flex flex-col min-h-[250px] md:min-h-[300px] py-6 px-6 md:px-20 justify-center items-center text-center 
-            backdrop-blur-sm bg-black/75 hover:bg-blue-haze  ring-1 z-10 cursor-pointer transition ease-in-out duration-500">
-            <h3 className="text-white max-w-4xl font-bolder text-2xl leading-[1.25] md:text-4xl ">{project.title}</h3>
-            <p className="max-w-3xl text-sm mt-4 md:text-base text-white ">{project.description}</p>
+            className="flex flex-col h-full px-6 md:px-6 py-8 items-center text-center
+            backdrop-blur-sm bg-black/75 hover:bg-blue-haze z-10 cursor-pointer transition ease-in-out duration-500">
+            <h2 className="font-nhgMono text-white font-bolder text-2xl leading-[1.25] md:text-3xl ">{project.title}</h2>
+            <p className="font-nhgMono text-sm mt-4 md:text-base text-white ">{project.description}</p>
           </div>
         </button>
 
@@ -132,18 +132,19 @@ function FeaturedProjects({
   return (
     <section id="projects" className="relative w-full bg-[#131415] pb-10">
       <div className="flex w-full items-center justify-center bg-black px-4 py-10 ">
-        <h2 className=" text-3xl text-center md:text-5xl text-white">
+        <h1 className="font-nhgDisplay text-3xl text-center md:text-5xl text-white">
           Featured Projects
-        </h2>
+        </h1>
       </div>
       <div className="mx-auto w-full px-[10%] md:pb-10">
         <div
           className="
-            mt-10 
+            mt-20 
             grid 
             grid-cols-1 
             md:grid-cols-2 
-            gap-16
+            gap-10
+            items-stretch
           "
         >
           {items.map((project, i) => (
@@ -176,7 +177,7 @@ export default function PortfolioPage() {
   };
 
   return (
-    <main className="relative min-h-screen w-full overflow-x-hidden bg-white">
+    <main className="font-nhgText relative min-h-screen w-full overflow-x-hidden bg-white">
       <Hero />
       <FeaturedProjects items={featuredProjects} onOpen={handleProjectClick} />
       <Footer />

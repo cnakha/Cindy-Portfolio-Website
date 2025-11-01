@@ -31,7 +31,7 @@ export default function NavBar() {
   };
 
   return (
-    <div className="relative w-full h-[85px]" data-name="nav bar">
+    <div className="font-nhgDisplay relative w-full h-[85px]" data-name="nav bar">
       {/* Gradient background */}
       <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-b from-[#008BE8] to-transparent" />
 
@@ -47,7 +47,7 @@ export default function NavBar() {
             alt="Headshot Preview"
             className="hidden md:block w-[35px] h-[35px]"
           /> */}
-        <div className="flex flex-col font-bolder text-white text-[16px] text-left">
+        <div className="flex flex-col text-white text-[16px] text-left">
           <p className="-mb-1">Cindy</p>
           <p>Nakhammouane</p>
         </div>
