@@ -32,7 +32,7 @@ export default function FolioFolds() {
                 Import Images and PDFs, Choose a Template, Then Go!
               </h3>
               <p className="mt-6 mb-10 text-black/75 sm:text-xl md:text-[1rem] lg:text-xl">
-                FolioFolds makes it easy to create beautiful, professional-quality foldable publications. Users can import images and PDFs, select from a variety of templates, and customize their designs with intuitive tools.
+                Users can import images and PDFs, select from a variety of templates, and customize their designs with intuitive tools.
               </p>          
             </div>     
           <div className="scrollable-panel relative h-full lg:overflow-hidden overflow-x-auto">
@@ -69,7 +69,7 @@ export default function FolioFolds() {
               Dynamically Fold your Pages Digitally
             </h3>
               <p className="mt-10 text-black/75 text-[1.25rem] md:text-[1rem] lg:text-xl">
-            Users can experience the feeling of handling a physical publication digitally.
+            Handle paper folding with ease using intuitive gestures like pinch-to-fold and drag-to-unfold.
             </p>          
           </div>    
         </div>
@@ -81,9 +81,11 @@ export default function FolioFolds() {
               Create Unique Layouts and Binds
             </h3>
               <p className="mt-6 mb-10 text-black/75 sm:text-xl md:text-[1rem] lg:text-xl">
-              Move and resize elements freely to create custom layouts. Choose from various binding and page styles like saddle stitch, perfect bind, and spiral bind to give your publication a professional finish.
+              Move and resize elements freely to create unique layouts. Choose from various binding and page styles like spiral binds, stitched binds, textured paper, to glossy paper.
             </p>          
             </div>      
+                      <div className="scrollable-panel relative h-full lg:overflow-hidden overflow-x-auto">
+
           <div className="relative h-full aspect-[22/15] overflow-hidden">
             <img
               src={"/foliofolds/move.png"}
@@ -91,6 +93,7 @@ export default function FolioFolds() {
               className="absolute inset-0 h-full w-full object-cover"
             />
           </div>  
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2"> 
@@ -101,20 +104,22 @@ export default function FolioFolds() {
               z-0
             "
           >
+          <div className="scrollable-panel relative h-full lg:overflow-hidden overflow-x-auto">
             <div className="h-full aspect-[22/15]">
             <img
               src={"/foliofolds/cutting.png"}
               alt={`Note Traversal and Discovery`}
-              className="absolute inset-0 h-full w-full object-cover"
+                className="h-full w-full object-cover"
             />
           </div>  
+          </div>
           </div>
           <div className="mt-[15%] mb-20 md:mr-[15%] ml-[15%] order-1 md:order-2">
             <h3 className="mt-2 text-4xl font-semibold">
               Cut Pages with Ease and Precision
             </h3>
               <p className="mt-6 mb-10 text-black/75 sm:text-xl md:text-[1rem] lg:text-xl">
-                Users can easily create cutouts and custom shapes on their pages using intuitive cutting tools. This allows for unique designs and interactive elements within the publication.
+                Users can easily create cutouts and custom shapes on their pages using cutting tools inspired by paper cutter sliders.
              </p>          
           </div>     
         </div>
@@ -127,12 +132,15 @@ export default function FolioFolds() {
               <p className="mt-6 mb-10 text-black/75 sm:text-xl md:text-[1rem] lg:text-xl">
                 Creators can generate a share link or embed, allowing publications to live online like interactive artifacts — not static images or PDFs. </p>          
             </div>      
+                      <div className="scrollable-panel relative h-full lg:overflow-hidden overflow-x-auto">
+
           <div className="relative h-full aspect-[22/15] overflow-hidden">
             <img
               src={"/foliofolds/share.png"}
               alt={`Note Traversal and Discovery`}
               className="absolute inset-0 h-full w-full object-cover"
             />
+            </div>
           </div>  
         </div>
 
@@ -149,14 +157,15 @@ export default function FolioFolds() {
           Step 1 — Inspiration and Research
         </h3>
         <p className="mt-10 text-sm text-white/70 max-w-4xl leading-relaxed text-xl">
-          Paper engineering and bookbinding have a rich history that spans centuries and although the medium has a more prominent impact in its physical form, exploring ways to convey these physical properties digitally can allow designers to share our works easier and serve as an archival method. 
+          Paper engineering and bookbinding have a rich history that spans centuries and although the medium has a more enriching impact in its physical form, exploring ways to convey these physical properties digitally can allow designers to share our work's potential more fully and serve as an interesting archival method. 
+          <br/><br/>
           To design FolioFolds, I researched traditional techniques and modern digital tools to understand how people interact with physical publications.
           The challenge then became: <span className="italic text-white font-semibold"> how can we design a user friendly tool to construct prints in 3D that captures the tactility of traditional paper engineering? </span>
         </p>
 
-        <div className="mt-40">
+        {/* <div className="mt-40">
           <Line />
-        </div>
+        </div> */}
 
         <h3 className="mt-40 text-2xl font-semibold">
           Step 2 — Design Philosophy
@@ -166,21 +175,27 @@ export default function FolioFolds() {
           <br/><br/>
           Simplicity was key to ensure that users of all skill levels could easily navigate the interface and create their own foldable publications without feeling overwhelmed by complex tools or features.
           <br/><br/>
-          Digital Craft, Physical Sensibility
-          <br/><br/>
-The interface reflects the world of book arts: soft, tactile UI with subtle texture references.
-The digital tools mimic traditional paper engineering techniques while visually resembling current 3D modeling and design software.
-Gestures reminiscent of handling real books — pinch, drag, peek, unfold
-          <br/><br/>
+          </p>
 
-          Celebration of Print Culture
-          <br/><br/>
-          FolioFolds elevates printed matter as living, interactive media — bridging the gap between physical craft and digital storytelling.
-        </p>
+          <div className="ml-10 flex flex-col text-left items-start rounded-xl p-6 ">
+            <h4 className=" font-semibold">
+              Digital Craft, Physical Sensibility
+            </h4>
+            <p className="mt-2 max-w-4xl text-xl text-white/70">
+              The interface reflects the world of book arts: soft, tactile UI with subtle texture references.
+              The digital tools mimic traditional paper engineering techniques while visually resembling current 3D modeling and design software.
+              Gestures reminiscent of handling real books — pinch, drag, peek, unfold
+            </p>
 
-        <div className="mt-40">
-          <Line />
-        </div>
+            <h4 className="mt-10 font-semibold">
+              Celebration of Print Culture
+            </h4>
+            <p className="mt-2 max-w-4xl text-xl text-white/70">
+               FolioFolds elevates printed matter as living, interactive media — bridging the gap between physical craft and digital storytelling.
+            </p>
+          </div>        
+
+       
 
         <h3 className="mt-40 text-2xl font-semibold">
           Step 3 — Prototyping and Designing Behaviours 
@@ -212,7 +227,7 @@ Gestures reminiscent of handling real books — pinch, drag, peek, unfold
           ))}
         </div>
 
-        <Line/>
+        {/* <Line/> */}
 
         
         <h3 className="mt-20 text-2xl font-semibold">

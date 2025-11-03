@@ -61,15 +61,15 @@ export default function ProjectDetailPage() {
           <div className="rounded-xl p-6">
             <button
               onClick={() => navigate(-1)}
-              className="mb-6 inline-flex items-center gap-2 rounded-md px-3 py-2 text-white/90 hover:bg-white/10"
+              className="mb-6 inline-flex text-xl items-center gap-2 rounded-[25px] px-4 pr-6 py-2 text-white/90 hover:bg-white/10 transition"
             >
-              <ArrowLeft className="h-4 w-4" />
+              <ArrowLeft className="h-7 w-7" />
               Return
             </button>
 
             <h3 className="mt-4 text-white text-6xl leading-[1.25] ">{project.title}</h3>
-            <h4 className="mt-16 text-white font-semibold">Overview</h4>
-            <p className="mt-4 text-white/75 text-[24px]">{project.fullDescription}</p>
+            <h4 className="font-nhgDisplay mt-16 text-white font-semibold">Overview</h4>
+            <p className="font-nhgMono mt-4 text-white/75 text-[24px]">{project.fullDescription}</p>
 
           </div>
         </div>
@@ -115,22 +115,21 @@ export default function ProjectDetailPage() {
                 {/* My Role */}
                 <div>
                   <div className="flex gap-2">
-                    <UserRound size="30"/>
-                    <h3 className="text-[24px] tracking-wider text-white">
+                    <UserRound size="25"/>
+                    <h3 className="text-xl tracking-wider text-white">
                       My Role
                     </h3>
                   </div>
                   <p className="mt-2 text-[16px] text-white/80 max-w-md">
-                    {role ||
-                      "As the only developer and designer, I built this app end-to-end from ideation to launch."}
+                    {role}
                   </p>
                 </div>
 
                 {/* Timeline */}
                 <div className="w-full ">
                   <div className="flex gap-2">
-                    <Calendar size="30"/>
-                    <h3 className="text-[24px] tracking-wider text-white ">
+                    <Calendar size="25"/>
+                    <h3 className="text-xl tracking-wider text-white ">
                       Timeline
                     </h3>
                   </div>
@@ -144,12 +143,12 @@ export default function ProjectDetailPage() {
               {/* Skills */}
               <div>
                 <div className="flex gap-2">
-                  <Wand size="30"/>
-                <h3 className="text-[24px] tracking-wider text-white">
+                  <Wand size="25"/>
+                <h3 className="text-xl tracking-wider text-white">
                   Skills
                 </h3>
                 </div>
-                <ul className="mt-2 space-y-1 text-[16px] text-white/80 list-disc list-inside">
+                <ul className="mt-2 space-y-1  text-white/80 list-disc list-inside">
                   {(skills.length ? skills : ["UI/UX Design", "Web Development", "Wireframing", "SEO"]).map(
                     (s, i) => (
                       <li key={i}>{s}</li>
@@ -161,8 +160,8 @@ export default function ProjectDetailPage() {
               {/* Column 3: Tools + See Code */}
               <div>
                 <div className="flex gap-2">
-                  <Wrench size="30"/>
-                <h3 className="text-[24px] tracking-wider text-white">
+                  <Wrench size="25"/>
+                <h3 className="text-xl tracking-wider text-white">
                   Tools
                 </h3>
                 </div>
@@ -186,7 +185,7 @@ export default function ProjectDetailPage() {
                       href={githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex text-[16px] mt-8 items-center gap-2 rounded-full border border-white/50 px-10 py-2 text-sm text-white/50 hover:bg-white/10"
+                      className="font-nhgMono inline-flex mt-8 items-center gap-1 rounded-full border border-white/50 px-10 py-2 text-white/50 hover:bg-white/10 transition"
                     >
                       See the Code  <ArrowLeft className="h-6 w-6 rotate-180" />
                     </a>
@@ -200,8 +199,8 @@ export default function ProjectDetailPage() {
 
 
       <div className="flex flex-col justify-center items-center text-center mt-40 mx-auto w-full max-w-6xl px-6">
-        <h4 className="text-white font-semibold">Problem</h4>
-        <h3 className="font-nhgMono mt-2 text-3xl text-white/90 font-bolder max-w-3xl">
+        <h4 className="font-nhgDisplay text-white font-semibold bg-blue-haze px-4 py-2 rounded-[20px]">Problem</h4>
+        <h3 className="font-nhgMono mt-8 text-3xl text-white/90 font-bolder max-w-3xl">
           {problem ||
             "How can we promote authentic visual expression and global communication while elevating the medium with new technologies?"}
         </h3>
@@ -224,8 +223,8 @@ export default function ProjectDetailPage() {
       </div>
 
       <div className="flex flex-col justify-center items-center text-center mt-40 mx-auto w-full max-w-6xl px-8">
-        <h4 className="text-white font-semibold">Solution</h4>
-        <h3 className="font-nhgMono mt-2 text-3xl font-normal text-white/90 max-w-4xl">
+        <h4 className="font-nhgDispla ytext-white font-semibold bg-blue-haze px-4 py-2 rounded-[20px]">Solution</h4>
+        <h3 className="font-nhgMono mt-8 text-3xl font-normal text-white/90 max-w-4xl">
           {solution}
         </h3>
       </div>
@@ -236,7 +235,7 @@ export default function ProjectDetailPage() {
         <section className="mt-32">
           <div className="mx-auto w-full max-w-6xl px-8">
             <div className="rounded-xl border border-white/15 bg-[#1f1f1f] p-6 pb-10">
-              <h3 className="mb-4 text-white">Key Features</h3>
+              <h3 className="font-nhgDisplay text-xl mb-4 text-white">Key Features</h3>
               <div className="grid grid-cols-1 gap-2 md:gap-8 md:grid-cols-2">
                 <ul className="list-disc list-inside space-y-2 text-white/85">
                   {features.slice(0, Math.ceil(features.length / 2)).map((feature, idx) => (
@@ -266,12 +265,12 @@ export default function ProjectDetailPage() {
       <section className="mt-20 mb-40">
         <div className="mx-auto w-full max-w-6xl px-6">
           <div className="rounded-xl border border-white/15 bg-[#222] p-6">
-            <h3 className="text-white font-semibold text-3xl">Next Milestones</h3>
+            <h3 className="text-white text-3xl">Next Milestones</h3>
             <div className="mt-4 space-y-6">
               {(milestones).map((m, i) => (
                 <div key={i}>
                   <h4 className="font-bolder">{m}</h4>
-                  <p className="mt-1 ml-2 text-xs text-white/60">
+                  <p className="mt-1 text-xs text-white/60">
                     Elevate fidelity and gather analytics to iterate quickly.
                   </p>
                 </div>

@@ -234,8 +234,8 @@ export default function AboutMeCarousel({slideNumber,  setSlideNumber, isPlaying
                 className="inline-flex items-center text-xl text-white pb-2"
                 onClick={nextSlide}
               >
-                <p className="">More about me</p>
-                <Triangle className="ml-2 h-5 w-5 rotate-90 fill-white stroke-none" />
+                <p className="ml-1">More about me</p>
+                <Triangle className=" h-5 w-5 rotate-90 fill-white stroke-none" />
               </button>
             </div>
 

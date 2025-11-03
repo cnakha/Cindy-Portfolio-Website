@@ -150,7 +150,7 @@ export default function Biomed() {
         <section className="mt-32">
           <div className="w-full h-full px-6">
             <div className="rounded-xl border border-white/15 bg-[#1f1f1f] p-6 pb-10">
-              <h3 className="mb-4 text-white font-semibold">Key Features</h3>
+              <h3 className="font-nhgDisplay text-xl mb-4 text-white">Key Features</h3>
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
                 <ul className="list-disc list-inside space-y-2 text-white/85">
                   {features.slice(0, Math.ceil(features.length / 2)).map((feature, idx) => (

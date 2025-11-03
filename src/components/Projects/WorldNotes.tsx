@@ -171,7 +171,7 @@ export default function WorldNotes() {
         </p>
 
         <div className="mt-40">
-          <Line />
+          {/* <Line /> */}
         </div>
 
         <h3 className="mt-40 text-2xl font-semibold">
@@ -183,7 +183,7 @@ export default function WorldNotes() {
         </p>
 
         <div className="mt-40">
-          <Line />
+          {/* <Line /> */}
         </div>
 
 
@@ -222,7 +222,7 @@ export default function WorldNotes() {
         </div>   
 
         <div className="mt-40">
-          <Line />
+          {/* <Line /> */}
         </div>
 
         <h3 className="mt-40 text-2xl font-bold">
@@ -244,7 +244,7 @@ export default function WorldNotes() {
         </div>    
         
         <div className="mt-40">
-          <Line />
+          {/* <Line /> */}
         </div>
         
         <h3 className="mt-40 text-2xl font-semibold">
@@ -280,7 +280,7 @@ export default function WorldNotes() {
         </div>   
 
         <div className="mt-40">
-          <Line />
+          {/* <Line /> */}
         </div>
 
         <h3 className="mt-40 text-2xl font-semibold">
@@ -312,7 +312,7 @@ export default function WorldNotes() {
         </div>    
 
         <div className="mt-40">
-          <Line />
+          {/* <Line /> */}
         </div>
         
         <h3 className="mt-40 text-2xl font-semibold">
