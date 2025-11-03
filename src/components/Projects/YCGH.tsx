@@ -57,7 +57,9 @@ export default function YCGH() {
                         SIGGRAPH 2025 Convention
                         </h3>
                         <p className="mt-10 text-xl text-white/70"> 
-                        After our research paper was accepted, my team put together this research poster to present at the SIGGRAPGH 2025 Convention in Vancouver over the course of 5 days for over 12,000 attendees.
+                        ACM SIGGRAPH is the world’s premier international conference on computer graphics and interactive techniques, known for its competitive selection process and global prestige.
+                        <br/><br/>
+                        After our research paper was accepted, we put together a research poster to present at the SIGGRAPGH 2025 Convention in Vancouver over the course of 5 days for over 12,000 attendees.
                         <br/><br/>
                         Many meanigful conversations were had with researchers and industry professionals alike about the future of AR/VR applications and the challenges of accessibility to the general public.
                         <br/><br/>

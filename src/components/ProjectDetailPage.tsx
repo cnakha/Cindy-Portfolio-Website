@@ -7,6 +7,7 @@ import WorldNotes from "./Projects/WorldNotes";
 import Clarity from "./Projects/Clarity";
 import YCGH from "./Projects/YCGH";
 import Biomed from "./Projects/Biomed";
+import FolioFolds from "./Projects/FolioFolds";
 
 export default function ProjectDetailPage() {
   const { projectId } = useParams<{ projectId: string }>();
@@ -208,7 +209,7 @@ export default function ProjectDetailPage() {
           {subProblem || "Authentic connection can be expanded through shared, visual notes and geolocated discovery—creating richer casual browsing and meaningfulinteractions."}
         </p>
         {keyProblems && keyProblems.length > 0 && keyProblemDescriptions && keyProblemDescriptions.length === keyProblems.length && (
-            <div className="mt-8 flex flex-wrap gap-6 justify-center w-full">
+            <div className="mt-8 px-4 flex flex-wrap gap-6 justify-center w-full">
             {keyProblems.map((problem, idx) => (
               <div
               key={idx}
@@ -222,7 +223,7 @@ export default function ProjectDetailPage() {
         )}
       </div>
 
-      <div className="flex flex-col justify-center items-center text-center mt-40 mx-auto w-full max-w-6xl px-6">
+      <div className="flex flex-col justify-center items-center text-center mt-40 mx-auto w-full max-w-6xl px-8">
         <h4 className="text-white font-semibold">Solution</h4>
         <h3 className="font-nhgMono mt-2 text-3xl font-normal text-white/90 max-w-4xl">
           {solution}
@@ -233,16 +234,16 @@ export default function ProjectDetailPage() {
       {/* Key Features (two-column bullets) */}
       {features.length > 0 && (
         <section className="mt-32">
-          <div className="mx-auto w-full max-w-6xl px-6">
+          <div className="mx-auto w-full max-w-6xl px-8">
             <div className="rounded-xl border border-white/15 bg-[#1f1f1f] p-6 pb-10">
               <h3 className="mb-4 text-white">Key Features</h3>
-              <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div className="grid grid-cols-1 gap-2 md:gap-8 md:grid-cols-2">
                 <ul className="list-disc list-inside space-y-2 text-white/85">
                   {features.slice(0, Math.ceil(features.length / 2)).map((feature, idx) => (
                     <li key={idx}>{feature}</li>
                   ))}
                 </ul>
-                <ul className="list-disc pl-6  space-y-2 text-white/85">
+                <ul className="list-disc list-inside space-y-2 text-white/85">
                   {features.slice(Math.ceil(features.length / 2)).map((feature, idx) => (
                     <li key={idx + Math.ceil(features.length / 2)}>{feature}</li>
                   ))}
@@ -257,7 +258,8 @@ export default function ProjectDetailPage() {
         <WorldNotes/> : project.id === "clarity" 
         ? <Clarity/> : project.id === "YCGH"
         ? <YCGH/> : project.id === "biomed"
-        ? <Biomed/> :  null}
+        ? <Biomed/> :  project.id === "foliofolds"
+        ? <FolioFolds/> : null}
 
       {/* Next Milestones card */}
       {milestones.length > 0 && (

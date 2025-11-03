@@ -40,53 +40,67 @@ export default function WorldNotes() {
     <section className="mt-40 mb-40">
       <div className="mx-auto w-full">
       <Line/>
+
       <div className="font-nhgDisplay bg-white/95 text-black">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.2fr]"> 
-            <div className="mt-20 mb-20 md:mb-0 ml-10 mr-20 md:ml-40">
-              <h3 className="text-4xl font-semibold">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr]"> 
+            <div className="mt-20 mb-10 sm:pr-10 md:mb-0 ml-10  md:ml-[15%]">
+              <h3 className="text-3xl md:text-3xl lg:text-4xl font-semibold">
                 Discover Art and Stories From Around the World
               </h3>
-              <p className="mt-10 text-black/75 text-xl">
-                Start your adventure by landing at a random location scattered with 3D notes left by others. <br/> <br/>Exploration feels natural: click-to-move in Street View, use the overview or mini map, or search specific places.<br/><br/> The navigation bar allows quick refreshes, shuffling nearby notes, or stepping through them sequentially for a guided discovery experience.            
+              <p className="mt-6 mb-10 text-black/75 sm:text-xl md:text-[1rem] lg:text-xl">
+                Start your adventure by landing at a random location scattered with 3D notes left behind by others. <br/> <br/>Exploration feels natural: click-to-move in Street View, use the overview or mini map, or search specific places. The navigation bar allows quick refreshes of nearby notes, filters, and stepping through notes.            
               </p>          
-            </div>      
-            <div className="relative aspect-[22/15] overflow-hidden">
+            </div>     
+          <div className="scrollable-panel relative h-full lg:overflow-hidden overflow-x-auto">
+            <div className="relative h-full aspect-[22/15] overflow-hidden">
               <img
                 src={"/worldnotes/traversal.png"}
                 alt={`Note Traversal and Discovery`}
                 className="absolute inset-0 h-full w-full object-cover"
               />
             </div>  
+            </div>
           </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2"> 
-          <div className="relative aspect-[22/15] overflow-hidden order-2 md:order-1">
-            <img
-              src={"/worldnotes/post_viewer.png"}
-              alt={`Note Traversal and Discovery`}
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-          </div>  
-          <div className="mt-20 mb-20 mr-10 md:mr-40 ml-10 md:ml-20 order-1 md:order-2">
-            <h3 className="text-4xl font-semibold">
+          <div
+            className="
+              order-2 md:order-1 relative overflow-hidden
+              md:w-full md:translate-x-0
+              z-0
+            "
+          >
+          <div className="scrollable-panel relative h-full lg:overflow-hidden overflow-x-auto">
+            <div className="h-full aspect-[22/15]">
+              <img
+                src="/worldnotes/post_viewer.png"
+                alt="Note Traversal and Discovery"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            </div>
+          </div> 
+          <div className="mt-[15%] mb-20 md:mr-[15%] ml-[15%] order-1 md:order-2">
+              <h3 className="text-3xl md:text-3xl lg:text-4xl font-semibold">
               See the Full Picture and React with Your Community
             </h3>
-            <p className="mt-10 text-black/75 text-xl">
+              <p className="mt-10 text-black/75 text-[1.25rem] md:text-[1rem] lg:text-xl">
               A post viewer will be shown if you click on a note, here we can see information about the note’s title, creator, location, description, and community reactions.
             </p>          
           </div>    
         </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.6fr]"> 
-            <div className="mt-20 mb-20 ml-10 mr-20 md:ml-40">
-            <h3 className=" text-4xl font-semibold">
+
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr]"> 
+            <div className="mt-20 mb-10 sm:pr-10 md:mb-0 ml-10 md:ml-[15%]">
+              <h3 className="text-3xl md:text-3xl lg:text-4xl font-semibold">
               Show Off Your Notes the Way You Want
             </h3>
-            <p className="mt-10 text-black/75 text-xl">
+              <p className="mt-6 mb-10 text-black/75 sm:text-xl md:text-[1rem] lg:text-xl">
               Profiles show you all the notes you post, draft, repost, like, and save. The cover page is a place the user can display their favorite notes in any way they desire.
             </p>          
             </div>      
-          <div className="relative aspect-[22/15] overflow-hidden">
+          <div className="relative h-full aspect-[22/15] overflow-hidden">
             <img
               src={"/worldnotes/profile.png"}
               alt={`Note Traversal and Discovery`}
@@ -96,19 +110,27 @@ export default function WorldNotes() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2"> 
-          <div className="relative aspect-[22/15] overflow-hidden order-2 md:order-1">
+          <div
+            className="
+              order-2 md:order-1 relative overflow-hidden
+              md:w-full md:translate-x-0
+              z-0
+            "
+          >
+            <div className="h-full aspect-[22/15]">
             <img
               src={"/worldnotes/creator.png"}
               alt={`Note Traversal and Discovery`}
               className="absolute inset-0 h-full w-full object-cover"
             />
           </div>  
-          <div className="mt-20 mb-20 mr-10 md:mr-40 ml-10 md:ml-20 order-1 md:order-2">
+          </div>
+          <div className="mt-[15%] mb-20 md:mr-[15%] ml-[15%] order-1 md:order-2">
             <h3 className="mt-2 text-4xl font-semibold">
-              Create Notes with Fun, Easy to Use Tools For Everyone
+              Create Notes with Fun and Easy to Use Tools
             </h3>
-            <p className="mt-10 text-black/75 text-xl">
-              A custom note creation canvas was created to provide custom tools and brushes. Drawing, text, pixel art, and animation are all supported along with a layers panel, color picker, and color palette creator. <br/> <br/> Draggable panels are a key characteristic, making the workspace feel more free.
+              <p className="mt-6 mb-10 text-black/75 sm:text-xl md:text-[1rem] lg:text-xl">
+              The note creation canvas provides custom tools and brushes. Drawing, text, pixel art, and animation are all supported along with a layers panel, color picker, and color palette creator.
             </p>          
           </div>     
         </div>
@@ -119,7 +141,7 @@ export default function WorldNotes() {
 
 
       {/* Process Section */}
-      <div className="max-w-6xl flex flex-col mx-auto mt-40">
+      <div className="max-w-6xl px-10 flex flex-col mx-auto mt-40">
         <h3 className="font-nhgDisplay text-white text-center text-7xl ">Creating the MVP</h3>
         <h3 className="mt-40 text-2xl font-semibold">
           Step 1 — Inspiration and Discovery
@@ -145,7 +167,7 @@ export default function WorldNotes() {
         </div>
 
         <p className="text-sm text-white/70 max-w-4xl mt-10 text-xl">
-          The end result is a creative world explorer that is part map, part sketchbook, part collaboration space. WorldNotes transforms scrolling into a playful exploration of what people post.
+          The end result is a creative world explorer that is part map, part sketchbook, and part collaboration space. 
         </p>
 
         <div className="mt-40">
@@ -156,8 +178,8 @@ export default function WorldNotes() {
           Step 2 — How to Build Community
         </h3>
         <p className="mt-10 text-xl text-white/70 max-w-3xl">
-          Building community meant encouraging exploration and a sense of adventure rather than passive scrolling in a tailored algorithm. Notes are anchored to geolocations
-          that fosters a diverse user base of different backgrounds and interests. The spontaneous element of finding new communities let's the WorldNotes community be an open experience that leads to natural discovery of micro-communities.
+          Building community meant encouraging exploration and a sense of adventure rather than passive scrolling in a tailored algorithm. It was very important to be raw and an <span className="font-semibold">open global community </span>as to authentically reflect the art of the world. Notes are anchored to geolocations
+          that foster a diverse user base of different backgrounds and interests. The spontaneous element of finding these new communities let's the WorldNotes community be an open experience that leads to natural discovery of micro-communities.
         </p>
 
         <div className="mt-40">

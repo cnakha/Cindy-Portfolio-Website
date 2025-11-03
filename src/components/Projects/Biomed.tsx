@@ -124,7 +124,7 @@ export default function Biomed() {
 
   return (
     <section>
-      <div className="mx-auto w-full max-w-7xl px-6 mb-40">
+      <div className="mx-auto w-full max-w-7xl px-8 mb-40">
 
         <div className="flex flex-col items-center justify-center">
           <p className="mt-5 text-xl text-center text-white/50 max-w-2xl">
@@ -396,6 +396,7 @@ export default function Biomed() {
     
 
         {/* Process Section */}
+        <div classNAme="px-10">
         <h3 className="text-white text-6xl mt-60">The Process</h3>
         <h3 className="mt-20 text-2xl font-semibold">
           Technologies
@@ -407,7 +408,7 @@ export default function Biomed() {
           The following tools were instrumental in bringing the various biomedical devices to life:
         </p>
         
-        <div className="mt-10 md:px-20 flex flex-wrap gap-6 justify-center w-full">
+        <div className="mt-12 md:px-20 flex flex-wrap gap-6 justify-center w-full">
           {tech.map((inspo, idx) => (
             <div
             key={idx}
@@ -431,6 +432,7 @@ export default function Biomed() {
           <br/><br/>
         </p>
 
+      </div>
       </div>
     </section>
 

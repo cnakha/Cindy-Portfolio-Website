@@ -35,7 +35,7 @@ h1 {
 
 p {
   font-family: "neue-haas-grotesk-text", "Helvetica Neue", Arial, sans-serif;
-  font-weight: 400; /* 65 Medium */
+  font-weight: 200; /* 65 Medium */
   line-height: 1.6;
 
 }
@@ -108,3 +108,38 @@ p {
   background: #e2e8f0; /* light gray hover */
 }
 
+/* remove space reservation */
+.scrollable-panel { 
+  overflow-y: hidden; 
+  overflow-x: auto;
+  touch-action: pan-x;
+  position: relative;
+}
+
+/* Force overlay scrollbars (Chrome/Safari) */
+.scrollable-panel::-webkit-scrollbar {
+  height: 8px;
+  background: transparent;
+}
+
+.scrollable-panel::-webkit-scrollbar-track {
+  background: transparent;
+  margin-block: 12px; /* optional: gives thumb nice breathing room */
+}
+
+.scrollable-panel::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.3);
+  border-radius: 9999px;
+  border: 2px solid transparent; /* adds padding around bar */
+}
+
+/* On hover, make thumb more visible */
+.scrollable-panel:hover::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.5);
+}
+
+/* For Firefox */
+.scrollable-panel {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,.3) transparent;
+}

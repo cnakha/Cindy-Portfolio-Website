@@ -68,8 +68,8 @@ const [typingDone, setTypingDone] = useState(false);
         >
         
           <div>
-            <h3 className="text-5xl md:text-8xl text-white">Cindy</h3>
-            <h3 className="text-5xl  md:text-8xl text-white pt-2">Nakhammouane</h3>
+            <h3 className="text-5xl md:text-7xl lg:text-8xl text-white">Cindy</h3>
+            <h3 className="text-5xl  md:text-7xl lg:text-8xl text-white">Nakhammouane</h3>
             <p className="text-xl font-nhgText text-white pt-2">Fullstack Developer & UI/UX Designer</p>
           </div>
         </motion.div>
