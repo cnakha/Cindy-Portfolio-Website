@@ -49,7 +49,7 @@ const [typingDone, setTypingDone] = useState(false);
           wrapper="p"
           className="
             font-nhgText  
-            block text-3xl md:text-4xl text-white/50
+            block text-3xl md:text-4xl text-white
             !leading-[1.25]
             [&>span]:!leading-[1.4]
             whitespace-pre-wrap

@@ -98,7 +98,7 @@ function FeaturedProjectBlock({
       <div className="flex flex-col justify-center items-center h-full w-full text-center">
         <button
           onClick={() => onOpen(project.id)}
-          className=" block h-full w-full overflow-hidden rounded-[12px] bg-black/20 ring-1 ring-white/25 hover:ring-white/50 transition shadow-[0_12px_32px_rgba(0,0,0,0.35)]"
+          className=" block h-full w-full overflow-hidden rounded-[12px] bg-black/20 ring-1 ring-white/15 transition shadow-[0_12px_32px_rgba(0,0,0,0.35)]"
         >
           <div className="relative aspect-[20/7] overflow-hidden">
             <img
@@ -109,9 +109,9 @@ function FeaturedProjectBlock({
           </div>
           <div 
             className="flex flex-col h-full px-6 md:px-6 py-8 items-center text-center
-            backdrop-blur-sm bg-black/75 hover:bg-blue-haze z-10 cursor-pointer transition ease-in-out duration-500">
-            <h2 className="font-nhgMono text-white font-bolder text-2xl leading-[1.25] md:text-3xl ">{project.title}</h2>
-            <p className="font-nhgMono text-sm mt-4 md:text-base text-white ">{project.description}</p>
+            bg-black/75 hover:bg-blue-haze z-10 cursor-pointer transition ease-in-out duration-500">
+            <h2 className="font-nhgDisplay text-white font-bolder text-2xl leading-[1.25] md:text-3xl ">{project.title}</h2>
+            <p className="font-nhgMono text-sm mt-6 md:text-md text-white">{project.description}</p>
           </div>
         </button>
 

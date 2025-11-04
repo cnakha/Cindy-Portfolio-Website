@@ -80,7 +80,7 @@ export default function ProjectDetailPage() {
             <h3 className="mt-16 text-3xl">
                 Concept Video
             </h3>
-            <div className=" mt-5 relative aspect-[21/12] overflow-hidden ">
+            <div className=" mt-5 relative aspect-[21/13] overflow-hidden rounded-lg">
                 <video
                     src={'/YCGH/YCGH_Concept_Vid.mp4'}
                     controls
@@ -90,7 +90,7 @@ export default function ProjectDetailPage() {
       ) : (
         <section className="mt-10">
           <div className="mx-auto max-w-6xl px-10 mt-10">
-            <div className="overflow-hidden  border border-white/20">
+            <div className="overflow-hidden  border border-white/20 rounded-lg">
               <img
                 src={`${project.imageUrl2}`}
                 alt="Project mock"
@@ -265,7 +265,7 @@ export default function ProjectDetailPage() {
       <section className="mt-20 mb-40">
         <div className="mx-auto w-full max-w-6xl px-6">
           <div className="rounded-xl border border-white/15 bg-[#222] p-6">
-            <h3 className="text-white text-3xl">Next Milestones</h3>
+            <h3 className="font-semibold text-white text-2xl">Next Milestones</h3>
             <div className="mt-4 space-y-6">
               {(milestones).map((m, i) => (
                 <div key={i}>

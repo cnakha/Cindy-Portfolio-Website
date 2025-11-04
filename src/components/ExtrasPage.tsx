@@ -12,10 +12,10 @@ const pictures = [
 
 function Extras() {
   return (
-    <section id="extras" className="relative w-full bg-[#008be8] mt-40">
+    <section id="extras" className="relative w-full bg-[#008be8] my-40">
       <div className="mx-auto w-full px-[5%]">
         <div className="flex w-full justify-center text-center px-4">
-          <h2 className="text-6xl font-semibold text-white">
+          <h2 className="text-6xl text-white">
             Extras
           </h2>
         </div>

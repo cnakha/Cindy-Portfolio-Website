@@ -75,8 +75,8 @@ export const projects: Project[] = [
     timeline: "Jan 2025 — May 2025",
     role: "Lead Frontend Developer and UI/UX Designer but I was also a Fullstack Developer and Hardware Engineer alongside three other interdisciplinary students from computer science and biomedical engineering backgrounds: Kegan Jones, Rohan Kakarlapudi, and Sufyan Siddiqui",
     skills: ["UI/UX Design", "Fullstack Development", "Entrepreneurship", "Internet of Things", "Prototyping", "Hardware Engineering", "Product Design", "User Testing", "Websockets"],
-    problem: "Wearable technology has immense potential to revolutionize personal health tracking, yet many current devices fail to balance accuracy, usability, and seamless integration into everyday life.",
-    subProblem: "After user research, listed are key problems we identified in the wearable health tech space:",
+    problem: "Wearable technology has the potential to revolutionize personal health tracking, yet many devices fail due to not meeting consumer needs.",
+    subProblem: "After researching users and wearable assitive health tech, listed are key problems we identified in the wearable health tech space:",
     solution: "My team developed five wearable bluetooth devices that utilize sensors to monitor biometric data such as heart rate, oxygen levels, stress, and activity patterns. The devices are created with user comfort in mind, featuring ergonomic designs, wireless communication, and intuitive user interfaces that provide real-time data visualization and alerts, ensuring users can easily track their health metrics and receive timely notifications on health anomalies.",
     keyProblems:[
       "Lack of Accessible Health Monitoring",
@@ -147,14 +147,13 @@ export const projects: Project[] = [
     outcome: "This project is currently in active development with plans to launch a beta version in late 2026.",
     imageUrl: "/foliofolds/thumbnail.png",
     imageUrl2: "/foliofolds/thumbnail.png",
-
-    timeline: "Jan 2023 — May 2024",
+    timeline: "June 2025 — Present",
     role: "Project Manager, Fullstack Developer, and UI/UX Designer",
     skills: ["UI/UX Design", "Web Development", "Prototyping", "Wireframing", "User Testing"],
     tools: ["Figma", "React", "Next.js", "Typescript", "Three.js", "WebGL"],
     problem: "Designers need a tool to help display printworks in 3D that's both intuitive and accessible to expert designers and casual users.",
     subProblem: "Printmakers are saying there is a need for a user-friendly platform that bridges the gap between design complexity and accessibility. Here are key problems we identified:",
-    solution: "Wanting a better way to showcase a design project online, I made FolioFolds, a web application that allows users to create and share interactive 3D models of printworks. The platform makes creating paper folds, cutouts, and bindings easier by provided custom tools. Creators can embedd their finished piece into a website or view it in AR using their mobile devices. Publications can be flipped through manually or viewed through animated video, fostering a vibrant ecosystem of print design enthusiasts.",
+    solution: "Wanting a better way to showcase a design project online, I made FolioFolds, a web application that allows users to create and share interactive 3D models of printworks. The platform makes creating paper folds, cutouts, and bindings easier by provided tailored tools for paper engineering. Users can embedd finished piece into a website or view it in AR using their mobile devices. Publications can be flipped through manually or viewed through animated video, fostering a vibrant ecosystem of print design enthusiasts.",
     keyProblems:[
       "Lack of Intuitive 3D Visualization for Printed Materials",
       "Physical Prototyping Is Time-Consuming and Expensive",
@@ -168,8 +167,8 @@ export const projects: Project[] = [
     },
   {
     id: "clarity",
-    title: "Designing For Clarity: A Redesign of Blackboard's User Interface",
-    description: "A publication on creating methodologies for designing clear and intuitive user interfaces",
+    title: "Exploring Modern Design: Clarity and Learning Management Systems, Chatbots, and Integrating AI",
+    description: "Methodologies for designing clear and intuitive user interfaces and general exploration of AI features and assimilation into existing products",
     category: "Design Research, Methodology Development, and UI and User Experience Design",
     fullDescription: "Designing For Clarity is a comprehensive redesign of Blackboard's user interface, focusing on enhancing user-flow and accessibility for a diverse user base. The project involved extensive user research, comparative market research on learning management systems, systems prototyping, and iterative user tests to develop a more intuitive and engaging experience. The redesign emphasizes clear navigation, simplified workflows, and improved visual hierarchy, making it easier for users to access course materials, communicate with peers, and manage their academic tasks. The project culminated in a detailed publication outlining the design methodologies employed, challenges faced, and the impact of the redesign on user satisfaction and engagement.",
     features: [

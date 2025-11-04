@@ -151,7 +151,7 @@ export default function Biomed() {
           <div className="w-full h-full px-6">
             <div className="rounded-xl border border-white/15 bg-[#1f1f1f] p-6 pb-10">
               <h3 className="font-nhgDisplay text-xl mb-4 text-white">Key Features</h3>
-              <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div className="grid grid-cols-1 gap-2 md:gap-8 md:grid-cols-2">
                 <ul className="list-disc list-inside space-y-2 text-white/85">
                   {features.slice(0, Math.ceil(features.length / 2)).map((feature, idx) => (
                     <li key={idx}>{feature}</li>
@@ -396,14 +396,14 @@ export default function Biomed() {
     
 
         {/* Process Section */}
-        <div classNAme="px-10">
+        <div className="max-w-6xl px-12 flex flex-col mx-auto">
         <h3 className="text-white text-6xl mt-60">The Process</h3>
-        <h3 className="mt-20 text-2xl font-semibold">
-          Technologies
+        <h3 className="mt-40 text-4xl ">
+          Rounding Up Technologies
         </h3>
         <p className="mt-10 text-sm text-white/50 max-w-4xl leading-relaxed text-xl">
           Before participating in this lab, I had limited experience with biomedical device design nor engineering in general. 
-          Through this project, I gained hands-on experience in sensor integration, harware engineering, data acquisition, and real-time monitoring.
+          Through these projects, I gained hands-on experience in sensor integration, harware engineering, data acquisition, and real-time monitoring.
           <br/><br/>
           The following tools were instrumental in bringing the various biomedical devices to life:
         </p>
@@ -414,7 +414,7 @@ export default function Biomed() {
             key={idx}
             className="flex flex-col text-left items-start bg-[#1f1f1f] border border-white/10 rounded-xl p-6 min-w-[220px] min-h-[220px] max-w-xs flex-1"
             >
-            <h5 className="text-lg font-bolder text-white mb-4">{inspo}</h5>
+            <h5 className="text-lg font-bolder text-white/90 mb-4">{inspo}</h5>
             <p className="text-sm text-white/50">{techDescriptions[idx]}</p>
             </div>
           ))}
@@ -423,7 +423,7 @@ export default function Biomed() {
         <Line/>
 
         
-        <h3 className="mt-20 text-2xl font-semibold">
+        <h3 className="mt-20 text-4xl ">
           Designing for Health
         </h3>
         <p className="mt-10 text-xl text-white/70 max-w-4xl">

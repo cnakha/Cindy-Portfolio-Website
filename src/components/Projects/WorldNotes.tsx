@@ -80,7 +80,7 @@ export default function WorldNotes() {
             </div>
             </div>
           </div> 
-          <div className="mt-[15%] mb-20 md:mr-[15%] ml-[15%] order-1 md:order-2">
+          <div className="mt-[15%] mb-20 md:mr-[15%] ml-10 md:ml-[15%] order-1 md:order-2">
               <h3 className="text-3xl md:text-3xl lg:text-4xl font-semibold">
               See the Full Picture and React with Your Community
             </h3>
@@ -100,6 +100,7 @@ export default function WorldNotes() {
               Profiles show you all the notes you post, draft, repost, like, and save. The cover page is a place the user can display their favorite notes in any way they desire.
             </p>          
             </div>      
+          <div className="scrollable-panel relative h-full lg:overflow-hidden overflow-x-auto">
           <div className="relative h-full aspect-[22/15] overflow-hidden">
             <img
               src={"/worldnotes/profile.png"}
@@ -107,6 +108,7 @@ export default function WorldNotes() {
               className="absolute inset-0 h-full w-full object-cover"
             />
           </div>  
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2"> 
@@ -117,15 +119,17 @@ export default function WorldNotes() {
               z-0
             "
           >
-            <div className="h-full aspect-[22/15]">
-            <img
-              src={"/worldnotes/creator.png"}
-              alt={`Note Traversal and Discovery`}
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-          </div>  
+            <div className="scrollable-panel relative h-full lg:overflow-hidden overflow-x-auto">
+              <div className="h-full aspect-[22/15]">
+                <img
+                  src={"/worldnotes/creator.png"}
+                  alt={`Note Traversal and Discovery`}
+                  className="h-full w-full object-cover"
+                />
+              </div>  
+            </div>
           </div>
-          <div className="mt-[15%] mb-20 md:mr-[15%] ml-[15%] order-1 md:order-2">
+          <div className="mt-[15%] mb-20 md:mr-[15%] ml-10 md:ml-[15%] order-1 md:order-2">
             <h3 className="mt-2 text-4xl font-semibold">
               Create Notes with Fun and Easy to Use Tools
             </h3>
@@ -141,12 +145,12 @@ export default function WorldNotes() {
 
 
       {/* Process Section */}
-      <div className="max-w-6xl px-10 flex flex-col mx-auto mt-40">
-        <h3 className="font-nhgDisplay text-white text-center text-7xl ">Creating the MVP</h3>
-        <h3 className="mt-40 text-2xl font-semibold">
+      <div className="max-w-6xl px-12 flex flex-col mx-auto mt-40">
+        <h3 className="font-nhgDisplay text-white text-6xl ">Creating the MVP</h3>
+        <h3 className="mt-40 text-4xl ">
           Step 1 — Inspiration and Discovery
         </h3>
-        <p className="mt-10 text-sm text-white/70 max-w-4xl leading-relaxed text-xl">
+        <p className="mt-10 text-xl text-white/75 max-w-4xl leading-relaxed ">
           Establishing a vision and core values were key to WorldNotes's design. Prioritizing pictorial communication and geolocated discoveries offers a quirky nuance and emotional depth in social interactions that is yet to be explored. 
           The challenge then became: <span className="italic text-white font-semibold"> how can we design a user friendly, universal platform that inspires creativity? </span>
         
@@ -170,32 +174,26 @@ export default function WorldNotes() {
           The end result is a creative world explorer that is part map, part sketchbook, and part collaboration space. 
         </p>
 
-        <div className="mt-40">
-          {/* <Line /> */}
-        </div>
 
-        <h3 className="mt-40 text-2xl font-semibold">
+        <h3 className="mt-40 text-4xl">
           Step 2 — How to Build Community
         </h3>
-        <p className="mt-10 text-xl text-white/70 max-w-3xl">
-          Building community meant encouraging exploration and a sense of adventure rather than passive scrolling in a tailored algorithm. It was very important to be raw and an <span className="font-semibold">open global community </span>as to authentically reflect the art of the world. Notes are anchored to geolocations
-          that foster a diverse user base of different backgrounds and interests. The spontaneous element of finding these new communities let's the WorldNotes community be an open experience that leads to natural discovery of micro-communities.
+        <p className="mt-10 text-xl text-white/75 max-w-3xl">
+          Building community meant encouraging exploration and a sense of adventure rather than passive scrolling in a tailored algorithm. It was very important to present a raw and truly <span className="font-semibold">open global community </span>as to authentically reflect the art of the world. 
+          <br/><br/>
+          Our user base encourages differences in backgrounds and interests, creating an interesting melting pot of groups, and making discovering new communities spontaneous and natural.
         </p>
 
-        <div className="mt-40">
-          {/* <Line /> */}
-        </div>
 
-
-        <h3 className="mt-40 text-2xl font-semibold">
+        <h3 className="mt-40 text-4xl">
           Step 3 — Designing App Structure
         </h3>
-        <p className="mt-10 text-xl text-white/70 max-w-4xl">
+        <p className="mt-10 text-xl text-white/75 max-w-4xl">
         With the vision set, I focused on structuring the app. 
         There's a diverse set of unique user flows I had to consider: note traversal and browsing, the note creation process, etc., so I decided to map the app structure 
         out. This helped me visualize all user navigation routes between different sections, ensuring a logical user flow. 
         </p>
-        <div className=" mt-10 relative aspect-[24/10] overflow-hidden ">
+        <div className=" mt-10 relative aspect-[24/10] overflow-hidden rounded-t-lg">
           <img
             src={"/worldnotes/user_flow.png"}
             alt={`Flowchart of Webflow`}
@@ -205,56 +203,63 @@ export default function WorldNotes() {
           
           {AppStructPopup && (
             <div
-                className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70"
+                className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 "
                 onClick={() => setShowPopup(false)}
             >
               <img
                 src={"/worldnotes/user_flow.png"}
                 alt={`App Structure Enlarged`}
-                className="max-h-[90vh] max-w-[90vw]  shadow-lg "
+                className="max-h-[90vh] max-w-[90vw] shadow-lg "
                 onClick={e => e.stopPropagation()}
               />
             </div>
           )}
         </div>
-        <div className="flex justify-center mt-4">
-          <p className="text-center text-white/50">App Structure Diagram</p>
+        <div className="flex justify-center bg-white rounded-b-lg py-4">
+          <p className="text-center text-black/75 text-sm">App Structure Diagram</p>
         </div>   
 
-        <div className="mt-40">
-          {/* <Line /> */}
-        </div>
 
-        <h3 className="mt-40 text-2xl font-bold">
+        <h3 className="mt-40 text-4xl">
           Step 4 — Wireframing
         </h3>
         <p className="mt-10 text-xl text-white/70 max-w-4xl">
           I sketched out how key features like the user profile, community page, and subsequent news and updates page would look and interact. 
           Early iterations helped me find balance between clean and simpler layouts and a stylized scrap book layout without over-investing in visuals too soon.
         </p>
-        <div className="mt-10 relative aspect-[21/8] overflow-hidden">
+        <div className="mt-10 relative aspect-[21/8] overflow-hidden rounded-t-lg">
           <img
             src={"/worldnotes/wireframing.png"}
             alt={`Wireframe`}
             className="absolute inset-0 h-full w-full object-cover"
           />
         </div>
-        <div className="flex justify-center mt-4">
-          <p className="text-center text-white/50">Wireframes of User Profile and Community Page</p>
+        <div className="flex justify-center bg-white rounded-b-lg py-4">  
+          <p className="text-center text-sm text-black/75">Wireframes of User Profile and Community Page</p>
         </div>    
-        
-        <div className="mt-40">
-          {/* <Line /> */}
-        </div>
-        
-        <h3 className="mt-40 text-2xl font-semibold">
+
+
+        <h3 className="mt-40 text-4xl ">
           Step 5 — UI Design
         </h3>
         <p className="mt-10 text-xl text-white/70 max-w-4xl">
-        After validating layouts, I shifted to creating a formal visual design of components using Figma and Illustrator. In doing this process, I found myself redesigning elements multiple times to refine usability and aesthetics.
-         <br/><br/>
-        WorldNote's branding embraces playfulness, bright accents, references scrapbooking, and a lighthearted aesthetic—to reflect the project’s creative spirit. 
-        The UI is intentionally inviting, encouraging hesitant users to leave their mark on the world.
+          After validating layouts, I shifted to creating a formal visual design of components using Figma and Illustrator. In doing this process, I found myself redesigning elements multiple times to refine usability and aesthetics.
+        </p>
+
+        <div className=" mt-10 relative aspect-[21/8] overflow-hidden rounded-t-lg">
+          <img
+            src={"/worldnotes/UI_Design.png"}
+            alt={`UI Design`}
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        </div>
+        <div className="flex justify-center bg-white rounded-b-lg py-4">
+          <p className="text-center text-sm text-black/75">Mockup Deigns of User Profile and Community Page</p>
+        </div> 
+
+        <p className="mt-10 text-xl text-white/70 max-w-4xl">
+          WorldNote's branding embraces playfulness, bright accents, references scrapbooking, and a lighthearted aesthetic—to reflect the project’s creative spirit. 
+          The UI is intentionally inviting, encouraging hesitant users to leave their mark on the world.
         </p>
 
         <div className="mt-10 ml-10 flex flex-col text-left items-start bg-[#1f1f1f] border border-white/10 rounded-xl p-6 ">
@@ -268,22 +273,8 @@ export default function WorldNotes() {
           </p>
         </div>
 
-        <div className=" mt-10 relative aspect-[21/8] overflow-hidden ">
-          <img
-            src={"/worldnotes/UI_Design.png"}
-            alt={`UI Design`}
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-        </div>
-        <div className="flex justify-center mt-4">
-          <p className="text-center text-white/50">Mockup Deigns of User Profile and Community Page</p>
-        </div>   
 
-        <div className="mt-40">
-          {/* <Line /> */}
-        </div>
-
-        <h3 className="mt-40 text-2xl font-semibold">
+        <h3 className="mt-40 text-4xl">
           Step 6 — Fullstack Development
         </h3>
 
@@ -311,24 +302,25 @@ export default function WorldNotes() {
         </div>
         </div>    
 
-        <div className="mt-40">
-          {/* <Line /> */}
-        </div>
         
-        <h3 className="mt-40 text-2xl font-semibold">
-          Step 7 - Measuring Impact
+        <h3 className="mt-40 text-4xl">
+          Step 7 — Measuring Impact
         </h3>
         <p className="mt-10 text-xl text-white/70 max-w-4xl">
-          Because WorldNotes is experimental, impact is measured less in metrics and more in moments of connection; however there are community polls that are posted to survey users on the site’s updates. Over time, I plan to introduce lightweight analytics and community feedback loops to guide future iterations.
+          WorldNotes is experimental and engages in direct surveys and open discourse over updates and features regularly. Impact is measured through metrics and moments of connection, liasened through community polls and recieving feedback from focused user groups.
         </p>
-        {/* <div className=" mt-5 relative aspect-[21/9] overflow-hidden rounded-[12px]">
-          <img
-            src={"/panorama_kitchen.png"}
-            alt={`Engagement Metrics`}
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-        </div> */}
 
+
+        <div className="flex flex-col items-center text-center justify-center mt-40 ">
+          <h4 className="font-nhgDisplay text-white font-semibold bg-blue-haze px-4 py-2 rounded-[20px]">Outcome</h4>
+          <p className="mt-10 text-xl text-white/70 max-w-3xl">
+            Since launching, WorldNotes has fostered a vibrant community of creators and explorers. Users have left thousands of notes worldwide, sparking spontaneous connections and shared experiences across cultures.    
+          </p>
+          <h3 className="font-nhgMono mt-8 text-3xl text-white/90 font-bolder max-w-3xl">
+              "WorldNotes lowers barriers to expression and prioritizing whimsy over polished aesthetics, the platform feels judgment free and inviting. So fun!"
+          </h3>
+          <p className="mt-4 italic text-white/50 max-w-2xl">— Casual User</p>
+        </div>
       </div>
       </div>
     </section>

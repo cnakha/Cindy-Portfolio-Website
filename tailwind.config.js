@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       colors: {
         'blue-haze': 'var(--blue-haze)',
+        'blue-haze-light': 'var(--blue-haze-light)',
       },
       fontFamily: {
         nhgDisplay: ['var(--font-nhg-display)'],

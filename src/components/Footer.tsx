@@ -1,15 +1,21 @@
 export default function Footer() {
   return (
+    <div className="bg-black pt-40">
     <footer id="contact" className="font-nhgMono relative bg-blue-haze">
-      {/* Black horizontal line at the top of the footer */}
-      {/* <div className="absolute top-0 left-0 right-0 h-40 bg-black z-30" /> */}
-
-      <div
-        className="absolute inset-0 bg-cover opacity-80 bg-center"
-        style={{ backgroundImage: `url("../footer.png")` }}
+      {/* Background video */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover opacity-50"
+        src="/Footer.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
       />
+
+      {/* Overlay for darkening and ensuring readability */}
       <div className="absolute inset-0 " />
-      <div className="relative ml-20 w-full px-4 py-20">
+
+      <div className="relative md:ml-10 w-full px-4 py-20">
         <div
           className="max-w-xl w-full rounded-2xl bg-black/55 p-10
           backdrop-blur-sm shadow-[0_12px_32px_rgba(0,0,0,0.35)]
@@ -51,8 +57,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-             {/* <div className="absolute h-full w-full bg-gradient-to-b from-[#008BE8] to-transparent" /> */}
-
     </footer>
+    </div>
   );
 }
