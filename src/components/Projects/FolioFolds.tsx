@@ -41,7 +41,7 @@ const accessibillity = [
           <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr]"> 
             <div className="mt-20 mb-10 sm:pr-10 md:mb-0 ml-10  md:ml-[15%]">
               <h3 className="text-3xl md:text-3xl lg:text-4xl font-semibold">
-                Import Images and PDFs, Choose a Template, Then Go!
+                Import Images and PDFs, Choose a Template, Then Begin!
               </h3>
               <p className="mt-6 mb-10 text-black/75 sm:text-xl md:text-[1rem] lg:text-xl">
                 Users can import images and PDFs, select from a variety of templates, and customize their designs with intuitive tools.
@@ -169,9 +169,9 @@ const accessibillity = [
           Step 1 — Inspiration and Research
         </h3>
         <p className="mt-10 text-sm text-white/70 max-w-4xl leading-relaxed text-xl">
-          Paper engineering and bookbinding have a rich history that spans centuries and although the medium has a more enriching impact in its physical form, exploring ways to convey these physical properties digitally can allow designers to share our work's potential more fully and serve as an interesting archival method. 
+          Paper engineering and bookbinding have a rich history that spans centuries and although the medium has a more enriching impact in its physical form, exploring ways to convey these physical properties digitally can allow designers to share our work's potential more captivatingly and serve as an interesting archival method. 
           <br/><br/>
-          To design FolioFolds, I researched traditional techniques and modern digital tools to understand how people interact with physical publications and to find physical qualities I should account for.
+          To design FolioFolds, I researched traditional techniques and modern digital tools to understand how people interact with physical publications and to find physical qualities I should replicate.
           The challenge then became: <span className="italic text-white font-semibold"> how can we design a user friendly tool to construct prints in 3D that captures the tactility of traditional paper engineering? </span>
         </p>
 

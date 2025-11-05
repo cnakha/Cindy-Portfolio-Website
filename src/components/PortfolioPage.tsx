@@ -25,7 +25,7 @@ function Hero() {
   };
 
   return (
-    <section id="home" className="relative w-full min-h-[120vh]">
+    <section id="home" className="relative w-full min-h-[100vh]">
       {/* Full-bleed background */}
       <video
         ref={videoRef}
@@ -98,22 +98,30 @@ function FeaturedProjectBlock({
       <div className="flex flex-col justify-center items-center h-full w-full text-center">
         <button
           onClick={() => onOpen(project.id)}
-          className=" block h-full w-full overflow-hidden rounded-[12px] bg-black/20 ring-1 ring-white/15 transition shadow-[0_12px_32px_rgba(0,0,0,0.35)]"
+          className="group block h-full w-full overflow-hidden rounded-[12px] bg-black/20 ring-1 ring-white/20 transition "
         >
           <div className="relative aspect-[20/7] overflow-hidden">
             <img
               src={`${project.imageUrl}`}
               alt={`${project.id} preview`}
-              className="absolute inset-0 h-full w-full object-cover transform transition-transform duration-600 ease-in-out hover:scale-105"
+              className="absolute inset-0 h-full w-full object-cover transform transition duration-500 ease-in-out group-hover:scale-105"
             />
           </div>
+
           <div 
-            className="flex flex-col h-full px-6 md:px-6 py-8 items-center text-center
-            bg-black/75 hover:bg-blue-haze z-10 cursor-pointer transition ease-in-out duration-500">
-            <h2 className="font-nhgDisplay text-white font-bolder text-2xl leading-[1.25] md:text-3xl ">{project.title}</h2>
-            <p className="font-nhgMono text-sm mt-6 md:text-md text-white">{project.description}</p>
+            className="flex flex-col text-left h-full px-6 md:px-10 py-10 
+            bg-black transition ease-in-out duration-500 group-hover:bg-blue-haze
+            "
+          >
+            <h2 className="font-nhgDisplay text-white font-bolder text-2xl leading-[1.25] md:text-3xl">
+              {project.title}
+            </h2>
+            <p className="font-nhgTexttext-md mt-6 md:text-md text-white/75">
+              {project.description}
+            </p>
           </div>
         </button>
+
 
       </div>
 
@@ -130,16 +138,16 @@ function FeaturedProjects({
 }) {
 
   return (
-    <section id="projects" className="relative w-full bg-[#131415] pb-10">
-      <div className="flex w-full items-center justify-center bg-black px-4 py-10 ">
-        <h1 className="font-nhgDisplay text-3xl text-center md:text-5xl text-white">
+    <section id="projects" className="relative w-full bg-black/90 pb-10">
+      <div className="flex w-full bg-black pt-20 pl-10 py-10 ">
+        <h1 className="font-nhgDisplay text-3xl md:text-5xl pl-10 text-white">
           Featured Projects
         </h1>
       </div>
-      <div className="mx-auto w-full px-[10%] md:pb-10">
+      <div className="mx-auto w-full px-[5%] md:pb-10">
         <div
           className="
-            mt-20 
+            mt-10 
             grid 
             grid-cols-1 
             md:grid-cols-2 

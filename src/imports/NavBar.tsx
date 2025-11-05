@@ -47,9 +47,9 @@ export default function NavBar() {
             alt="Headshot Preview"
             className="hidden md:block w-[35px] h-[35px]"
           /> */}
-        <div className="flex flex-col text-white text-[16px] text-left">
-          <p className="-mb-1">Cindy</p>
-          <p>Nakhammouane</p>
+        <div className="flex flex-col text-white text-[18px] text-left">
+          <p className="font-nhgDisplay -mb-1">Cindy</p>
+          <p className="font-nhgDisplay">Nakhammouane</p>
         </div>
       </button>
 

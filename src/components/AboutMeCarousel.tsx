@@ -39,9 +39,9 @@ const [typingDone, setTypingDone] = useState(false);
     index === 0 ? (
       <div className="text-white space-y-6">
         <TypeAnimation
-          key={"Hi there! I'm..."}
+          key={"Hi I'm..."}
           sequence={[
-            "Hi there! I'm...",
+            "Hi, I'm...",
             () => setTypingDone(true), 
           ]}
           speed={35}
@@ -49,7 +49,7 @@ const [typingDone, setTypingDone] = useState(false);
           wrapper="p"
           className="
             font-nhgText  
-            block text-3xl md:text-4xl text-white
+            block text-2xl md:text-3xl text-white/50
             !leading-[1.25]
             [&>span]:!leading-[1.4]
             whitespace-pre-wrap
@@ -68,14 +68,14 @@ const [typingDone, setTypingDone] = useState(false);
         >
         
           <div>
-            <h3 className="text-5xl md:text-7xl lg:text-8xl text-white">Cindy</h3>
-            <h3 className="text-5xl  md:text-7xl lg:text-8xl text-white">Nakhammouane</h3>
+            <h3 className="text-5xl md:text-7xl lg:text-7xl text-white">Cindy</h3>
+            <h3 className="text-5xl  md:text-7xl lg:text-7xl text-white">Nakhammouane</h3>
             <p className="text-xl font-nhgText text-white pt-2">Fullstack Developer & UI/UX Designer</p>
           </div>
         </motion.div>
 
-        <motion.p className="font-nhgMono text-3xl md:text-4xl text-white/50 pt-8" variants={item}>
-          I love to{" "}
+        <motion.p className="font-nhgText text-2xl md:text-3xl text-white/50 pt-6" variants={item}>
+          I {" "}
           <span className="text-white font-bolder">
             research, design, user test, and code{" "}
           </span>
@@ -83,7 +83,7 @@ const [typingDone, setTypingDone] = useState(false);
         </motion.p>     
 
         {/* Bottom info row */}
-        <motion.div className="flex flex-wrap w-full gap-5 pt-8" variants={item}>
+        <motion.div className="flex flex-wrap w-full gap-2 md:gap-5 pt-8" variants={item}>
           <div className="flex flex-inline text-white/75 gap-2">
             <div className="w-6 h-6 rounded-full bg-white border border-[6px] border-blue-haze" />
             <p>Chicago, IL</p>
@@ -123,7 +123,7 @@ const [typingDone, setTypingDone] = useState(false);
         cursor={text !== ""}
         wrapper="p"
         className="
-          block text-3xl md:text-5xl text-white/75
+          block text-2xl md:text-3xl text-white/75
           !leading-[1.25]               /* force on <p> */
           [&>span]:!leading-[1.4]      /* force on inner span that TA inserts */
           whitespace-pre-wrap
@@ -147,13 +147,13 @@ export default function AboutMeCarousel({slideNumber,  setSlideNumber, isPlaying
     "I love creating things that bring joy to others and heavily value leaving a positive impact in the world. Wanting to leverage my academic drive and creative mind, I found myself at the door of creative technology...",
     "Today, I'm a fourth year undergraduate student at the University of Illinois Chicago studying computer science and design and exploring the possibilities of AI/ML automation, web dev, and product design.",
     "I love being at the intersection of design and technology as I get to bridge creative and technical teams. I've thus became a very passionate designer who values intuitive experiences and engaging storytelling and a developer who can bring ideas to life.",
-    "In my free time I love to travel to cool places, watch movies, sing, and attend live theatrical shows. I also spend a lot of time on my passion projects: WorldNotes and FolioFlips!",
+    "In my free time I love to travel to cool places, watch movies, sing, and attend live theatrical shows. I also spend a lot of time on my passion projects: WorldNotes and FolioFolds!",
   ];
 
   const [idx, setIdx] = useState(0);
   const nextSlide = () => setIdx((i) => (i + 1) % slides.length);
 
-  const MIN = 580;
+  const MIN = 500;
   const innerRef = useRef<HTMLDivElement>(null); 
   const [height, setHeight] = useState<number>(MIN);
 
@@ -221,7 +221,7 @@ export default function AboutMeCarousel({slideNumber,  setSlideNumber, isPlaying
       {/* Natural-flow flex column (no h-full) so height can shrink/grow per slide */}
       <div
         ref={innerRef}
-        className="flex min-h-[600px] flex-col gap-6 px-10 pt-10 "
+        className="flex min-h-[500px] flex-col gap-6 px-10 pt-10 "
       >
         {/* Text */}
         <TypedParagraph text={slides[idx]} index={idx} />

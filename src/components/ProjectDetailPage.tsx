@@ -16,7 +16,7 @@ export default function ProjectDetailPage() {
 
   if (!project) {
     return (
-      <main className="min-h-screen bg-[#131415] pt-[84px] text-white flex items-center justify-center">
+      <main className="min-h-screen bg-[#131415] pt-[80px] text-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-3xl font-bold mb-4">Project Not Found</h1>
           <button
@@ -61,138 +61,136 @@ export default function ProjectDetailPage() {
           <div className="rounded-xl p-6">
             <button
               onClick={() => navigate(-1)}
-              className="mb-6 inline-flex text-xl items-center gap-2 rounded-[25px] px-4 pr-6 py-2 text-white/90 hover:bg-white/10 transition"
+              className="mb-6 inline-flex text-xl items-center gap-2 rounded-[25px] px-2 pr-6 py-2 text-white/90 hover:bg-white/10 transition"
             >
               <ArrowLeft className="h-7 w-7" />
               Return
             </button>
 
             <h3 className="mt-4 text-white text-6xl leading-[1.25] ">{project.title}</h3>
-            <h4 className="font-nhgDisplay mt-16 text-white font-semibold">Overview</h4>
+            {project.vid ? (
+            <div className=" mx-auto mt-10">
+                <h3 className="mt-16 text-2xl">
+                    Concept Video
+                </h3>
+                <div className=" mt-5 relative aspect-[21/13] overflow-hidden rounded-lg">
+                    <video
+                        src={'/YCGH/YCGH_Concept_Vid.mp4'}
+                        controls
+                    />
+                </div>
+              </div>
+          ) : (
+            <section className="mt-10">
+              <div className="mx-auto mt-10">
+                <div className="overflow-hidden  border border-white/20 rounded-lg">
+                  <img
+                    src={`${project.imageUrl2}`}
+                    alt="Project mock"
+                    className="h-auto w-full object-cover"
+                  />
+                </div>
+              </div>
+            </section>
+          )}
+
+            {/* Top specs row: My Role / Skills / Tools / Timeline + See the Code */}
+            <section className="mt-10">
+              <div className="mx-auto w-full max-w-6xl">
+                <div className="rounded-xl">
+                  <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+
+                  {/* Column 1: My Role + Timeline */}
+                    <div className="flex flex-col items-start justify-between gap-8">                
+
+                      {/* My Role */}
+                      <div>
+                        <div className="flex gap-2">
+                          <UserRound size="25"/>
+                          <h3 className="text-2xl tracking-wider text-white">
+                            Role
+                          </h3>
+                        </div>
+                        <p className="mt-2 text-[16px] text-white/80 max-w-md">
+                          {role}
+                        </p>
+                      </div>
+
+                      {/* Timeline */}
+                      <div className="w-full ">
+                        <div className="flex gap-2">
+                          <Calendar size="25"/>
+                          <h3 className="text-2xl tracking-wider text-white ">
+                            Timeline
+                          </h3>
+                        </div>
+                        <p className="mt-2 text-[16px] text-white/80">
+                          {timeline || "June 2025 – Present"}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Column 2: Skills */}
+                    {/* Skills */}
+                    <div>
+                      <div className="flex gap-2">
+                        <Wand size="25"/>
+                      <h3 className="text-2xl tracking-wider text-white">
+                        Skills
+                      </h3>
+                      </div>
+                      <ul className="mt-2 space-y-1  text-white/80 list-disc list-inside">
+                        {(skills.length ? skills : ["UI/UX Design", "Web Development", "Wireframing", "SEO"]).map(
+                          (s, i) => (
+                            <li key={i}>{s}</li>
+                          )
+                        )}
+                      </ul>
+                    </div>
+
+                    {/* Column 3: Tools + See Code */}
+                    <div>
+                      <div className="flex gap-2">
+                        <Wrench size="25"/>
+                      <h3 className="text-2xl tracking-wider text-white">
+                        Tools
+                      </h3>
+                      </div>
+                      <div className="mt-2 text-[16px] flex flex-wrap gap-2">
+                        {(tools.length ? tools : ["React", "Next.js", "TypeScript"]).map(
+                          (t, i) => (
+                            <span
+                              key={i}
+                              className="mt-2 rounded-full bg-white/10 px-3 py-1 text-xs text-white ring-1 ring-white/20"
+                            >
+                              {t}
+                            </span>
+                          )
+                        )}
+                      </div>
+
+                      {/* See code button */}
+                      <div className="flex flex-col mt-2 items-start justify-between gap-4 ">
+                        {githubUrl && (
+                          <a
+                            href={githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-nhgMono inline-flex text-bolder mt-8 items-center gap-1 rounded-full border border-white/50 px-10 py-2 text-white hover:bg-white hover:text-black transition"
+                          >
+                            See the Code  <ArrowLeft className="h-6 w-6 rotate-180" />
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <h4 className="font-nhgDisplay mt-20 text-white font-semibold">Overview</h4>
             <p className="font-nhgMono mt-4 text-white/75 text-[24px]">{project.fullDescription}</p>
 
-          </div>
-        </div>
-      </section>
-
-      {project.vid ? (
-        <div className="max-w-6xl mx-auto mt-10 px-10">
-            <h3 className="mt-16 text-3xl">
-                Concept Video
-            </h3>
-            <div className=" mt-5 relative aspect-[21/13] overflow-hidden rounded-lg">
-                <video
-                    src={'/YCGH/YCGH_Concept_Vid.mp4'}
-                    controls
-                />
-            </div>
-          </div>
-      ) : (
-        <section className="mt-10">
-          <div className="mx-auto max-w-6xl px-10 mt-10">
-            <div className="overflow-hidden  border border-white/20 rounded-lg">
-              <img
-                src={`${project.imageUrl2}`}
-                alt="Project mock"
-                className="h-auto w-full object-cover"
-              />
-            </div>
-          </div>
-        </section>
-      )}
-
-
-
-      {/* Top specs row: My Role / Skills / Tools / Timeline + See the Code */}
-      <section className="mt-20">
-        <div className="mx-auto w-full max-w-6xl px-10">
-          <div className="rounded-xl border border-white/10 bg-[#1f1f1f] p-6">
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-
-             {/* Column 1: My Role + Timeline */}
-              <div className="flex flex-col items-start justify-between gap-8">                
-
-                {/* My Role */}
-                <div>
-                  <div className="flex gap-2">
-                    <UserRound size="25"/>
-                    <h3 className="text-xl tracking-wider text-white">
-                      My Role
-                    </h3>
-                  </div>
-                  <p className="mt-2 text-[16px] text-white/80 max-w-md">
-                    {role}
-                  </p>
-                </div>
-
-                {/* Timeline */}
-                <div className="w-full ">
-                  <div className="flex gap-2">
-                    <Calendar size="25"/>
-                    <h3 className="text-xl tracking-wider text-white ">
-                      Timeline
-                    </h3>
-                  </div>
-                  <p className="mt-2 text-[16px] text-white/80">
-                    {timeline || "June 2025 – Present"}
-                  </p>
-                </div>
-              </div>
-
-              {/* Column 2: Skills */}
-              {/* Skills */}
-              <div>
-                <div className="flex gap-2">
-                  <Wand size="25"/>
-                <h3 className="text-xl tracking-wider text-white">
-                  Skills
-                </h3>
-                </div>
-                <ul className="mt-2 space-y-1  text-white/80 list-disc list-inside">
-                  {(skills.length ? skills : ["UI/UX Design", "Web Development", "Wireframing", "SEO"]).map(
-                    (s, i) => (
-                      <li key={i}>{s}</li>
-                    )
-                  )}
-                </ul>
-              </div>
-
-              {/* Column 3: Tools + See Code */}
-              <div>
-                <div className="flex gap-2">
-                  <Wrench size="25"/>
-                <h3 className="text-xl tracking-wider text-white">
-                  Tools
-                </h3>
-                </div>
-                <div className="mt-2 text-[16px] flex flex-wrap gap-2">
-                  {(tools.length ? tools : ["React", "Next.js", "TypeScript"]).map(
-                    (t, i) => (
-                      <span
-                        key={i}
-                        className="mt-2 rounded-full bg-white/10 px-3 py-1 text-xs text-white ring-1 ring-white/20"
-                      >
-                        {t}
-                      </span>
-                    )
-                  )}
-                </div>
-
-                {/* See code button */}
-                <div className="flex flex-col items-start justify-between gap-4 ">
-                  {githubUrl && (
-                    <a
-                      href={githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-nhgMono inline-flex mt-8 items-center gap-1 rounded-full border border-white/50 px-10 py-2 text-white/50 hover:bg-white/10 transition"
-                    >
-                      See the Code  <ArrowLeft className="h-6 w-6 rotate-180" />
-                    </a>
-                  )}
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -212,10 +210,10 @@ export default function ProjectDetailPage() {
             {keyProblems.map((problem, idx) => (
               <div
               key={idx}
-              className="flex flex-col text-left items-start bg-[#1f1f1f] border border-white/10 rounded-xl p-6 min-w-[220px] max-w-xs flex-1"
+              className="flex flex-col text-left items-start bg-white/10 border border-white/10 rounded-xl p-6 min-w-[220px] max-w-xs flex-1"
               >
               <h5 className="text-lg font-bolder text-white/90 mb-4">{problem}</h5>
-              <p className="text-sm text-white/50">{keyProblemDescriptions[idx]}</p>
+              <p className="text-sm text-white/75">{keyProblemDescriptions[idx]}</p>
               </div>
             ))}
             </div>
@@ -234,7 +232,7 @@ export default function ProjectDetailPage() {
       {features.length > 0 && (
         <section className="mt-32">
           <div className="mx-auto w-full max-w-6xl px-8">
-            <div className="rounded-xl border border-white/15 bg-[#1f1f1f] p-6 pb-10">
+            <div className="rounded-xl border border-white/15 bg-white/10 p-6 pb-10">
               <h3 className="font-nhgDisplay text-xl mb-4 text-white">Key Features</h3>
               <div className="grid grid-cols-1 gap-2 md:gap-8 md:grid-cols-2">
                 <ul className="list-disc list-inside space-y-2 text-white/85">

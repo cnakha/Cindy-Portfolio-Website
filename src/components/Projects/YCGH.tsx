@@ -18,6 +18,18 @@ export default function YCGH() {
 
     return(
         <section className="mt-40 mb-40 mx-auto w-full max-w-6xl px-6">
+
+            <div className=" mt-10">
+                <h3 className="mt-16 text-2xl">
+                    Documentation Video
+                </h3>
+                <div className=" mt-5 relative aspect-[21/13] overflow-hidden rounded-lg">
+                    <video
+                        src={'/YCGH/YCGH_Video_Documentation_FINAL.mp4'}
+                        controls
+                    />
+                </div>
+              </div>
            
             <div className="mt-5 relative aspect-[10/5] overflow-hidden rounded-t-lg">
                 <img

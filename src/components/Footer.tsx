@@ -15,7 +15,7 @@ export default function Footer() {
       {/* Overlay for darkening and ensuring readability */}
       <div className="absolute inset-0 " />
 
-      <div className="relative md:ml-10 w-full px-4 py-20">
+      <div className="relative md:ml-10 w-full px-4 pt-20 py-10">
         <div
           className="max-w-xl w-full rounded-2xl bg-black/55 p-10
           backdrop-blur-sm shadow-[0_12px_32px_rgba(0,0,0,0.35)]
@@ -57,6 +57,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      <p className="text-right text-white text-nhgDisplay pb-4 mr-6">Website Created by Cindy Nakhammouane</p>
     </footer>
     </div>
   );
