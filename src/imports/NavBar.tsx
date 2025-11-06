@@ -31,12 +31,12 @@ export default function NavBar() {
   };
 
   return (
-    <div className="font-nhgDisplay relative w-full h-[85px]" data-name="nav bar">
+    <div className="font-nhgDisplay relative w-full h-[85px] pointer-events-none" data-name="nav bar">
       {/* Gradient background */}
-      <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-b from-[#008BE8] to-transparent" />
+      <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-b from-[#008BE8] to-transparent pointer-events-none" />
 
       {/* Logo + name */}
-      <button onClick={() => goTo("home")} className="relative flex items-start pl-8 pt-6">
+      <button onClick={() => goTo("home")} className="relative flex items-start pl-8 pt-4 pointer-events-auto">
         {/* <img
           src={"/CN_logo.svg"}
           alt="CN logo"
@@ -55,14 +55,14 @@ export default function NavBar() {
 
     
       {/* Nav buttons on right */}
-      <div className="absolute top-0 right-0 h-full flex items-center pr-8">
+      <div className="absolute top-0 right-0 h-full flex items-center pr-8 pointer-events-none">
       {/* Desktop nav */}
-      <div className="hidden sm:flex gap-6">
+      <div className="hidden sm:flex gap-6 pointer-events-none">
         {NAV_ITEMS.map((item) => (
           <button
             key={item.id}
             onClick={() => goTo(item.id)}
-            className={`text-[18px] font-bolder transition-opacity text-white hover:opacity-90 ${
+            className={`text-[18px] font-bolder transition-opacity pointer-events-auto text-white hover:opacity-90 ${
               active === item.id ? "opacity-100" : "opacity-75"
             }`}
           >
@@ -75,14 +75,14 @@ export default function NavBar() {
       <div className="sm:hidden">
         <button
           onClick={() => setMenuOpen((prev) => !prev)}
-          className=" text-white focus:outline-none mt-4"
+          className=" text-white focus:outline-none mt-4 pointer-events-auto"
         >
           {menuOpen ? <X size={40} /> : <Menu size={40} />}
         </button>
 
         {/* Dropdown */}
         {menuOpen && (
-          <div className="absolute right-4 mt-2 w-32 rounded-md bg-black/75 py-4 shadow-lg z-50 flex flex-col">
+          <div className="absolute right-4 mt-2 w-32 rounded-md bg-black/75 py-4 shadow-lg z-50 flex flex-col pointer-events-auto">
             {NAV_ITEMS.map((item) => (
               <button
                 key={item.id}

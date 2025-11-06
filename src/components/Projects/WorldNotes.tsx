@@ -152,7 +152,9 @@ export default function WorldNotes() {
         </h3>
         <p className="mt-10 text-xl text-white/75 max-w-4xl leading-relaxed ">
           Establishing a vision and core values were key to WorldNotes's design. Prioritizing pictorial communication and geolocated discoveries offers a quirky nuance and emotional depth in social interactions that is yet to be explored. 
-          The challenge then became: <span className="italic text-white font-semibold"> how can we design a user friendly, universal platform that inspires creativity? </span>
+          The challenge then became: 
+          <br/><br/>
+          <span className="italic text-3xl text-white "> How can we design a social platform that inspires creativity? </span>
         
         <br/><br/>
         WorldNotes is deeply informed by a blend of <span className="font-semibold text-white">internet culture </span>, mapping tools, and communal creativity platforms. Here a few places of inspiration I pulled from:
@@ -301,6 +303,31 @@ export default function WorldNotes() {
             ))}
         </div>
         </div>    
+
+        <h3 className="mt-20 text-3xl">
+        Frontend Development
+        </h3>
+        <p className="mt-10 text-sm text-white/50 max-w-4xl leading-relaxed text-xl">
+          <br/><br/>
+=       </p>
+      <h3 className="mt-20 text-2xl">
+       Konva the Canvas Library
+      </h3>
+      <p>
+        "react-konva is a JavaScript library for drawing complex canvas graphics using React. It provides declarative and reactive bindings to the Konva Framework."
+      </p>
+      <p>Navigating this library was key to implementing the Note Creator Canvas I had planned</p>
+      <h3 className="mt-20 text-2xl">
+        Google Maps API Integration
+      </h3>
+
+      <h3 className="mt-20 text-3xl">
+        Backend Development: Storing and Retrieving Notes, User Data, and Reactions
+      </h3>
+
+      <h3 className="mt-20 text-2xl">
+        Organizing Firebase Database, NextAuth, and Serverless Functions
+      </h3>
 
         
         <h3 className="mt-40 text-4xl">

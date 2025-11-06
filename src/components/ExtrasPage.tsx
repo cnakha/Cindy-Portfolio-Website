@@ -1,63 +1,62 @@
-import React, { useState } from "react";
+import React from "react";
 import Footer from "./Footer";
-import { Triangle } from "lucide-react";
+const extras = [
+  "/extras/Time_Poster.png",
+  "/extras/Coding_Poster.png",
+  "/extras/Love.png",
+  "/extras/Riso_Animation.gif",
+  "/extras/Lollapalooza.jpg",
+  "/extras/Trippy_Animation.gif",
+  "/extras/vfx.png",
+  "/extras/memento.png",
+  "/extras/Conops.png",
 
-const pictures = [
-    "/profile_picture.png",
-    "/chicago.png",
-    "/panorama_kitchen.png",
 ];
 
-/* ---------------- EXTRAS (HORIZONTAL STRIP) ---------------- */
-
-function Extras() {
+export default function ExtrasPage() {
   return (
-    <section id="extras" className="relative w-full bg-[#008be8] my-40">
-      <div className="mx-auto w-full px-[5%]">
-        <div className="flex w-full justify-center text-center px-4">
-          <h2 className="text-6xl text-white">
-            Extras
-          </h2>
-        </div>
-        <div className="px-4">
-          <p className="mx-auto max-w-5xl text-center text-2xl text-white/75">
+    <main className="relative min-h-screen w-full overflow-x-hidden bg-[#008be8]">
+      <section id="extras" className="relative w-full py-24">
+        <div className="mx-auto w-full max-w-6xl px-[5%]">
+          <div className="flex w-full justify-center text-center px-4">
+            <h2 className="text-6xl text-white">Extras</h2>
+          </div>
+          <p className="mx-auto max-w-5xl text-center text-2xl text-white/75 px-4 mt-2">
             A brief assortment of other projects and works
           </p>
-        </div>
 
-        <div className="mt-8">
+          {/* Masonry */}
           <div
-            className="extras-scroll flex snap-x snap-mandatory gap-6 overflow-x-auto px-1 pb-6"
-            style={{ scrollBehavior: "smooth" }}
+            className="
+              mt-12
+              columns-1 sm:columns-2 lg:columns-3 xl:columns-4
+              gap-4 [column-fill:_balance]
+              px-2
+            "
           >
-            {[...Array(8)].map((_, i) => (
-              <button
+            {extras.map((src, i) => (
+              <figure
                 key={i}
-                className="mt-4 snap-start shrink-0 w-[260px] overflow-hidden rounded-[18px] bg-black/20 ring-1 ring-black"
+                className="
+                  mb-4 break-inside-avoid
+                  rounded-xl overflow-hidden
+                  bg-white/10 ring-1 ring-white/15
+                  group
+                "
               >
-                {/* <button> */}
-                  <div className="relative aspect-[3/4]">
-                    <img
-                      src="/public/panorama_kitchen.png"
-                      alt="Project preview"
-                      className="absolute inset-0 h-full w-full object-cover transform transition-transform duration-600 ease-in-out hover:scale-105"
-                    />
-                  </div>
-                {/* </button> */}
-              </button>
+                <img
+                  src={src}
+                  alt={`Extra ${i + 1}`}
+                  className="w-full h-auto opacity-0 animate-[fadeIn_400ms_ease-out_forwards]"
+
+                  loading="lazy"
+                />
+              </figure>
             ))}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <Footer />
+    </main>
   );
-}
-
-export default function ExtrasPage() {
-    return (
-      <main className="relative min-h-screen w-full overflow-x-hidden bg-[#008be8]">
-        <Extras/>
-        <Footer />
-      </main>
-    );
 }

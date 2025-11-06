@@ -1,25 +1,28 @@
 export default function Footer() {
   return (
-    <div className="bg-black pt-40">
-    <footer id="contact" className="font-nhgMono relative bg-blue-haze">
+    <div className="bg-black pt-10">
+    <footer id="contact" className="font-nhgMono relative bg-black">
       {/* Background video */}
-      <video
+      {/* <video
         className="absolute inset-0 w-full h-full object-cover opacity-50"
         src="/Footer.mp4"
         autoPlay
         loop
         muted
         playsInline
-      />
+      /> */}
 
       {/* Overlay for darkening and ensuring readability */}
       <div className="absolute inset-0 " />
 
-      <div className="relative md:ml-10 w-full px-4 pt-20 py-10">
-        <div
+      <div className="relative md:ml-10 w-full pl-10 pt-20 py-10">
+        {/* <div
           className="max-w-xl w-full rounded-2xl bg-black/55 p-10
           backdrop-blur-sm shadow-[0_12px_32px_rgba(0,0,0,0.35)]
           ring-1 ring-white/10 overflow-hidden"
+        > */}
+         <div
+          className="max-w-xl w-full rounded-2xl overflow-hidden"
         >
           <h3 className="text-4xl font-bolder leading-tight text-white">
             Let's Work Together!
@@ -57,7 +60,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <p className="text-right text-white text-nhgDisplay pb-4 mr-6">Website Created by Cindy Nakhammouane</p>
+      <p className="text-right text-white font-nhgDisplay pb-4 mr-6">Website Created by Cindy Nakhammouane</p>
     </footer>
     </div>
   );

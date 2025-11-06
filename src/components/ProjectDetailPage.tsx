@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { projects } from "../lib/projectData";
-// import imgChicago from "./public/chicago_bg.png";
+import { motion } from "framer-motion";
 import Footer from "./Footer";
 import { ArrowLeft, UserRound, Calendar, Wrench, Wand } from "lucide-react";
 import WorldNotes from "./Projects/WorldNotes";
@@ -77,12 +77,13 @@ export default function ProjectDetailPage() {
                     <video
                         src={'/YCGH/YCGH_Concept_Vid.mp4'}
                         controls
+                        autoPlay
                     />
                 </div>
               </div>
           ) : (
             <section className="mt-10">
-              <div className="mx-auto mt-10">
+              <div className="mx-auto mt-20 mb-20">
                 <div className="overflow-hidden  border border-white/20 rounded-lg">
                   <img
                     src={`${project.imageUrl2}`}
@@ -95,7 +96,7 @@ export default function ProjectDetailPage() {
           )}
 
             {/* Top specs row: My Role / Skills / Tools / Timeline + See the Code */}
-            <section className="mt-10">
+            <section className="">
               <div className="mx-auto w-full max-w-6xl">
                 <div className="rounded-xl">
                   <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -114,20 +115,7 @@ export default function ProjectDetailPage() {
                         <p className="mt-2 text-[16px] text-white/80 max-w-md">
                           {role}
                         </p>
-                      </div>
-
-                      {/* Timeline */}
-                      <div className="w-full ">
-                        <div className="flex gap-2">
-                          <Calendar size="25"/>
-                          <h3 className="text-2xl tracking-wider text-white ">
-                            Timeline
-                          </h3>
-                        </div>
-                        <p className="mt-2 text-[16px] text-white/80">
-                          {timeline || "June 2025 – Present"}
-                        </p>
-                      </div>
+                      </div>                     
                     </div>
 
                     {/* Column 2: Skills */}
@@ -149,7 +137,20 @@ export default function ProjectDetailPage() {
                     </div>
 
                     {/* Column 3: Tools + See Code */}
-                    <div>
+                    <div className="flex flex-col items-start justify-between gap-8"> 
+                       {/* Timeline */}
+                      <div className="w-full ">
+                        <div className="flex gap-2">
+                          <Calendar size="25"/>
+                          <h3 className="text-2xl tracking-wider text-white ">
+                            Timeline
+                          </h3>
+                        </div>
+                        <p className="mt-2 text-[16px] text-white/80">
+                          {timeline || "June 2025 – Present"}
+                        </p>
+                      </div>
+                      <div>
                       <div className="flex gap-2">
                         <Wrench size="25"/>
                       <h3 className="text-2xl tracking-wider text-white">
@@ -167,16 +168,17 @@ export default function ProjectDetailPage() {
                             </span>
                           )
                         )}
+                        </div>
                       </div>
 
                       {/* See code button */}
-                      <div className="flex flex-col mt-2 items-start justify-between gap-4 ">
+                      <div className="flex flex-colitems-start mt-2 justify-between gap-4 ">
                         {githubUrl && (
                           <a
                             href={githubUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="font-nhgMono inline-flex text-bolder mt-8 items-center gap-1 rounded-full border border-white/50 px-10 py-2 text-white hover:bg-white hover:text-black transition"
+                            className="font-nhgMono inline-flex text-bolder items-center gap-1 rounded-full border border-white/50 px-10 py-2 text-white hover:bg-white hover:text-black transition"
                           >
                             See the Code  <ArrowLeft className="h-6 w-6 rotate-180" />
                           </a>
@@ -189,7 +191,7 @@ export default function ProjectDetailPage() {
             </section>
 
             <h4 className="font-nhgDisplay mt-20 text-white font-semibold">Overview</h4>
-            <p className="font-nhgMono mt-4 text-white/75 text-[24px]">{project.fullDescription}</p>
+            <p className="font-nhgMono mt-4 text-white/90 text-[24px]">{project.fullDescription}</p>
 
           </div>
         </div>

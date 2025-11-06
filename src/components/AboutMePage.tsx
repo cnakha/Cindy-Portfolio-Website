@@ -20,14 +20,12 @@ export default function AboutMePage() {
             <div className="mb-10 flex flex-row items-center justify-center min-h-[60vh] p-8 gap-8 flex-wrap md:flex-row sm:flex-col sm:p-4 sm:gap-4">
                 <div className="relative w-full py-20">
                     <div
-                        className="max-w-xl w-full rounded-2xl bg-black/55 p-10
-                        backdrop-blur-sm shadow-[0_12px_32px_rgba(0,0,0,0.35)]
-                        ring-1 ring-white/10 overflow-hidden"
+                        className="max-w-xl w-full rounded-2xl p-10 overflow-hidden"
                     >
                         {/* <div className="flex-1 min-w-[250px]"> */}
                             <h1 className="font-nhgDisplay text-4xl md:text-6xl mb-4 text-white ">About Me</h1>
-                            <div className="mt-10 text-2xl">
-                                <p className="font-nhgText text-md md:text-2xl text-white opacity-50">
+                            <div className="mt-20 text-2xl">
+                                <p className="font-nhgText text-md md:text-2xl text-white/90 ">
                                     Hi! I'm Cindy Nakhammouane, a fullstack developer and UI/UX designer currently enrolled in my fourth year at the University of Illinois Chicago studying Computer Science and Design. <br/> <br/>
                                     I'm currently very interested in creative technology and exploring career paths in AI/ML, web app dev, project management, and UI/UX design.<br/> <br/>
                                     In my free time I love to travel, watch movies, sing, draw, and do theatre.

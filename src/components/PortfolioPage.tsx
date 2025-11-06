@@ -90,7 +90,7 @@ function FeaturedProjectBlock({
       custom={index}
       viewport={{
         once: true,          
-        amount: 0.1,         
+        amount: 0.01,         
         margin: "0px 0px -8% 0px", 
       }
     }
@@ -98,7 +98,7 @@ function FeaturedProjectBlock({
       <div className="flex flex-col justify-center items-center h-full w-full text-center">
         <button
           onClick={() => onOpen(project.id)}
-          className="group block h-full w-full overflow-hidden rounded-[12px] bg-black/20 ring-1 ring-white/20 transition "
+          className="group block h-full w-full overflow-hidden rounded-2xl bg-black/20  transition "
         >
           <div className="relative aspect-[20/7] overflow-hidden">
             <img
@@ -110,10 +110,10 @@ function FeaturedProjectBlock({
 
           <div 
             className="flex flex-col text-left h-full px-6 md:px-10 py-10 
-            bg-black transition ease-in-out duration-500 group-hover:bg-blue-haze
+            bg-black/90 transition ease-in-out duration-500 group-hover:bg-blue-haze
             "
           >
-            <h2 className="font-nhgDisplay text-white font-bolder text-2xl leading-[1.25] md:text-3xl">
+            <h2 className="font-nhgText text-white font-bolder text-2xl leading-[1.25] md:text-3xl">
               {project.title}
             </h2>
             <p className="font-nhgTexttext-md mt-6 md:text-md text-white/75">
@@ -139,8 +139,8 @@ function FeaturedProjects({
 
   return (
     <section id="projects" className="relative w-full bg-black/90 pb-10">
-      <div className="flex w-full bg-black pt-20 pl-10 py-10 ">
-        <h1 className="font-nhgDisplay text-3xl md:text-5xl pl-10 text-white">
+      <div className="flex w-full bg-black pt-20 md:pl-20 py-10 justify-center md:justify-start">
+        <h1 className="font-nhgDisplay text-4xl md:text-5xl text-white">
           Featured Projects
         </h1>
       </div>

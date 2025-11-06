@@ -41,6 +41,9 @@ p {
 
 }
 
+@keyframes fadeIn { to { opacity: 1 } }
+
+
 @keyframes pulse {
   50% {
     opacity: .5;

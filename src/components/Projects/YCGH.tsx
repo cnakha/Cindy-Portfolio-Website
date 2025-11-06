@@ -71,7 +71,7 @@ export default function YCGH() {
                         <p className="mt-10 text-xl text-white/70"> 
                         ACM SIGGRAPH is the world’s premier international conference on computer graphics and interactive techniques, known for its competitive selection process and global prestige.
                         <br/><br/>
-                        After writing our research paper, we put together a research poster to present at the SIGGRAPGH 2025 Convention in Vancouver over the course of 5 days for over 12,000 attendees.
+                        My team put together a research poster to present at the SIGGRAPGH 2025 Convention in Vancouver over the course of 5 days for over 12,000 attendees.
                         <br/><br/>
                         <span className="text-sm text-white/50">
                             An interesting application of this research that was discussed was the use of VR in medical and clinical settings; patients could use VR to destress and educate themselves about upcoming procedures and good health practices.
