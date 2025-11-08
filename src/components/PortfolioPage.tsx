@@ -116,7 +116,7 @@ function FeaturedProjectBlock({
             <h2 className="font-nhgText text-white font-bolder text-2xl leading-[1.25] md:text-3xl">
               {project.title}
             </h2>
-            <p className="font-nhgTexttext-md mt-6 md:text-md text-white/75">
+            <p className="font-nhgTexttext-md mt-6 md:text-sm text-white/50">
               {project.description}
             </p>
           </div>

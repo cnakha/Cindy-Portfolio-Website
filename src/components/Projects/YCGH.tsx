@@ -6,11 +6,11 @@ export default function YCGH() {
     const [current, setCurrent] = useState(0);
     
     const pictures = [
+        "/YCGH/island_view.png",
         "/YCGH/interaction2.jpeg",
         "/YCGH/interaction1.jpg",
         "/YCGH/interaction3.jpg",
         "/YCGH/interaction4.jpeg",
-        "/YCGH/island_view.png",
     ];
 
     const nextPic = () => setCurrent((current + 1) % pictures.length);

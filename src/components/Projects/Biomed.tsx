@@ -106,7 +106,7 @@ function BiomedProjectsTabs() {
         aria-label="Biomedical projects"
         className="flex flex-wrap  mb-5 justify-center text-black"
       >
-        <div className="flex bg-white p-2 rounded-[55px] gap-1 sm:gap-1">
+        <div className="flex bg-white p-2 rounded-2xl gap-1 sm:gap-1">
         {TABS.map(({ key, label }) => {
           const selected = active === key;
           return (
@@ -131,7 +131,7 @@ function BiomedProjectsTabs() {
         </div>
       </div>
 
-      <div className="bg-white rounded-lg text-black px-4 sm:px-6 md:px-10 py-12  ">
+      <div className="bg-white rounded-2xl text-black px-4 sm:px-6 md:px-10 py-12  ">
         {/* Animated panel */}
         <div className="relative">
           <AnimatePresence mode="wait">
@@ -517,7 +517,7 @@ export default function Biomed() {
 
         <div className="flex flex-col items-center justify-center">
           <p className="mt-5 text-xl text-center text-white/50 max-w-2xl">
-            These five devices empower individuals to monitor their health in fields such as digital health, fitness, assistive, medical, and rehabilitation.
+            Empowering individuals in digital health, fitness, assistive, medical, and rehabilitation to monitor their health.
           </p>
         </div>
 

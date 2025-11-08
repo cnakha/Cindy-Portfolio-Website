@@ -178,7 +178,7 @@ export default function WorldNotes() {
 
 
         <h3 className="mt-40 text-4xl">
-          Step 2 — How to Build Community
+          Step 2 — Understanding Audience
         </h3>
         <p className="mt-10 text-xl text-white/75 max-w-3xl">
           Building community meant encouraging exploration and a sense of adventure rather than passive scrolling in a tailored algorithm. It was very important to present a raw and truly <span className="font-semibold">open global community </span>as to authentically reflect the art of the world. 
@@ -188,7 +188,7 @@ export default function WorldNotes() {
 
 
         <h3 className="mt-40 text-4xl">
-          Step 3 — Designing App Structure
+          Step 3 — Storyboarding & Designing App Structure
         </h3>
         <p className="mt-10 text-xl text-white/75 max-w-4xl">
         With the vision set, I focused on structuring the app. 
