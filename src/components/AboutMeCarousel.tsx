@@ -189,7 +189,7 @@ export default function AboutMeCarousel({slideNumber,  setSlideNumber, isPlaying
     <div
       className="
         font-nhgDisplay
-        relative w-full max-w-[750px] rounded-2xl
+        relative w-full max-w-[675px] rounded-2xl
         bg-black/55 backdrop-blur-sm
         shadow-[0_12px_32px_rgba(0,0,0,0.35)]
         ring-1 ring-white/10 overflow-hidden
@@ -239,7 +239,7 @@ export default function AboutMeCarousel({slideNumber,  setSlideNumber, isPlaying
               </button>
             </div>
 
-            <div className="flex items-center gap-2 pb-10">
+            <div className="flex items-center gap-2 pb-8">
               {slides.map((_, i) => (
                 <button
                   key={i}
