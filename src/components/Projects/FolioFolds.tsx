@@ -165,15 +165,16 @@ const accessibillity = [
       {/* Process Section */}
       <div className="max-w-6xl px-10 flex flex-col mx-auto mt-40 mb-40">
         <h3 className="font-nhgDisplay text-white text-6xl ">The Process</h3>
-        <h3 className="mt-40 text-4xl">
+        <h3 className="mt-20 text-4xl">
           Step 1 — Inspiration and Research
         </h3>
         <p className="mt-10 text-sm text-white/70 max-w-4xl leading-relaxed text-xl">
           Paper engineering and bookbinding have a rich history that spans centuries and although the medium has a more enriching impact in its physical form, exploring ways to convey these physical properties digitally can allow designers to share our work's potential more captivatingly and serve as an interesting archival method. 
           <br/><br/>
           To design FolioFolds, I researched traditional techniques and modern digital tools to understand how people interact with physical publications and to find physical qualities I should replicate.
-          The challenge then became: <span className="italic text-white font-semibold"> how can we design a user friendly tool to construct prints in 3D that captures the tactility of traditional paper engineering? </span>
+          The challenge then became: 
         </p>
+        <p className="mt-10 italic text-white text-3xl"> How can we design a user friendly tool to construct prints in 3D that captures the tactility of traditional paper engineering?</p>
 
         <h3 className="mt-40 text-4xl ">
           Step 2 — Design Philosophy
@@ -263,11 +264,11 @@ const accessibillity = [
           ))}
         </ul>
 
-          <div className="mt-20 flex flex-col text-center justify-center">
+          {/* <div className="mt-20 flex flex-col text-center justify-center">
             <h3 className="text-4xl font-bolder leading-tight text-blue-haze-light mt-20 text-center ">
               FolioFolds is finalizing its design and beginning development... Stay tuned for updates!
             </h3>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

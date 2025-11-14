@@ -1,6 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { projects } from "../lib/projectData";
-import { motion } from "framer-motion";
 import Footer from "./Footer";
 import { ArrowLeft, UserRound, Calendar, Wrench, Wand } from "lucide-react";
 import WorldNotes from "./Projects/WorldNotes";
@@ -39,6 +38,7 @@ export default function ProjectDetailPage() {
     imageUrl,
     vid,
     fullDescription,
+    status,
     features = [],
     problem,
     subProblem, 
@@ -96,13 +96,23 @@ export default function ProjectDetailPage() {
           )}
 
             {/* Top specs row: My Role / Skills / Tools / Timeline + See the Code */}
+
             <section className="">
-              <div className="mx-auto w-full max-w-6xl">
+              <h4 className="font-nhgDisplay mt-20 text-white font-semibold">Overview</h4>
+              <p className="font-nhgMono mt-4 text-white/90 text-[24px]">{project.fullDescription}</p>
+
+              <div className="mt-20 flex justify-center items-center w-full">
+                {status && (
+                  <p className="font-nhgMono mt-4 text-center rounded-lg text-bolder w-full bg-blue-haze p-4 text-white text-xl ">{status}</p>
+                )}
+              </div>
+
+              <div className="mx-auto w-full max-w-6xl mt-20 border border-white/10 rounded-xl bg-black/50 p-10 mt-20">
                 <div className="rounded-xl">
                   <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
 
                   {/* Column 1: My Role + Timeline */}
-                    <div className="flex flex-col items-start justify-between gap-8">                
+                    <div className="flex flex-col items-start justify-between gap-10">                
 
                       {/* My Role */}
                       <div>
@@ -115,7 +125,19 @@ export default function ProjectDetailPage() {
                         <p className="mt-2 text-[16px] text-white/80 max-w-md">
                           {role}
                         </p>
-                      </div>                     
+                      </div>     
+                        {/* Timeline */}
+                      <div className="w-full ">
+                        <div className="flex gap-2">
+                          <Calendar size="25"/>
+                          <h3 className="text-2xl tracking-wider text-white ">
+                            Timeline
+                          </h3>
+                        </div>
+                        <p className="mt-2 text-[16px] text-white/80">
+                          {timeline || "June 2025 – Present"}
+                        </p>
+                      </div>                
                     </div>
 
                     {/* Column 2: Skills */}
@@ -138,24 +160,12 @@ export default function ProjectDetailPage() {
 
                     {/* Column 3: Tools + See Code */}
                     <div className="flex flex-col items-start justify-between gap-8"> 
-                       {/* Timeline */}
-                      <div className="w-full ">
-                        <div className="flex gap-2">
-                          <Calendar size="25"/>
-                          <h3 className="text-2xl tracking-wider text-white ">
-                            Timeline
-                          </h3>
-                        </div>
-                        <p className="mt-2 text-[16px] text-white/80">
-                          {timeline || "June 2025 – Present"}
-                        </p>
-                      </div>
                       <div>
-                      <div className="flex gap-2">
-                        <Wrench size="25"/>
-                      <h3 className="text-2xl tracking-wider text-white">
-                        Tools
-                      </h3>
+                        <div className="flex gap-2">
+                          <Wrench size="25"/>
+                        <h3 className="text-2xl tracking-wider text-white">
+                          Tools
+                        </h3>
                       </div>
                       <div className="mt-2 text-[16px] flex flex-wrap gap-2">
                         {(tools.length ? tools : ["React", "Next.js", "TypeScript"]).map(
@@ -172,13 +182,13 @@ export default function ProjectDetailPage() {
                       </div>
 
                       {/* See code button */}
-                      <div className="flex flex-colitems-start mt-2 justify-between gap-4 ">
+                      <div className="flex flex-colitems-start justify-between gap-4 ">
                         {githubUrl && (
                           <a
                             href={githubUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="font-nhgMono inline-flex text-bolder items-center gap-1 rounded-full border border-white/50 px-10 py-2 text-white hover:bg-white hover:text-black transition"
+                            className="font-nhgMono inline-flex text-bolder mt-2 items-center gap-1 rounded-full border border-white/50 px-10 py-2 text-white hover:bg-white hover:text-black transition"
                           >
                             See the Code  <ArrowLeft className="h-6 w-6 rotate-180" />
                           </a>
@@ -190,9 +200,6 @@ export default function ProjectDetailPage() {
               </div>
             </section>
 
-            <h4 className="font-nhgDisplay mt-20 text-white font-semibold">Overview</h4>
-            <p className="font-nhgMono mt-4 text-white/90 text-[24px]">{project.fullDescription}</p>
-
           </div>
         </div>
       </section>
@@ -200,10 +207,7 @@ export default function ProjectDetailPage() {
 
       <div className="flex flex-col justify-center items-center text-center mt-40 mx-auto w-full max-w-6xl px-6">
         <h4 className="font-nhgDisplay text-white font-semibold bg-blue-haze px-4 py-2 rounded-[20px]">Problem</h4>
-        <h3 className="font-nhgMono mt-8 text-3xl text-white/90 font-bolder max-w-3xl">
-          {problem ||
-            "How can we promote authentic visual expression and global communication while elevating the medium with new technologies?"}
-        </h3>
+        <h3 className="font-nhgMono text-2xl md:text-3xl mt-8 text-white/90 font-bolder max-w-3xl">{problem} </h3>
         <p className="mt-4 text-white/50 max-w-2xl">
           {subProblem || "Authentic connection can be expanded through shared, visual notes and geolocated discovery—creating richer casual browsing and meaningfulinteractions."}
         </p>
@@ -223,8 +227,8 @@ export default function ProjectDetailPage() {
       </div>
 
       <div className="flex flex-col justify-center items-center text-center mt-40 mx-auto w-full max-w-6xl px-8">
-        <h4 className="font-nhgDispla ytext-white font-semibold bg-blue-haze px-4 py-2 rounded-[20px]">Solution</h4>
-        <h3 className="font-nhgMono mt-8 text-3xl font-normal text-white/90 max-w-4xl">
+        <h4 className="font-nhgDisplay text-white font-semibold bg-blue-haze px-4 py-2 rounded-[20px]">Solution</h4>
+        <h3 className="font-nhgMono mt-8 text-2xl md:text-3xl font-normal text-white/90 max-w-4xl">
           {solution}
         </h3>
       </div>

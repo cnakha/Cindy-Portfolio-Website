@@ -49,7 +49,7 @@ const [typingDone, setTypingDone] = useState(false);
           wrapper="p"
           className="
             font-nhgText  
-            block text-2xl md:text-3xl text-white/50
+            block text-2xl md:text-2xl text-white/50
             !leading-[1.25]
             [&>span]:!leading-[1.4]
             whitespace-pre-wrap
@@ -70,11 +70,11 @@ const [typingDone, setTypingDone] = useState(false);
           <div>
             <h3 className="text-5xl md:text-7xl lg:text-7xl text-white">Cindy</h3>
             <h3 className="text-5xl  md:text-7xl lg:text-7xl text-white">Nakhammouane</h3>
-            <p className="text-xl font-nhgText text-white pt-2">Fullstack Developer & UI/UX Designer</p>
+            <p className="text-md md:text-xl font-nhgText text-white pt-2">Fullstack Developer & UI/UX Designer</p>
           </div>
         </motion.div>
 
-        <motion.p className="font-nhgText text-2xl md:text-3xl text-white/50 pt-6" variants={item}>
+        <motion.p className="font-nhgText text-2xl md:text-2xl text-white/50 pt-6" variants={item}>
           I {" "}
           <span className="text-white font-bolder">
             research, design, user test, and code{" "}
@@ -83,13 +83,13 @@ const [typingDone, setTypingDone] = useState(false);
         </motion.p>     
 
         {/* Bottom info row */}
-        <motion.div className="text-sm flex flex-wrap w-full gap-5 pt-8" variants={item}>
+        <motion.div className="text-sm flex flex-wrap w-full gap-2 md:gap-5 pt-8" variants={item}>
           <div className="flex flex-inline text-white/75 gap-2">
             <div className="w-6 h-6 rounded-full bg-white border border-[6px] border-blue-haze" />
             <p>Chicago, IL</p>
           </div>
 
-          <div className="flex flex-inline items-center text-white/75 gap-2">
+          <div className="flex flex-inline items-center text-white/75 md:ml-0 ml-5 gap-2">
             <Clock className="h-5 w-5 stroke-white/75" />
             <p>
               {new Date().toLocaleTimeString("en-US", {
@@ -123,7 +123,7 @@ const [typingDone, setTypingDone] = useState(false);
         cursor={text !== ""}
         wrapper="p"
         className="
-          block text-2xl md:text-3xl text-white/75
+          block text-2xl md:text-2xl text-white/75
           !leading-[1.25]               /* force on <p> */
           [&>span]:!leading-[1.4]      /* force on inner span that TA inserts */
           whitespace-pre-wrap
@@ -151,7 +151,8 @@ export default function AboutMeCarousel({slideNumber,  setSlideNumber, isPlaying
   ];
 
   const [idx, setIdx] = useState(0);
-  const nextSlide = () => setIdx((i) => (i + 1) % slides.length);
+  const nextSlide = () => {
+    setIdx((i) => (i + 1) % slides.length)  }
 
   const MIN = 500;
   const innerRef = useRef<HTMLDivElement>(null); 
@@ -189,7 +190,7 @@ export default function AboutMeCarousel({slideNumber,  setSlideNumber, isPlaying
     <div
       className="
         font-nhgDisplay
-        relative w-full max-w-[675px] rounded-2xl
+        relative w-full max-w-[660px] rounded-2xl
         bg-black/55 backdrop-blur-sm
         shadow-[0_12px_32px_rgba(0,0,0,0.35)]
         ring-1 ring-white/10 overflow-hidden
@@ -232,9 +233,9 @@ export default function AboutMeCarousel({slideNumber,  setSlideNumber, isPlaying
             <div className="opacity-40 hover:opacity-90 transition ease-in-out duration-500">
               <button
                 className="inline-flex items-center text-xl text-white pb-2"
-                onClick={nextSlide}
+                onClick={() => {nextSlide(); setSlideNumber((i) => (i + 1) % slides.length);}}
               >
-                <p className="ml-1">More about me</p>
+                <p className="ml-1 mr-1">More about me</p>
                 <Triangle className=" h-5 w-5 rotate-90 fill-white stroke-none" />
               </button>
             </div>

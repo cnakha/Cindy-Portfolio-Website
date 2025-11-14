@@ -9,6 +9,7 @@ export interface Project {
   skills: string[];
   tools: string[];
   features?: string[];
+  status?: string;
   challenges: string;
   outcome: string;
   imageUrl: string;
@@ -58,6 +59,7 @@ export const projects: Project[] = [
     "Most platforms use filters and optimized algorithms to maximize user engagement, this leads to tiring social media addictions and restricted natural content discovery.",
     "Social platforms are beginning to share derivative features and blend into each other. People want new and innovative ways to connect with people online.",
   ],
+  status: "WorldNotes is currently under development",
   },
 
   {
@@ -65,7 +67,7 @@ export const projects: Project[] = [
     title: "Sensing Through Life: A Collection of Wearable Biomedical Devices and Apps",
     description: "Five wearable IoT devices and UI projects from my time at the Wearables and Nearables Technology Laboratory at the University of Illinois Chicago",
     category: "Fullstack Development, Hardware Assembly, and UI and User Experience Design for Wearable Health Monitoring Devices",
-    fullDescription: "Projects from working in the Wearables and Nearables Technology Laboratory at the University of Illinois Chicago. For a semester, I collaborated in an interdisciplinary group of biomedical engineering and computer science students, gaining hands-on experience assembling and designing various wearable devices and UI. I acquisitioned, processed, and analyzed a diverse set of sensor data, worked with wireless communication and various Arduino sensors. Each project was developed in under two weeks and presented through a series of live demos and critques.",
+    fullDescription: "Projects from working in the Wearables and Nearables Technology Laboratory at the University of Illinois Chicago. I collaborated in an interdisciplinary group of biomedical engineering and computer science students, gaining hands-on experience assembling and designing various wearable devices and UIs. I acquisitioned, processed, and analyzed a diverse set of sensor data, created IoT systems, and worked with various Arduino sensors. Each project was developed in under two weeks and presented through a series of live demos and critques.",
     tools: ["React", "Node.js", "Processing", "Python", "C#", "Arduino", "Figma", "Illustrator", "Photoshop"],
     challenges: "Creating an intuitive interface that could handle complex project hierarchies while remaining accessible to users of all technical levels.",
     outcome: "Successfully developed 5 different wearable biomedical devices that monitor various health metrics, each successfully tested and validated in real-world scenarios.",
@@ -77,7 +79,7 @@ export const projects: Project[] = [
     skills: ["UI/UX Design", "Fullstack Development", "Entrepreneurship", "Internet of Things", "Hardware Engineering", "User Testing", "Websockets"],
     problem: "Wearable technology has the potential to revolutionize personal health tracking, yet many devices fail due to not meeting consumer needs.",
     subProblem: "After researching users and wearable assitive health tech, listed are key problems we identified in the wearable health tech space:",
-    solution: "My team developed five wearable bluetooth devices that utilize sensors to monitor biometrics such as heart rate, oxygen levels, stress, and activity patterns. The devices featured ergonomic designs, wireless communication, and intuitive UIs that provide real-time data visualization and alerts, helping users track their personal health and receive timely notifications on health anomalies.",
+    solution: "My team developed five wearable bluetooth devices that monitor biometrics such as heart rate, oxygen levels, stress, and activity patterns. The devices featured ergonomic designs, wireless communication, and intuitive UIs that provide real-time data visualization and alerts, helping users track their personal health and receive timely notifications on health anomalies.",
     keyProblems:[
       "Lack of Accessible Health Monitoring",
       "Poor Integration into Daily Life",
@@ -164,6 +166,7 @@ export const projects: Project[] = [
       "Physically prototyping folds, bindings, cutouts, and page structures often requires multiple physical mockups",
       "Traditional digital documentation, flat scans, photos, or videos, fails to capture the dimensionality, tactility, and interactive discovery of physical publications.",
     ],
+    status: "FolioFolds is finalizing its design and beginning development... Stay tuned for updates!",
     },
   // {
   //   id: "clarity",

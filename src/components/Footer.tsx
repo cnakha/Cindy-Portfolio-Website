@@ -15,7 +15,7 @@ export default function Footer() {
       {/* Overlay for darkening and ensuring readability */}
       <div className="absolute inset-0 " />
 
-      <div className="relative md:ml-10 w-full pl-10 pt-20 py-10">
+      <div className="relative md:ml-10 w-full pl-10 pt-10 py-10">
         {/* <div
           className="max-w-xl w-full rounded-2xl bg-black/55 p-10
           backdrop-blur-sm shadow-[0_12px_32px_rgba(0,0,0,0.35)]

@@ -109,14 +109,14 @@ function FeaturedProjectBlock({
           </div>
 
           <div 
-            className="flex flex-col text-left h-full px-6 md:px-10 py-10 
+            className="flex flex-col text-left h-full px-6 py-6 md:px-10 md:py-10 
             bg-black/90 transition ease-in-out duration-500 group-hover:bg-blue-haze
             "
           >
-            <h2 className="font-nhgText text-white font-bolder text-2xl leading-[1.25] md:text-3xl">
+            <h2 className="font-nhgText text-white font-bolder text-xl leading-[1.25] md:text-2xl">
               {project.title}
             </h2>
-            <p className="font-nhgTexttext-md mt-4 md:text-sm text-white/50">
+            <p className="font-nhgText mt-4 text-sm text-white/50">
               {project.description}
             </p>
           </div>
@@ -138,9 +138,9 @@ function FeaturedProjects({
 }) {
 
   return (
-    <section id="projects" className="relative w-full bg-black/90 pb-10">
+    <section id="projects" className="relative w-full bg-black/90 ">
       <div className="flex w-full bg-black pt-20 md:pl-20 py-10 justify-center md:justify-start">
-        <h1 className="font-nhgDisplay text-4xl md:text-5xl text-white">
+        <h1 className="font-nhgDisplay text-4xl md:text-4xl text-white">
           Featured Projects
         </h1>
       </div>

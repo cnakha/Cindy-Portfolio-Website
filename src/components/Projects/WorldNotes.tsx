@@ -147,7 +147,7 @@ export default function WorldNotes() {
       {/* Process Section */}
       <div className="max-w-6xl px-12 flex flex-col mx-auto mt-40">
         <h3 className="font-nhgDisplay text-white text-6xl ">Creating the MVP</h3>
-        <h3 className="mt-40 text-4xl ">
+        <h3 className="mt-20 text-4xl ">
           Step 1 — Inspiration and Discovery
         </h3>
         <p className="mt-10 text-xl text-white/75 max-w-4xl leading-relaxed ">

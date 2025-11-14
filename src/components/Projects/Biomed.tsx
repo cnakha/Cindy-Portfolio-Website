@@ -104,9 +104,9 @@ function BiomedProjectsTabs() {
       <div
         role="tablist"
         aria-label="Biomedical projects"
-        className="flex flex-wrap  mb-5 justify-center text-black"
+        className="w-full mb-5 justify-center text-black"
       >
-        <div className="flex bg-white p-2 rounded-2xl gap-1 sm:gap-1">
+        <div className="flex justify-center bg-white p-2 w-full rounded-[55px] gap-10 sm:gap-1">
         {TABS.map(({ key, label }) => {
           const selected = active === key;
           return (
@@ -117,7 +117,7 @@ function BiomedProjectsTabs() {
               aria-controls={`panel-${key}`}
               onClick={() => setActive(key)}
               className={[
-                "rounded-[55px] px-4 sm:px-6 py-3 text-sm sm:text-base font-medium",
+                "rounded-[55px] px-8 sm:px-6 py-3 text-sm sm:text-base font-medium",
                 "transition-colors ease-out", 
                 selected
                   ? "bg-black text-white "
@@ -545,7 +545,7 @@ export default function Biomed() {
         {/* Process Section */}
         <div className="max-w-6xl px-12 flex flex-col mx-auto">
         <h3 className="text-white text-6xl mt-60">The Process</h3>
-        <h3 className="mt-40 text-4xl ">
+        <h3 className="mt-20 text-4xl ">
           Understanding Technologies
         </h3>
         <p className="mt-10 text-sm text-white/50 max-w-4xl leading-relaxed text-xl">
@@ -571,14 +571,13 @@ export default function Biomed() {
           The Development Cycle
         </h3>
         <p className="mt-10 text-sm text-white/50 max-w-4xl leading-relaxed text-xl">
-          Each device followed a similar development cycle, starting with research into existing biomedical wearables and sensor technologies to gain product and app design inspiration.
+          Each device followed a similar development cycle, starting with research into existing biomedical wearables and sensor technologies to gain insight on product and app design. Next followed conceptualizing, diagraming, low fidelity prototyping and UI designs, final construction, testing, and final review.
         </p>
         <h3 className="mt-20 text-3xl">
           Prototyping
         </h3>
         <p className="mt-4 text-sm text-white/50 max-w-4xl leading-relaxed text-xl">
-          I sketched initial concepts and created low-fidelity prototypes to test sensor placements and data acquisition methods in Figma, designing final assets in Illustrator and Photoshop.
-          Circuit diagrams were created by my group to plan hardware integration.
+          Sketches of physical device designs and UI were made followed by circuit diagrams to plan hardware integration and creating low-fidelity prototypes to test sensor response, placements, and data acquisition. UI assets were initally designed in Figma then finalized in Illustrator and Photoshop.
         </p>
 
         <div className="mt-10 relative aspect-[23/12] overflow-hidden rounded-t-lg">
@@ -631,8 +630,8 @@ export default function Biomed() {
           Designing for Health
         </h3>
         <p className="mt-10 text-xl text-white/70 max-w-4xl">
-          Designing biomedical devices requires a deep understanding of both user needs and technical constraints. I prioritized clarity, accessibility, and comfort in these UI designs as displaying biometric data can often be non-intuitive and overwhelming. 
-          Researching existing health monitoring solutions helped to identify effective hierarchy of information and the importance of clear labeling and soft visuals. 
+          Deeply understanding the difficulties users face when navigating apps pertaining to personal health is key to ensure compassionate designs. I prioritized clarity, accessibility, and comfort as displaying biometric data can often be non-intuitive, confusing, and overwhelming. 
+          Researching existing health monitoring UIs helped to identify effective hierarchy of information and the importance of clear labeling and soft visuals. 
           <br/><br/>
         </p>
 
