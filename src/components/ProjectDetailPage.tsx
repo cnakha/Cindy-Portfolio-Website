@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { projects } from "../lib/projectData";
 import Footer from "./Footer";
-import { ArrowLeft, UserRound, Calendar, Wrench, Wand } from "lucide-react";
+import { ArrowLeft, UserRound, Calendar, Wrench, Wand, Info } from "lucide-react";
 import WorldNotes from "./Projects/WorldNotes";
 import Clarity from "./Projects/Clarity";
 import YCGH from "./Projects/YCGH";
@@ -53,21 +53,37 @@ export default function ProjectDetailPage() {
   } = project;
 
   return (
-    <main className="font-nhgMono min-h-screen overflow-x-clip bg-[#131415] text-white">
+    <main className="font-nhgMono min-h-screen overflow-x-clip bg-white/95 text-black">
      
       {/* Summary band (matches screenshot spacing) */}
-      <section className="pt-32">
+      <section className="pt-20">
         <div className="mx-auto w-full max-w-6xl px-6">
           <div className="rounded-xl p-6">
             <button
               onClick={() => navigate(-1)}
-              className="mb-6 inline-flex text-xl items-center gap-2 rounded-[25px] px-2 pr-6 py-2 text-white/90 hover:bg-white/10 transition"
+              className="mb-6 inline-flex text-md items-center gap-2 border border-black rounded-full px-4 pr-6 py-2 text-black/90 hover:text-white hover:bg-black transition"
             >
-              <ArrowLeft className="h-7 w-7" />
-              Return
+              <ArrowLeft className="h-5 w-5" />
+              Return to homepage
             </button>
 
-            <h3 className="mt-4 text-white text-6xl leading-[1.25] ">{project.title}</h3>
+            <h3 className="mt-10 font-nhgDisplay text-5xl md:text-6xl leading-[1.25] ">{project.title}</h3>
+             <h4 className="font-nhgDisplay mt-20 font-semibold">Overview</h4>
+              <p className="font-nhgMono mt-2 opacity-90 text-xl md:text-2xl">{project.fullDescription}</p>
+
+              <div className="mt-10 flex w-full rounded-full bg-black p-4 px-6 border border-white/10">
+                {status && (
+                  <div className="md:flex">
+                    <div className="flex  gap-2">
+                    <Info className="fill-white stroke-black"/>
+                    <span className="font-semibold text-white">Status:</span>
+                    </div>
+                    <p className="flex items-center font-nhgText pl-8 md:pl-2 w-full text-white text-sm md:text-md ">
+                      {status}
+                    </p>
+                  </div>
+                )}
+              </div>
             {project.vid ? (
             <div className=" mx-auto mt-10">
                 <h3 className="mt-16 text-2xl">
@@ -82,8 +98,8 @@ export default function ProjectDetailPage() {
                 </div>
               </div>
           ) : (
-            <section className="mt-10">
-              <div className="mx-auto mt-20 mb-20">
+            <section >
+              <div className="mx-auto mt-10">
                 <div className="overflow-hidden  border border-white/20 rounded-lg">
                   <img
                     src={`${project.imageUrl2}`}
@@ -98,16 +114,7 @@ export default function ProjectDetailPage() {
             {/* Top specs row: My Role / Skills / Tools / Timeline + See the Code */}
 
             <section className="">
-              <h4 className="font-nhgDisplay mt-20 text-white font-semibold">Overview</h4>
-              <p className="font-nhgMono mt-4 text-white/90 text-[24px]">{project.fullDescription}</p>
-
-              <div className="mt-20 flex justify-center items-center w-full">
-                {status && (
-                  <p className="font-nhgMono mt-4 text-center rounded-lg text-bolder w-full bg-blue-haze p-4 text-white text-xl ">{status}</p>
-                )}
-              </div>
-
-              <div className="mx-auto w-full max-w-6xl mt-20 border border-white/10 rounded-xl bg-black/50 p-10 mt-20">
+              <div className="mx-auto w-full max-w-6xl border border-white/10 rounded-xl bg-black p-10 mt-10">
                 <div className="rounded-xl">
                   <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
 
@@ -117,26 +124,24 @@ export default function ProjectDetailPage() {
                       {/* My Role */}
                       <div>
                         <div className="flex gap-2">
-                          <UserRound size="25"/>
+                          <UserRound size="25" color="white"/>
                           <h3 className="text-2xl tracking-wider text-white">
                             Role
                           </h3>
                         </div>
-                        <p className="mt-2 text-[16px] text-white/80 max-w-md">
+                        <p className="mt-2 text-[14px] text-white/80 max-w-md">
                           {role}
                         </p>
                       </div>     
                         {/* Timeline */}
                       <div className="w-full ">
                         <div className="flex gap-2">
-                          <Calendar size="25"/>
+                          <Calendar size="25" color="white"/>
                           <h3 className="text-2xl tracking-wider text-white ">
                             Timeline
                           </h3>
                         </div>
-                        <p className="mt-2 text-[16px] text-white/80">
-                          {timeline || "June 2025 – Present"}
-                        </p>
+                        <p className="mt-2 text-[14px] text-white/80">{timeline} </p>
                       </div>                
                     </div>
 
@@ -144,13 +149,13 @@ export default function ProjectDetailPage() {
                     {/* Skills */}
                     <div>
                       <div className="flex gap-2">
-                        <Wand size="25"/>
+                        <Wand size="25" color="white"/>
                       <h3 className="text-2xl tracking-wider text-white">
                         Skills
                       </h3>
                       </div>
-                      <ul className="mt-2 space-y-1  text-white/80 list-disc list-inside">
-                        {(skills.length ? skills : ["UI/UX Design", "Web Development", "Wireframing", "SEO"]).map(
+                      <ul className="mt-2 text-[14px] space-y-1 text-white/80 list-disc list-inside">
+                        {(skills).map(
                           (s, i) => (
                             <li key={i}>{s}</li>
                           )
@@ -162,17 +167,17 @@ export default function ProjectDetailPage() {
                     <div className="flex flex-col items-start justify-between gap-8"> 
                       <div>
                         <div className="flex gap-2">
-                          <Wrench size="25"/>
+                          <Wrench size="25" color="white"/>
                         <h3 className="text-2xl tracking-wider text-white">
                           Tools
                         </h3>
                       </div>
-                      <div className="mt-2 text-[16px] flex flex-wrap gap-2">
+                      <div className="mt-2 text-[14px] flex flex-wrap gap-2">
                         {(tools.length ? tools : ["React", "Next.js", "TypeScript"]).map(
                           (t, i) => (
                             <span
                               key={i}
-                              className="mt-2 rounded-full bg-white/10 px-3 py-1 text-xs text-white ring-1 ring-white/20"
+                              className="mt-2 rounded-full bg-white/15 px-3 py-1 text-xs text-white ring-1 ring-white/20"
                             >
                               {t}
                             </span>
@@ -206,19 +211,17 @@ export default function ProjectDetailPage() {
 
 
       <div className="flex flex-col justify-center items-center text-center mt-40 mx-auto w-full max-w-6xl px-6">
-        <h4 className="font-nhgDisplay text-white font-semibold bg-blue-haze px-4 py-2 rounded-[20px]">Problem</h4>
-        <h3 className="font-nhgMono text-2xl md:text-3xl mt-8 text-white/90 font-bolder max-w-3xl">{problem} </h3>
-        <p className="mt-4 text-white/50 max-w-2xl">
-          {subProblem || "Authentic connection can be expanded through shared, visual notes and geolocated discovery—creating richer casual browsing and meaningfulinteractions."}
-        </p>
+        <h4 className="font-nhgDisplay text-white font-semibold bg-blue-haze px-4 py-2 rounded-full">Problem</h4>
+        <h3 className="font-nhgMono text-xl md:text-2xl mt-8 text-black font-bolder max-w-4xl">{problem} </h3>
+        <p className="mt-4 text-black/50 max-w-2xl">{subProblem}</p>
         {keyProblems && keyProblems.length > 0 && keyProblemDescriptions && keyProblemDescriptions.length === keyProblems.length && (
-            <div className="mt-8 px-4 flex flex-wrap gap-6 justify-center w-full">
+            <div className="mt-10 px-4 flex flex-wrap gap-6 justify-center w-full">
             {keyProblems.map((problem, idx) => (
               <div
               key={idx}
-              className="flex flex-col text-left items-start bg-white/10 border border-white/10 rounded-xl p-6 min-w-[220px] max-w-xs flex-1"
+              className="flex flex-col text-left items-start bg-black border border-white/10 rounded-xl p-6 min-w-[220px] max-w-xs flex-1"
               >
-              <h5 className="text-lg font-bolder text-white/90 mb-4">{problem}</h5>
+              <h5 className="text-xl md:text-lg font-bolder text-white mb-4">{problem}</h5>
               <p className="text-sm text-white/75">{keyProblemDescriptions[idx]}</p>
               </div>
             ))}
@@ -227,8 +230,8 @@ export default function ProjectDetailPage() {
       </div>
 
       <div className="flex flex-col justify-center items-center text-center mt-40 mx-auto w-full max-w-6xl px-8">
-        <h4 className="font-nhgDisplay text-white font-semibold bg-blue-haze px-4 py-2 rounded-[20px]">Solution</h4>
-        <h3 className="font-nhgMono mt-8 text-2xl md:text-3xl font-normal text-white/90 max-w-4xl">
+        <h4 className="font-nhgDisplay text-white font-semibold bg-blue-haze px-4 py-2 rounded-full">Solution</h4>
+        <h3 className="font-nhgMono mt-8 text-xl md:text-2xl font-normal text-black max-w-4xl">
           {solution}
         </h3>
       </div>
@@ -238,7 +241,7 @@ export default function ProjectDetailPage() {
       {features.length > 0 && (
         <section className="mt-32">
           <div className="mx-auto w-full max-w-6xl px-8">
-            <div className="rounded-xl border border-white/15 bg-white/10 p-6 pb-10">
+            <div className="rounded-xl border border-white/15 bg-black p-6 pb-10">
               <h3 className="font-nhgDisplay text-xl mb-4 text-white">Key Features</h3>
               <div className="grid grid-cols-1 gap-2 md:gap-8 md:grid-cols-2">
                 <ul className="list-disc list-inside space-y-2 text-white/85">
@@ -268,12 +271,12 @@ export default function ProjectDetailPage() {
       {milestones.length > 0 && (
       <section className="mt-20 mb-40">
         <div className="mx-auto w-full max-w-6xl px-6">
-          <div className="rounded-xl border border-white/15 bg-[#222] p-6">
+          <div className="rounded-xl border border-white/15 bg-black p-10">
             <h3 className="font-semibold text-white text-2xl">Next Milestones</h3>
             <div className="mt-4 space-y-6">
               {(milestones).map((m, i) => (
                 <div key={i}>
-                  <h4 className="font-bolder">{m}</h4>
+                  <h4 className="font-bolder text-white">{m}</h4>
                   <p className="mt-1 text-xs text-white/60">
                     Elevate fidelity and gather analytics to iterate quickly.
                   </p>

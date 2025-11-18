@@ -33,7 +33,7 @@ export const projects: Project[] = [
   description: "Blurring the line between social platform and digital graffiti, explore the world through notes and doodles left behind by others on a street map view.",
   category: "Fullstack Web Development and UI/UX Design for a Creative Social Media App",
   fullDescription:
-    "WorldNotes is a spatial web experiment blending maps, art, and 3D spaces. Users create notes sharing thoughts and doodles, then post and anchor them to a globally shared street view map. Designed for casual web strolling, this web app fuels the creative spirit, gifts serendipitous discovery, and builds a global community centering authentic creative expression.",
+    "WorldNotes is a spatial web experiment blending maps, art, and 3D spaces. Users create notes by sharing thoughts and doodles, then post and anchor them to a globally shared street view map. Designed for casual web strolling, this web app fuels the creative spirit, gifts serendipitous discovery, and builds a global community centering authentic creative expression.",
   role: "Project Manager, Lead Fullstack Developer and UI/UX Designer. I built this app end-to-end from ideation to launch",
   skills: ["UI/UX Design", "Fullstack Development", "Web App Development", "Webflow Development", "Wireframing", "SEO"],
   tools: ["React", "Next.js", "TypeScript", "Three.js", "NoSQL"],
@@ -43,7 +43,7 @@ export const projects: Project[] = [
   imageUrl2: "/worldnotes/welcomeScreen.png",
   problem: "Existing social media platforms are losing their genuinity and overall appeal",
   subProblem: "After interviewing a pool of social media creators and everyday users, many say these are the reasons for the rise of disinterest in social media:",
-  solution: "I created WorldNotes to embrace the values and practice of digital graffiti: self-expression, pictography, and creativity. Interesting technologies like 3D note placement, drawing tools, and Street View mapping are integrated to create a unique craft-based social media platform.",
+  solution: "I created WorldNotes to embrace the values and practice of digital graffiti: self-expression, pictography, and creativity. Unique features like 3D note placement, custom drawing tools, and Street View mapping are integrated to create a unique craft-based social media platform.",
   milestones: [
     "User Testing and Feedback Integration",
     "Refine UI and Micro-interactions",

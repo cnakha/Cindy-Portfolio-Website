@@ -31,24 +31,14 @@ export default function NavBar() {
   };
 
   return (
-    <div className="font-nhgDisplay relative w-full h-[90px] pointer-events-none" data-name="nav bar">
+    <div className="font-nhgDisplay relative w-full h-[70px] pointer-events-none" data-name="nav bar">
       {/* Gradient background */}
       <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-b from-[#008BE8] to-transparent pointer-events-none" />
 
       {/* Logo + name */}
-      <button onClick={() => goTo("home")} className="relative flex items-start pl-8 pt-4 pointer-events-auto">
-        {/* <img
-          src={"/CN_logo.svg"}
-          alt="CN logo"
-          className=" translate-y-[-10px] w-[70px]"
-        /> */}
-        {/* <img
-            src={"/headshot-bw.png"}
-            alt="Headshot Preview"
-            className="hidden md:block w-[35px] h-[35px]"
-          /> */}
+      <button onClick={() => goTo("home")} className="relative flex items-start pl-8 pt-2 pointer-events-auto">
         <div className="flex flex-col text-white text-[18px] text-left">
-          <p className="font-nhgDisplay -mb-1">Cindy</p>
+          <p className="font-nhgDisplay -mb-2">Cindy</p>
           <p className="font-nhgDisplay">Nakhammouane</p>
         </div>
       </button>
@@ -57,7 +47,7 @@ export default function NavBar() {
       {/* Nav buttons on right */}
       <div className="absolute top-0 right-0 h-full flex items-center pr-8 pointer-events-none">
       {/* Desktop nav */}
-      <div className="hidden sm:flex gap-6 pointer-events-none">
+      <div className="hidden sm:flex gap-4 pointer-events-none">
         {NAV_ITEMS.map((item) => (
           <button
             key={item.id}
@@ -75,7 +65,7 @@ export default function NavBar() {
       <div className="sm:hidden">
         <button
           onClick={() => setMenuOpen((prev) => !prev)}
-          className=" text-white focus:outline-none mt-4 pointer-events-auto"
+          className=" text-white focus:outline-none pointer-events-auto"
         >
           {menuOpen ? <X size={40} /> : <Menu size={40} />}
         </button>

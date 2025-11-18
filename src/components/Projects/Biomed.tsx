@@ -106,7 +106,7 @@ function BiomedProjectsTabs() {
         aria-label="Biomedical projects"
         className="w-full mb-5 justify-center text-black"
       >
-        <div className="flex justify-center bg-white p-2 w-full rounded-[55px] gap-10 sm:gap-1">
+        <div className="flex justify-center bg-white p-2 w-full rounded-[55px] md:gap-10 gap-1 overflow-x">
         {TABS.map(({ key, label }) => {
           const selected = active === key;
           return (
@@ -117,7 +117,7 @@ function BiomedProjectsTabs() {
               aria-controls={`panel-${key}`}
               onClick={() => setActive(key)}
               className={[
-                "rounded-[55px] px-8 sm:px-6 py-3 text-sm sm:text-base font-medium",
+                "rounded-[55px] md:px-8 px-4 py-2 md:py-3 text-[10px] md:text-sm font-medium",
                 "transition-colors ease-out", 
                 selected
                   ? "bg-black text-white "
@@ -516,7 +516,7 @@ export default function Biomed() {
       <div className="mx-auto w-full max-w-7xl px-8 mb-40">
 
         <div className="flex flex-col items-center justify-center">
-          <p className="mt-5 text-xl text-center text-white/50 max-w-2xl">
+          <p className="mt-5 text-md md:text-xl text-center text-white/50 max-w-2xl">
             Empowering individuals in digital health, fitness, assistive, medical, and rehabilitation to monitor their health.
           </p>
         </div>
@@ -543,7 +543,7 @@ export default function Biomed() {
         <BiomedProjectsTabs />
 
         {/* Process Section */}
-        <div className="max-w-6xl px-12 flex flex-col mx-auto">
+        <div className="max-w-6xl px-4 flex flex-col">
         <h3 className="text-white text-6xl mt-60">The Process</h3>
         <h3 className="mt-20 text-4xl ">
           Understanding Technologies
@@ -590,41 +590,6 @@ export default function Biomed() {
         <div className="flex justify-center bg-white rounded-b-lg py-4">  
           <p className="text-center text-sm text-black/75">MotionSense Circuit Diagram</p>
         </div>    
-{/* 
-        <h3 className="mt-20 text-3xl"> Assembly & Testing</h3>
-        <p className="mt-10 text-sm text-white/50 max-w-4xl leading-relaxed text-xl">
-          After we validated our device design, began assembling components using various Arduino sensors, developing the frontend and backend, and creating 3D-printed enclosures using Solidworks.
-          Baseline models, iterative testing, user feedback, and refinement were key, as I calibrated sensors, improved data accuracy, and enhanced user comfort through multiple design iterations.
-          <br/><br/>
-          User feedback helped identify usability issues and informed adjustments to both hardware and software components. Common struggles consisted of data filtering, sensor sensitivity, packaging design, and visual clarity.
-        </p>
-        <div className="mt-10 grid grid-cols-4 gap-5 w-full overflow-hidden aspect-[36/12]">
-          <img
-            src="/biomed_devices/Spark_Beat_og.png"
-            alt="SparkBeat Original Design"
-            className="object-cover w-full h-full col-span-1 rounded-lg"
-          />
-          <img
-            src="/biomed_devices/p4.png"
-            alt="SparkBeat Improved Design"
-            className="object-cover w-full h-full col-span-3 rounded-lg"
-          />
-        </div>
-
-
-        <div className="flex justify-center bg-white rounded-lg py-4 mt-4">  
-          <p className="text-center text-sm text-black/75">SparkBeat original design (left) Improved design after feedback loop (right)</p>
-        </div>
-
-        <h3 className="mt-20 text-3xl">
-        Live Demos and Critques
-        </h3>
-        <p className="mt-10 text-sm text-white/50 max-w-4xl leading-relaxed text-xl">
-          Each project required two working prototypes to demo infront of peers and professors for feedback.
-          These sessions provided valuable insights into usability, appeal, functionality, creativity, and overall user experience.
-          <br/><br/>
-          Constructive critiques helped identify areas for improvement, leading to refinements in both hardware and software components.
-      </p> */}
 
         <h3 className="mt-20 text-4xl ">
           Designing for Health
