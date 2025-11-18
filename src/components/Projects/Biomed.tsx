@@ -106,7 +106,7 @@ function BiomedProjectsTabs() {
         aria-label="Biomedical projects"
         className="w-full mb-5 justify-center text-black"
       >
-        <div className="flex justify-center bg-white p-2 w-full rounded-[55px] md:gap-10 gap-1 overflow-x">
+        <div className="flex justify-between bg-white p-1 md:p-2 w-full rounded-[55px] md:gap-10 gap-1 overflow-x">
         {TABS.map(({ key, label }) => {
           const selected = active === key;
           return (
@@ -117,7 +117,7 @@ function BiomedProjectsTabs() {
               aria-controls={`panel-${key}`}
               onClick={() => setActive(key)}
               className={[
-                "rounded-[55px] md:px-8 px-4 py-2 md:py-3 text-[10px] md:text-sm font-medium",
+                "rounded-full md:px-8 px-4 py-1 md:py-3 text-[10px] md:text-sm font-medium",
                 "transition-colors ease-out", 
                 selected
                   ? "bg-black text-white "
@@ -131,7 +131,7 @@ function BiomedProjectsTabs() {
         </div>
       </div>
 
-      <div className="bg-white rounded-2xl text-black px-4 sm:px-6 md:px-10 py-12  ">
+      <div className="bg-white rounded-2xl text-black px-4 sm:px-6 md:px-10 pl-6 md:pl-16 py-6 md:py-10  ">
         {/* Animated panel */}
         <div className="relative">
           <AnimatePresence mode="wait">
@@ -471,16 +471,6 @@ function BiomedProjectsTabs() {
 }
 
 export default function Biomed() {
-  const devices = [
-    'MotionSense',  'SparkBeat', 'SparkBeat 2', 'TikTok Tattoo', 'Smart Shoe' ];
-
-  const deviceDescriptions = [
-    'A Wearable System for Real-Time Assessment of Lower Body Form and Muscle Engagement During Exercise',
-    'Smart Heart rate and Blood Oxygenation Assessment Wristband',
-    'Smart Sport Chest Band for Heart Rate and Respiratory Monitoring',
-    'Smart Arm Tattoo to Control TikTok Web',
-    'Gait, Balance, and Motion Analysis Smart Shoe Insole'
-   ];
 
   const features = [
       "Motion Tracking",
@@ -523,7 +513,7 @@ export default function Biomed() {
 
         <section className="mt-32">
           <div className="w-full h-full px-6">
-            <div className="rounded-xl border border-white/15 bg-white/10 p-6 pb-10">
+            <div className="rounded-xl border border-white/15 bg-black p-6 pb-10">
               <h3 className="font-nhgDisplay text-xl mb-4 text-white">Key Features</h3>
               <div className="grid grid-cols-1 gap-2 md:gap-8 md:grid-cols-2">
                 <ul className="list-disc list-inside space-y-2 text-white/85">
@@ -540,15 +530,16 @@ export default function Biomed() {
             </div>
           </div>
         </section>
+
         <BiomedProjectsTabs />
 
         {/* Process Section */}
         <div className="max-w-6xl px-4 flex flex-col">
-        <h3 className="text-white text-6xl mt-60">The Process</h3>
+        <h3 className="text-6xl mt-60">The Process</h3>
         <h3 className="mt-20 text-4xl ">
           Understanding Technologies
         </h3>
-        <p className="mt-10 text-sm text-white/50 max-w-4xl leading-relaxed text-xl">
+        <p className="mt-10 text-sm text-black/50 max-w-4xl leading-relaxed text-xl">
           Before participating in this lab, I had limited experience with biomedical device design nor engineering in general. 
           Through these projects, I gained hands-on experience in sensor integration, harware engineering, data acquisition, and real-time monitoring.
           <br/><br/>
@@ -570,13 +561,13 @@ export default function Biomed() {
         <h3 className="mt-20 text-4xl ">
           The Development Cycle
         </h3>
-        <p className="mt-10 text-sm text-white/50 max-w-4xl leading-relaxed text-xl">
+        <p className="mt-10 text-sm text-black/50 max-w-4xl leading-relaxed text-xl">
           Each device followed a similar development cycle, starting with research into existing biomedical wearables and sensor technologies to gain insight on product and app design. Next followed conceptualizing, diagraming, low fidelity prototyping and UI designs, final construction, testing, and final review.
         </p>
         <h3 className="mt-20 text-3xl">
           Prototyping
         </h3>
-        <p className="mt-4 text-sm text-white/50 max-w-4xl leading-relaxed text-xl">
+        <p className="mt-4 text-sm text-black/50 max-w-4xl leading-relaxed text-xl">
           Sketches of physical device designs and UI were made followed by circuit diagrams to plan hardware integration and creating low-fidelity prototypes to test sensor response, placements, and data acquisition. UI assets were initally designed in Figma then finalized in Illustrator and Photoshop.
         </p>
 
@@ -587,14 +578,14 @@ export default function Biomed() {
             className="absolute inset-0 h-full w-full object-cover"
           />
         </div>
-        <div className="flex justify-center bg-white rounded-b-lg py-4">  
-          <p className="text-center text-sm text-black/75">MotionSense Circuit Diagram</p>
+        <div className="flex justify-center bg-black rounded-b-lg py-4">  
+          <p className="text-center text-sm text-white">MotionSense Circuit Diagram</p>
         </div>    
 
         <h3 className="mt-20 text-4xl ">
           Designing for Health
         </h3>
-        <p className="mt-10 text-xl text-white/70 max-w-4xl">
+        <p className="mt-10 text-xl text-black/75 max-w-4xl">
           Deeply understanding the difficulties users face when navigating apps pertaining to personal health is key to ensure compassionate designs. I prioritized clarity, accessibility, and comfort as displaying biometric data can often be non-intuitive, confusing, and overwhelming. 
           Researching existing health monitoring UIs helped to identify effective hierarchy of information and the importance of clear labeling and soft visuals. 
           <br/><br/>

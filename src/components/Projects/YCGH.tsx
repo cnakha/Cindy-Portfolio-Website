@@ -57,8 +57,8 @@ export default function YCGH() {
                 </div>
                   
             </div>
-            <div className="flex justify-center bg-white rounded-b-lg py-4">
-                <p className="text-center text-sm text-black/75">Anxiety Management Interactions and Map Overview</p>
+            <div className="flex justify-center bg-black rounded-b-lg py-4">
+                <p className="text-center text-sm text-white">Anxiety Management Interactions and Map Overview</p>
             </div>  
 
             <div className=" mx-auto w-full max-w-6xl px-8">
@@ -68,12 +68,12 @@ export default function YCGH() {
                         <h3 className=" text-5xl">
                         SIGGRAPH 2025 Convention
                         </h3>
-                        <p className="mt-10 text-xl text-white/70"> 
+                        <p className="mt-10 text-xl text-black/70"> 
                         ACM SIGGRAPH is the world’s premier international conference on computer graphics and interactive techniques, known for its competitive selection process and global prestige.
                         <br/><br/>
                         My team put together a research poster to present at the SIGGRAPGH 2025 Convention in Vancouver over the course of 5 days for over 12,000 attendees.
                         <br/><br/>
-                        <span className="text-sm text-white/50">
+                        <span className="text-sm text-black/50 ">
                             An interesting application of this research that was discussed was the use of VR in medical and clinical settings; patients could use VR to destress and educate themselves about upcoming procedures and good health practices.
                         </span>
                         <br/><br/>
@@ -107,17 +107,17 @@ export default function YCGH() {
 
                 <div className="flex flex-col items-center text-center justify-center mt-40 ">
                     <h4 className="font-nhgDisplay text-white font-semibold bg-blue-haze px-4 py-2 rounded-[20px]">Outcome</h4>
-                    <p className="mt-10 text-xl text-white/70 max-w-4xl">
+                    <p className="mt-10 text-xl text-black/70 max-w-4xl">
                         Our project received significant attention at SIGGRAPH 2025, sparking engaging discussions about the future of AR/VR in mental health and adjacent fields. The positive feedback from attendees highlighted the potential impact of our work in making anxiety management more accessible and effective through immersive technology.
                     </p>
-                    <h3 className="font-nhgMono mt-8 text-3xl text-white/90 font-bolder max-w-3xl">
+                    <h3 className="font-nhgMono mt-8 text-3xl text-black/90 font-bolder max-w-3xl">
                         "The experience is emotionally engaging, using gentle gameplay mechanics, environmental storytelling, ambient sound, and evolving typography."
                     </h3>
-                    <p className="mt-4 italic text-white/50 max-w-2xl">— Reviewer</p>
-                    <h3 className="font-nhgMono mt-8 text-3xl text-white/90 font-bolder max-w-3xl">
+                    <p className="mt-4 italic text-black/50 max-w-2xl">— Reviewer</p>
+                    <h3 className="font-nhgMono mt-8 text-3xl text-black/90 font-bolder max-w-3xl">
                         "While VR for mental health isn’t new, the focus on narrative, improvisation, and user interaction makes this project stand out. It’s a thoughtful blend of disciplines with potential for real-world impact."
                     </h3>
-                    <p className="mt-4 italic text-white/50 max-w-2xl">— Reviewer</p>
+                    <p className="mt-4 italic text-black/50 max-w-2xl">— Reviewer</p>
                 </div>
             </div>
         </section>

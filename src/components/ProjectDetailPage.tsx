@@ -71,9 +71,8 @@ export default function ProjectDetailPage() {
              <h4 className="font-nhgDisplay mt-20 font-semibold">Overview</h4>
               <p className="font-nhgMono mt-2 opacity-90 text-xl md:text-2xl">{project.fullDescription}</p>
 
-              <div className="mt-10 flex w-full rounded-full bg-black p-4 px-6 border border-white/10">
                 {status && (
-                  <div className="md:flex">
+              <div className="mt-10 flex w-full rounded-full bg-black p-4 px-6 border border-white/10">
                     <div className="flex  gap-2">
                     <Info className="fill-white stroke-black"/>
                     <span className="font-semibold text-white">Status:</span>
@@ -83,7 +82,6 @@ export default function ProjectDetailPage() {
                     </p>
                   </div>
                 )}
-              </div>
             {project.vid ? (
             <div className=" mx-auto mt-10">
                 <h3 className="mt-16 text-2xl">

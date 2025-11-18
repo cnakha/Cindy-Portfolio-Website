@@ -36,6 +36,21 @@ export default function WorldNotes() {
     'Inspired the drawing experience. I intentionally leaned into primitive, playful tools, which lower barriers to entry and make creation fun rather than intimidating.'
   ];
 
+  const MapLogistics = [
+    "Syncing camera movements with note placement",
+    "Converting lat/lng + orientation metadata into UI positioning",
+    "Smoothing transitions between map view and Street View",
+    "Ensuring performance by throttling pan/zoom events",
+  ];
+
+  const NoteQualities = [
+    "User information (username, display name, profile reference)",
+    "Title, description, hashtags",
+    "Location metadata (lat, lng, heading, pitch, angle)",
+    "Optional image URLs",
+    "Timestamps",
+  ];
+
   return (
     <section className="mt-40 mb-40">
       <div className="mx-auto w-full">
@@ -164,7 +179,7 @@ export default function WorldNotes() {
           {keyInspos.map((inspo, idx) => (
             <div
             key={idx}
-            className="flex flex-col text-left items-start bg-[#1f1f1f] border border-white/10 rounded-xl p-6 min-w-[220px] max-w-xs flex-1"
+            className="flex flex-col text-left items-start bg-black border border-white/10 rounded-xl p-6 min-w-[220px] max-w-xs flex-1"
             >
             <h5 className="text-lg font-bolder text-white/90 mb-4">{inspo}</h5>
             <p className="text-sm text-white/50">{keyInsposDescriptions[idx]}</p>
@@ -181,10 +196,13 @@ export default function WorldNotes() {
           Step 2 — Understanding Audience
         </h3>
         <p className="mt-10 text-xl text-black/75 max-w-3xl">
-          Building community meant creating a sense of adventure and open discovery rather than fixated scrolling in a tailored algorithm. 
+          <span className="font-semibold">Primary Research (Interviews): </span>
+          I spoke with classmates, artists, and casual social media users to understand motivations and frustrations around online creativity. People expressed pressure to “perform” on platforms like Instagram, and a desire for spaces that feel casual, anonymous, and authentic.
           <br/><br/>
-          An <span className="font-semibold">open global community </span> is embraced best through this free roaming ability; 
-          allowing our user base to come from a variety of backgrounds and interests, creating an interesting melting pot of groups, and making discovering new communities spontaneous and natural.
+          To build a community meant pushing for more open discovery and adventure rather than fixated scrolling in a bubbled tailored algorithm. 
+          <br/><br/>
+          An <span className="font-semibold">open global community </span> is formed by this free roaming ability by 
+          allowing our user base from a variety of backgrounds and interests to discover new groups in a spontaneous and natural way.
         </p>
 
 
@@ -192,7 +210,7 @@ export default function WorldNotes() {
           Step 3 — Storyboarding & Designing App Structure
         </h3>
         <p className="mt-10 text-xl text-black/75 max-w-4xl">
-        With the vision set, I focused on structuring the app and story boarding user experience. 
+        With the vision set, I focused on structuring the app and story boarding user experiences. 
         There's a diverse set of unique user flows I had to consider: note traversal and browsing, the note creation process, etc., so I mapped the app structure 
         out to visualize navigation routes between different sections, ensuring a concise logical user flow. 
         </p>
@@ -308,21 +326,43 @@ export default function WorldNotes() {
         </h3>
         <p className="mt-10 text-sm text-black/50 max-w-4xl leading-relaxed text-xl">
           <br/><br/>
-=       </p>
+       </p>
       <h3 className="mt-20 text-2xl">
        Konva the Canvas Library
       </h3>
-      <p>
+      <p className="mt-2">
+        Using react-konva was central to bringing the Note Creator to life. WorldNotes isn’t just a text app, it’s a space for doodles, sketches, pixel art, and layered compositions.
+      </p>
+      <p className="italic text-xl py-4">
         "react-konva is a JavaScript library for drawing complex canvas graphics using React. It provides declarative and reactive bindings to the Konva Framework."
       </p>
-      <p>Navigating this library was key to implementing the Note Creator Canvas I had planned</p>
+      <p>Navigating this library allowed for features like layers, transformers for resizing and rotating text, undo/redo history, pixel-grid interactions, and porting canvas snapshots for Firebase Storage to be supported</p>
+      
+      
       <h3 className="mt-20 text-2xl">
         Google Maps API Integration
       </h3>
+      <p>WorldNotes revolves around place, so integrating Google Maps and Street View was one of the most challenging parts of development. 
+        I wanted notes to feel like they belonged in the environment, responding to heading, pitch, and zoom in a believable way.
+      </p>
+      <h4 className="mt-10 text-xl text-black font-semibold">This required building a bridge between the Maps API and my React state:</h4>
+      <ul className="list-disc mt-4 text-sm pl-6 space-y-2 text-black/75">
+        {MapLogistics.map((feature, idx) => (
+          <li key={idx}>{feature}</li>
+        ))}
+      </ul>
 
       <h3 className="mt-20 text-3xl">
-        Backend Development: Storing and Retrieving Notes, User Data, and Reactions
+        Backend Development: Storing Notes, User Data, and Reactions
       </h3>
+      <p>On the backend, I wanted something real-time, simple to iterate on, and friendly to a solo workflow. 
+        Firebase Firestore quickly became the natural choice. Each note stores:
+      </p>
+      <ul className="list-disc mt-4 text-sm pl-6 space-y-2 text-black/75">
+        {NoteQualities.map((feature, idx) => (
+          <li key={idx}>{feature}</li>
+        ))}
+      </ul>
 
       <h3 className="mt-20 text-2xl">
         Organizing Firebase Database, NextAuth, and Serverless Functions
