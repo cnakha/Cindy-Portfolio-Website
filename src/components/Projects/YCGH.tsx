@@ -77,7 +77,7 @@ export default function YCGH() {
                             An interesting application of this research that was discussed was the use of VR in medical and clinical settings; patients could use VR to destress and educate themselves about upcoming procedures and good health practices.
                         </span>
                         <br/><br/>
-                        Check out the full research paper here:
+                        Check out the full published research paper here:
                         </p>
                         
                         <a className="cursor-pointer font-semibold" href="https://dl.acm.org/doi/10.1145/3721250.3743037"> https://dl.acm.org/doi/10.1145/3721250.3743037 </a>
@@ -107,7 +107,7 @@ export default function YCGH() {
 
                 <div className="flex flex-col items-center text-center justify-center mt-40 ">
                     <h4 className="font-nhgDisplay text-white font-semibold bg-blue-haze px-4 py-2 rounded-[20px]">Outcome</h4>
-                    <p className="mt-10 text-xl text-black/70 max-w-4xl">
+                    <p className="mt-10 text-xl text-black/90 max-w-4xl">
                         Our project received significant attention at SIGGRAPH 2025, sparking engaging discussions about the future of AR/VR in mental health and adjacent fields. The positive feedback from attendees highlighted the potential impact of our work in making anxiety management more accessible and effective through immersive technology.
                     </p>
                     <h3 className="font-nhgMono mt-8 text-3xl text-black/90 font-bolder max-w-3xl">

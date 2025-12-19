@@ -1,89 +1,141 @@
 import React, { useState } from "react";
 import Footer from "./Footer";
-import { Triangle } from "lucide-react";
 
-const pictures = [
-    "/headshot-bw.png",
-    "/chicago.png",
-    "/panorama_kitchen.png",
-];
+
 
 export default function AboutMePage() {
-    const [current, setCurrent] = useState(0);
 
-    return (
-        <main className="relative min-h-screen w-full overflow-x-hidden bg-black">
-            <div className="flex justify-center items-center mx-auto w-full px-[5%] pb-10">
-                <div className="relative w-full py-20">
-                    <div className="max-w-xl w-full rounded-2xl p-10 overflow-hidden">
-                        {/* <div className="flex-1 min-w-[250px]"> */}
-                            <h1 className="font-nhgDisplay text-4xl md:text-6xl mb-4 text-white ">About Me</h1>
-                            <div className="mt-10 text-2xl">
-                                <p className="font-nhgText text-sm md:text-xl text-white/90 ">
-                                    Hi! I'm Cindy Nakhammouane, a fullstack developer and UI/UX designer currently enrolled in my fourth year at the University of Illinois Chicago studying <span className="font-semibold">Computer Science and Design</span>. <br/> <br/>
-                                    I'm currently very interested in creative technology and exploring career paths in AI/ML, web app dev, project management, and UI/UX design.<br/> <br/>
-                                    In my free time I love to travel, watch movies, sing, draw, and do theatre!
-                                </p>
-                            {/* </div> */}
-                        </div>
-                    </div>
-                    
-                </div>
-
-                {/* Right column */}
-                <div className="flex flex-col justify-left items-left pt-40">
+  return (
+    <main className="relative min-h-screen w-full overflow-x-hidden bg-black">
+      <div className="mx-auto mt-10 w-full px-[10%] pb-10">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10 py-20">
+          {/* Left column (About paragraphs) */}
+          <div className="w-full md:flex-1">
+            <div className="max-w-xl w-full rounded-2xl overflow-hidden">
+              
+              <div className="mt-10 text-2xl">
+                <div className="flex gap-8 items-end">
                     <img
-                        src={"/headshot-bw.png"}
-                        alt="Headshot Preview"
-                        className="hidden md:block w-[30%] h-[30%]"
+                        src={"/about/img1.jpg"}
+                        alt={`Photo of me`}
+                        className="w-[35%] h-auto block rounded-full border border-white/10"
+                        loading="lazy"
                     />
-
-
-                    <div className=" w-[75%] mt-20 border border-white/10 rounded-xl bg-white/10 p-5">
-                        <div className="flex flex-col items-start justify-between gap-8"> 
-                            <div>
-                                <div className="flex gap-2">
-                                    <h3 className="rounded-full bg-blue-haze font-semibold px-4 py-1 text-md tracking-wider text-white">Tools I Use</h3>
-                                </div>
-
-
-                                <div className="pt-8 flex gap-2">
-                                    <h3 className="text-md tracking-wider text-white">Coding</h3>
-                                </div>
-                                <div className=" text-[16px] flex flex-wrap gap-2">
-                                    {(["React", "Next.js", "TypeScript", "Javascipt", "Python", "C/C++"]).map(
-                                    (t, i) => (
-                                        <span
-                                            key={i}
-                                            className="mt-2 rounded-full bg-white/10 px-3 py-1 text-xs text-white ring-1 ring-white/20"
-                                        >
-                                        {t}
-                                        </span>
-                                    )
-                                    )}
-                                </div>
-
-                                <div className="pt-8  flex gap-2">
-                                    <h3 className="text-md tracking-wider text-white">Design</h3>
-                                </div>
-                                <div className=" text-[16px] flex flex-wrap gap-2">
-                                    {(["Adobe Creative Suite", "Photoshop", "InDesign", "Illustrator", "After Effects", "Figma", "Blender", "Maya", "Canva"]).map(
-                                    (t, i) => (
-                                        <span
-                                            key={i}
-                                            className="mt-2 rounded-full bg-white/10 px-3 py-1 text-xs text-white ring-1 ring-white/20"
-                                        >
-                                        {t}
-                                        </span>
-                                    )
-                                    )}
-                                </div>
-                            </div>
-                        </div>
+                    <div className="flex flex-col">
+                        <h1 className="font-nhgDisplay text-4xl md:text-6xl text-white mb-10">
+                            About Me
+                        </h1>
+                        <p className="font-nhgText text-sm md:text-xl text-white/90 mb-8">
+                        Hi! I'm Cindy Nakhammouane, a fullstack developer and UI/UX
+                        designer currently enrolled in my fourth year at the University
+                        of Illinois Chicago and studying{" "}
+                        <span className="font-semibold">Computer Science and Design</span>.
+                        </p>
                     </div>
                 </div>
+                <img
+                    src={"/about/wood.jpg"}
+                    alt={`Photo of me`}
+                    className="w-full h-auto block rounded-full mt-8 border border-white/10"
+                    loading="lazy"
+                  />
+                <p className="font-nhgText text-sm md:text-xl text-white/90 py-8">
+                  I love creative technology and exploring career paths in fullstack 
+                  and web app development, project management, and UI/UX design.
+                  In my free time, besides coding, I love to travel, watch movies,
+                  write, sing, draw, and do theatre!
+                </p>
+                <img
+                    src={"/about/vancouver.jpg"}
+                    alt={`Photo of me`}
+                    className="w-full h-auto block rounded-full mt-2 border border-white/10"
+                    loading="lazy"
+                  />
+              
+              </div>
             </div>
-            <Footer />
-        </main>
-    );
+          </div>
+
+          {/* Right column (Tools card) */}
+          <div className="w-full md:w-[550px]">
+            <div className="border border-white/10 rounded-xl bg-white/10 p-6 pb-8 mt-20 lg:mt-40">
+              <div className="flex flex-col items-start justify-between gap-10">
+                <div>
+                  <div className="flex gap-2 mb-2 justify-center">
+                    <h3 className="rounded-full bg-white font-semibold px-4 py-1 text-lg tracking-wider text-black">
+                      Tools I Use:
+                    </h3>
+                  </div>
+
+                  <div className="pt-8 flex gap-2">
+                    <h3 className="text-[16px] font-semibold tracking-wider text-white mb-1">
+                      Coding
+                    </h3>
+                  </div>
+                  <div className="text-[16px] flex flex-wrap gap-2">
+                    {["React", "Next.js", "TypeScript", "Javascipt", "Tailwind", "Python", "C/C++", "Firebase", "SQL", "REST API", "FastAPI"].map(
+                      (t, i) => (
+                        <span
+                          key={i}
+                          className="mt-2 rounded-full bg-white/10 px-3 py-1 text-xs text-white ring-1 ring-white/20"
+                        >
+                          {t}
+                        </span>
+                      )
+                    )}
+                  </div>
+
+                  <div className="pt-8 flex gap-2">
+                    <h3 className="text-[16px] font-semibold tracking-wider text-white mb-1">
+                      Design
+                    </h3>
+                  </div>
+                  <div className="text-[16px] flex flex-wrap gap-2">
+                    {[
+                      "Adobe Creative Suite",
+                      "Photoshop",
+                      "InDesign",
+                      "Illustrator",
+                      "After Effects",
+                      "Figma",
+                      "Blender",
+                      "Maya",
+                      "Canva",
+                    ].map((t, i) => (
+                      <span
+                        key={i}
+                        className="mt-2 rounded-full bg-white/10 px-3 py-1 text-xs text-white ring-1 ring-white/20"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+
+                <div className="pt-8 flex gap-2">
+                    <h3 className="text-[16px] font-semibold tracking-wider text-white mb-1">
+                      My Pockets
+                    </h3>
+                  </div>
+                  <div className="text-[16px] flex flex-wrap gap-2">
+                    {[
+                      "Sunshine"
+                    ].map((t, i) => (
+                      <span
+                        key={i}
+                        className="mt-2 rounded-full bg-white/10 px-3 py-1 text-xs text-white ring-1 ring-white/20"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <Footer />
+    </main>
+  );
 }

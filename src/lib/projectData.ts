@@ -10,6 +10,7 @@ export interface Project {
   tools: string[];
   features?: string[];
   status?: string;
+  link?: string;
   challenges: string;
   outcome: string;
   imageUrl: string;
@@ -18,7 +19,7 @@ export interface Project {
   liveUrl?: string;
   githubUrl?: string;
   problem: string;
-  subProblem: string;
+  subProblem?: string;
   keyProblems?: string[];
   keyProblemDescriptions?: string[];
   solution: string;
@@ -79,7 +80,7 @@ export const projects: Project[] = [
     skills: ["UI/UX Design", "Fullstack Development", "Entrepreneurship", "Internet of Things", "Hardware Engineering", "User Testing", "Websockets"],
     problem: "Wearable technology has the potential to revolutionize personal health tracking, yet many devices fail due to not meeting consumer needs.",
     subProblem: "After researching users and wearable assitive health tech, listed are key problems we identified in the wearable health tech space:",
-    solution: "My team developed five wearable bluetooth devices that monitor biometrics such as heart rate, oxygen levels, stress, and activity patterns. The devices featured ergonomic designs, wireless communication, and intuitive UIs that provide real-time data visualization and alerts, helping users track their personal health and receive timely notifications on health anomalies.",
+    solution: "My team developed five wearable bluetooth devices that monitor biometrics such as heart rate, oxygen levels, stress, and activity patterns. The devices feature ergonomic designs, wireless communication, and intuitive UIs that provide real-time data visualization and alerts, helping users track their personal health and receive timely notifications on health anomalies.",
     keyProblems:[
       "Lack of Accessible Health Monitoring",
       "Poor Integration into Daily Life",
@@ -91,6 +92,26 @@ export const projects: Project[] = [
       "Current solutions don’t consistently offer real-time, continuous data streams that are accurate and intuitive enough to provide meaningful feedback or alerts."
       ],
     
+  },
+  {
+    id: "forecaster",
+    title: "Chicago Traffic Commute Time Forecaster",
+    description: "Website hosting, training regression models on historic Chicago traffic data, and integrated UI with FastAPI and RESTAPI",
+    category: "Fullstack Development, Machine Learning, Linear Regression, and UI and User Experience Design",
+    fullDescription: "An interactive web application that predicts commute times in Chicago using historic congestion patterns, route distance, and contextual travel conditions. The tool helps commuters visualize how traffic impacts travel time and compares a simple baseline estimate against a machine-learned prediction.",
+    tools: ["React", "Javascript", "Tailwind", "FastAPI", "Python", "REST API", "Figma", "Scikit-learn", "Linear Regression", "Random Forest", "XGBoost", "Pandas", "NumPy"],
+    challenges: "Creating an intuitive interface that could handle complex project hierarchies while remaining accessible to users of all technical levels.",
+    outcome: "",
+    imageUrl: "/forecaster/thumbnail.png",
+    imageUrl2: "/forecaster/banner.png",
+    githubUrl: "https://github.com/cnakha/cs412-machine-learning-project",
+    timeline: "Nov 2025 — Dec 2025",
+    role: "Lead Frontend Developer and UI/UX Designer, Fullstack Developer and ML Engineer alongside Elizabeth Ng",
+    skills: ["UI/UX Design", "Fullstack Development", "Machine Learning", "Data Cleaning", "Model Evaluation"],
+    problem: "Chicago is ranked as one of the most congested cities in the U.S. where drivers lose, on average, 102 hours per year in traffic and an estimated $1826 annually in lost time/productivity.",
+    link: "https://cs412-machine-learning-project.vercel.app/",
+    solution: "The objective of this project is to create and compare regression models to predict commute times based on historical Chicago traffic data. The result of this project is a dashboard that includes trained regression models, visuals of model evaluations in the form of plots, and maps that reveal congestion levels and predicted delay intensities.",
+  
   },
   {
     id: "YCGH",
@@ -153,8 +174,8 @@ export const projects: Project[] = [
     role: "Project Manager, Fullstack Developer, and UI/UX Designer",
     skills: ["UI/UX Design", "Fullstack Development", "Web Development", "Prototyping", "User Testing"],
     tools: ["Figma", "React", "Next.js", "Typescript", "Three.js", "WebGL"],
-    problem: "Designers need a tool to help display printworks in 3D that's both intuitive and accessible to expert designers and casual users.",
-    subProblem: "Printmakers are saying there is a need for a user-friendly platform that bridges the gap between design complexity and accessibility. Here are key problems we identified:",
+    problem: "Designers want a tool to help display interactable printworks in 3D that's both intuitive and accessible to expert designers and casual users.",
+    subProblem: "There is a need for a stream-lined way to construct complex 3D versions of printworks that provides accessibility. Here are key problems we identified:",
     solution: "Wanting a better way to showcase my design projects online, I made FolioFolds, a web application that allows users to create and share interactive 3D mockups of printworks. The platform makes creating paper folds, cutouts, and bindings easier by provided tailored tools for paper engineering. Users can embedd finished piece into a website or view it in AR using their mobile devices. Publications can be flipped through manually or viewed through animated video, fostering a vibrant ecosystem of print design enthusiasts.",
     keyProblems:[
       "Lack of Intuitive 3D Visualization for Printed Materials",
@@ -164,7 +185,7 @@ export const projects: Project[] = [
     keyProblemDescriptions:[
       "Professional 3D and CAD tools struggle to capture the tactile complexity of print work and have too much technical depth for casual users.",
       "Physically prototyping folds, bindings, cutouts, and page structures often requires multiple physical mockups",
-      "Traditional digital documentation, flat scans, photos, or videos, fails to capture the dimensionality, tactility, and interactive discovery of physical publications.",
+      "Traditional digital documentations (flat scans, photos, or videos) struggle to capture the dimensionality, tactility, and interactive discovery of physical publications.",
     ],
     status: "FolioFolds is finalizing its design and beginning development... Stay tuned for updates!",
     },

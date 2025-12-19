@@ -81,8 +81,8 @@ function BiomedProjectsTabs() {
   const SmartShoeDesignCriteria = [
     "Must be worn in the shoe",
     "Identify real-time gait profile, detect acceleration, and determine quality of balance",
-    "Display a real-time heatmap uf the foot's pressure points",
-    "Graph the Voltage over time of each FSR",
+    "Display a real-time heatmap of the foot's pressure points",
+    "Graph the voltage over time of each FSR",
   ];
 
   const TikTokHardware = [
@@ -104,9 +104,9 @@ function BiomedProjectsTabs() {
       <div
         role="tablist"
         aria-label="Biomedical projects"
-        className="w-full mb-5 justify-center text-black"
+        className="flex w-full mb-5 justify-center text-black"
       >
-        <div className="flex justify-between bg-white p-1 md:p-2 w-full rounded-[55px] md:gap-10 gap-1 overflow-x">
+        <div className="flex justify-center p-1 md:p-2 rounded-full md:gap-2 gap-1 overflow-x bg-white border border-black">
         {TABS.map(({ key, label }) => {
           const selected = active === key;
           return (
@@ -131,7 +131,7 @@ function BiomedProjectsTabs() {
         </div>
       </div>
 
-      <div className="bg-white rounded-2xl text-black px-4 sm:px-6 md:px-10 pl-6 md:pl-16 py-6 md:py-10  ">
+      <div className="bg-white rounded-2xl text-black px-4 sm:px-6 md:px-10 pl-6 md:pl-16 py-6 md:py-10  border border-black">
         {/* Animated panel */}
         <div className="relative">
           <AnimatePresence mode="wait">
@@ -414,7 +414,7 @@ function BiomedProjectsTabs() {
 
                     <h4 className="mt-10 text-xl text-black font-semibold">Context</h4>
                     <p className="mt-2 text-xl text-black/75">
-                      As digital and physical worlds continue to merge, people are increasingly seeking playful and personal ways to interact with technology. 
+                      As digital and physical worlds continue to merge, people are increasingly seeking playful and new ways to interact with technology. 
                       Tiktok Tattoo is a smart tattoo that explores the idea of skin-based interfaces and gives you the ability to control TikTok Web with just your skin.
                     </p>
 
@@ -438,7 +438,7 @@ function BiomedProjectsTabs() {
 
                     <h4 className="mt-10 text-xl text-black font-semibold">Evaluation</h4>
                     <p className="mt-2 text-xl text-black/75">
-                      The tattoo reliably detected swipe gestures and touch inputs, allowing users to seamlessly scroll through TikTok videos with a simple finger movement. The integration with TikTok on Web was smooth, enabling users to control video playback without any noticeable lag or delay.
+                      The tattoo reliably detected swipe gestures and touch inputs, allowing users to scroll through TikTok videos with ease. Integration with TikTok Web was smooth, enabling users to control video playback without any noticeable lag or delay.
                     </p>
                   </div>
 
@@ -516,12 +516,12 @@ export default function Biomed() {
             <div className="rounded-xl border border-white/15 bg-black p-6 pb-10">
               <h3 className="font-nhgDisplay text-xl mb-4 text-white">Key Features</h3>
               <div className="grid grid-cols-1 gap-2 md:gap-8 md:grid-cols-2">
-                <ul className="list-disc list-inside space-y-2 text-white/85">
+                <ul className="list-disc list-inside space-y-2 text-white/90">
                   {features.slice(0, Math.ceil(features.length / 2)).map((feature, idx) => (
                     <li key={idx}>{feature}</li>
                   ))}
                 </ul>
-                <ul className="list-disc list-inside space-y-2 text-white/85">
+                <ul className="list-disc list-inside space-y-2 text-white/90">
                   {features.slice(Math.ceil(features.length / 2)).map((feature, idx) => (
                     <li key={idx + Math.ceil(features.length / 2)}>{feature}</li>
                   ))}
@@ -539,10 +539,9 @@ export default function Biomed() {
         <h3 className="mt-20 text-4xl ">
           Understanding Technologies
         </h3>
-        <p className="mt-10 text-sm text-black/50 max-w-4xl leading-relaxed text-xl">
+        <p className="mt-5 text-sm text-black/75 max-w-4xl leading-relaxed text-xl">
           Before participating in this lab, I had limited experience with biomedical device design nor engineering in general. 
-          Through these projects, I gained hands-on experience in sensor integration, harware engineering, data acquisition, and real-time monitoring.
-          <br/><br/>
+          Through these projects, I gained hands-on experience in sensor integration, harware engineering, data acquisition, UI/UX design, frontend development, and real-time monitoring.
           The following tools were instrumental in bringing the various biomedical devices to life:
         </p>
         
@@ -552,17 +551,17 @@ export default function Biomed() {
             key={idx}
             className="flex flex-col text-left items-start bg-[#1f1f1f] border border-white/10 rounded-xl p-6 min-w-[220px] min-h-[220px] max-w-xs flex-1"
             >
-            <h5 className="text-lg font-bolder text-white/90 mb-4">{inspo}</h5>
-            <p className="text-sm text-white/50">{techDescriptions[idx]}</p>
+            <h5 className="text-lg font-bolder text-white/90 mb-2">{inspo}</h5>
+            <p className="text-sm text-white/75">{techDescriptions[idx]}</p>
             </div>
           ))}
         </div>
 
-        <h3 className="mt-20 text-4xl ">
+        <h3 className="mt-40 text-4xl ">
           The Development Cycle
         </h3>
-        <p className="mt-10 text-sm text-black/50 max-w-4xl leading-relaxed text-xl">
-          Each device followed a similar development cycle, starting with research into existing biomedical wearables and sensor technologies to gain insight on product and app design. Next followed conceptualizing, diagraming, low fidelity prototyping and UI designs, final construction, testing, and final review.
+        <p className="mt-5 text-sm text-black/50 max-w-4xl leading-relaxed text-xl">
+          Each device followed a similar development cycle, beginning with research on existing biomedical wearables and sensor solutions to gain insight on product and app design. Then followed conceptualizing, diagraming, low fidelity prototyping and UI designs, final construction, testing, and final review.
         </p>
         <h3 className="mt-20 text-3xl">
           Prototyping
@@ -571,24 +570,26 @@ export default function Biomed() {
           Sketches of physical device designs and UI were made followed by circuit diagrams to plan hardware integration and creating low-fidelity prototypes to test sensor response, placements, and data acquisition. UI assets were initally designed in Figma then finalized in Illustrator and Photoshop.
         </p>
 
-        <div className="mt-10 relative aspect-[23/12] overflow-hidden rounded-t-lg">
-          <img
-            src={"/biomed_devices/circuit_diagram.png"}
-            alt={`Circuit Diagram`}
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-        </div>
-        <div className="flex justify-center bg-black rounded-b-lg py-4">  
-          <p className="text-center text-sm text-white">MotionSense Circuit Diagram</p>
-        </div>    
+        <div className="max-w-2xl ml-[25%]">
+          <div className="mt-10 relative aspect-[23/12] overflow-hidden rounded-t-lg">
+            <img
+              src={"/biomed_devices/circuit_diagram.png"}
+              alt={`Circuit Diagram`}
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+          <div className="flex justify-center bg-black rounded-b-lg py-4">  
+            <p className="text-center text-sm text-white">MotionSense Circuit Diagram</p>
+          </div>   
+        </div> 
 
-        <h3 className="mt-20 text-4xl ">
-          Designing for Health
+        <h3 className="mt-40 text-4xl ">
+          Reflection and Designing for Health
         </h3>
-        <p className="mt-10 text-xl text-black/75 max-w-4xl">
-          Deeply understanding the difficulties users face when navigating apps pertaining to personal health is key to ensure compassionate designs. I prioritized clarity, accessibility, and comfort as displaying biometric data can often be non-intuitive, confusing, and overwhelming. 
+        <p className="mt-5 text-xl text-black/75 max-w-4xl">
+          I found that the most important step in designing these devices was grasping a strong understanding of the patients' specfic needs and overall health goals. Learning about the nuances and difficulties a variety of patients face when managing personal health devices and apps was key in ensuring compassionate designs. 
+          It was very important to prioritized clarity, accessibility, and comfort as displaying biometric data can often be non-intuitive, confusing, and overwhelming. 
           Researching existing health monitoring UIs helped to identify effective hierarchy of information and the importance of clear labeling and soft visuals. 
-          <br/><br/>
         </p>
 
       </div>

@@ -75,7 +75,7 @@ const [typingDone, setTypingDone] = useState(false);
         </motion.div>
 
         <motion.p className="font-nhgText text-2xl md:text-2xl text-white/50 pt-6" variants={item}>
-          I {" "}
+          I love to {" "}
           <span className="text-white font-bolder">
             research, design, user test, and code{" "}
           </span>
@@ -124,7 +124,7 @@ const [typingDone, setTypingDone] = useState(false);
         wrapper="p"
         className="
           block text-2xl md:text-2xl text-white/75
-          !leading-[1.25]               /* force on <p> */
+          !leading-[1.5]               /* force on <p> */
           [&>span]:!leading-[1.4]      /* force on inner span that TA inserts */
           whitespace-pre-wrap
         "
@@ -146,7 +146,7 @@ export default function AboutMeCarousel({slideNumber,  setSlideNumber, isPlaying
     "",
     "I love creating things that bring joy to others and heavily value leaving a positive impact in the world. Wanting to leverage my academic drive and creative mind, I found myself at the door of creative technology...",
     "Today, I'm a fourth year undergraduate student at the University of Illinois Chicago studying computer science and design and exploring the possibilities of AI/ML automation, web dev, and product design.",
-    "I love being at the intersection of design and technology as I get to bridge creative and technical teams. I've thus became a very passionate designer who values intuitive experiences and engaging storytelling and a developer who can bring ideas to life.",
+    "I love being at the intersection of design and technology as I get to bridge creative and technical teams. I've thus became a very passionate designer who values engaging storytelling and a dedicated developer who can bring ideas to life.",
     "In my free time I love to travel to cool places, watch movies, sing, and attend live theatrical shows. I also spend a lot of time on my passion projects: WorldNotes and FolioFolds!",
   ];
 

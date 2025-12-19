@@ -25,12 +25,12 @@ const techDescriptions = [
 ];
 
 const accessibillity = [
-  'Immediate feedback — changes are reflected in real-time 3D, reinforcing exploration through visual reward.',
+  'Immediate feedback: changes are reflected in real-time 3D, reinforcing exploration through visual reward.',
   'Clear interaction cues and visual markers for actionable elements (drag edges, fold handles, navigation).',
   'Keyboard-friendly controls and focus-states for primary actions like rotating, flipping, and zooming.',
-  'Encouraging unexpected outcomes — folds and page sequences can be rearranged on the fly.',
-  'Play without penalty — undo/redo, safe drafts, and autosave encourage bold experimentation',
-  'Warm, non-intimidating UI — soft motion, gallery-like space, and tooltips that feel like guidance rather than instruction',
+  'Encouraging unexpected outcomes: folds and page sequences can be rearranged on the fly.',
+  'Play without penalty: undo/redo, safe drafts, and autosave encourage bold experimentation',
+  'Warm, non-intimidating UI: soft motion, gallery-like space, and tooltips that feel like guidance rather than instruction',
 ];
 
   
@@ -168,7 +168,7 @@ const accessibillity = [
         <h3 className="mt-20 text-4xl">
           Step 1 — Inspiration and Research
         </h3>
-        <p className="mt-10 text-sm text-black/75 max-w-4xl leading-relaxed text-xl">
+        <p className="mt-5 text-sm text-black/75 max-w-4xl leading-relaxed text-xl">
           Paper engineering and bookbinding have a rich history that spans centuries and although the medium is more enriching in its physical form, exploring ways to convey these physical properties digitally can allow designers to share our work's potential more captivatingly and serve as an interesting archival method. 
           <br/><br/>
           To design FolioFolds, I researched traditional techniques and modern digital tools to understand how people interact with physical publications and to find physical qualities I should replicate.
@@ -179,7 +179,8 @@ const accessibillity = [
         <h3 className="mt-40 text-4xl ">
           Step 2 — Design Philosophy
         </h3>
-        <p className="mt-10 text-sm text-black/75 max-w-5xl leading-relaxed text-xl">
+        <p className="mt-5 text-sm text-black/75 max-w-5xl leading-relaxed text-xl">
+          Outlining key values and goals for the project ensures we stay grounded and on the same page. 
           The core design values for FolioFolds centered around <span className="italic font-semibold">simplicity, appreciation, and accessibility.</span>
         </p>
 
@@ -213,8 +214,9 @@ const accessibillity = [
         <h3 className="mt-40 text-4xl">
           Step 3 — Prototyping and Designing Behaviours 
         </h3>
-        <p className="mt-10 text-sm text-black/50 max-w-4xl leading-relaxed text-xl">
-          To bring folding mechanics and material interactions to life, I built iterative prototypes exploring how paper should move, react, and feel in a digital environment. Early explorations included simplified books and basic hinge systems, gradually evolving into physics-informed page bends, easing curves, motion, weight, tension, and natural drag gestures. 
+        <p className="mt-5 text-sm text-black/50 max-w-4xl leading-relaxed text-xl">
+          To bring folding mechanics and paper handling interactions to life, I built iterative UI prototypes exploring how paper should move, react, and feel in a digital environment. 
+          Early explorations included simplified books and basic hinge systems, gradually evolving into physics-informed page bends, easing curves, motion, weight, tension, and natural drag gestures. 
           This stage helped define the visual language, interaction rhythm, and tactile qualities that should be made adjustable for the user.
         </p>
 
@@ -222,8 +224,8 @@ const accessibillity = [
         <h3 className="mt-40 text-4xl ">
           Step 4 — Interaction and Usability Tests
         </h3>
-        <p className="mt-10 text-sm text-black/50 max-w-4xl leading-relaxed text-xl">
-          With functional interactions in place, I conducted informal testing sessions with design students, book artists, and casual users to refine usability and user flow. 
+        <p className="mt-5 text-sm text-black/50 max-w-4xl leading-relaxed text-xl">
+          After functional interactions were in place, I conducted informal testing sessions with design students, book artists, and casual users to refine usability and user flow. 
           These sessions highlighted key needs: intuitive camera controls, clear affordances for flipping and unfolding, and a forgiving learning curve for newcomers. 
           <br/><br/>
           Based on feedback, I streamlined gesture input, introduced subtle visual prompts, and optimized transitions for clarity and comfort. 
@@ -234,7 +236,7 @@ const accessibillity = [
         <h3 className="mt-20 text-4xl ">
           Technologies
         </h3>
-        <p className="mt-10 text-sm text-black/50 max-w-4xl leading-relaxed text-xl">
+        <p className="mt-5 text-sm text-black/50 max-w-4xl leading-relaxed text-xl">
           The following tools make up the core technology stack for FolioFolds:
         </p>
         
@@ -244,8 +246,8 @@ const accessibillity = [
             key={idx}
             className="flex flex-col text-left items-start bg-[#1f1f1f] border border-white/10 rounded-xl p-6 min-w-[220px] min-h-[220px] max-w-xs flex-1"
             >
-            <h5 className="text-lg font-bolder text-white mb-4">{inspo}</h5>
-            <p className="text-sm text-white/50">{techDescriptions[idx]}</p>
+            <h5 className="text-lg font-bolder text-white mb-2">{inspo}</h5>
+            <p className="text-sm text-white/75">{techDescriptions[idx]}</p>
             </div>
           ))}
         </div>
@@ -254,7 +256,7 @@ const accessibillity = [
         <h3 className="mt-20 text-4xl">
           Designing for Creativity
         </h3>
-        <p className="mt-10 text-xl text-black/75 max-w-4xl">
+        <p className="mt-5 text-xl text-black/75 max-w-4xl">
           Empowering creativity was at the heart of FolioFold's design. My goal was to design an environment where users feel invited to experiment just as they would with paper, scissors, and a blank table.
           <br/><br/>
         </p>
@@ -264,11 +266,6 @@ const accessibillity = [
           ))}
         </ul>
 
-          {/* <div className="mt-20 flex flex-col text-center justify-center">
-            <h3 className="text-4xl font-bolder leading-tight text-blue-haze-light mt-20 text-center ">
-              FolioFolds is finalizing its design and beginning development... Stay tuned for updates!
-            </h3>
-          </div> */}
         </div>
       </div>
     </section>

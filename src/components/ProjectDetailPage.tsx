@@ -17,7 +17,7 @@ export default function ProjectDetailPage() {
     return (
       <main className="min-h-screen bg-[#131415] pt-[80px] text-white flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-3xl font-bold mb-4">Project Not Found</h1>
+          <h1 className="text-3xl font-bold mb-8">Project Not Found</h1>
           <button
             onClick={() => navigate("/")}
             className="inline-flex items-center gap-2 rounded-md bg-[#008BE8] px-4 py-2 hover:bg-[#006fbb]"
@@ -39,6 +39,7 @@ export default function ProjectDetailPage() {
     vid,
     fullDescription,
     status,
+    link,
     features = [],
     problem,
     subProblem, 
@@ -53,10 +54,10 @@ export default function ProjectDetailPage() {
   } = project;
 
   return (
-    <main className="font-nhgMono min-h-screen overflow-x-clip bg-white/95 text-black">
+    <main className="font-nhgMono min-h-screen overflow-x-clip bg-white text-black">
      
       {/* Summary band (matches screenshot spacing) */}
-      <section className="pt-20">
+      <section className="pt-40">
         <div className="mx-auto w-full max-w-6xl px-6">
           <div className="rounded-xl p-6">
             <button
@@ -67,7 +68,7 @@ export default function ProjectDetailPage() {
               Return to homepage
             </button>
 
-            <h3 className="mt-10 font-nhgDisplay text-5xl md:text-6xl leading-[1.25] ">{project.title}</h3>
+            <h3 className="mt-4 font-nhgDisplay text-5xl md:text-6xl leading-[1.25] ">{project.title}</h3>
              <h4 className="font-nhgDisplay mt-20 font-semibold">Overview</h4>
               <p className="font-nhgMono mt-2 opacity-90 text-xl md:text-2xl">{project.fullDescription}</p>
 
@@ -80,6 +81,15 @@ export default function ProjectDetailPage() {
                     <p className="flex items-center font-nhgText pl-8 md:pl-2 w-full text-white text-sm md:text-md ">
                       {status}
                     </p>
+                  </div>
+                )}
+                 {link && (
+              <div className="mt-10 flex w-full rounded-full bg-black p-4 px-6 border border-white/10">
+                      <span className="font-semibold text-white whitespace-nowrap">Check out the project:</span>
+                    <a href={link} target="_blank" rel="noopener noreferrer" 
+                      className="cursor-pointer flex items-center font-nhgText pl-8 md:pl-4 w-full text-white text-sm md:text-md ">
+                      HERE
+                    </a>
                   </div>
                 )}
             {project.vid ? (
@@ -110,7 +120,6 @@ export default function ProjectDetailPage() {
           )}
 
             {/* Top specs row: My Role / Skills / Tools / Timeline + See the Code */}
-
             <section className="">
               <div className="mx-auto w-full max-w-6xl border border-white/10 rounded-xl bg-black p-10 mt-10">
                 <div className="rounded-xl">
@@ -127,7 +136,7 @@ export default function ProjectDetailPage() {
                             Role
                           </h3>
                         </div>
-                        <p className="mt-2 text-[14px] text-white/80 max-w-md">
+                        <p className="mt-2 text-[14px] text-white/90 max-w-md">
                           {role}
                         </p>
                       </div>     
@@ -139,7 +148,7 @@ export default function ProjectDetailPage() {
                             Timeline
                           </h3>
                         </div>
-                        <p className="mt-2 text-[14px] text-white/80">{timeline} </p>
+                        <p className="mt-2 text-[14px] text-white/90">{timeline} </p>
                       </div>                
                     </div>
 
@@ -152,7 +161,7 @@ export default function ProjectDetailPage() {
                         Skills
                       </h3>
                       </div>
-                      <ul className="mt-2 text-[14px] space-y-1 text-white/80 list-disc list-inside">
+                      <ul className="mt-2 text-[14px] space-y-1 text-white/90 list-disc list-inside">
                         {(skills).map(
                           (s, i) => (
                             <li key={i}>{s}</li>
@@ -211,7 +220,7 @@ export default function ProjectDetailPage() {
       <div className="flex flex-col justify-center items-center text-center mt-40 mx-auto w-full max-w-6xl px-6">
         <h4 className="font-nhgDisplay text-white font-semibold bg-blue-haze px-4 py-2 rounded-full">Problem</h4>
         <h3 className="font-nhgMono text-xl md:text-2xl mt-8 text-black font-bolder max-w-4xl">{problem} </h3>
-        <p className="mt-4 text-black/50 max-w-2xl">{subProblem}</p>
+        <p className="mt-4 text-black/75 max-w-2xl">{subProblem}</p>
         {keyProblems && keyProblems.length > 0 && keyProblemDescriptions && keyProblemDescriptions.length === keyProblems.length && (
             <div className="mt-10 px-4 flex flex-wrap gap-6 justify-center w-full">
             {keyProblems.map((problem, idx) => (

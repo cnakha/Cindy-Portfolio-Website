@@ -165,7 +165,7 @@ export default function WorldNotes() {
         <h3 className="mt-20 text-4xl ">
           Step 1 — Inspiration and Discovery
         </h3>
-        <p className="mt-10 text-xl text-black/75 max-w-4xl leading-relaxed ">
+        <p className="mt-5 text-xl text-black/75 max-w-4xl leading-relaxed ">
           Establishing a vision and core values were key in figuring out WorldNote's creative direction. Prioritizing geolocated and hand-drawn pictorial posts over formal text-based and video/photo content offers a quirky nuance and emotional depth in social interactions that is yet to be explored. 
           The challenge then became: 
           <br/><br/>
@@ -182,7 +182,7 @@ export default function WorldNotes() {
             className="flex flex-col text-left items-start bg-black border border-white/10 rounded-xl p-6 min-w-[220px] max-w-xs flex-1"
             >
             <h5 className="text-lg font-bolder text-white/90 mb-4">{inspo}</h5>
-            <p className="text-sm text-white/50">{keyInsposDescriptions[idx]}</p>
+            <p className="text-sm text-white/75">{keyInsposDescriptions[idx]}</p>
             </div>
           ))}
         </div>
@@ -195,11 +195,11 @@ export default function WorldNotes() {
         <h3 className="mt-40 text-4xl">
           Step 2 — Understanding Audience
         </h3>
-        <p className="mt-10 text-xl text-black/75 max-w-3xl">
+        <p className="mt-5 text-xl text-black/75 max-w-3xl">
           <span className="font-semibold">Primary Research (Interviews): </span>
           I spoke with classmates, artists, and casual social media users to understand motivations and frustrations around online creativity. People expressed pressure to “perform” on platforms like Instagram, and a desire for spaces that feel casual, anonymous, and authentic.
           <br/><br/>
-          To build a community meant pushing for more open discovery and adventure rather than fixated scrolling in a bubbled tailored algorithm. 
+          To build a community meant pushing for more open discovery and adventure rather than fixated scrolling in a "bubble" tailored algorithm. 
           <br/><br/>
           An <span className="font-semibold">open global community </span> is formed by this free roaming ability by 
           allowing our user base from a variety of backgrounds and interests to discover new groups in a spontaneous and natural way.
@@ -209,7 +209,7 @@ export default function WorldNotes() {
         <h3 className="mt-40 text-4xl">
           Step 3 — Storyboarding & Designing App Structure
         </h3>
-        <p className="mt-10 text-xl text-black/75 max-w-4xl">
+        <p className="mt-5 text-xl text-black/75 max-w-4xl">
         With the vision set, I focused on structuring the app and story boarding user experiences. 
         There's a diverse set of unique user flows I had to consider: note traversal and browsing, the note creation process, etc., so I mapped the app structure 
         out to visualize navigation routes between different sections, ensuring a concise logical user flow. 
@@ -244,7 +244,7 @@ export default function WorldNotes() {
         <h3 className="mt-40 text-4xl">
           Step 4 — Wireframing
         </h3>
-        <p className="mt-10 text-xl text-black/75 max-w-4xl">
+        <p className="mt-5 text-xl text-black/75 max-w-4xl">
           I sketched out how key pages like the user profile, community page, and subsequent news and updates page would look and interact. 
           Early iterations helped me find balance between clean and simpler layouts and a stylized scrap book layout without over investing in visuals too soon.
         </p>
@@ -263,7 +263,7 @@ export default function WorldNotes() {
         <h3 className="mt-40 text-4xl ">
           Step 5 — UI Design
         </h3>
-        <p className="mt-10 text-xl text-black/75 max-w-4xl">
+        <p className="mt-5 text-xl text-black/75 max-w-4xl">
           After validating layouts, I shifted toward creating a formal visual design of components using Figma and Illustrator. In doing this process, I found myself redesigning elements multiple times to refine usability and aesthetics.
         </p>
 
@@ -283,7 +283,7 @@ export default function WorldNotes() {
           The UI is intentionally inviting, encouraging hesitant users to have casual fun.
         </p>
 
-        <div className="mt-10 ml-10 flex flex-col text-left items-start bg-[#1f1f1f] border border-white/10 rounded-xl p-10 ">
+        <div className="mt-20 ml-10 flex flex-col text-left items-start bg-[#1f1f1f] border border-white/10 rounded-xl p-10 ">
           <h4 className="text-white font-semibold">
             Creating An Ecosystem
           </h4>
@@ -298,9 +298,7 @@ export default function WorldNotes() {
         <h3 className="mt-40 text-4xl">
           Step 6 — Fullstack Development
         </h3>
-
-
-        <p className="mt-10 text-xl text-black/75 max-w-5xl">
+        <p className="mt-5 text-xl text-black/75 max-w-5xl">
           I followed an Agile-inspired workflow to stay organized and iterative. Each development cycle began with defining small testable goals then designing the feature, implementing it, validating behavior, and gathering informal user feedback.
           <br/><br/>
           Working independently meant acting as both designer and developer, so I used short sprints and modular commits to keep momentum while maintaining flexibility. I continuously refined features through rapid prototyping, debugging, and lightweight testing rather than long planning phases.
@@ -324,10 +322,13 @@ export default function WorldNotes() {
         <h3 className="mt-20 text-3xl">
         Frontend Development
         </h3>
-        <p className="mt-10 text-sm text-black/50 max-w-4xl leading-relaxed text-xl">
+        <p className="mt-5 text-sm text-black/75 max-w-4xl leading-relaxed text-xl">
+        The bulk of my development time went into implementing WorldNotes's unique UI. It was imperative early on to set up a system of designs
+        such as core color schemes, fonts, text sizing conventions etc. as to have a cohesive look. Pre-planning React component implementations helped
+        steamline production and provide reusable code.
           <br/><br/>
        </p>
-      <h3 className="mt-20 text-2xl">
+      <h3 className="mt-10 text-2xl">
        Konva the Canvas Library
       </h3>
       <p className="mt-2">
@@ -339,41 +340,29 @@ export default function WorldNotes() {
       <p>Navigating this library allowed for features like layers, transformers for resizing and rotating text, undo/redo history, pixel-grid interactions, and porting canvas snapshots for Firebase Storage to be supported</p>
       
       
-      <h3 className="mt-20 text-2xl">
-        Google Maps API Integration
+      <h3 className="mt-14 text-2xl">
+        Google Maps API Integration and Three.js
       </h3>
-      <p>WorldNotes revolves around place, so integrating Google Maps and Street View was one of the most challenging parts of development. 
-        I wanted notes to feel like they belonged in the environment, responding to heading, pitch, and zoom in a believable way.
+      <p className="mt-2">WorldNotes functionality depends on the street map atmosphere, so integrating Google Maps and Street View was one of the most important parts of development. 
+        I wanted notes to feel like they belonged in the environment, responding to heading, pitch, and zoom in a believable way however the street map exists as a panorame image. To create the illusion
+        of 3D notes in that space, I used Three.js to create 3D meshes of the notes that sat on an invisible plane. The meshes would transform and translate depending on the camera pitch and your geolocation.
       </p>
-      <h4 className="mt-10 text-xl text-black font-semibold">This required building a bridge between the Maps API and my React state:</h4>
-      <ul className="list-disc mt-4 text-sm pl-6 space-y-2 text-black/75">
-        {MapLogistics.map((feature, idx) => (
-          <li key={idx}>{feature}</li>
-        ))}
-      </ul>
 
       <h3 className="mt-20 text-3xl">
         Backend Development: Storing Notes, User Data, and Reactions
       </h3>
-      <p>On the backend, I wanted something real-time, simple to iterate on, and friendly to a solo workflow. 
-        Firebase Firestore quickly became the natural choice. Each note stores:
+      <p className="mt-5 ">Implementing a database was something completely new to me, so I wanted something real-time, simple to iterate on, and friendly to a solo workflow. 
+        Firebase Firestore quickly became the natural choice where I end up storing key information about user accounts, posted notes, and interactions. I also had no experience with
+        user authentification practices so I ended up using NextAuth and allowed users to create accounts using Google accounts.
       </p>
-      <ul className="list-disc mt-4 text-sm pl-6 space-y-2 text-black/75">
-        {NoteQualities.map((feature, idx) => (
-          <li key={idx}>{feature}</li>
-        ))}
-      </ul>
-
-      <h3 className="mt-20 text-2xl">
-        Organizing Firebase Database, NextAuth, and Serverless Functions
-      </h3>
 
         
         <h3 className="mt-40 text-4xl">
           Step 7 — Measuring Impact
         </h3>
-        <p className="mt-10 text-xl text-black/75 max-w-4xl">
-          WorldNotes is experimental and engages in direct surveys and open discourse over updates and features regularly. Impact is measured through metrics and moments of connection, liasened through community polls and recieving feedback from focused user groups.
+        <p className="mt-5 text-xl text-black/75 max-w-4xl">
+          WorldNotes is experimental and engages in direct surveys and open discourse over updates and features regularly. 
+          Impact is measured through community polls and recieving feedback from focused user groups.
         </p>
 
 
