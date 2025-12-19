@@ -15,6 +15,7 @@ type ExtraProject = {
   images: string[];
   description: string;
   title: string;
+  video?: string;
 };
 
 /**
@@ -34,6 +35,7 @@ function ExtraProjectModal({
   images,
   description,
   title,
+  video,
 }: {
   open: boolean;
   onClose: () => void;
@@ -41,6 +43,7 @@ function ExtraProjectModal({
   images: string[];
   description: string;
   title: string;
+  video?: string;
 }) {
   const panelRef = useRef<HTMLDivElement | null>(null);
 
@@ -155,6 +158,15 @@ function ExtraProjectModal({
             "
           >
             <div className="mx-auto w-full max-w-xl flex flex-col gap-6">
+              {video && (
+                <div className=" mt-5 relative aspect-[21/13] overflow-hidden rounded-lg">
+                  <video
+                    src={video}
+                    controls
+                    autoPlay
+                  />
+                </div>
+              )}
               {allImages.map((src, idx) => (
                 <figure
                   key={`${src}-${idx}`}
@@ -189,7 +201,7 @@ export default function ExtrasPage() {
       id: "time-poster",
       coverImage: "/extras/Time_Poster.png",
       images: [],
-      description: "Composition practice and study.",
+      description: "Composition and phooto editing practice and study.",
       title: "Fluid Time Poster",
     },
     {
@@ -223,30 +235,74 @@ export default function ExtrasPage() {
     {
       id: "trippy",
       coverImage: "/extras/Trippy_Animation.gif",
-      images: [],
+      images: ["/extras/trippy2.gif"],
       description: "Trippy animation loop, Analog images, experimental timing + shapes.",
       title: "Trippy Animation"
     },
     {
       id: "vfx",
-      coverImage: "/extras/vfx.png",
-      images: [],
+      coverImage: "/extras/vfx/vfx.png",
+      images: ["/extras/vfx/tv.png", "/extras/vfx/blender.png"],
       description: "Book on the social space of VFX, retro futurism style.",
       title: "VFX and the Space Between"
     },
     {
       id: "memento",
-      coverImage: "/extras/memento.png",
-      images: [],
+      coverImage: "/extras/memento/memento.png",
+      images: ["/extras/memento/all.png", "/extras/memento/cover.jpg", "/extras/memento/back.jpg", "/extras/memento/inside1.jpg",
+              "/extras/memento/inside2.jpg"],
       description: "Memento concept, Riso printed, analog images, narrative/visual design exploration.",
       title: "Memento"
     },
     {
       id: "conops",
-      coverImage: "/extras/Conops.png",
+      coverImage: "/extras/nasa/Conops.png",
       images: [],
-      description: "CONOPS / systems-style document visuals, clean layout practice as part of L'SPACE Program.",
+      description: "CONOPS / systems-style document visuals, clean layout practice as part of L'SPACE Program. Role: Chief Scientist",
       title: "NASA Rover Conops Poster"
+    },
+    {
+      id: "countdown",
+      coverImage: "/extras/countdown/10_style_frame.jpg",
+      video: "/extras/countdown/Bug_Countdown.mp4",
+      images: ["/extras/countdown/10_sb.jpg", "/extras/countdown/3_Style_Frame.jpg", "/extras/countdown/3_sb.jpg",
+               "/extras/countdown/4_Style_Frame.jpg", "/extras/countdown/6_Style_Frame.jpg", "/extras/countdown/7_Style_Frame.jpg"
+      ],
+      description: "10 second countdown Photoshop animation, collaborated with Hope Jo",
+      title: "Bug Countdown"
+    },
+    {
+      id: "goblet",
+      coverImage: "/extras/goblet/img1.png",
+      images: ["/extras/goblet/img2.png", "/extras/goblet/img3.png", "/extras/goblet/img4.png",
+                "/extras/goblet/img5.png", "/extras/goblet/collage1.png", "/extras/goblet/collage2.png",
+                "/extras/goblet/grid_art.png", "/extras/goblet/color1.png", "/extras/goblet/color2.png",
+                "/extras/goblet/color3.png", "/extras/goblet/color4.png", "/extras/goblet/color5.png",
+                "/extras/goblet/b1.png", "/extras/goblet/b2.png"
+      ],
+      description: "Typography, printing, and book binding",
+      title: "The Crystal Goblet"
+    },
+    {
+      id: "ticket",
+      coverImage: "/extras/ticket.png",
+      images: [],
+      description: "",
+      title: "XYV Music Festival Ticket Concept"
+    },
+    {
+      id: "antparty",
+      coverImage: "/extras/ant_party.png",
+      images: [],
+      description: "",
+      title: "ANT PARTY Card Concept"
+    },
+    {
+      id: "paper",
+      coverImage: "/extras/paper/img1.png",
+      images: ["/extras/paper/img2.png", "/extras/paper/img3.png", "/extras/paper/img4.png"],
+      description: "Form + Type + Image, Photography Practice",
+      title: "Light and Shadow Paper Photography"
     },
   ];
 
@@ -315,6 +371,7 @@ export default function ExtrasPage() {
         onClose={() => setActive(null)}
         coverImage={active?.coverImage ?? ""}
         images={active?.images ?? []}
+        video={active?.video ?? "" }
         description={active?.description ?? ""}
         title={active?.title ?? ""}
       />

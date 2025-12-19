@@ -88,7 +88,7 @@ export default function ProjectDetailPage() {
                       <span className="font-semibold text-white whitespace-nowrap">Check out the project:</span>
                     <a href={link} target="_blank" rel="noopener noreferrer" 
                       className="cursor-pointer flex items-center font-nhgText pl-8 md:pl-4 w-full text-white text-sm md:text-md ">
-                      HERE
+                      {link}
                     </a>
                   </div>
                 )}

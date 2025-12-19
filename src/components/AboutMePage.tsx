@@ -61,7 +61,7 @@ export default function AboutMePage() {
             <div className="border border-white/10 rounded-xl bg-white/10 p-6 pb-8 mt-20 lg:mt-40">
               <div className="flex flex-col items-start justify-between gap-10">
                 <div>
-                  <div className="flex gap-2 mb-2 justify-center">
+                  <div className="flex gap-2 mb-2 mt-4 justify-center">
                     <h3 className="rounded-full bg-white font-semibold px-4 py-1 text-lg tracking-wider text-black">
                       Tools I Use:
                     </h3>
