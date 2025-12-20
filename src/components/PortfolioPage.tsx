@@ -30,7 +30,7 @@ function Hero() {
       {/* Full-bleed background */}
       <video
         ref={videoRef}
-        src={`${import.meta.env.BASE_URL}/Hero.mp4`}
+        src={`${import.meta.env.BASE_URL}Hero.mp4`}
         className="absolute inset-0 h-full w-auto min-w-full object-cover bg-center bg-no-repeat"
         muted
         autoPlay
