@@ -294,7 +294,7 @@ export default function ExtrasPage() {
     {
       id: "antparty",
       coverImage: "/extras/ant_party.png",
-      images: ["extras/Garden"],
+      images: ["extras/Garden_Card2.png"],
       description: "Business card concepts",
       title: "ANT PARTY Card Concept"
     },
