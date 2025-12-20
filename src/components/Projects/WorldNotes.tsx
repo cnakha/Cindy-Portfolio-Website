@@ -55,7 +55,7 @@ export default function WorldNotes() {
           <div className="scrollable-panel relative h-full lg:overflow-hidden overflow-x-auto">
             <div className="relative h-full aspect-[22/15] overflow-hidden">
               <img
-                src={"/worldnotes/traversal.png"}
+                src={`${import.meta.env.BASE_URL}/worldnotes/traversal.png`}
                 alt={`Note Traversal and Discovery`}
                 className="absolute inset-0 h-full w-full object-cover"
               />
@@ -74,7 +74,7 @@ export default function WorldNotes() {
           <div className="scrollable-panel relative h-full lg:overflow-hidden overflow-x-auto">
             <div className="h-full aspect-[22/15]">
               <img
-                src="/worldnotes/post_viewer.png"
+                src={`${import.meta.env.BASE_URL}/worldnotes/post_viewer.png`}
                 alt="Note Traversal and Discovery"
                 className="h-full w-full object-cover"
               />
@@ -104,7 +104,7 @@ export default function WorldNotes() {
           <div className="scrollable-panel relative h-full lg:overflow-hidden overflow-x-auto">
           <div className="relative h-full aspect-[22/15] overflow-hidden">
             <img
-              src={"/worldnotes/profile.png"}
+              src={`${import.meta.env.BASE_URL}/worldnotes/profile.png`}
               alt={`Note Traversal and Discovery`}
               className="absolute inset-0 h-full w-full object-cover"
             />
@@ -123,7 +123,7 @@ export default function WorldNotes() {
             <div className="scrollable-panel relative h-full lg:overflow-hidden overflow-x-auto">
               <div className="h-full aspect-[22/15]">
                 <img
-                  src={"/worldnotes/creator.png"}
+                  src={`${import.meta.env.BASE_URL}/worldnotes/creator.png`}
                   alt={`Note Traversal and Discovery`}
                   className="h-full w-full object-cover"
                 />
@@ -202,7 +202,7 @@ export default function WorldNotes() {
         </p>
         <div className=" mt-10 relative aspect-[24/10] overflow-hidden rounded-t-lg">
           <img
-            src={"/worldnotes/user_flow.png"}
+            src={`${import.meta.env.BASE_URL}/worldnotes/user_flow.png`}
             alt={`Flowchart of Webflow`}
             className="absolute inset-0 h-full w-full object-cover cursor-pointer hover:scale-105 transition"
             onClick={() => setShowPopup(true)}
@@ -214,7 +214,7 @@ export default function WorldNotes() {
                 onClick={() => setShowPopup(false)}
             >
               <img
-                src={"/worldnotes/user_flow.png"}
+                src={`${import.meta.env.BASE_URL}/worldnotes/user_flow.png`}
                 alt={`App Structure Enlarged`}
                 className="max-h-[90vh] max-w-[90vw] shadow-lg "
                 onClick={e => e.stopPropagation()}
@@ -236,7 +236,7 @@ export default function WorldNotes() {
         </p>
         <div className="mt-10 relative aspect-[21/8] overflow-hidden rounded-t-lg">
           <img
-            src={"/worldnotes/wireframing.png"}
+            src={`${import.meta.env.BASE_URL}/worldnotes/wireframing.png`}
             alt={`Wireframe`}
             className="absolute inset-0 h-full w-full object-cover"
           />
@@ -255,7 +255,7 @@ export default function WorldNotes() {
 
         <div className=" mt-10 relative aspect-[21/8] overflow-hidden rounded-t-lg">
           <img
-            src={"/worldnotes/UI_Design.png"}
+            src={`${import.meta.env.BASE_URL}/worldnotes/UI_Design.png0`}
             alt={`UI Design`}
             className="absolute inset-0 h-full w-full object-cover"
           />

@@ -99,7 +99,7 @@ export default function ProjectDetailPage() {
                 </h3>
                 <div className=" mt-5 relative aspect-[21/13] overflow-hidden rounded-lg">
                     <video
-                        src={'/YCGH/YCGH_Concept_Vid.mp4'}
+                        src={`${import.meta.env.BASE_URL}/YCGH/YCGH_Concept_Vid.mp41`}
                         controls
                         autoPlay
                     />
@@ -110,7 +110,7 @@ export default function ProjectDetailPage() {
               <div className="mx-auto mt-10">
                 <div className="overflow-hidden  border border-white/20 rounded-lg">
                   <img
-                    src={`${project.imageUrl2}`}
+                    src={`${import.meta.env.BASE_URL}${project.imageUrl2}`}
                     alt="Project mock"
                     className="h-auto w-full object-cover"
                   />

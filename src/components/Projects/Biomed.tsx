@@ -200,14 +200,14 @@ function BiomedProjectsTabs() {
                       <div className="flex flex-col">
                       <div className=" mt-5 mx-10 relative aspect-[26/14] overflow-hidden">
                           <video
-                              src={'/biomed_devices/motionSense.mp4'}
+                              src={`${import.meta.env.BASE_URL}/biomed_devices/motionSense.mp4`}
                               loop
                               autoPlay
                               muted
                           />
                       </div>
                       <img
-                        src="/biomed_devices/p1.png"
+                        src={`${import.meta.env.BASE_URL}/biomed_devices/p1.png`}
                         alt="MotionSense prototype"
                         className="object-cover w-full h-full mt-4"
                       />
@@ -268,7 +268,7 @@ function BiomedProjectsTabs() {
 
                   <div className="relative mt-5 md:mt-0 aspect-[5/12] overflow-hidden rounded-[12px] flex justify-center">
                     <motion.img
-                      src="/biomed_devices/p2_vert.png"
+                      src={`${import.meta.env.BASE_URL}/biomed_devices/p2_vert.png`}
                       alt="SparkBeat 2 prototype"
                       className="object-cover w-full h-full"
                       initial={{ opacity: 0, scale: 0.98 }}
@@ -329,7 +329,7 @@ function BiomedProjectsTabs() {
 
                   <div className="relative mt-5 md:mt-0 aspect-[6/10] overflow-hidden rounded-[12px] flex justify-center">
                     <motion.img
-                      src="/biomed_devices/p4_vert.png"
+                      src={`${import.meta.env.BASE_URL}/biomed_devices/p4_vert.png`}
                       alt="SparkBeat prototype"
                       className="object-cover w-full h-full"
                       initial={{ opacity: 0, scale: 0.98 }}
@@ -390,7 +390,7 @@ function BiomedProjectsTabs() {
 
                   <div className="relative mt-5 md:mt-0 aspect-[4/10] overflow-hidden flex justify-center">
                     <motion.img
-                      src="/biomed_devices/p3_vert.png"
+                      src={`${import.meta.env.BASE_URL}/biomed_devices/p3_vert.png`}
                       alt="Smart Shoe prototype"
                       className="object-cover w-full h-full"
                       initial={{ opacity: 0, scale: 0.98 }}
@@ -452,7 +452,7 @@ function BiomedProjectsTabs() {
 
                   <div className="flex mt-10 md:mt-0 flex-col gap-5 relative aspect-[5/10] overflow-hidden justify-center">
                     <motion.video
-                      src="/biomed_devices/Tiktok_demo.mp4"
+                      src={`${import.meta.env.BASE_URL}/biomed_devices/Tiktok_demo.mp4`}
                       className="object-cover w-full h-full px-10 rounded-[12px]"
                       muted
                       autoPlay
@@ -461,7 +461,7 @@ function BiomedProjectsTabs() {
                       animate={{ opacity: 1, scale: 1, transition: { duration: 0.45 } }}
                     />
                     <motion.img
-                      src="/biomed_devices/p5.png"
+                      src={`${import.meta.env.BASE_URL}/biomed_devices/p5.png`}
                       alt="TikTok tattoo prototype"
                       className="object-cover w-full h-full"
                       initial={{ opacity: 0, scale: 0.98 }}
@@ -581,7 +581,7 @@ export default function Biomed() {
         <div className="max-w-2xl ml-[25%]">
           <div className="mt-10 relative aspect-[23/12] overflow-hidden rounded-t-lg">
             <img
-              src={"/biomed_devices/circuit_diagram.png"}
+              src={`${import.meta.env.BASE_URL}/biomed_devices/circuit_diagram.png`}
               alt={`Circuit Diagram`}
               className="absolute inset-0 h-full w-full object-cover"
             />

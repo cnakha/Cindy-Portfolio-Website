@@ -1,4 +1,3 @@
-// src/components/routing/HashScroll.tsx
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -7,6 +6,7 @@ export default function HashScroll() {
 
   useEffect(() => {
     if (!hash) return;
+    
     // delay to ensure the DOM of the target page is painted
     const id = hash.replace("#", "");
     const t = setTimeout(() => {

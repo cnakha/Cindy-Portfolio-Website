@@ -161,7 +161,7 @@ function ExtraProjectModal({
               {video && (
                 <div className=" mt-5 relative aspect-[21/13] overflow-hidden rounded-lg">
                   <video
-                    src={video}
+                    src={`${import.meta.env.BASE_URL}${video}`}
                     controls
                     autoPlay
                   />
@@ -176,7 +176,7 @@ function ExtraProjectModal({
                   "
                 >
                   <img
-                    src={src}
+                    src={`${import.meta.env.BASE_URL}#{src}`}
                     alt={`Project image ${idx + 1}`}
                     loading="lazy"
                     className="block w-full h-auto object-contain"
@@ -343,7 +343,7 @@ export default function ExtrasPage() {
                 aria-label={`Open project ${i + 1}`}
               >
                 <img
-                  src={item.coverImage}
+                  src={`${import.meta.env.BASE_URL}${item.coverImage}`}
                   alt={`Extra ${i + 1}`}
                   className="
                     w-full h-auto

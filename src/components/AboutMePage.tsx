@@ -13,7 +13,7 @@ export default function AboutMePage() {
               <div className="mt-10 text-2xl">
                 <div className="flex gap-8 items-end">
                     <img
-                        src={"/about/img1.jpg"}
+                        src={`${import.meta.env.BASE_URL}/about/img1.jpg`}
                         alt={`Photo of me`}
                         className="w-[35%] h-auto block rounded-full border border-white/10"
                         loading="lazy"
@@ -31,7 +31,7 @@ export default function AboutMePage() {
                     </div>
                 </div>
                 <img
-                    src={"/about/wood.jpg"}
+                    src={`${import.meta.env.BASE_URL}/about/wood.jpg`}
                     alt={`Photo of me`}
                     className="w-full h-auto block rounded-full mt-8 border border-white/10"
                     loading="lazy"
@@ -43,7 +43,7 @@ export default function AboutMePage() {
                   write, sing, draw, and do theatre!
                 </p>
                 <img
-                    src={"/about/vancouver.jpg"}
+                    src={`${import.meta.env.BASE_URL}/about/vancouver.jpg`}
                     alt={`Photo of me`}
                     className="w-full h-auto block rounded-full mt-2 border border-white/10"
                     loading="lazy"

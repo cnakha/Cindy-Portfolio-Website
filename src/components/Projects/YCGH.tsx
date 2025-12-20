@@ -25,7 +25,7 @@ export default function YCGH() {
                 </h3>
                 <div className=" mt-5 relative aspect-[21/13] overflow-hidden rounded-lg">
                     <video
-                        src={'/YCGH/YCGH_Video_Documentation_FINAL.mp4'}
+                        src={`${import.meta.env.BASE_URL}/YCGH/YCGH_Video_Documentation_FINAL.mp4`}
                         controls
                     />
                 </div>
@@ -33,7 +33,7 @@ export default function YCGH() {
            
             <div className="mt-5 relative aspect-[10/5] overflow-hidden rounded-t-lg">
                 <img
-                    src={pictures[current]}
+                    src={`${import.meta.env.BASE_URL}${pictures[current]}`}
                     alt={`YCGH Interaction`}
                     className="absolute inset-0 h-full w-full object-cover"
                 />
@@ -84,7 +84,7 @@ export default function YCGH() {
                     </div>      
                     <div className="relative overflow-hidden rounded-lg">
                         <img
-                            src={"/YCGH/2025_SIGGRAPH_POSTER_YCGH_Final.png"}
+                            src={`${import.meta.env.BASE_URL}/YCGH/2025_SIGGRAPH_POSTER_YCGH_Final.png`}
                             alt={`YCGH Poster`}
                             className=" object-cover cursor-pointer transform transition-transform duration-600 ease-in-out hover:scale-105"
                             onClick={() => setShowPopup(true)}
@@ -95,7 +95,7 @@ export default function YCGH() {
                                 onClick={() => setShowPopup(false)}
                             >
                                 <img
-                                    src={"/YCGH/2025_SIGGRAPH_POSTER_YCGH_Final.png"}
+                                    src={`${import.meta.env.BASE_URL}/YCGH/2025_SIGGRAPH_POSTER_YCGH_Final.png`}
                                     alt={`YCGH Poster Enlarged`}
                                     className="max-h-[90vh] max-w-[90vw] shadow-lg"
                                     onClick={e => e.stopPropagation()}

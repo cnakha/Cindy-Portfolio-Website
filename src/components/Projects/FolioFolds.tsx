@@ -50,7 +50,7 @@ const accessibillity = [
           <div className="scrollable-panel relative h-full lg:overflow-hidden overflow-x-auto">
             <div className="relative h-full aspect-[22/15] overflow-hidden">
               <img
-                src={"/foliofolds/landing.png"}
+                src={`${import.meta.env.BASE_URL}/foliofolds/landing.png`}
                 alt={`Note Traversal and Discovery`}
                 className="absolute inset-0 h-full w-full object-cover"
               />
@@ -69,7 +69,7 @@ const accessibillity = [
           <div className="scrollable-panel relative h-full lg:overflow-hidden overflow-x-auto">
             <div className="h-full aspect-[22/15]">
               <img
-                src="/foliofolds/folding.png"
+                src={`${import.meta.env.BASE_URL}/foliofolds/folding.png`}
                 alt="Note Traversal and Discovery"
                 className="h-full w-full object-cover"
               />
@@ -100,7 +100,7 @@ const accessibillity = [
 
           <div className="relative h-full aspect-[22/15] overflow-hidden">
             <img
-              src={"/foliofolds/move.png"}
+              src={`${import.meta.env.BASE_URL}/foliofolds/move.png`}
               alt={`Note Traversal and Discovery`}
               className="absolute inset-0 h-full w-full object-cover"
             />
@@ -119,7 +119,7 @@ const accessibillity = [
           <div className="scrollable-panel relative h-full lg:overflow-hidden overflow-x-auto">
             <div className="h-full aspect-[22/15]">
             <img
-              src={"/foliofolds/cutting.png"}
+              src={`${import.meta.env.BASE_URL}/foliofolds/cutting.png`}
               alt={`Note Traversal and Discovery`}
                 className="h-full w-full object-cover"
             />
@@ -148,7 +148,7 @@ const accessibillity = [
 
           <div className="relative h-full aspect-[22/15] overflow-hidden">
             <img
-              src={"/foliofolds/share.png"}
+              src={`${import.meta.env.BASE_URL}/foliofolds/share.png`}
               alt={`Note Traversal and Discovery`}
               className="absolute inset-0 h-full w-full object-cover"
             />

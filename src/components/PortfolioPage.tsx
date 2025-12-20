@@ -30,7 +30,7 @@ function Hero() {
       {/* Full-bleed background */}
       <video
         ref={videoRef}
-        src={'/Hero.mp4'}
+        src={`${import.meta.env.BASE_URL}/Hero.mp4`}
         className="absolute inset-0 h-full w-auto min-w-full object-cover bg-center bg-no-repeat"
         muted
         autoPlay
@@ -106,7 +106,7 @@ function FeaturedProjectBlock({
         >
           <div className="relative aspect-[20/7] overflow-hidden">
             <img
-              src={`${project.imageUrl}`}
+              src={`${import.meta.env.BASE_URL}${project.imageUrl}`}
               alt={`${project.id} preview`}
               className="absolute inset-0 h-full w-full object-cover transform transition duration-500 ease-in-out group-hover:scale-105"
             />
