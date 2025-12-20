@@ -199,7 +199,7 @@ export default function ExtrasPage() {
   const extras: ExtraProject[] = [
     {
       id: "time-poster",
-      coverImage: "/extras/Time_Poster.png",
+      coverImage: "extras/Time_Poster.png",
       images: [],
       description: "Composition and photo editing practice and study.",
       title: "Fluid Time Poster",

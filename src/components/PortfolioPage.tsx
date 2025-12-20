@@ -7,7 +7,8 @@ import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 
 
-// import Curve from "../assets/grouping_curve.svg";
+export const asset = (p: string) =>
+  new URL(p, import.meta.env.BASE_URL).toString();
 
 function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
