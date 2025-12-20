@@ -32,10 +32,10 @@ export default function ProjectDetailPage() {
 
   const {
     title,
-    description,
-    category,
+    // description,
+    // category,
     githubUrl,
-    imageUrl,
+    // imageUrl,
     vid,
     fullDescription,
     status,
@@ -68,9 +68,9 @@ export default function ProjectDetailPage() {
               Return to homepage
             </button>
 
-            <h3 className="mt-4 font-nhgDisplay text-5xl md:text-6xl leading-[1.25] ">{project.title}</h3>
+            <h3 className="mt-4 font-nhgDisplay text-5xl md:text-6xl leading-[1.25] ">{title}</h3>
              <h4 className="font-nhgDisplay mt-20 font-semibold">Overview</h4>
-              <p className="font-nhgMono mt-2 opacity-90 text-xl md:text-2xl">{project.fullDescription}</p>
+              <p className="font-nhgMono mt-2 opacity-90 text-xl md:text-2xl">{fullDescription}</p>
 
                 {status && (
               <div className="mt-10 flex w-full rounded-full bg-black p-4 px-6 border border-white/10">
@@ -92,7 +92,7 @@ export default function ProjectDetailPage() {
                     </a>
                   </div>
                 )}
-            {project.vid ? (
+            {vid ? (
             <div className=" mx-auto mt-10">
                 <h3 className="mt-16 text-2xl">
                     Concept Video

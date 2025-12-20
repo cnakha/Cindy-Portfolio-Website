@@ -233,7 +233,10 @@ export default function AboutMeCarousel({slideNumber,  setSlideNumber, isPlaying
             <div className="opacity-40 hover:opacity-90 transition ease-in-out duration-500">
               <button
                 className="inline-flex items-center text-xl text-white pb-2"
-                onClick={() => {nextSlide(); setSlideNumber((i) => (i + 1) % slides.length);}}
+                onClick={() => {
+                  nextSlide();
+                  setSlideNumber((idx + 1) % slides.length);
+                }}
               >
                 <p className="ml-1 mr-1">More about me</p>
                 <Triangle className=" h-5 w-5 rotate-90 fill-white stroke-none" />

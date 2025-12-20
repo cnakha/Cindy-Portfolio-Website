@@ -4,6 +4,7 @@ import AboutMeCarousel from "./AboutMeCarousel";
 import Footer from "./Footer";
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 
 
 // import Curve from "../assets/grouping_curve.svg";
@@ -11,7 +12,7 @@ import { motion } from "framer-motion";
 function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
-  const [slideNumber, setSlideNumber] = useState(0);
+  const [slideNumber, setSlideNumber] = useState<number>(0);
 
   const handlePlayPause = () => {
     if (!videoRef.current) return;
@@ -68,18 +69,21 @@ function FeaturedProjectBlock({
 }) {
 
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+  const easeOutExpo: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 18 },
     show: (i: number) => ({
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut",
-        delay: i * 0.25, // spacing between siblings, but only after THIS one is in view
+        ease: easeOutExpo,
+        delay: i * 0.06,
       },
     }),
   };
+
 
   return (
     <motion.div

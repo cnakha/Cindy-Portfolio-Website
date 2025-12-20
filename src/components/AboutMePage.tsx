@@ -1,7 +1,4 @@
-import React, { useState } from "react";
 import Footer from "./Footer";
-
-
 
 export default function AboutMePage() {
 

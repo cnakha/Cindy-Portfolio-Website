@@ -1,11 +1,8 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import type { Variants } from "framer-motion";
 
-
-function Line(){
-  return <div className="mt-20 h-[1px] w-full bg-black/50" />
-}
 
 function BiomedProjectsTabs() {
   const [active, setActive] = useState<TabKey>("motionsense");
@@ -19,10 +16,18 @@ function BiomedProjectsTabs() {
       { key: "tiktok",      label: "TikTok Tattoo" },
     ];
 
-    const fadeSlide = {
-      initial: { opacity: 0, y: 12 },
-      animate: { opacity: 1, y: 0, transition: { duration: 0.45, ease: "easeOut" } },
-      exit:    { opacity: 0, y: -8, transition: { duration: 0.25, ease: "easeIn" } },
+    // const fadeSlide = {
+    //   initial: { opacity: 0, y: 12 },
+    //   animate: { opacity: 1, y: 0, transition: { duration: 0.45, ease: "easeOut" } },
+    //   exit:    { opacity: 0, y: -8, transition: { duration: 0.25, ease: "easeIn" } },
+    // };
+
+    const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
+    const fadeSlide: Variants = {
+      initial: { opacity: 0, y: 16 },
+      animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: EASE } },
+      exit: { opacity: 0, y: -16, transition: { duration: 0.35, ease: EASE } },
     };
 
     const MotionSenseHardware = [
@@ -186,7 +191,12 @@ function BiomedProjectsTabs() {
                   </div>
 
                   <div className="relative mt-5 md:mt-0 aspect-[4/12] overflow-hidden flex justify-center">
-                    <motion.div>
+                    <motion.div
+                      variants={fadeSlide}
+                      initial="initial"
+                      animate="animate"
+                      exit="exit"
+                    >
                       <div className="flex flex-col">
                       <div className=" mt-5 mx-10 relative aspect-[26/14] overflow-hidden">
                           <video
@@ -200,8 +210,6 @@ function BiomedProjectsTabs() {
                         src="/biomed_devices/p1.png"
                         alt="MotionSense prototype"
                         className="object-cover w-full h-full mt-4"
-                        initial={{ opacity: 0, scale: 0.98 }}
-                        animate={{ opacity: 1, scale: 1, transition: { duration: 0.45 } }}
                       />
                       </div>
                     </motion.div>

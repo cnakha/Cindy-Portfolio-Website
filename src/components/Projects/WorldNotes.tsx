@@ -36,20 +36,6 @@ export default function WorldNotes() {
     'Inspired the drawing experience. I intentionally leaned into primitive, playful tools, which lower barriers to entry and make creation fun rather than intimidating.'
   ];
 
-  const MapLogistics = [
-    "Syncing camera movements with note placement",
-    "Converting lat/lng + orientation metadata into UI positioning",
-    "Smoothing transitions between map view and Street View",
-    "Ensuring performance by throttling pan/zoom events",
-  ];
-
-  const NoteQualities = [
-    "User information (username, display name, profile reference)",
-    "Title, description, hashtags",
-    "Location metadata (lat, lng, heading, pitch, angle)",
-    "Optional image URLs",
-    "Timestamps",
-  ];
 
   return (
     <section className="mt-40 mb-40">
