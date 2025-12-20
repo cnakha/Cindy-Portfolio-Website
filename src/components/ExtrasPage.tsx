@@ -199,7 +199,7 @@ export default function ExtrasPage() {
   const extras: ExtraProject[] = [
     {
       id: "time-poster",
-      coverImage: "/extras/Time_Poster.png",
+      coverImage: "extras/Time_Poster.png",
       images: [],
       description: "Composition and photo editing practice and study.",
       title: "Fluid Time Poster",
@@ -250,7 +250,7 @@ export default function ExtrasPage() {
     {
       id: "countdown",
       coverImage: "/extras/countdown/10_style_frame.jpg",
-      video: "extras/countdown/Bug_Countdown.mp4",
+      video: "/extras/countdown/Bug_Countdown.mp4",
       images: ["extras/countdown/10_sb.jpg", "extras/countdown/3_Style_Frame.jpg", "extras/countdown/3_sb.jpg",
                "extras/countdown/4_Style_Frame.jpg", "extras/countdown/6_style_frame.jpg", "extras/countdown/7_style_frame.jpg"
       ],
@@ -294,8 +294,8 @@ export default function ExtrasPage() {
     {
       id: "antparty",
       coverImage: "/extras/ant_party.png",
-      images: [],
-      description: "Business card concept",
+      images: ["extras/Garden"],
+      description: "Business card concepts",
       title: "ANT PARTY Card Concept"
     },
     {
