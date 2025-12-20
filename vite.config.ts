@@ -1,7 +1,7 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: import.meta.env.VITE_BASE ?? "/",
+  base: "/Cindy-Portfolio-Website/",
   plugins: [react()],
-});
+})
