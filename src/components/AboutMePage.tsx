@@ -31,7 +31,7 @@ export default function AboutMePage() {
                     </div>
                 </div>
                 <img
-                    src={`${import.meta.env.BASE_URL}/about/wood.jpg`}
+                    src={`${import.meta.env.BASE_URL}/about/vancouver.jpg`}
                     alt={`Photo of me`}
                     className="w-full h-auto block rounded-full mt-8 border border-white/10"
                     loading="lazy"
@@ -43,7 +43,7 @@ export default function AboutMePage() {
                   write, sing, draw, and do theatre!
                 </p>
                 <img
-                    src={`${import.meta.env.BASE_URL}/about/vancouver.jpg`}
+                    src={`${import.meta.env.BASE_URL}/about/wood.jpg`}
                     alt={`Photo of me`}
                     className="w-full h-auto block rounded-full mt-2 border border-white/10"
                     loading="lazy"
@@ -56,8 +56,14 @@ export default function AboutMePage() {
           {/* Right column (Tools card) */}
           <div className="w-full md:w-[550px]">
             <div className="border border-white/10 rounded-xl bg-white/10 p-6 pb-8 mt-20 lg:mt-40">
-              <div className="flex flex-col items-start justify-between gap-10">
-                <div>
+              <div className="flex flex-col items-center justify-center gap-10">
+                {/* <img
+                    src={`${import.meta.env.BASE_URL}/about/grad.png`}
+                    alt={`Photo of me`}
+                    className="w-[55%] h-auto block rounded-full mt-8 border border-white/10"
+                    loading="lazy"
+                  /> */}
+                <div className="flex flex-col items-start">
                   <div className="flex gap-2 mb-2 mt-4 justify-center">
                     <h3 className="rounded-full bg-white font-semibold px-4 py-1 text-lg tracking-wider text-black">
                       Tools I Use:

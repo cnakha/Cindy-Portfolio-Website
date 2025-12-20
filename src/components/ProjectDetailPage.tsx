@@ -85,7 +85,7 @@ export default function ProjectDetailPage() {
                 )}
                  {link && (
               <div className="mt-10 flex w-full rounded-full bg-black p-4 px-6 border border-white/10">
-                      <span className="font-semibold text-white whitespace-nowrap">Check out the project:</span>
+                      <span className="font-semibold text-white whitespace-nowrap">Check out the project!</span>
                     <a href={link} target="_blank" rel="noopener noreferrer" 
                       className="cursor-pointer flex items-center font-nhgText pl-8 md:pl-4 w-full text-white text-sm md:text-md ">
                       {link}
@@ -99,7 +99,7 @@ export default function ProjectDetailPage() {
                 </h3>
                 <div className=" mt-5 relative aspect-[21/13] overflow-hidden rounded-lg">
                     <video
-                        src={`${import.meta.env.BASE_URL}/YCGH/YCGH_Concept_Vid.mp41`}
+                        src={`${import.meta.env.BASE_URL}YCGH/YCGH_Concept_Vid.mp4`}
                         controls
                         autoPlay
                     />
