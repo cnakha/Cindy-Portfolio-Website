@@ -12,6 +12,7 @@ export default function YCGH() {
         "/YCGH/interaction3.jpg",
         "/YCGH/interaction4.jpeg",
     ];
+    const doc_vid = "https://firebasestorage.googleapis.com/v0/b/portfolio-website-6baaf.firebasestorage.app/o/portfolio_videos%2FYCGH_Video_Documentation_FINAL.mp4?alt=media&token=c72fad37-0a48-4ad6-b566-d1aaeb8d9641";
 
     const nextPic = () => setCurrent((current + 1) % pictures.length);
     const prevPic = () => setCurrent((current - 1 + pictures.length) % pictures.length);
@@ -25,8 +26,10 @@ export default function YCGH() {
                 </h3>
                 <div className=" mt-5 relative aspect-[21/13] overflow-hidden rounded-lg">
                     <video
-                        src={`${import.meta.env.BASE_URL}/YCGH/YCGH_Video_Documentation_FINAL.mp4`}
+                        src={doc_vid}
                         controls
+                        preload="metadata"
+
                     />
                 </div>
               </div>

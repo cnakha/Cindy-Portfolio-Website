@@ -4,65 +4,63 @@ export default function AboutMePage() {
 
   return (
     <main className="relative min-h-screen w-full overflow-x-hidden bg-black">
-      <div className="mx-auto mt-10 w-full px-[10%] pb-10">
-        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10 py-20">
+      <div className="flex justify-center mx-auto w-full px-[10%] pb-10 bg-white/10 mt-40">
+        <div className="flex flex-col lg:flex-row lg:items-start justify-center gap-10 py-20 pt-10">
+          
           {/* Left column (About paragraphs) */}
-          <div className="w-full md:flex-1">
-            <div className="max-w-xl w-full rounded-2xl overflow-hidden">
+          <div className="">
+            <div className="max-w-2xl w-full overflow-hidden">
               
-              <div className="mt-10 text-2xl">
-                <div className="flex gap-8 items-end">
+              <div className="mt-10 ">
+                 <h1 className="font-nhgDisplay text-6xl lg:text-7xl text-white mb-6 md:mb-10 md:hidden">
+                    About Me
+                </h1>
+                <div className="flex flex-col md:flex-row gap-8 items-center">
                     <img
                         src={`${import.meta.env.BASE_URL}/about/img1.jpg`}
                         alt={`Photo of me`}
-                        className="w-[35%] h-auto block rounded-full border border-white/10"
+                        className="w-[35%] h-auto block rounded-full border border-white/10 mt-4 md:mt-0"
                         loading="lazy"
                     />
-                    <div className="flex flex-col">
-                        <h1 className="font-nhgDisplay text-4xl md:text-6xl text-white mb-10">
-                            About Me
-                        </h1>
-                        <p className="font-nhgText text-sm md:text-xl text-white/90 mb-8">
-                        Hi! I'm Cindy Nakhammouane, a fullstack developer and UI/UX
-                        designer currently enrolled in my fourth year at the University
-                        of Illinois Chicago and studying{" "}
-                        <span className="font-semibold">Computer Science and Design</span>.
+                    <div className="flex flex-col gap-4 ">
+                      <h1 className="font-nhgDisplay text-6xl lg:text-7xl text-white mb-6 md:mb-10 hidden md:block">
+                          About Me
+                      </h1>
+                        <p className="font-nhgText text-[16px] md:text-xl text-white/90 mb-4">
+                          Hi! I'm Cindy Nakhammouane, a <span className="font-semibold text-blue-haze-light">Fullstack Developer and UI/UX
+                          Designer</span> currently enrolled in my fourth year at the University
+                          of Illinois Chicago and studying{" "}
+                          <span className="font-semibold text-blue-haze-light">Computer Science and Design</span>.
                         </p>
                     </div>
                 </div>
-                <img
-                    src={`${import.meta.env.BASE_URL}/about/vancouver.jpg`}
-                    alt={`Photo of me`}
-                    className="w-full h-auto block rounded-full mt-8 border border-white/10"
-                    loading="lazy"
-                  />
-                <p className="font-nhgText text-sm md:text-xl text-white/90 py-8">
+                <p className="font-nhgText text-[16px] md:text-xl text-white/90 py-4">
                   I love creative technology and exploring career paths in fullstack 
                   and web app development, project management, and UI/UX design.
                   In my free time, besides coding, I love to travel, watch movies,
                   write, sing, draw, and do theatre!
                 </p>
-                <img
-                    src={`${import.meta.env.BASE_URL}/about/wood.jpg`}
+                 <img
+                    src={`${import.meta.env.BASE_URL}/about/vancouver.jpg`}
                     alt={`Photo of me`}
-                    className="w-full h-auto block rounded-full mt-2 border border-white/10"
+                    className="w-full h-auto block rounded-full mt-4 border border-white/10"
                     loading="lazy"
-                  />
-              
+                  />              
               </div>
             </div>
           </div>
 
           {/* Right column (Tools card) */}
-          <div className="w-full md:w-[550px]">
-            <div className="border border-white/10 rounded-xl bg-white/10 p-6 pb-8 mt-20 lg:mt-40">
+          <div className="flex justify-center">
+          <div className="flex flex-col gap-8 w-full md:max-w-[550px] min-w-[350px]">
+            <img
+              src={`${import.meta.env.BASE_URL}/about/wood.jpg`}
+              alt={`Photo of me`}
+              className="w-full h-auto block rounded-full lg:mt-[10%] border border-white/10 "
+              loading="lazy"
+            />
+            <div className="border border-white/10 rounded-xl bg-black p-6 pb-8">
               <div className="flex flex-col items-center justify-center gap-10">
-                {/* <img
-                    src={`${import.meta.env.BASE_URL}/about/grad.png`}
-                    alt={`Photo of me`}
-                    className="w-[55%] h-auto block rounded-full mt-8 border border-white/10"
-                    loading="lazy"
-                  /> */}
                 <div className="flex flex-col items-start">
                   <div className="flex gap-2 mb-2 mt-4 justify-center">
                     <h3 className="rounded-full bg-white font-semibold px-4 py-1 text-lg tracking-wider text-black">
@@ -134,6 +132,7 @@ export default function AboutMePage() {
                 </div>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </div>

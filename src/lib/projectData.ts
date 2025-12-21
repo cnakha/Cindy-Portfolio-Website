@@ -31,7 +31,7 @@ export const projects: Project[] = [
   id: "worldnotes",
   title: "WorldNotes: Global Canvas for Creative Expression",
   timeline: "June 2025 — Present",
-  description: "Blurring the line between social platform and digital graffiti, explore the world through notes and doodles left behind by others on a street map view.",
+  description: "Blurring the line between social platform and digital graffiti, explore the world through 3D notes and doodles left behind by others on a street map view.",
   category: "Fullstack Web Development and UI/UX Design for a Creative Social Media App",
   fullDescription:
     "WorldNotes is a spatial web experiment blending maps, art, and 3D spaces. Users create notes by sharing thoughts and doodles, then post and anchor them to a globally shared street view map. Designed for casual web strolling, this web app fuels the creative spirit, gifts serendipitous discovery, and builds a global community centering authentic creative expression.",
@@ -96,7 +96,7 @@ export const projects: Project[] = [
   {
     id: "forecaster",
     title: "Chicago Traffic Commute Time Forecaster",
-    description: "Website hosting, training regression models on historic Chicago traffic data, and integrated UI with FastAPI and RESTAPI",
+    description: "Training regression models on historic Chicago traffic data, integratiing UI with FastAPI and RESTAPI, website hosting exploration",
     category: "Fullstack Development, Machine Learning, Linear Regression, and UI and User Experience Design",
     fullDescription: "An interactive web application that predicts commute times in Chicago using historic congestion patterns, route distance, and contextual travel conditions. The tool helps commuters visualize how traffic impacts travel time and compares a simple baseline estimate against a machine-learned prediction.",
     tools: ["React", "Javascript", "Tailwind", "FastAPI", "Python", "REST API", "Figma", "Scikit-learn", "Linear Regression", "Random Forest", "XGBoost", "Pandas", "NumPy"],
@@ -116,9 +116,9 @@ export const projects: Project[] = [
   {
     id: "YCGH",
     title: "You Can Grow Here: A Therapeutic VR Journey for Anxiety Management",
-    description: "Theatrical storytelling, typographic design, and evidence-based wellness techniques to guide users in anxiety relief (Presented at SIGGRAPH 2025).",
+    description: "Published research, theatrical storytelling, typographic design, and evidence-based wellness techniques to guide users in anxiety relief (Presented at SIGGRAPH 2025).",
     category: "VR Application and Research Paper on VR Applications Centering Health and Well-Being Presented at SIGGRAPH 2025 Convention",
-    fullDescription: "You Can Grow Here is an immersive VR experience developed for and exhibited at the CAVE2™ environment in the Electronic Visualization Labratory at the University of Illinois Chicago, aligning with the United Nation's Sustainable Development Goal of Good Health and Well-Being. In response to the mental health challenges intensified by the COVID-19 pandemic, the project explores how interactive storytelling, ambient sound, and 3D typography can support emotional reflection and teach anxiety coping strategies. Built in Unity with custom assets from Blender and Maya, the experience differs from most clinical VR programs, allowing users to independently explore emotions, manage anxiety, and practice evidence-based calming techniques within a safe, narrative-driven space that builds emotional resilience.",
+    fullDescription: "You Can Grow Here is an immersive VR experience developed for and exhibited at the CAVE2™ environment in the Electronic Visualization Labratory at the University of Illinois Chicago, aligning with the United Nation's Sustainable Development Goal of Good Health and Well-Being. In response to the mental health challenges intensified by the COVID-19 pandemic, the project explores how interactive storytelling, ambient sound, and 3D typography can support emotional reflection, explore modes of group therapy, and teach anxiety coping strategies. Built in Unity with custom assets from Blender and Maya, the experience differs from most clinical VR programs, allowing users to independently explore emotions, manage anxiety, and practice evidence-based calming techniques within a safe, narrative-driven space that builds emotional resilience.",
     features: [
       "Interactive 3D Typography",
       "Immersive 3D Environments",
@@ -189,6 +189,26 @@ export const projects: Project[] = [
     ],
     status: "FolioFolds is finalizing its design and beginning development... Stay tuned for updates!",
     },
+    // {
+    // id: "iceberg",
+    // title: "Creative UI Animation Iceberg",
+    // description: "Exploring current practices in advanced UI animation and interactions including: mobile, vector, and 3D applications",
+    // category: "UI/UX Design and Frontend Development",
+    // fullDescription: "",
+    // challenges: "",
+    // outcome: "",
+    // imageUrl: "foliofolds/thumbnail.png",
+    // timeline: "December 2025 — Present",
+    // role: "Frontend Developer, and UI/UX Designer",
+    // skills: ["UI/UX Design", "Frontend Development"],
+    // tools: ["Figma", "React", "Photoshop", "Illustrator", "After Effect"],
+    // problem: "Designers want a tool to help display interactable printworks in 3D that's both intuitive and accessible to expert designers and casual users.",
+    // subProblem: "There is a need for a stream-lined way to construct complex 3D versions of printworks that provides accessibility. Here are key problems we identified:",
+    // solution: "Wanting a better way to showcase my design projects online, I made FolioFolds, a web application that allows users to create and share interactive 3D mockups of printworks. The platform makes creating paper folds, cutouts, and bindings easier by provided tailored tools for paper engineering. Users can embedd finished piece into a website or view it in AR using their mobile devices. Publications can be flipped through manually or viewed through animated video, fostering a vibrant ecosystem of print design enthusiasts.",
+    
+    // },
+
+
   // {
   //   id: "clarity",
   //   title: "Clarity, Learning Management Systems, Chatbots, and Integrating AI",

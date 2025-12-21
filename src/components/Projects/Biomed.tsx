@@ -578,17 +578,19 @@ export default function Biomed() {
           Sketches of physical device designs and UI were made followed by circuit diagrams to plan hardware integration and creating low-fidelity prototypes to test sensor response, placements, and data acquisition. UI assets were initally designed in Figma then finalized in Illustrator and Photoshop.
         </p>
 
-        <div className="max-w-2xl ml-[25%]">
-          <div className="mt-10 relative aspect-[23/12] overflow-hidden rounded-t-lg">
-            <img
-              src={`${import.meta.env.BASE_URL}/biomed_devices/circuit_diagram.png`}
-              alt={`Circuit Diagram`}
-              className="absolute inset-0 h-full w-full object-cover"
-            />
+        <div className="flex justify-center">
+          <div className="max-w-5xl w-full px-4 lg:px-40">
+            <div className="mt-10 relative aspect-[23/12] overflow-hidden rounded-t-lg">
+              <img
+                src={`${import.meta.env.BASE_URL}/biomed_devices/circuit_diagram.png`}
+                alt={`Circuit Diagram`}
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            </div>
+            <div className="flex justify-center bg-black rounded-b-lg py-6">  
+              <p className="text-center text-base text-white">MotionSense Circuit Diagram</p>
+            </div>   
           </div>
-          <div className="flex justify-center bg-black rounded-b-lg py-4">  
-            <p className="text-center text-sm text-white">MotionSense Circuit Diagram</p>
-          </div>   
         </div> 
 
         <h3 className="mt-40 text-4xl ">

@@ -14,6 +14,7 @@ function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
   const [slideNumber, setSlideNumber] = useState<number>(0);
+  const hero_vid = "https://firebasestorage.googleapis.com/v0/b/portfolio-website-6baaf.firebasestorage.app/o/portfolio_videos%2FHero.mp4?alt=media&token=44a88620-8569-4faa-95d6-f51483167ce1";
 
   const handlePlayPause = () => {
     if (!videoRef.current) return;
@@ -31,7 +32,8 @@ function Hero() {
       {/* Full-bleed background */}
       <video
         ref={videoRef}
-        src={`${import.meta.env.BASE_URL}Hero.mp4`}
+        preload="metadata"
+        src={hero_vid}
         className="absolute inset-0 h-full w-auto min-w-full object-cover bg-center bg-no-repeat"
         muted
         autoPlay

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import { Triangle, Clock , Heart, Play, Pause} from "lucide-react";
-
+import { registerVisit } from "../lib/visitorsCounter";
 import { motion } from "framer-motion";
 
 declare global {
@@ -13,6 +13,8 @@ declare global {
 
 function TypedParagraph({ text, index }: { text: string; index: number }) {
 const [typingDone, setTypingDone] = useState(false);
+const [visitorCount, setVisitorCount] = useState<number | null>(null);
+
 
   // Framer Motion variants
   const container = {
@@ -34,6 +36,11 @@ const [typingDone, setTypingDone] = useState(false);
       transition: { duration: 0.8, ease: "easeOut" as const },
     },
   };
+
+  useEffect(() => {
+    registerVisit().then(setVisitorCount).catch(console.error);
+  }, []);
+
 
   return (
     index === 0 ? (
@@ -106,9 +113,7 @@ const [typingDone, setTypingDone] = useState(false);
             <p>Hello visitor</p>
             <div className="ring-1 ring-white/10 min-w-20 flex ml-1 items-center gap-2 rounded-full bg-black/25 px-3 py-1 text-sm">
               <span>
-                {typeof window !== "undefined" && (window as any).visitorCount
-                  ? `${(window as any).visitorCount}`
-                  : "0"}
+                {visitorCount !== null ? visitorCount : "—"}
               </span>
             </div>
           </div>

@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# env files (can opt-in for committing if needed)
+.env*
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -22,3 +25,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# heavy videos >100MB
+public/Hero.mp4
+public/YCGH/YCGH_Video_Documentation_FINAL.mp4

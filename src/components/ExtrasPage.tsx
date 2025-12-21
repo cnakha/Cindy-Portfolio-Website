@@ -157,7 +157,7 @@ function ExtraProjectModal({
               px-5 py-6
             "
           >
-            <div className="mx-auto w-full max-w-xl flex flex-col gap-6">
+            <div className="mx-auto w-full max-w-xl flex flex-col gap-6 pb-10">
               {video && (
                 <div className=" mt-5 relative aspect-[21/13] overflow-hidden rounded-lg">
                   <video
