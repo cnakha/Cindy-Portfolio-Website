@@ -38,6 +38,7 @@ function Hero() {
         muted
         autoPlay
         loop
+        poster={`${import.meta.env.BASE_URL}hero_oic.jpg`}
         style={{ minHeight: '100%', height: '100%', width: 'auto' }}
       />
       {/* Gradient for legibility */}

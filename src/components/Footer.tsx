@@ -48,7 +48,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <p className="text-right text-white font-nhgDisplay pb-4 mr-6">Website Created by Cindy Nakhammouane</p>
+      <p className="text-right text-xl text-white font-nhgDisplay pb-4 mr-6">Website Created by Cindy Nakhammouane</p>
     </footer>
     </div>
   );

@@ -241,6 +241,21 @@ export default function ExtrasPage() {
       title: "Memento"
     },
     {
+      id: "ticket",
+      coverImage: "/extras/ticket.png",
+      images: [],
+      description: "Music festival concept ticket",
+      title: "XYV Music Festival Ticket Concept"
+    },
+    {
+      id: "photography",
+      coverImage: "/extras/photography/bus_stop.jpg",
+      images: ["extras/photography/garden.jpg", "extras/photography/glasses.jpg", "extras/photography/ships.jpg",
+              "extras/photography/boots.jpg", "extras/photography/plants.jpg"],
+      description: "",
+      title: "Collage of Photography Works"
+    },
+    {
       id: "conops",
       coverImage: "/extras/nasa/Conops.png",
       images: ["extras/nasa/diagram.png", "extras/nasa/rover.png"],
@@ -270,13 +285,6 @@ export default function ExtrasPage() {
       title: "The Crystal Goblet"
     },
     
-    {
-      id: "ticket",
-      coverImage: "/extras/ticket.png",
-      images: [],
-      description: "Music festival concept ticket",
-      title: "XYV Music Festival Ticket Concept"
-    },
     {
       id: "trippy",
       coverImage: "/extras/trippy2.gif",

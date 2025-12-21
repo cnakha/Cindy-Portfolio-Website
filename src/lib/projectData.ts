@@ -191,8 +191,8 @@ export const projects: Project[] = [
     },
     // {
     // id: "iceberg",
-    // title: "Creative UI Animation Iceberg",
-    // description: "Exploring current practices in advanced UI animation and interactions including: mobile, vector, and 3D applications",
+    // title: "Expressive and Responsive UI Animation Iceberg",
+    // description: "Experiments and explorative look into current practices in advanced UI animation and interactions",
     // category: "UI/UX Design and Frontend Development",
     // fullDescription: "",
     // challenges: "",
@@ -202,10 +202,9 @@ export const projects: Project[] = [
     // role: "Frontend Developer, and UI/UX Designer",
     // skills: ["UI/UX Design", "Frontend Development"],
     // tools: ["Figma", "React", "Photoshop", "Illustrator", "After Effect"],
-    // problem: "Designers want a tool to help display interactable printworks in 3D that's both intuitive and accessible to expert designers and casual users.",
-    // subProblem: "There is a need for a stream-lined way to construct complex 3D versions of printworks that provides accessibility. Here are key problems we identified:",
-    // solution: "Wanting a better way to showcase my design projects online, I made FolioFolds, a web application that allows users to create and share interactive 3D mockups of printworks. The platform makes creating paper folds, cutouts, and bindings easier by provided tailored tools for paper engineering. Users can embedd finished piece into a website or view it in AR using their mobile devices. Publications can be flipped through manually or viewed through animated video, fostering a vibrant ecosystem of print design enthusiasts.",
-    
+    // problem: "",
+    // subProblem: "",
+    // solution: "",
     // },
 
 

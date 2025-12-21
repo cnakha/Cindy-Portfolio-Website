@@ -2,6 +2,9 @@ import { useParams, useNavigate } from "react-router-dom";
 import { projects } from "../lib/projectData";
 import Footer from "./Footer";
 import { ArrowLeft, UserRound, Calendar, Wrench, Wand, Info } from "lucide-react";
+import { useRef, useState } from "react";
+import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 import WorldNotes from "./Projects/WorldNotes";
 import Clarity from "./Projects/Clarity";
 import YCGH from "./Projects/YCGH";
@@ -12,6 +15,22 @@ export default function ProjectDetailPage() {
   const { projectId } = useParams<{ projectId: string }>();
   const navigate = useNavigate();
   const project = projects.find((p) => p.id === projectId);
+
+  const easeOutExpo: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 18 },
+    show: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: easeOutExpo,
+        delay: i * 0.06,
+      },
+    }),
+  };
+
 
   if (!project) {
     return (
@@ -32,10 +51,7 @@ export default function ProjectDetailPage() {
 
   const {
     title,
-    // description,
-    // category,
     githubUrl,
-    // imageUrl,
     vid,
     fullDescription,
     status,
@@ -60,6 +76,17 @@ export default function ProjectDetailPage() {
       <section className="pt-40">
         <div className="mx-auto w-full max-w-6xl px-6">
           <div className="rounded-xl p-6">
+            <motion.div 
+              variants={itemVariants}
+              initial="hidden"
+              whileInView="show"
+              custom={1}
+              viewport={{
+                once: true,          
+                amount: 0.01,         
+                margin: "0px 0px -8% 0px", 
+              }}
+            >
             <button
               onClick={() => navigate(-1)}
               className="mb-6 inline-flex text-md items-center gap-2 border border-black rounded-full px-4 pr-6 py-2 text-black/90 hover:text-white hover:bg-black transition"
@@ -67,11 +94,35 @@ export default function ProjectDetailPage() {
               <ArrowLeft className="h-5 w-5" />
               Return to homepage
             </button>
+          </motion.div>
 
-            <h3 className="mt-4 font-nhgDisplay text-5xl md:text-6xl leading-[1.25] ">{title}</h3>
-             <h4 className="font-nhgDisplay mt-20 font-semibold">Overview</h4>
+            <motion.div 
+              variants={itemVariants}
+              initial="hidden"
+              whileInView="show"
+              custom={2}
+              viewport={{
+                once: true,          
+                amount: 0.01,         
+                margin: "0px 0px -8% 0px", 
+              }}
+            >
+              <h3 className="mt-4 font-nhgDisplay text-5xl md:text-6xl leading-[1.25] ">{title}</h3>
+            </motion.div>
+              <motion.div 
+              variants={itemVariants}
+              initial="hidden"
+              whileInView="show"
+              custom={3}
+              viewport={{
+                once: true,          
+                amount: 0.01,         
+                margin: "0px 0px -8% 0px", 
+              }}
+            >
+              <h4 className="font-nhgDisplay mt-20 font-semibold">Overview</h4>
               <p className="font-nhgMono mt-2 opacity-90 text-xl md:text-2xl">{fullDescription}</p>
-
+            </motion.div>
                 {status && (
               <div className="mt-10 flex w-full rounded-full bg-black p-4 px-6 border border-white/10">
                     <div className="flex  gap-2">

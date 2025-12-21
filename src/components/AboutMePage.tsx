@@ -1,74 +1,111 @@
 import Footer from "./Footer";
+import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 
 export default function AboutMePage() {
+  const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
+    const fadeSlide: Variants = {
+      initial: { opacity: 0, y: 16 },
+      animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: EASE } },
+      exit: { opacity: 0, y: -16, transition: { duration: 0.35, ease: EASE } },
+    };
 
   return (
     <main className="relative min-h-screen w-full overflow-x-hidden bg-black">
-      <div className="flex justify-center mx-auto w-full px-[10%] pb-10 bg-white/10 mt-40">
-        <div className="flex flex-col lg:flex-row lg:items-start justify-center gap-10 py-20 pt-10">
+      <div className="flex flex-col justify-center mx-auto px-[10%] pb-10 bg-white/10 mt-32">
+        <motion.div
+              key="motionsense"
+              id="collage"
+              role="tabpanel"
+              aria-labelledby="tab-motionsense"
+              variants={fadeSlide}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              className="flex gap-4 mt-10"
+          >
+          <img
+                src={`${import.meta.env.BASE_URL}/about/img1.jpg`}
+                alt={`Photo of me`}
+                className="w-1/4 h-auto block rounded-2xl object-cover"
+                loading="lazy"
+            />
+            <div className="flex flex-col gap-4 w-1/2">
+              <img
+                src={`${import.meta.env.BASE_URL}/about/vancouver.jpg`}
+                alt={`Photo of me`}
+                className="w-full h-auto block rounded-2xl object-cover"
+                loading="lazy"
+              />     
+              <img
+                src={`${import.meta.env.BASE_URL}/about/wood.jpg`}
+                alt={`Photo of me`}
+                className="w-full h-auto block rounded-2xl"
+                loading="lazy"
+              />
+             </div>   
+          <img
+            src={`${import.meta.env.BASE_URL}/about/grad.png`}
+            alt={`Photo of me`}
+            className="w-1/3 h-auto block rounded-2xl object-cover"
+            loading="lazy"
+          />  
+        </motion.div> 
+ 
+        <div className="flex flex-col lg:flex-row lg:items-start justify-center gap-10 py-10">
           
           {/* Left column (About paragraphs) */}
           <div className="">
             <div className="max-w-2xl w-full overflow-hidden">
               
-              <div className="mt-10 ">
-                 <h1 className="font-nhgDisplay text-6xl lg:text-7xl text-white mb-6 md:mb-10 md:hidden">
-                    About Me
-                </h1>
+              <div className="">
                 <div className="flex flex-col md:flex-row gap-8 items-center">
-                    <img
-                        src={`${import.meta.env.BASE_URL}/about/img1.jpg`}
-                        alt={`Photo of me`}
-                        className="w-[35%] h-auto block rounded-full border border-white/10 mt-4 md:mt-0"
-                        loading="lazy"
-                    />
                     <div className="flex flex-col gap-4 ">
-                      <h1 className="font-nhgDisplay text-6xl lg:text-7xl text-white mb-6 md:mb-10 hidden md:block">
-                          About Me
+                      <h1 className="font-nhgDisplay text-2xl text-white mb-2 ">
+                          Background
                       </h1>
                         <p className="font-nhgText text-[16px] md:text-xl text-white/90 mb-4">
-                          Hi! I'm Cindy Nakhammouane, a <span className="font-semibold text-blue-haze-light">Fullstack Developer and UI/UX
+                          Hi! I'm Cindy Nakhammouane, a <span className="font-semibold ">Fullstack Developer and UI/UX
                           Designer</span> currently enrolled in my fourth year at the University
                           of Illinois Chicago and studying{" "}
-                          <span className="font-semibold text-blue-haze-light">Computer Science and Design</span>.
+                          <span className="font-semibold ">Computer Science and Design</span>.
                         </p>
                     </div>
                 </div>
                 <p className="font-nhgText text-[16px] md:text-xl text-white/90 py-4">
-                  I love creative technology and exploring career paths in fullstack 
+                  I think creative technology is awesome and would love to spend my life making cool stuff. 
+                  I'm currently interested in exploring career paths in fullstack 
                   and web app development, project management, and UI/UX design.
-                  In my free time, besides coding, I love to travel, watch movies,
-                  write, sing, draw, and do theatre!
                 </p>
-                 <img
-                    src={`${import.meta.env.BASE_URL}/about/vancouver.jpg`}
-                    alt={`Photo of me`}
-                    className="w-full h-auto block rounded-full mt-4 border border-white/10"
-                    loading="lazy"
-                  />              
+                <p className="font-nhgText text-[16px] md:text-xl text-white/90 pt-4 ">
+                  Random stuff about me: 
+                </p>
+                <ul className="font-nhgText text-[16px] md:text-md text-white/90 py-4 list-disc list-inside">
+                  <li>In my free time, I love to travel, watch movies, write, sing, draw, and do theatre!</li>
+                  <li>Laotian but from Chicago</li>
+                  <li>Love baking cookies (Cowboy cookies the best)</li>
+                  <li>Chronically online</li>
+                  <li>I play a little bit of guitar and ukulele</li>
+                </ul>
+
               </div>
             </div>
           </div>
 
           {/* Right column (Tools card) */}
           <div className="flex justify-center">
-          <div className="flex flex-col gap-8 w-full md:max-w-[550px] min-w-[350px]">
-            <img
-              src={`${import.meta.env.BASE_URL}/about/wood.jpg`}
-              alt={`Photo of me`}
-              className="w-full h-auto block rounded-full lg:mt-[10%] border border-white/10 "
-              loading="lazy"
-            />
+          <div className="flex flex-col gap-8 w-full md:max-w-[450px] min-w-[300px]">
             <div className="border border-white/10 rounded-xl bg-black p-6 pb-8">
-              <div className="flex flex-col items-center justify-center gap-10">
+              <div className="">
                 <div className="flex flex-col items-start">
                   <div className="flex gap-2 mb-2 mt-4 justify-center">
-                    <h3 className="rounded-full bg-white font-semibold px-4 py-1 text-lg tracking-wider text-black">
+                    <h3 className="font-nhgDisplay  py-1 text-2xl text-white">
                       Tools I Use:
                     </h3>
                   </div>
 
-                  <div className="pt-8 flex gap-2">
+                  <div className="pt-10 flex gap-2">
                     <h3 className="text-[16px] font-semibold tracking-wider text-white mb-1">
                       Coding
                     </h3>
@@ -86,7 +123,7 @@ export default function AboutMePage() {
                     )}
                   </div>
 
-                  <div className="pt-8 flex gap-2">
+                  <div className="pt-10 flex gap-2">
                     <h3 className="text-[16px] font-semibold tracking-wider text-white mb-1">
                       Design
                     </h3>
@@ -112,7 +149,7 @@ export default function AboutMePage() {
                     ))}
                   </div>
 
-                <div className="pt-8 flex gap-2">
+                <div className="pt-10 flex gap-2">
                     <h3 className="text-[16px] font-semibold tracking-wider text-white mb-1">
                       My Pockets
                     </h3>

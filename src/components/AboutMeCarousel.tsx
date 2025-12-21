@@ -92,7 +92,7 @@ const [visitorCount, setVisitorCount] = useState<number | null>(null);
         {/* Bottom info row */}
         <motion.div className="text-sm flex flex-wrap w-full gap-2 md:gap-5 pt-8" variants={item}>
           <div className="flex flex-inline text-white/75 gap-2">
-            <div className="w-6 h-6 rounded-full bg-white border border-[6px] border-blue-haze" />
+            <div className="w-6 h-6 rounded-full bg-white border border-[7px] border-blue-haze" />
             <p>Chicago, IL</p>
           </div>
 
