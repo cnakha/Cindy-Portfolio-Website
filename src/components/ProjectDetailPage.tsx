@@ -2,7 +2,6 @@ import { useParams, useNavigate } from "react-router-dom";
 import { projects } from "../lib/projectData";
 import Footer from "./Footer";
 import { ArrowLeft, UserRound, Calendar, Wrench, Wand, Info } from "lucide-react";
-import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import WorldNotes from "./Projects/WorldNotes";
