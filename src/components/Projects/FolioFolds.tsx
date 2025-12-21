@@ -37,7 +37,7 @@ const accessibillity = [
     return (
     <section className="mt-40">
         
-      <div className="font-nhgDisplay bg-[#B3C4E3] text-black">
+      <div className="font-nhgDisplay bg-[var(--folio-blue)] text-black">
           <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr]"> 
             <div className="mt-20 mb-10 sm:pr-10 md:mb-0 ml-10  md:ml-[15%]">
               <h3 className="text-3xl md:text-3xl lg:text-4xl font-semibold">
