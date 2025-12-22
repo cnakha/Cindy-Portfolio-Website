@@ -2,6 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var p = params.get("p");
+        if (p) {
+          window.history.replaceState(null, "", p);
+        }
+      })();
+    </script>
     <link rel="icon" type="image/svg+xml" href="/CN_logo.svg" />
     <link rel="stylesheet" href="https://use.typekit.net/hxr6xyz.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      // Redirect to index.html while preserving the path
+      var path = window.location.pathname;
+      var repo = "/Cindy-Portfolio-Website";
+      if (path.startsWith(repo)) path = path.slice(repo.length);
+      window.location.replace(repo + "/?p=" + encodeURIComponent(path + window.location.search + window.location.hash));
+    </script>
+  </head>
+  <body></body>
+</html>
