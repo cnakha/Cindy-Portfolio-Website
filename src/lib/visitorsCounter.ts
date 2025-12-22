@@ -7,6 +7,7 @@ export async function registerVisit(): Promise<number> {
   const ref = doc(db, "stats", "visitors");
 
   const hasVisited = sessionStorage.getItem(VISITOR_KEY);
+  console.log(import.meta.env.VITE_FIREBASE_PROJECT_ID)
 
   try {
     // If this is a new session, increment (or create doc if missing)

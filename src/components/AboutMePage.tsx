@@ -67,7 +67,7 @@ export default function AboutMePage() {
                       </h1>
                         <p className="font-nhgText text-[16px] md:text-xl text-white/90 mb-4">
                           Hi! I'm Cindy Nakhammouane, a <span className="font-semibold ">Fullstack Developer and UI/UX
-                          Designer</span> currently an undergrad enrolled in my fourth year at the University
+                          Designer</span> currently enrolled in my fourth year at the University
                           of Illinois Chicago and studying{" "}
                           <span className="font-semibold ">Computer Science and Design</span>.
                           
@@ -89,7 +89,6 @@ export default function AboutMePage() {
                 <ul className="font-nhgText text-[16px] md:text-md text-white/90 py-4 list-disc list-inside">
                   <li>In my free time, I love to travel, watch movies, write, sing, draw, and do theatre!</li>
                   <li>Laotian but born and raised in Chicago</li>
-                  <li>Love baking cookies (Cowboy cookies are the best)</li>
                   <li>I play a little bit of guitar and ukulele</li>
                   <li>Chronically online</li>
                 </ul>
