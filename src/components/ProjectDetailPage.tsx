@@ -162,6 +162,7 @@ export default function ProjectDetailPage() {
                   <img
                     src={`${import.meta.env.BASE_URL}${project.imageUrl2}`}
                     alt="Project mock"
+                    loading="lazy"
                     className="h-auto w-full object-cover"
                   />
                 </div>
@@ -301,12 +302,12 @@ export default function ProjectDetailPage() {
             <div className="rounded-xl border border-white/15 bg-black p-6 pb-10">
               <h3 className="font-nhgDisplay text-xl mb-4 text-white">Key Features</h3>
               <div className="grid grid-cols-1 gap-2 md:gap-8 md:grid-cols-2">
-                <ul className="list-disc list-inside space-y-2 text-white/85">
+                <ul className="list-disc list-outside pl-5 space-y-2 text-white/85">
                   {features.slice(0, Math.ceil(features.length / 2)).map((feature, idx) => (
                     <li key={idx}>{feature}</li>
                   ))}
                 </ul>
-                <ul className="list-disc list-inside space-y-2 text-white/85">
+                <ul className="list-disc list-outside pl-5 space-y-2 text-white/85">
                   {features.slice(Math.ceil(features.length / 2)).map((feature, idx) => (
                     <li key={idx + Math.ceil(features.length / 2)}>{feature}</li>
                   ))}

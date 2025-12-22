@@ -241,13 +241,6 @@ export default function ExtrasPage() {
       title: "Memento"
     },
     {
-      id: "ticket",
-      coverImage: "/extras/ticket.png",
-      images: [],
-      description: "Music festival concept ticket",
-      title: "XYV Music Festival Ticket Concept"
-    },
-    {
       id: "photography",
       coverImage: "/extras/photography/bus_stop.jpg",
       images: ["extras/photography/garden.jpg", "extras/photography/glasses.jpg", "extras/photography/ships.jpg",
@@ -302,7 +295,7 @@ export default function ExtrasPage() {
     {
       id: "antparty",
       coverImage: "/extras/ant_party.png",
-      images: ["extras/Garden_Card2.png"],
+      images: ["extras/Garden_Card2.png", "extras/ticket.png"],
       description: "Business card concepts",
       title: "ANT PARTY Card Concept"
     },

@@ -196,9 +196,11 @@ export default function AboutMeCarousel({slideNumber,  setSlideNumber, isPlaying
       className="
         font-nhgDisplay
         relative w-full max-w-[660px] rounded-2xl
-        bg-black/55 backdrop-blur-sm
-        shadow-[0_12px_32px_rgba(0,0,0,0.35)]
+        bg-black/60 backdrop-blur-sm
+        shadow-[0_12px_32px_rgba(0,0,0,0.35),inset_2px_2px_8px_rgba(255,255,255,0.1),inset_-2px_-2px_8px_rgba(0,0,0,0.4)]
         ring-1 ring-white/10 overflow-hidden
+        before:absolute before:inset-0 before:rounded-2xl before:pointer-events-none
+        before:bg-gradient-to-br before:from-white/ before:via-transparent before:to-transparent
       "
       style={{ height, transition: "height 300ms ease" }}
     >

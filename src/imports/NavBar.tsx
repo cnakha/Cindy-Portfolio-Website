@@ -21,12 +21,12 @@ export default function NavBar() {
  const goTo = (id: string) => {
     setActive(id);
     if (id === "aboutme" || id === "extras") {
-      navigate(`/${id}`);
+      navigate(`/Cindy-Portfolio-Website/${id}`);
     }
     else if (location.pathname !== "/") {
-      navigate(`/#${id}`);   
+      navigate(`/Cindy-Portfolio-Website/#${id}`);   
     } else {
-      navigate(`#${id}`);
+      navigate(`/Cindy-Portfolio-Website/#${id}`);
     }
   };
 

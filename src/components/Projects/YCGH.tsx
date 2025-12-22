@@ -38,6 +38,7 @@ export default function YCGH() {
                 <img
                     src={`${import.meta.env.BASE_URL}${pictures[current]}`}
                     alt={`YCGH Interaction`}
+                    loading="lazy"
                     className="absolute inset-0 h-full w-full object-cover"
                 />
 
@@ -89,6 +90,7 @@ export default function YCGH() {
                         <img
                             src={`${import.meta.env.BASE_URL}/YCGH/2025_SIGGRAPH_POSTER_YCGH_Final.png`}
                             alt={`YCGH Poster`}
+                            loading="lazy"
                             className=" object-cover cursor-pointer transform transition-transform duration-600 ease-in-out hover:scale-105"
                             onClick={() => setShowPopup(true)}
                         />
@@ -100,6 +102,7 @@ export default function YCGH() {
                                 <img
                                     src={`${import.meta.env.BASE_URL}/YCGH/2025_SIGGRAPH_POSTER_YCGH_Final.png`}
                                     alt={`YCGH Poster Enlarged`}
+                                    loading="lazy"
                                     className="max-h-[90vh] max-w-[90vw] shadow-lg"
                                     onClick={e => e.stopPropagation()}
                                 />

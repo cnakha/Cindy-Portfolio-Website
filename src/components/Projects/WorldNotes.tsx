@@ -61,6 +61,7 @@ export default function WorldNotes() {
               <img
                 src={`${import.meta.env.BASE_URL}worldnotes/traversal.png`}
                 alt={`Note Traversal and Discovery`}
+                loading="lazy"
                 className="absolute h-full w-full"
               />
             </div>  

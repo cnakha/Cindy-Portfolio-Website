@@ -42,7 +42,7 @@ export const projects: Project[] = [
   outcome: "This project is currently in active development with plans to launch a beta version in late 2026.",
   imageUrl: "worldnotes/thumbnail.png",
   imageUrl2: "worldnotes/welcomeScreen.png",
-  problem: "Existing social media platforms are losing their genuinity and overall appeal",
+  problem: "Existing social media platforms are losing their genuity and overall appeal",
   subProblem: "After interviewing a pool of social media creators and everyday users, many say these are the reasons for the rise of disinterest in social media:",
   solution: "I created WorldNotes to embrace the values and practice of digital graffiti: self-expression, pictography, and creativity. Unique features like 3D note placement, custom drawing tools, and Street View mapping are integrated to create a unique craft-based social media platform.",
   milestones: [
@@ -79,7 +79,7 @@ export const projects: Project[] = [
     role: "Lead Frontend Developer and UI/UX Designer, Fullstack Developer and Hardware Engineer alongside Kegan Jones, Rohan Kakarlapudi, and Sufyan Siddiqui",
     skills: ["UI/UX Design", "Fullstack Development", "Entrepreneurship", "Internet of Things", "Hardware Engineering", "User Testing", "Websockets"],
     problem: "Wearable technology has the potential to revolutionize personal health tracking, yet many devices fail due to not meeting consumer needs.",
-    subProblem: "After researching users and wearable assitive health tech, listed are key problems we identified in the wearable health tech space:",
+    subProblem: "After researching users and wearable assistive health tech, listed are key problems we identified in the wearable health tech space:",
     solution: "My team developed five wearable bluetooth devices that monitor biometrics such as heart rate, oxygen levels, stress, and activity patterns. The devices feature ergonomic designs, wireless communication, and intuitive UIs that provide real-time data visualization and alerts, helping users track their personal health and receive timely notifications on health anomalies.",
     keyProblems:[
       "Lack of Accessible Health Monitoring",
@@ -96,7 +96,7 @@ export const projects: Project[] = [
   {
     id: "forecaster",
     title: "Chicago Traffic Commute Time Forecaster",
-    description: "Training regression models on historic Chicago traffic data, integratiing UI with FastAPI and RESTAPI, website hosting exploration",
+    description: "Training regression models on historic Chicago traffic data, integrating UI with FastAPI and RESTAPI, website hosting exploration",
     category: "Fullstack Development, Machine Learning, Linear Regression, and UI and User Experience Design",
     fullDescription: "An interactive web application that predicts commute times in Chicago using historic congestion patterns, route distance, and contextual travel conditions. The tool helps commuters visualize how traffic impacts travel time and compares a simple baseline estimate against a machine-learned prediction.",
     tools: ["React", "Javascript", "Tailwind", "FastAPI", "Python", "REST API", "Figma", "Scikit-learn", "Linear Regression", "Random Forest", "XGBoost", "Pandas", "NumPy"],
@@ -121,9 +121,9 @@ export const projects: Project[] = [
   {
     id: "YCGH",
     title: "You Can Grow Here: A Therapeutic VR Journey for Anxiety Management",
-    description: "Published research, theatrical storytelling, typographic design, and evidence-based wellness techniques to guide users in anxiety relief (Presented at SIGGRAPH 2025).",
+    description: "Published research on theatrical storytelling, typographic design, and adapting wellness techniques to guide users in anxiety relief in VR (Presented at SIGGRAPH 2025).",
     category: "VR Application and Research Paper on VR Applications Centering Health and Well-Being Presented at SIGGRAPH 2025 Convention",
-    fullDescription: "You Can Grow Here is an immersive VR experience developed for and exhibited at the CAVE2™ environment in the Electronic Visualization Labratory at the University of Illinois Chicago, aligning with the United Nation's Sustainable Development Goal of Good Health and Well-Being. In response to the mental health challenges intensified by the COVID-19 pandemic, the project explores how interactive storytelling, ambient sound, and 3D typography can support emotional reflection, explore modes of group therapy, and teach anxiety coping strategies. Built in Unity with custom assets from Blender and Maya, the experience differs from most clinical VR programs, allowing users to independently explore emotions, manage anxiety, and practice evidence-based calming techniques within a safe, narrative-driven space that builds emotional resilience.",
+    fullDescription: "You Can Grow Here is an immersive VR experience developed for and exhibited at the CAVE2™ environment in the Electronic Visualization Laboratory at the University of Illinois Chicago, aligning with the United Nation's Sustainable Development Goal of Good Health and Well-Being. In response to the mental health challenges intensified by the COVID-19 pandemic, the project explores how interactive storytelling, ambient sound, and 3D typography can support emotional reflection, explore modes of group therapy, and teach anxiety coping strategies. Built in Unity with custom assets from Blender and Maya, the experience differs from most clinical VR programs, allowing users to independently explore emotions, manage anxiety, and practice evidence-based calming techniques within a safe, narrative-driven space that builds emotional resilience.",
     features: [
       "Interactive 3D Typography",
       "Immersive 3D Environments",
@@ -211,8 +211,6 @@ export const projects: Project[] = [
     subProblem: "",
     solution: "",
     },
-
-
   // {
   //   id: "clarity",
   //   title: "Clarity, Learning Management Systems, Chatbots, and Integrating AI",

@@ -86,7 +86,7 @@ export default function AboutMePage() {
                 <p className="font-nhgText text-[16px] md:text-xl text-white/90 pt-4 ">
                   Random stuff about me: 
                 </p>
-                <ul className="font-nhgText text-[16px] md:text-md text-white/90 py-4 list-disc list-inside">
+                <ul className="font-nhgText text-[16px] md:text-md text-white/90 py-4 list-disc list-outside pl-5">
                   <li>In my free time, I love to travel, watch movies, write, sing, draw, and do theatre!</li>
                   <li>Laotian but born and raised in Chicago</li>
                   <li>I play a little bit of guitar and ukulele</li>

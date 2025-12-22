@@ -112,6 +112,7 @@ function FeaturedProjectBlock({
             <img
               src={`${import.meta.env.BASE_URL}${project.imageUrl}`}
               alt={`${project.id} preview`}
+              loading="lazy"
               className="absolute inset-0 h-full w-full object-cover transform transition duration-500 ease-in-out group-hover:scale-105"
             />
           </div>
