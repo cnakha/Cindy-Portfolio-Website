@@ -24,8 +24,8 @@ export default function App() {
           <Route path="/" element={<PortfolioPage />} />
           <Route path="/project/:projectId" element={<ProjectDetailPage />} />
           <Route path="/preview_page.html" element={<PortfolioPage />} />
-          <Route path="/Cindy-Portfolio-Website/aboutme" element={<AboutMePage />} />
-          <Route path="/Cindy-Portfolio-Website/extras" element={<Extras/>}/>
+          <Route path="/aboutme" element={<AboutMePage />} />
+          <Route path="/extras" element={<Extras/>}/>
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
