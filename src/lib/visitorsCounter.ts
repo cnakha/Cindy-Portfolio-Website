@@ -11,7 +11,12 @@ export async function registerVisit(): Promise<number> {
   try {
     // If this is a new session, increment (or create doc if missing)
     if (!hasVisited) {
-      await setDoc(ref, { count: increment(1) }, { merge: true });
+      try {
+        await setDoc(ref, { count: increment(1) }, { merge: true });
+      } catch (e) {
+        console.error("Firestore increment failed:", e);
+      }
+
       sessionStorage.setItem(VISITOR_KEY, "true");
     }
 

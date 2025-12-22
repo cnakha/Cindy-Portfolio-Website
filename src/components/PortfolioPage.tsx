@@ -156,6 +156,8 @@ function FeaturedProjects({
         <div
           className="
             mt-10 
+            pb-10
+            md:pb-0
             grid 
             grid-cols-1 
             md:grid-cols-2 

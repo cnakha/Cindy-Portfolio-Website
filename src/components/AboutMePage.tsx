@@ -67,26 +67,31 @@ export default function AboutMePage() {
                       </h1>
                         <p className="font-nhgText text-[16px] md:text-xl text-white/90 mb-4">
                           Hi! I'm Cindy Nakhammouane, a <span className="font-semibold ">Fullstack Developer and UI/UX
-                          Designer</span> currently enrolled in my fourth year at the University
+                          Designer</span> currently an undergrad enrolled in my fourth year at the University
                           of Illinois Chicago and studying{" "}
                           <span className="font-semibold ">Computer Science and Design</span>.
+                          
                         </p>
                     </div>
                 </div>
                 <p className="font-nhgText text-[16px] md:text-xl text-white/90 py-4">
-                  I think creative technology is awesome and would love to spend my life making cool stuff. 
-                  I'm currently interested in exploring career paths in fullstack 
-                  and web app development, project management, and UI/UX design.
+                  Creating is freedom. Since forever, I've always been drawn toward expressing myself through various creative avenues as well as living to learn, 
+                  so I naturally grew an interest in blending the worlds of technology and art. 
+                  I love that creative technology is always evolving and I would love to spend my life 
+                  exploring it and making cool stuff. 
+                  <br/> <br/>
+                  I'm currently interested in career paths in fullstack 
+                  and web app development, creative directing + project management, and UI/UX design.
                 </p>
                 <p className="font-nhgText text-[16px] md:text-xl text-white/90 pt-4 ">
                   Random stuff about me: 
                 </p>
                 <ul className="font-nhgText text-[16px] md:text-md text-white/90 py-4 list-disc list-inside">
                   <li>In my free time, I love to travel, watch movies, write, sing, draw, and do theatre!</li>
-                  <li>Laotian but from Chicago</li>
-                  <li>Love baking cookies (Cowboy cookies the best)</li>
-                  <li>Chronically online</li>
+                  <li>Laotian but born and raised in Chicago</li>
+                  <li>Love baking cookies (Cowboy cookies are the best)</li>
                   <li>I play a little bit of guitar and ukulele</li>
+                  <li>Chronically online</li>
                 </ul>
 
               </div>
@@ -107,7 +112,7 @@ export default function AboutMePage() {
 
                   <div className="pt-10 flex gap-2">
                     <h3 className="text-[16px] font-semibold tracking-wider text-white mb-1">
-                      Coding
+                      Tech
                     </h3>
                   </div>
                   <div className="text-[16px] flex flex-wrap gap-2">

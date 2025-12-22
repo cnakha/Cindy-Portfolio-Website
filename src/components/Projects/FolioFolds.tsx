@@ -40,14 +40,14 @@ const accessibillity = [
       <div className="font-nhgDisplay bg-[var(--folio-blue)] text-black">
           <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr]"> 
             <div className="mt-20 mb-10 sm:pr-10 md:mb-0 ml-10  md:ml-[15%]">
-              <h3 className="text-3xl md:text-3xl lg:text-4xl font-semibold">
-                Import Images and PDFs, Choose a Template, Then Begin!
+              <h3 className="text-3xl pr-4 md:pr-0 md:text-3xl lg:text-4xl font-semibold">
+                Import Images and PDFs, Select a Template, Then Start!
               </h3>
-              <p className="mt-6 mb-10 text-black/75 sm:text-xl md:text-[1rem] lg:text-xl">
-                Users can import images and PDFs, select from a variety of templates, and customize their designs with intuitive tools.
+              <p className="mt-6 mb-10 text-black/75 mr-10 md:mr-0 sm:text-xl md:text-[1rem] lg:text-xl">
+                Users can import images, PDFs, select from a variety of templates, and customize their designs with intuitive tools.
               </p>          
             </div>     
-          <div className="scrollable-panel relative h-full lg:overflow-hidden overflow-x-auto">
+          <div className="relative h-full lg:overflow-hidden overflow-x-auto">
             <div className="relative h-full aspect-[22/15] overflow-hidden">
               <img
                 src={`${import.meta.env.BASE_URL}/foliofolds/landing.png`}
@@ -66,7 +66,7 @@ const accessibillity = [
               z-0
             "
           >
-          <div className="scrollable-panel relative h-full lg:overflow-hidden overflow-x-auto">
+          <div className=" relative h-full lg:overflow-hidden overflow-x-auto">
             <div className="h-full aspect-[22/15]">
               <img
                 src={`${import.meta.env.BASE_URL}/foliofolds/folding.png`}
@@ -86,17 +86,16 @@ const accessibillity = [
           </div>    
         </div>
 
-
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr]"> 
-            <div className="mt-20 mb-10 sm:pr-10 md:mb-0 ml-10 md:ml-[15%]">
-              <h3 className="text-3xl md:text-3xl lg:text-4xl font-semibold">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr]"> 
+          <div className="mt-20 mb-10 sm:pr-10 md:mb-0 ml-10 md:ml-[15%]">
+            <h3 className="text-3xl md:text-3xl lg:text-4xl font-semibold">
               Create Unique Layouts and Binds
             </h3>
               <p className="mt-6 mb-10 text-black/75 sm:text-xl md:text-[1rem] lg:text-xl">
               Move and resize elements freely to create unique layouts. Choose from various binding and page styles like spiral binds, stitched binds, textured paper, to glossy paper.
             </p>          
-            </div>      
-                      <div className="scrollable-panel relative h-full lg:overflow-hidden overflow-x-auto">
+          </div>      
+          <div className="relative h-full lg:overflow-hidden overflow-x-auto">
 
           <div className="relative h-full aspect-[22/15] overflow-hidden">
             <img
@@ -116,7 +115,7 @@ const accessibillity = [
               z-0
             "
           >
-          <div className="scrollable-panel relative h-full lg:overflow-hidden overflow-x-auto">
+          <div className="relative h-full lg:overflow-hidden overflow-x-auto">
             <div className="h-full aspect-[22/15]">
             <img
               src={`${import.meta.env.BASE_URL}/foliofolds/cutting.png`}
@@ -144,7 +143,7 @@ const accessibillity = [
               <p className="mt-6 mb-10 text-black/75 sm:text-xl md:text-[1rem] lg:text-xl">
                 Creators can generate a share link or embed, allowing publications to live online like interactive artifacts — not static images or PDFs. </p>          
             </div>      
-                      <div className="scrollable-panel relative h-full lg:overflow-hidden overflow-x-auto">
+          <div className="relative h-full lg:overflow-hidden overflow-x-auto">
 
           <div className="relative h-full aspect-[22/15] overflow-hidden">
             <img
@@ -212,7 +211,7 @@ const accessibillity = [
        
 
         <h3 className="mt-40 text-4xl">
-          Step 3 — Prototyping and Designing Behaviours 
+          Step 3 — Prototyping and Designing Behaviors 
         </h3>
         <p className="mt-5 text-sm text-black/50 max-w-4xl leading-relaxed text-xl">
           To bring folding mechanics and paper handling interactions to life, I built iterative UI prototypes exploring how paper should move, react, and feel in a digital environment. 
@@ -226,7 +225,7 @@ const accessibillity = [
         </h3>
         <p className="mt-5 text-sm text-black/50 max-w-4xl leading-relaxed text-xl">
           After functional interactions were in place, I conducted informal testing sessions with design students, book artists, and casual users to refine usability and user flow. 
-          These sessions highlighted key needs: intuitive camera controls, clear affordances for flipping and unfolding, and a forgiving learning curve for newcomers. 
+          These sessions highlighted key needs: intuitive camera controls, clear affordance for flipping and unfolding, and a forgiving learning curve for newcomers. 
           <br/><br/>
           Based on feedback, I streamlined gesture input, introduced subtle visual prompts, and optimized transitions for clarity and comfort. 
           The iterative feedback loop ensured the interface remains approachable for beginners while still offering creative depth for expert users.

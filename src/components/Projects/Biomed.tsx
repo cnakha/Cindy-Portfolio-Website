@@ -532,7 +532,6 @@ export default function Biomed() {
             </div>
           </div>
         </section>
-
         <BiomedProjectsTabs />
 
         {/* Process Section */}
@@ -543,7 +542,7 @@ export default function Biomed() {
         </h3>
         <p className="mt-5 text-sm text-black/75 max-w-4xl leading-relaxed text-xl">
           Before participating in this lab, I had limited experience with biomedical device design nor engineering in general. 
-          Through these projects, I gained hands-on experience in sensor integration, harware engineering, data acquisition, UI/UX design, frontend development, and real-time monitoring.
+          Through these projects, I gained hands-on experience in sensor integration, hardware engineering, data acquisition, UI/UX design, frontend development, and real-time monitoring.
           The following tools were instrumental in bringing the various biomedical devices to life:
         </p>
         
@@ -569,7 +568,7 @@ export default function Biomed() {
           Prototyping
         </h3>
         <p className="mt-4 text-sm text-black/50 max-w-4xl leading-relaxed text-xl">
-          Sketches of physical device designs and UI were made followed by circuit diagrams to plan hardware integration and creating low-fidelity prototypes to test sensor response, placements, and data acquisition. UI assets were initally designed in Figma then finalized in Illustrator and Photoshop.
+          Sketches of physical device designs and UI were made followed by circuit diagrams to plan hardware integration and creating low-fidelity prototypes to test sensor response, placements, and data acquisition. UI assets were initially designed in Figma then finalized in Illustrator and Photoshop.
         </p>
 
         <div className="flex justify-center">
@@ -591,7 +590,7 @@ export default function Biomed() {
           Reflection and Designing for Health
         </h3>
         <p className="mt-5 text-xl text-black/75 max-w-4xl">
-          I found that the most important step in designing these devices was grasping a strong understanding of the patients' specfic needs and overall health goals. Learning about the nuances and difficulties a variety of patients face when managing personal health devices and apps was key in ensuring compassionate designs. 
+          I found that the most important step in designing these devices was grasping a strong understanding of the patients' specific needs and overall health goals. Learning about the nuances and difficulties a variety of patients face when managing personal health devices and apps was key in ensuring compassionate designs. 
           It was very important to prioritized clarity, accessibility, and comfort as displaying biometric data can often be non-intuitive, confusing, and overwhelming. 
           Researching existing health monitoring UIs helped to identify effective hierarchy of information and the importance of clear labeling and soft visuals. 
         </p>

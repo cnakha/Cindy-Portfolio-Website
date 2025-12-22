@@ -34,7 +34,7 @@ export const projects: Project[] = [
   description: "Blurring the line between social platform and digital graffiti, explore the world through 3D notes and doodles left behind by others on a street map view.",
   category: "Fullstack Web Development and UI/UX Design for a Creative Social Media App",
   fullDescription:
-    "WorldNotes is a spatial web experiment blending maps, art, and 3D spaces. Users create notes by sharing thoughts and doodles, then post and anchor them to a globally shared street view map. Designed for casual web strolling, this web app fuels the creative spirit, gifts serendipitous discovery, and builds a global community centering authentic creative expression.",
+    "WorldNotes is a spatial web experiment blending maps, art, and 3D spaces. Users create notes by sharing thoughts and doodles, then post and anchor them to a globally shared street view map. Designed for casual web strolling, this web app fuels the creative spirit and builds a global community centering authentic creative expression.",
   role: "Project Manager, Lead Fullstack Developer and UI/UX Designer. I built this app end-to-end from ideation to launch",
   skills: ["UI/UX Design", "Fullstack Development", "Web App Development", "Webflow Development", "Wireframing", "SEO"],
   tools: ["React", "Next.js", "TypeScript", "Three.js", "NoSQL"],
@@ -111,7 +111,12 @@ export const projects: Project[] = [
     problem: "Chicago is ranked as one of the most congested cities in the U.S. where drivers lose, on average, 102 hours per year in traffic and an estimated $1826 annually in lost time/productivity.",
     link: "https://cs412-machine-learning-project.vercel.app/",
     solution: "The objective of this project is to create and compare regression models to predict commute times based on historical Chicago traffic data. The result of this project is a dashboard that includes trained regression models, visuals of model evaluations in the form of plots, and maps that reveal congestion levels and predicted delay intensities.",
-  
+    features: [
+      "Linear Regression Model Interaction",
+      "Commute Time Forecaster Dashboard",
+      "Google Maps API Integration",
+      "Congestion Heatmap"
+    ],
   },
   {
     id: "YCGH",
@@ -189,23 +194,23 @@ export const projects: Project[] = [
     ],
     status: "FolioFolds is finalizing its design and beginning development... Stay tuned for updates!",
     },
-    // {
-    // id: "iceberg",
-    // title: "Expressive and Responsive UI Animation Iceberg",
-    // description: "Experiments and explorative look into current practices in advanced UI animation and interactions",
-    // category: "UI/UX Design and Frontend Development",
-    // fullDescription: "",
-    // challenges: "",
-    // outcome: "",
-    // imageUrl: "foliofolds/thumbnail.png",
-    // timeline: "December 2025 — Present",
-    // role: "Frontend Developer, and UI/UX Designer",
-    // skills: ["UI/UX Design", "Frontend Development"],
-    // tools: ["Figma", "React", "Photoshop", "Illustrator", "After Effect"],
-    // problem: "",
-    // subProblem: "",
-    // solution: "",
-    // },
+    {
+    id: "iceberg",
+    title: "The UI Motion Graphics Iceberg",
+    description: "Experiments and explorative look into current practices in advanced UI animations and interactions",
+    category: "UI/UX Design and Frontend Development",
+    fullDescription: "A bento style showcase of interactable UI elements with a focus on motion graphics and user experience. I started this project out of pure curiosity as to how super stylized animated buttons and visuals were created in the handful of medias I've seen. What are the best practices? What tools should I use? How can motion graphics be integrated ",
+    challenges: "",
+    outcome: "",
+    imageUrl: "foliofolds/thumbnail.png",
+    timeline: "December 2025 — Present",
+    role: "Frontend Developer, and UI/UX Designer",
+    skills: ["UI/UX Design", "Frontend Development"],
+    tools: ["Figma", "React", "Photoshop", "Illustrator", "After Effect"],
+    problem: "",
+    subProblem: "",
+    solution: "",
+    },
 
 
   // {

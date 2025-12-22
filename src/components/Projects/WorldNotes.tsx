@@ -7,13 +7,17 @@ function Line(){
 }
 
 export default function WorldNotes() {
-  const [AppStructPopup, setShowPopup] = useState(false);
+  const [AppStructPopup, setShowAppStructPopup] = useState(false);
+  const [WireframPopup, setShowWireframePopup] = useState(false);
+  const [UIPopup, setShowUIPopup] = useState(false);
+
+
 
   const techStack = [
     'React', 'Next.js', 'TypeScript', 'Konva', 'Firebase Firestore', 'NextAuth'
   ];
 
-  const texhStackDescriptions = [
+  const techStackDescriptions = [
     'React powers the interactive UI components, while Next.js (App Router) structures the app.',
     'Nested layouts and route groups separate the map explorer, note creator, and profile areas. Server Components handle data fetching and SEO-friendly rendering; Client Components power interactive views.',
     'TypeScript ensures type safety across components, hooks, and API calls, reducing runtime bugs and streamlining refactors as features evolve.', 
@@ -24,7 +28,7 @@ export default function WorldNotes() {
 
   const keyInspos = [
     'The Unsent Project',
-    'Google Maps & GeoGuessr',
+    'Google Maps & GeoGuesser',
     "Reddit's r/Place",
     'Gartic Phone & MS Paint'
   ];
@@ -52,12 +56,12 @@ export default function WorldNotes() {
                 Start your adventure by landing at a random location scattered with 3D notes left behind by others. <br/> <br/>Exploration feels natural: click-to-move in Street View, use the overview or mini map, or search specific places. The navigation bar allows quick refreshes of nearby notes, filters, and stepping through notes.            
               </p>          
             </div>     
-          <div className="scrollable-panel relative h-full lg:overflow-hidden overflow-x-auto">
-            <div className="relative h-full aspect-[22/15] overflow-hidden">
+          <div className="relative h-full">
+            <div className="relative h-full aspect-[22/15]">
               <img
                 src={`${import.meta.env.BASE_URL}worldnotes/traversal.png`}
                 alt={`Note Traversal and Discovery`}
-                className="absolute inset-0 h-full w-full object-cover"
+                className="absolute h-full w-full"
               />
             </div>  
             </div>
@@ -71,7 +75,7 @@ export default function WorldNotes() {
               z-0
             "
           >
-          <div className="scrollable-panel relative h-full lg:overflow-hidden overflow-x-auto">
+          <div className="relative h-full ">
             <div className="h-full aspect-[22/15]">
               <img
                 src={`${import.meta.env.BASE_URL}worldnotes/post_viewer.png`}
@@ -101,7 +105,7 @@ export default function WorldNotes() {
               Profiles show you all the notes you post, draft, repost, like, and save. The cover page is a place the user can display their favorite notes in any way they desire.
             </p>          
             </div>      
-          <div className="scrollable-panel relative h-full lg:overflow-hidden overflow-x-auto">
+          <div className=" relative h-full lg:overflow-hidden overflow-x-auto">
           <div className="relative h-full aspect-[22/15] overflow-hidden">
             <img
               src={`${import.meta.env.BASE_URL}worldnotes/profile.png`}
@@ -120,7 +124,7 @@ export default function WorldNotes() {
               z-0
             "
           >
-            <div className="scrollable-panel relative h-full lg:overflow-hidden overflow-x-auto">
+            <div className="relative h-full lg:overflow-hidden overflow-x-auto">
               <div className="h-full aspect-[22/15]">
                 <img
                   src={`${import.meta.env.BASE_URL}worldnotes/creator.png`}
@@ -205,13 +209,13 @@ export default function WorldNotes() {
             src={`${import.meta.env.BASE_URL}worldnotes/user_flow.png`}
             alt={`Flowchart of Webflow`}
             className="absolute inset-0 h-full w-full object-cover cursor-pointer hover:scale-105 transition"
-            onClick={() => setShowPopup(true)}
+            onClick={() => setShowAppStructPopup(true)}
           />
           
           {AppStructPopup && (
             <div
                 className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 "
-                onClick={() => setShowPopup(false)}
+                onClick={() => setShowAppStructPopup(false)}
             >
               <img
                 src={`${import.meta.env.BASE_URL}worldnotes/user_flow.png`}
@@ -238,8 +242,22 @@ export default function WorldNotes() {
           <img
             src={`${import.meta.env.BASE_URL}worldnotes/wireframing.png`}
             alt={`Wireframe`}
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover cursor-pointer hover:scale-105 transition"
+            onClick={() => setShowWireframePopup(true)}
           />
+          {WireframPopup && (
+            <div
+                className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 "
+                onClick={() => setShowWireframePopup(false)}
+            >
+              <img
+                src={`${import.meta.env.BASE_URL}worldnotes/wireframing.png`}
+                alt={`Wireframe Enlarged`}
+                className="max-h-[90vh] max-w-[90vw] shadow-lg "
+                onClick={e => e.stopPropagation()}
+              />
+            </div>
+          )}
         </div>
         <div className="flex justify-center bg-black rounded-b-lg py-4">  
           <p className="text-center text-sm text-white">Wireframes of User Profile and Community Page</p>
@@ -257,15 +275,29 @@ export default function WorldNotes() {
           <img
             src={`${import.meta.env.BASE_URL}worldnotes/UI_Design.png`}
             alt={`UI Design`}
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover cursor-pointer hover:scale-105 transition"
+            onClick={() => setShowUIPopup(true)}
           />
+          {UIPopup && (
+            <div
+                className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 "
+                onClick={() => setShowUIPopup(false)}
+            >
+              <img
+                src={`${import.meta.env.BASE_URL}worldnotes/UI_Design.png`}
+                alt={`UI Enlarged`}
+                className="max-h-[90vh] max-w-[90vw] shadow-lg "
+                onClick={e => e.stopPropagation()}
+              />
+            </div>
+          )}
         </div>
         <div className="flex justify-center bg-black rounded-b-lg py-4">
           <p className="text-center text-sm text-white">Mockup Deigns of User Profile and Community Page</p>
         </div> 
 
         <p className="mt-10 text-xl text-black/75 max-w-4xl">
-          WorldNote's branding embraces playfulness, bright colors, references scrapbooking, and carries a lighthearted aesthetic to reflect the project’s creative spirit. 
+          WorldNote's branding embraces playfulness, bright colors, references the paper medium, and carries a lighthearted aesthetic to reflect the project’s creative spirit. 
           The UI is intentionally inviting, encouraging hesitant users to have casual fun.
         </p>
 
@@ -299,7 +331,7 @@ export default function WorldNotes() {
                 className="flex flex-col text-left items-start bg-[#1f1f1f] border border-white/10 rounded-xl p-6 min-w-[220px] min-h-[220px] max-w-xs flex-1"
               >
                 <h5 className="text-lg font-bolder text-white mb-4">{tech}</h5>
-                <p className="text-sm text-white/50">{texhStackDescriptions[idx]}</p>
+                <p className="text-sm text-white/75">{techStackDescriptions[idx]}</p>
               </div>
             ))}
         </div>
@@ -311,7 +343,7 @@ export default function WorldNotes() {
         <p className="mt-5 text-sm text-black/75 max-w-4xl leading-relaxed text-xl">
         The bulk of my development time went into implementing WorldNotes's unique UI. It was imperative early on to set up a system of designs
         such as core color schemes, fonts, text sizing conventions etc. as to have a cohesive look. Pre-planning React component implementations helped
-        steamline production and provide reusable code.
+        streamline production and provide reusable code.
           <br/><br/>
        </p>
       <h3 className="mt-10 text-2xl">
@@ -330,7 +362,7 @@ export default function WorldNotes() {
         Google Maps API Integration and Three.js
       </h3>
       <p className="mt-2">WorldNotes functionality depends on the street map atmosphere, so integrating Google Maps and Street View was one of the most important parts of development. 
-        I wanted notes to feel like they belonged in the environment, responding to heading, pitch, and zoom in a believable way however the street map exists as a panorame image. To create the illusion
+        I wanted notes to feel like they belonged in the environment, responding to heading, pitch, and zoom in a believable way however the street map exists as a panorama image. To create the illusion
         of 3D notes in that space, I used Three.js to create 3D meshes of the notes that sat on an invisible plane. The meshes would transform and translate depending on the camera pitch and your geolocation.
       </p>
 
@@ -339,7 +371,7 @@ export default function WorldNotes() {
       </h3>
       <p className="mt-5 ">Implementing a database was something completely new to me, so I wanted something real-time, simple to iterate on, and friendly to a solo workflow. 
         Firebase Firestore quickly became the natural choice where I end up storing key information about user accounts, posted notes, and interactions. I also had no experience with
-        user authentification practices so I ended up using NextAuth and allowed users to create accounts using Google accounts.
+        user authentication practices so I ended up using NextAuth and allowed users to create accounts using Google accounts.
       </p>
 
         
@@ -348,7 +380,7 @@ export default function WorldNotes() {
         </h3>
         <p className="mt-5 text-xl text-black/75 max-w-4xl">
           WorldNotes is experimental and engages in direct surveys and open discourse over updates and features regularly. 
-          Impact is measured through community polls and recieving feedback from focused user groups.
+          Impact is measured through community polls and receiving feedback from focused user groups.
         </p>
 
 
