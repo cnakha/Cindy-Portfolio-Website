@@ -56,13 +56,13 @@ export default function WorldNotes() {
                 Start your adventure by landing at a random location scattered with 3D notes left behind by others. <br/> <br/>Exploration feels natural: click-to-move in Street View, use the overview or mini map, or search specific places. The navigation bar allows quick refreshes of nearby notes, filters, and stepping through notes.            
               </p>          
             </div>     
-          <div className="relative h-full">
+          <div className="relative h-full lg:overflow-hidden overflow-x-auto">
             <div className="relative h-full aspect-[22/15]">
               <img
                 src={`${import.meta.env.BASE_URL}worldnotes/traversal.png`}
                 alt={`Note Traversal and Discovery`}
                 loading="lazy"
-                className="absolute h-full w-full"
+                className="absolute inset-0 h-full w-full object-cover"
               />
             </div>  
             </div>

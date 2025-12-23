@@ -210,10 +210,12 @@ export default function AboutMeCarousel({slideNumber,  setSlideNumber, isPlaying
           onClick={onTogglePlay}
           className="
             absolute top-8 right-8
-            bg-black/55 text-white rounded-full
+            bg-black/5 text-white rounded-full
             p-4 backdrop-blur-sm ring-1 ring-white/10
-            shadow-[0_12px_32px_rgba(0,0,0,0.35)]
-            hover:bg-black/80 transition-transform hover:scale-110
+            shadow-[0_12px_32px_rgba(0,0,0,0.35)],inset_2px_2px_8px_rgba(255,255,255,0.1),inset_-2px_-2px_8px_rgba(0,0,0,0.4)]
+            transition-transform hover:scale-110
+            before:absolute before:inset-0 before:rounded-2xl before:pointer-events-none
+            before:bg-gradient-to-br before:from-white/ before:via-transparent before:to-transparent
           "
         >
           <div className="rounded-full p-2 border-4 border-white/75 flex items-center justify-center">

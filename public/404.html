@@ -1,14 +1,23 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
     <script>
-      // Redirect to index.html while preserving the path
-      var path = window.location.pathname;
-      var repo = "/Cindy-Portfolio-Website";
-      if (path.startsWith(repo)) path = path.slice(repo.length);
-      window.location.replace(repo + "/?p=" + encodeURIComponent(path + window.location.search + window.location.hash));
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var p = params.get("p");
+        if (p) {
+          window.history.replaceState(null, "", p);
+        }
+      })();
     </script>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/CN_logo.svg" />
+    <link rel="stylesheet" href="https://use.typekit.net/hxr6xyz.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cindy | Fullstack Developer & UI/UX Designer</title>
   </head>
-  <body></body>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
