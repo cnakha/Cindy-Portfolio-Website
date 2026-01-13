@@ -75,7 +75,7 @@ export default function AboutMePage() {
                     </div>
                 </div>
                 <p className="font-nhgText text-[16px] md:text-xl text-white/90 py-4">
-                  Creating is freedom. Since forever, I've always been drawn toward expressing myself through various creative avenues as well as living to learn, 
+                  Creating is my favorite freedom. Since forever, I've always been drawn toward expressing myself through various creative avenues as well as living to learn, 
                   so I naturally grew an interest in blending the worlds of technology and art. 
                   I love that creative technology is always evolving and I would love to spend my life 
                   exploring it and making cool stuff. 

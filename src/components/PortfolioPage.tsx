@@ -188,8 +188,7 @@ function FeaturedProjects({
 
 export default function PortfolioPage() {
   const navigate = useNavigate();
-  const featuredProjects = projects.slice(0, 5);
-  // bg-[#008be8]
+  const featuredProjects = projects.slice(0, 6);
 
   const handleProjectClick = (projectId: string) => {
     navigate(`/project/${projectId}`);
